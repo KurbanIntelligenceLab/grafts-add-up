@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+.venv-rlvr/
+env/
+venv/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local caches and secrets
+workspace/
+first_test/
+*/judge/
+
+# Legacy workspace (not part of the public release)
+archive/
+paper_acl/
+analysis/
+external/
+Project-1/
+Project-2/
+
+# LaTeX intermediates
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.synctex.gz
+
+# Optional large generated training weights (metadata retained in results/)
+results/supplementary/**/checkpoints/
+results/supplementary/**/final_adapter/*.safetensors
+results/supplementary/**/final_adapter/*.bin

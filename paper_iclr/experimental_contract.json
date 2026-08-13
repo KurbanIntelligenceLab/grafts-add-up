@@ -1,0 +1,178 @@
+{
+  "contract_version": 1,
+  "contract_status": "frozen_with_explicit_local_compatibility_fallback",
+  "frozen_at": "2026-08-11T23:06:00+03:00",
+  "paper": {
+    "short_name": "SUTURE",
+    "target": "ICLR 2027",
+    "runbook": "paper_iclr/RUNBOOK.txt",
+    "selection_rule": "No merged model may be materialized while computing scores or selecting a graft."
+  },
+  "base_model": {
+    "tier": "A",
+    "requested_id": "Qwen/Qwen3-1.7B",
+    "requested_revision": "to_be_pinned_after_checkpoint_preflight",
+    "compatibility_fallback": {
+      "id": "Qwen/Qwen2.5-1.5B",
+      "revision": "to_be_pinned_after_checkpoint_preflight"
+    },
+    "selected_local_compatibility_fallback": {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+      "architecture": "qwen2",
+      "parameter_count": 1543714304,
+      "dtype": "bfloat16",
+      "selection_rationale": "The requested Qwen3-1.7B and exact Qwen2.5-1.5B revisions are not cached. This is the only cached 1B-2B Qwen decoder candidate, loads successfully on the pinned RTX 3060 Ti, and is recorded as an explicit compatibility fallback rather than silently relabeled."
+    },
+    "architecture_requirement": "open multilingual decoder with a shared tokenizer and an addressable sequential decoder-block stack",
+    "preflight": {
+      "status": "passed_for_selected_local_fallback",
+      "requested_candidates": "not_cached; outbound Hugging Face traffic is disabled",
+      "selected_candidate_load": "passed; 2.88 GiB bfloat16 model footprint on GPU",
+      "prohibited_resolution": "Do not substitute a from-scratch toy model for Tier-A evidence."
+    }
+  },
+  "experts": {
+    "donor": {
+      "role": "English math skill expert",
+      "source_data": "GSM8K and/or MetaMathQA training split",
+      "language": "en"
+    },
+    "hosts": [
+      {
+        "role": "target-language general instruction expert",
+        "language": "es",
+        "script_resource_axis": "high_resource_latin"
+      },
+      {
+        "role": "target-language general instruction expert",
+        "language": "zh",
+        "script_resource_axis": "high_resource_non_latin"
+      },
+      {
+        "role": "target-language general instruction expert",
+        "language": "sw",
+        "script_resource_axis": "lower_resource"
+      }
+    ],
+    "matching": {
+      "base_checkpoint": "identical content hash and revision for every expert",
+      "training_recipe": "identical optimizer, schedule, sequence length, batch convention, and checkpoint policy",
+      "expert_seeds": [0, 1, 2],
+      "adapter_policy": "LoRA or full-parameter fine-tuning must be recorded; no unrecorded mixture of policies"
+    }
+  },
+  "data": {
+    "utility_probe": {
+      "name": "P_util",
+      "source": "machine-translated GSM8K train questions",
+      "size_target": [200, 500],
+      "labels": "numeric answer inherited from the English source",
+      "label_use": "only to define a differentiable teacher-forced utility readout; never used for selection evaluation"
+    },
+    "risk_probe": {
+      "name": "P_risk",
+      "source": "target-language passages paired with translations into donor language",
+      "size_target": [200, 500],
+      "labels": "none"
+    },
+    "certificate_calibration": {
+      "name": "C",
+      "source": "held-out target-language prompts",
+      "size_target": [500, 1000],
+      "labels": "none",
+      "use": "drift certificate only"
+    },
+    "development": {
+      "name": "MGSM-dev",
+      "source": "target-language development slice derived from MGSM",
+      "use": "exhaustive E1 window sweep only; never used to tune probes or tau after inspection"
+    },
+    "test": {
+      "name": "MGSM-test",
+      "source": "target-language MGSM test split",
+      "use": "untouched final reporting only"
+    },
+    "integrity": {
+      "mechanism": "SHA-256 canonical-record hashes",
+      "required_disjoint_pairs": [
+        ["P_util", "P_risk"],
+        ["P_util", "C"],
+        ["P_risk", "C"],
+        ["C", "MGSM-dev"],
+        ["C", "MGSM-test"],
+        ["MGSM-dev", "MGSM-test"]
+      ],
+      "missing_hash_policy": "fail closed"
+    }
+  },
+  "metrics": {
+    "utility": "mean teacher-forced log-probability change for the target answer token(s)",
+    "risk": "mean target-language versus donor-language log-probability margin change",
+    "selection_constraint": "predicted risk change >= -tau",
+    "primary_e1": [
+      "Spearman(predicted_window_utility, measured_window_utility)",
+      "Pearson(predicted_window_utility, measured_window_utility)",
+      "accuracy_regret_of_selected_window",
+      "top_5_window_overlap",
+      "merged_models_built",
+      "wall_clock_seconds",
+      "retention_and_drift_guard"
+    ],
+    "statistics": {
+      "expert_seeds": 3,
+      "decode_seeds": 5,
+      "regret": "paired bootstrap over item-aligned outcomes",
+      "multiple_testing": "Holm correction across languages"
+    }
+  },
+  "hard_gates": {
+    "P1": {
+      "fixture": "host plus small parameter noise fake donor",
+      "prompts": 8,
+      "random_grafts": 10,
+      "minimum_spearman": 0.9
+    },
+    "P2": {
+      "fixture": "first real donor",
+      "prompts": 8,
+      "random_grafts": 10,
+      "required_diagnostics": ["spearman", "pearson", "relative_l2_error", "epsilon_S", "lambda_proxy"]
+    },
+    "P3": {
+      "fixture": "one-layer numerical adjoint check",
+      "relative_agreement_target": 0.0001
+    },
+    "E1": {
+      "first_language_order": ["es", "zh", "sw"],
+      "minimum_spearman": 0.5,
+      "stop_rule": "stop broader experiments and investigate E2 if Spearman is below approximately 0.5 or regret is a large fraction of the achievable gain"
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.14.1",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0",
+    "datasets": "5.0.1",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "safetensors": "0.8.0",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_memory": "8192 MiB total; 4778 MiB free at freeze",
+    "environment_lock": "env.lock"
+  },
+  "provenance": {
+    "git_repository": "initialized locally during contract freeze",
+    "git_commit": null,
+    "commit_policy": "commits require explicit user request",
+    "script_integrity": "SHA-256 manifest must be generated beside every run",
+    "anti_fabrication": "unmeasured values remain absent or explicitly blocked; no RES slot may be filled from estimates"
+  },
+  "current_blockers": [
+    "The exact requested Qwen3-1.7B (or exact Qwen2.5-1.5B) checkpoint is unavailable; all Tier-A results must name the selected Qwen2.5-Coder-1.5B-Instruct fallback.",
+    "Expert training remains gated on a reproducible, matched recipe and available training data; no scientific result is valid until those manifests are hashed.",
+    "The adapter tests on random tiny decoders remain plumbing-only and must not be cited as language-model evidence."
+  ]
+}

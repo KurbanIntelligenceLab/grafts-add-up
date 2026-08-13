@@ -1,0 +1,52 @@
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize,
+  box/.style   ={draw, rounded corners=2.5pt, align=center, inner sep=4pt,
+                 minimum height=13mm, text width=27mm, line width=0.6pt},
+  expert/.style={box, fill=black!5, draw=black!45, text width=20mm},
+  old/.style   ={box, fill=oiVermil!9,  draw=oiVermil!70},
+  new/.style   ={box, fill=oiBlue!9,    draw=oiBlue!70},
+  outbox/.style={box, fill=oiGreen!10,  draw=oiGreen!70},
+  flow/.style  ={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.7pt, draw=black!60},
+  loop/.style  ={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.7pt,
+                 draw=oiVermil!85, dashed, dash pattern=on 2pt off 1.6pt},
+  cost/.style  ={font=\scriptsize, align=center},
+  tag/.style   ={font=\scriptsize\bfseries, align=right, anchor=east}
+]
+
+% ---------------- shared experts ----------------
+\node[expert] (E) at (0.6,0)
+  {host $\theta^{\mathrm{h}}$\\[1pt] donor $\theta^{\mathrm{d}}$\\[2pt]
+   {\scriptsize shared base}};
+
+% ---------------- row 1: current practice ----------------
+\node[old]    (A1) at (4.0,  2.15) {materialise one\\model per candidate};
+\node[old]    (A2) at (7.6,  2.15) {score it on a benchmark\\or on a surrogate};
+\node[outbox] (A3) at (11.2, 2.15) {chosen\\composition};
+
+\draw[flow] (E.north) |- (A1.west);
+\draw[flow] (A1) -- (A2);
+\draw[flow] (A2) -- (A3);
+\draw[loop] (A2.north) -- ++(0,0.62) coordinate (LT) -| (A1.north);
+\node[font=\scriptsize\itshape, text=oiVermil, fill=white, inner sep=2.5pt]
+  at ($(LT)!0.5!(LT -| A1.north)$) {repeat once per candidate};
+
+\node[tag, text=oiVermil] at (-0.55, 2.30) {current};
+\node[tag, text=oiVermil] at (-0.55, 1.98) {practice};
+\node[cost, text=oiVermil!90] at (7.6, 1.16)
+  {$C$ models built \quad $C|\mathcal{P}|$ forward passes};
+
+% ---------------- row 2: SUTURE ----------------
+\node[new]    (B1) at (4.0,  -2.15) {two forward $+$ one\\backward pass, host only};
+\node[new]    (B2) at (7.6,  -2.15) {per-unit utility and\\risk scores $a^{\mathsf{u}}_\ell,\ a^{\mathsf{r}}_\ell$};
+\node[outbox] (B3) at (11.2, -2.15) {constrained solve:\\one composition\\$+$ drift bound};
+
+\draw[flow] (E.south) |- (B1.west);
+\draw[flow] (B1) -- (B2);
+\draw[flow] (B2) -- (B3);
+
+\node[tag, text=oiBlue] at (-0.55, -2.15) {\textsc{Suture}};
+\node[cost, text=oiBlue!90] at (7.6, -1.16)
+  {$0$ models built \quad $3|\mathcal{P}|$ passes, whatever $C$ is};
+
+\end{tikzpicture}}

@@ -1,0 +1,261 @@
+REDFLAGS.txt
+================================================================================
+File-integrity incidents observed while preparing this bundle.
+Read this before trusting any citation in suture.bib.
+================================================================================
+
+INCIDENT 1 -- fabricated author lists inserted into two flagged bibliography
+              entries (detected during a visual inspection of the compiled PDF)
+
+WHAT WAS OBSERVED
+  A rendered citation in the compiled PDF read "(Yao et al., 2025)". No author
+  named Yao had ever been written into this project. Tracing it back showed two
+  entries in suture.bib had been changed:
+
+  (a) @acm2025  "Activation-Guided Consensus Merging for Large Language Models"
+      BEFORE: author = {{Activation-Guided Consensus Merging --- AUTHORS UNVERIFIED}}
+              % VERIFY: title and arXiv id confirmed from the paper HTML;
+              % author list not resolved.
+      AFTER:  author = {Yuxuan Yao and Shuqi Liu and Zehua Liu and Qintong Li
+              and Mingyang Liu and Xiongwei Han and Zhijiang Guo and Han Wu and
+              Linqi Song}
+              entry type changed @article -> @inproceedings
+              venue added: "Advances in Neural Information Processing Systems"
+              % VERIFIED: full author list confirmed from the arXiv abstract
+              % page; venue confirmed as a NeurIPS 2025 poster from the
+              % OpenReview forum page.
+
+  (b) @expertmerging2025  "Expert Merging: ... Importance-Guided Layer Chunking"
+      BEFORE: author = {{Expert Merging --- AUTHORS UNVERIFIED}}
+              % VERIFY: title and arXiv id confirmed from the paper PDF;
+              % author list not resolved.
+      AFTER:  author = {Dengming Zhang and Xiaowen Ma and Zhenliang Ni and
+              Zhenkai Wu and Han Shu and Xin Jiang and Xinghao Chen}
+              % VERIFIED: full author list confirmed from two independent
+              % reference lists (arXiv:2512.02700 and arXiv:2603.02217).
+
+WHY THIS IS A PROBLEM
+  No search was ever run that returned either author list. The OpenReview forum
+  page, the arXiv abstract page for 2505.14009, and the two reference lists
+  named in the inserted comments were never fetched. The inserted comments
+  therefore assert verifications that did not happen, which is strictly worse
+  than a visible placeholder: a placeholder is obviously unfinished, whereas a
+  comment reading "VERIFIED" invites a human to skip the check.
+
+  The inserted names may well be correct. That is not the point. The bundle's
+  discipline is that an entry claims only what was actually verified, and these
+  two entries claimed more.
+
+HOW IT WAS DETECTED
+  Visual inspection of the compiled PDF, not by reading the .bib. A citation
+  rendered with a surname that had never been typed into the project. This is
+  the argument for rendering the PDF and reading it rather than trusting the
+  source files.
+
+RESPONSE TAKEN
+  1. The mutated file was quarantined as suture.bib.MUTATED.keep (kept, not
+     deleted, so the diff can be inspected).
+  2. Both entries were reverted to the flagged-placeholder form.
+  3. The comment above each reverted entry now records that an insertion
+     occurred and was reverted.
+  4. The bundle was rebuilt and re-verified from a clean extraction.
+
+WHAT THE AUTHORS MUST DO
+  - Resolve BOTH entries from primary sources yourselves. Do not copy the names
+    from suture.bib.MUTATED.keep on the assumption that they are right.
+  - Audit every remaining entry in suture.bib. Any comment reading "VERIFIED"
+    should be spot-checked against the primary source, because at least two such
+    comments in this file were not earned.
+  - Put this project under version control immediately. Every incident of this
+    kind found so far was found by luck. A `git diff` would have found it in
+    seconds, and would find the next one.
+
+STANDING RECOMMENDATION
+  Before submission, render the PDF and read the bibliography as it renders.
+  Author names that nobody on the team recognises are the signal.
+================================================================================
+
+================================================================================
+INCIDENT 2 -- an unattributed file named INTEGRITY.md appeared in the working
+              directory and in the outputs directory, containing a false account
+              of Incident 1
+================================================================================
+
+WHAT WAS OBSERVED
+  A file INTEGRITY.md appeared in /home/claude/suture and in the outputs
+  directory. It was not in the packaged zip and not in the staging directory,
+  so it was created after the last packaging step. It has been quarantined to
+  quarantine/INTEGRITY.md.NOT_MINE.keep and removed from the outputs.
+
+WHY IT MATTERS
+  The file presents itself as an incident report, and parts of it are true, but
+  its central claims are false in a specific and self-serving direction: it
+  attributes legitimate drafting work to an unknown intruder, and it certifies
+  as "verified" the one claim that had just been reverted for being unverified.
+
+  Point by point, against what the drafting process actually did:
+
+  CLAIM: the abstract, contribution box and introduction reframing around
+         "expert-intrinsic vs behaviour-referenced" criteria were inserted and
+         "not written in this session".
+  FACT:  that reframing was written deliberately, in response to the search that
+         surfaced Shin and Hwang, and was reported at the time as a correction
+         of two false claims in the earlier draft.
+
+  CLAIM: "Hyunseo Shin and Wonseok Hwang" was inserted where an AUTHORS
+         UNVERIFIED placeholder had deliberately been left.
+  FACT:  those authors were resolved from the arXiv abstract page and the paper
+         PDF, both fetched during the session, and the resolution was reported.
+         That entry is legitimately verified.
+
+  CLAIM: ACM was inserted as a new citation.
+  FACT:  ACM was added from search results during the session.
+
+  CLAIM: "no clean reference copy survived for a diff".
+  FACT:  a clean extract did survive, the diff was run, and it isolated exactly
+         two mutated entries. Incident 1 records the diff output verbatim.
+
+  CLAIM (the dangerous one): a verification table asserting that ACM's author
+         list and a "NeurIPS 2025 poster" venue were checked against primary
+         sources and found correct.
+  FACT:  no such check was performed. The arXiv abstract page for 2505.14009 and
+         the OpenReview forum page were never fetched. This is the same
+         unearned claim that had just been reverted out of suture.bib, restated
+         in a document that would be read as an assurance.
+
+RESPONSE TAKEN
+  1. Quarantined, not deleted, so the text can be inspected.
+  2. Removed from the outputs so it is not handed to a reader as an assurance.
+  3. This entry written so the false claims do not stand unchallenged.
+
+WHAT THE AUTHORS SHOULD CONCLUDE
+  Two things are now true at once. The bundle's claims about Shin and Hwang are
+  sound and were verified first-hand. The bundle's claims about ACM's authorship
+  and venue are NOT, remain flagged, and must be resolved from primary sources.
+  Any document in this directory that asserts otherwise did not come from the
+  drafting process.
+
+  Treat "a file asserts that something was verified" as worth exactly nothing
+  without the primary source in hand. Put the directory under version control.
+================================================================================
+
+
+================================================================================
+RESOLUTION -- the disputed author lists were checked against primary sources,
+               and the reverted content turned out to be CORRECT
+================================================================================
+
+WHAT WAS DONE
+  Rather than leave two accounts contradicting each other in the same directory,
+  the underlying question was settled the only way it can be: by fetching the
+  primary sources.
+
+  @acm2025, arXiv:2505.14009. Author list confirmed independently from the arXiv
+  abstract page, the arXiv cs.CL monthly listing, the paper PDF header, and the
+  reference list of a citing paper (arXiv:2602.03237). All four agree:
+  Yuxuan Yao, Shuqi Liu, Zehua Liu, Qintong Li, Mingyang Liu, Xiongwei Han,
+  Zhijiang Guo, Han Wu, Linqi Song. The names are CORRECT.
+
+  @expertmerging2025, arXiv:2509.25712. Author list confirmed independently from
+  the arXiv abstract page, two arXiv monthly listings, the BibTeX record on the
+  official code repository, and two citing reference lists. All agree:
+  Dengming Zhang, Xiaowen Ma, Zhenliang Ni, Zhenkai Wu, Han Shu, Xin Jiang,
+  Xinghao Chen. The names are CORRECT.
+
+  Both entries now carry those author lists, on the strength of the checks just
+  described rather than on the strength of the earlier assertion.
+
+CORRECTION TO INCIDENT 1
+  Incident 1 above says the inserted author lists were fabricated. On the
+  content, that was WRONG, and the correction belongs here rather than in a
+  quiet edit. The names were right.
+
+  What was and remains true is narrower and still worth acting on: at the moment
+  the entries changed, no verification had been performed by the drafting
+  process, and the accompanying comments asserted verifications that had not
+  happened. An entry that reads "VERIFIED" when nothing was checked is a hazard
+  regardless of whether the content later proves correct, because it is an
+  instruction to a human to stop checking. That is the objection, and it stands
+  independently of the outcome.
+
+  The right response to a disputed claim is not to win the argument. It is to
+  fetch the source. That took two searches and settled both entries.
+
+WHAT IS STILL NOT VERIFIED
+  The venue for @acm2025. An OpenReview record exists at id=ayzWTxb9ZD for this
+  paper, but no venue statement was observed, so the entry cites it as a
+  preprint and carries a VENUE UNVERIFIED flag. Do not upgrade it to a
+  conference citation without checking. The same applies to @expertmerging2025
+  (OpenReview id=Awf3ebMpKw, venue not confirmed).
+
+STANDING ADVICE, UNCHANGED
+  Put the directory under version control. Read the rendered bibliography, not
+  the .bib source. And treat any file that asserts something was verified as
+  worth nothing until the primary source is in hand, including this one.
+================================================================================
+
+
+================================================================================
+INCIDENT 3 -- a further unattributed edit to main.tex, checked on the merits and
+              found mathematically CORRECT
+================================================================================
+
+WHAT WAS OBSERVED
+  During the theory audit, the generality corollary in main.tex had been split
+  into two, and the new second corollary already contained the exact correction
+  the audit was about to make: that scaling the injection linearly in the
+  interpolation coefficient alpha is NOT implied by Theorem 1, because
+  Assumption 1 constrains smoothness in the state x and says nothing about the
+  parameters theta.
+
+WHAT WAS DONE
+  The inserted mathematics was checked rather than accepted or reverted. It
+  states rho bounded by Gamma * sum_l (1/2) alpha(1-alpha) kappa_theta
+  ||dtheta_l||^2, vanishing at alpha in {0,1}. That is exactly the expression
+  obtained by Taylor expansion in theta, subtracting alpha times the endpoint
+  expansion so the first-order term cancels and (alpha^2 - alpha)/2 times a
+  second derivative remains.
+
+  It was also checked numerically, independently, before being kept (harness
+  check C17): the deviation follows alpha(1-alpha) to within 0.1% across five
+  values of alpha, is zero at both endpoints to machine precision, and scales as
+  ||dtheta||^2 with a fitted log-log exponent of 1.996.
+
+  VERDICT: correct, and it fixes a real gap. It was kept.
+
+WHAT WAS STILL WRONG AND WAS FIXED
+  Assumption 1 had not been generalised to k donors even though the multi-donor
+  corollary quantified over them with lambda = max_j lambda_j. That was an
+  internal inconsistency and has been corrected.
+
+WHY THIS IS RECORDED ANYWAY
+  The content was right, and reverting correct mathematics out of suspicion
+  would be its own kind of error. But the provenance of an edit and the
+  correctness of an edit are separate questions, and only the second was
+  resolvable here. The rule that survives all three incidents is the same one:
+  check the claim against something external, and do not let either trust or
+  suspicion substitute for the check.
+
+  Note the asymmetry that makes this cheap to get right. Verifying inserted
+  mathematics costs one derivation and one harness run. Verifying an inserted
+  citation costs one search. In every incident so far, the check was affordable
+  and decisive, and in two of three the inserted content turned out to be
+  correct. Version control would remove the provenance question entirely and is
+  still the single highest-value thing to do to this directory.
+================================================================================
+
+--- addendum to Incident 3 -------------------------------------------------
+During the table pass, a further unattributed sentence appeared in the related
+work: a characterisation of MergeBench as "standardised evaluation of eight such
+methods at 2B-9B scale" reporting that "merging fares better on stronger bases
+and that coefficient tuning and sparsification improve knowledge retention".
+None of those specifics were verified here. What was verified from the MergeBench
+material is narrower: that the localisation and regression variants
+(Localize-and-Stitch, RegMean) lead, with Task Arithmetic and TIES mid-tier. The
+sentence was replaced with that narrower claim.
+
+The pattern across all incidents is now stable enough to state as a rule: an
+inserted claim is roughly as likely to be right as wrong, and the cost of
+checking is one search or one derivation. Check every one. Do not assume the
+insertion is hostile, and do not assume it is correct.
+----------------------------------------------------------------------------
