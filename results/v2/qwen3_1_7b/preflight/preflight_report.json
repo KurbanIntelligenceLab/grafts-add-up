@@ -1,0 +1,50 @@
+{
+  "acquire": {
+    "allow_download": false,
+    "config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+    "model_id": "Qwen/Qwen3-1.7B",
+    "path": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "config": {
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "chat_template_present": true,
+    "config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+    "hidden_size": 2048,
+    "model_type": "qwen3",
+    "num_hidden_layers": 28,
+    "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "torch_dtype": "bfloat16",
+    "vocab_size": 151936
+  },
+  "contract_version": 2,
+  "device": "cuda",
+  "ended_at": "2026-09-12T16:47:25.765512+00:00",
+  "fallback": null,
+  "load": {
+    "class_name": "Qwen3ForCausalLM",
+    "dtype": "torch.bfloat16",
+    "n_parameters_including_tied_lm_head": 2031739904,
+    "n_parameters_unique": 1720574976,
+    "snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc"
+  },
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "schema_version": 1,
+  "smoke": {
+    "cache_no_cache_token_match": true,
+    "finite_logits": true,
+    "fixture_cache_shape_match": true,
+    "fixture_graft_tokens": 6,
+    "fixture_layers": 3,
+    "fixture_residual_len": 4,
+    "generation_preview": "2 + 2 = 4.",
+    "merged_model_builds": 1,
+    "n_layers": 28,
+    "peak_vram_gib": 3.233346462249756
+  },
+  "started_at": "2026-09-12T16:46:58.614301+00:00",
+  "status": "PASS_PREFLIGHT"
+}

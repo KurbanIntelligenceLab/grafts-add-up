@@ -1,0 +1,234 @@
+{
+  "contract_version": 1,
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "contract_status": "frozen_preflight_only",
+  "frozen_at": "2026-09-13T15:29:00+03:00",
+  "purpose": "Independent scale check of SUTURE on the public LightOn Qwen3-8B specialists. This contract does not authorize or alter Tier-A or Qwen3-1.7B artifacts.",
+  "authorization": {
+    "study": "B3",
+    "selection_rule": "score contiguous layer intervals without constructing a grafted model",
+    "measurement_rule": "measurement is a separate post-selection stage and must use only declared held-out records",
+    "canonical_artifacts_immutable": true
+  },
+  "models": {
+    "donor": {
+      "id": "lightonai/Qwen3-8B-EN",
+      "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1",
+      "role": "English reasoning specialist"
+    },
+    "hosts": [
+      {
+        "language": "fr",
+        "id": "lightonai/Qwen3-8B-FR",
+        "revision": "a53d601e18842b62bd43b3718cf3900ba2d7bbf6",
+        "role": "French native reasoning specialist",
+        "published_swap": {
+          "id": "lightonai/Qwen3-8B-FR-Swap",
+          "revision": "9219ee997381f2fc0558168e41c7fd19fff5c620",
+          "window_inclusive": [
+            13,
+            22
+          ]
+        }
+      },
+      {
+        "language": "zh",
+        "id": "lightonai/Qwen3-8B-ZH",
+        "revision": "b100a627fcbe1af4391de73cb962e7564aff877a",
+        "role": "Chinese native reasoning specialist",
+        "published_swap": {
+          "id": "lightonai/Qwen3-8B-ZH-Swap",
+          "revision": "ca13acae7d919cdb66ad1cd29e1e1e9352798cc6",
+          "window_inclusive": [
+            13,
+            20
+          ]
+        }
+      }
+    ]
+  },
+  "architecture": {
+    "model_type": "qwen3",
+    "class_name": "Qwen3ForCausalLM",
+    "layer_path": "model.layers",
+    "n_layers": 36,
+    "hidden_size": 4096,
+    "intermediate_size": 12288,
+    "num_attention_heads": 32,
+    "num_key_value_heads": 8,
+    "head_dim": 128,
+    "vocab_size": 151936,
+    "max_position_embeddings": 40960,
+    "torch_dtype": "bfloat16"
+  },
+  "tokenizer": {
+    "required_files": [
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "merges.txt",
+      "vocab.json"
+    ],
+    "must_match_across_pair": true,
+    "padding_side": "left",
+    "pad_token_policy": "must_be_present_in_snapshot",
+    "chat_template_policy": "record_exact_template_hash"
+  },
+  "loading": {
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "attn_implementation": "eager",
+    "quantization": null,
+    "device_policy": "both_full_models_on_one_cuda_device",
+    "selection_use_cache": false,
+    "measurement_use_cache": false,
+    "fallback": null
+  },
+  "graft": {
+    "interval_indexing": "zero_based_inclusive",
+    "replace": "donor model.layers entries at selected indices",
+    "retain_from_host": [
+      "model.embed_tokens",
+      "model.norm",
+      "lm_head"
+    ],
+    "selection_allows_grafted_model_builds": false,
+    "measurement_allows_grafted_model_builds": true
+  },
+  "data": {
+    "sources": {
+      "utility": {
+        "dataset": "openai/gsm8k",
+        "config": "main",
+        "split": "train",
+        "revision": "740312add88f781978c0658806c59bc2815b9866",
+        "selection": "rows 0 through 499 in dataset order",
+        "license": "mit"
+      },
+      "risk": {
+        "dataset": "CohereLabsCommunity/multilingual-reward-bench",
+        "config": "translation",
+        "split": "test",
+        "revision": "04120fd1f0ef4faed0d6fd4fb632a14476fb0498",
+        "selection": "first 500 unique English source/chosen records after deterministic SHA-256 ordering",
+        "license": "odc-by"
+      },
+      "translation": {
+        "id": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+        "method": "greedy chat generation with thinking disabled",
+        "max_new_tokens": 96,
+        "batch_size": 1
+      },
+      "held_out_measurement": {
+        "dataset": "lightonai/mgsm-rev2",
+        "revision": "1463c6dc7991a8751b8e28e76f6c561b9201eb55",
+        "split": "test",
+        "configs": {
+          "fr": "fr",
+          "zh": "zh"
+        },
+        "n_items": 250,
+        "license": "cc-by-sa-4.0"
+      }
+    },
+    "selection": {
+      "shape": "interval",
+      "tau": 0.05,
+      "utility_manifest": "data/P_util.jsonl",
+      "risk_manifest": "data/P_risk.jsonl",
+      "minimum_utility_records": 8,
+      "minimum_risk_records": 8,
+      "max_length": 128,
+      "batch_size": 1
+    },
+    "probe_manifest_format": {
+      "kind": "hashed_jsonl",
+      "header_required": true,
+      "record_fields": [
+        "id",
+        "input_text",
+        "utility_texts",
+        "risk_target_texts",
+        "risk_donor_texts"
+      ],
+      "readout_texts_tokenized_without_special_tokens": true,
+      "readout_uses_first_token_only": true
+    },
+    "windows": {
+      "shape": "contiguous",
+      "enumeration": "all intervals [i,j] with 0 <= i <= j < 36",
+      "expected_count": 666
+    },
+    "held_out_measurement": {
+      "required": true,
+      "must_be_disjoint_from_selection": true,
+      "touch_policy": "only after selection code and score artifacts are frozen",
+      "objective": "mean teacher-forced answer log-probability per target token",
+      "candidates": [
+        "host_baseline",
+        "selected",
+        "published_reference"
+      ],
+      "selection_ground_truth_scope": "candidate comparison only; not a full 666-window ground-truth sweep",
+      "cache": false,
+      "batch_size": 1,
+      "manifest": "data/MGSM_rev2_test.jsonl",
+      "record_fields": [
+        "id",
+        "input_text",
+        "answer_number"
+      ],
+      "max_length": 256,
+      "truncation": "forbid"
+    }
+  },
+  "published_ground_truth": {
+    "source_paper": "https://arxiv.org/abs/2605.26735",
+    "source_cards": [
+      "https://huggingface.co/lightonai/Qwen3-8B-EN",
+      "https://huggingface.co/lightonai/Qwen3-8B-FR",
+      "https://huggingface.co/lightonai/Qwen3-8B-ZH"
+    ],
+    "published_window_is_reference_only": true,
+    "full_machine_readable_sweep_not_included": true,
+    "interpretation": "Published windows are external reference points until an independent held-out sweep is measured under this contract."
+  },
+  "compute": {
+    "minimum_gpu_memory_gib": 40,
+    "recommended_gpu_memory_gib": 80,
+    "gpu_count": 1,
+    "estimated_model_weight_memory_gib": 32,
+    "runtime_memory_headroom_required": true,
+    "cpu_ram_recommended_gib": 64
+  },
+  "results": {
+    "root": "results/b3/lighton_qwen3_8b",
+    "preflight_report": "preflight/preflight_report.json",
+    "selection_scores": "score/selection_scores.json",
+    "selection": "score/selection.json",
+    "held_out_measurement_manifest": "data/MGSM_rev2_test.jsonl",
+    "measurement": "measure/measure.json",
+    "measurements": "measure/measurements.jsonl",
+    "run_manifest_required": true
+  },
+  "stop_rules": [
+    "STOP_SETUP if either exact revision is unavailable or any snapshot file is missing",
+    "STOP_SETUP if model class, architecture, tokenizer, dtype, or pair compatibility differs from this contract",
+    "STOP_SETUP if quantization, remote-code loading, device fallback, or cache-enabled selection is observed",
+    "STOP_SELECTION if a merged/grafted model is built while scores or the interval choice are being computed",
+    "STOP_SELECTION if a probe manifest is missing, malformed, undersized, or overlaps another declared set",
+    "STOP_MEASUREMENT if held-out measurement records are not frozen and disjoint from selection records",
+    "Do not report a B3 result from a partial, synthetic, cached, or fallback run"
+  ],
+  "forbidden": [
+    "Qwen/Qwen3-1.7B as a B3 host or donor",
+    "Qwen2.5",
+    "quantized or GGUF checkpoints",
+    "mutable main/latest revisions",
+    "remote-code model classes",
+    "Tier-A result roots",
+    "Qwen3-8B-*-Swap checkpoints as substitutes for independently routed host/donor models"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "command": "python -u paper_iclr/tier_a_data.py --language sw --output-dir results/tier_a/sw --device cuda --translation-batch-size 4 --max-new-tokens 96",
+  "created_at": "2026-08-12T09:54:49.797513+00:00",
+  "files": {
+    "inputs": {
+      "results/tier_a/sw/C.jsonl": "c705e4da33e9c8a1740838bded18de027e2031aae6c63e15f65c028467ce8556",
+      "results/tier_a/sw/MGSM_dev.jsonl": "a246a5cbd2bb4e951e049933fb9754f6aa0799c58e1f423ec75ba73776398f18",
+      "results/tier_a/sw/MGSM_test.jsonl": "a80a632f7e32ad0482649726497abd3db817da663a314b9b26e64fb8555b1572",
+      "results/tier_a/sw/P_risk.jsonl": "50b7a6c427fbea31a9a0a3a5d83c02d0b4633195a3955fb69b419963d0e2397b",
+      "results/tier_a/sw/P_util.jsonl": "c4dd315ca053e3c13e0cbaccb08522df7116e4853d4f044d47005913a653cf92",
+      "results/tier_a/sw/data_build_summary.json": "c77819549ed830169ef0900918c48abc6e80a97dabcda0240c57765ea1f1fae4",
+      "results/tier_a/sw/host_train.jsonl": "f17a45b7cda4e76ffd9e0cb4ac3d0041de1e441ba2b0666d6a5e8fc3a433b7ea"
+    },
+    "outputs": {
+      "results/tier_a/sw/C.jsonl": "c705e4da33e9c8a1740838bded18de027e2031aae6c63e15f65c028467ce8556",
+      "results/tier_a/sw/MGSM_dev.jsonl": "a246a5cbd2bb4e951e049933fb9754f6aa0799c58e1f423ec75ba73776398f18",
+      "results/tier_a/sw/MGSM_test.jsonl": "a80a632f7e32ad0482649726497abd3db817da663a314b9b26e64fb8555b1572",
+      "results/tier_a/sw/P_risk.jsonl": "50b7a6c427fbea31a9a0a3a5d83c02d0b4633195a3955fb69b419963d0e2397b",
+      "results/tier_a/sw/P_util.jsonl": "c4dd315ca053e3c13e0cbaccb08522df7116e4853d4f044d47005913a653cf92",
+      "results/tier_a/sw/adapters/donor/README.md": "a70eb4d38ca247c37c5509ffeefd75812320790f5254d917486bf9c7ee63ac9e",
+      "results/tier_a/sw/adapters/donor/chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+      "results/tier_a/sw/adapters/donor/donor/adapter_config.json": "96dd2200e3df6f8b66427d2ea169eb8f7c04f808a1a966229c28b1878deae774",
+      "results/tier_a/sw/adapters/donor/donor/adapter_model.safetensors": "8401bbd0d062ac96584555069941cd40a3d00722d146d297f1d2bf900e375d49",
+      "results/tier_a/sw/adapters/donor/tokenizer.json": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee",
+      "results/tier_a/sw/adapters/donor/tokenizer_config.json": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e",
+      "results/tier_a/sw/adapters/donor/training_metadata.json": "1619dc04873f3a6bdfcd6f6616006c25668aa2e8f6c4ed0810a6963d40ba43d3",
+      "results/tier_a/sw/adapters/host/README.md": "a70eb4d38ca247c37c5509ffeefd75812320790f5254d917486bf9c7ee63ac9e",
+      "results/tier_a/sw/adapters/host/chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+      "results/tier_a/sw/adapters/host/host/adapter_config.json": "73c9cb5b61425d935a5f2dbca15a1743265594f5c2afb9ebae728504a3be4b98",
+      "results/tier_a/sw/adapters/host/host/adapter_model.safetensors": "8e57f0e6513f55b16b0513238287bc96fd6eb26d1bb1d57e3ab3d6e45200ba63",
+      "results/tier_a/sw/adapters/host/tokenizer.json": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee",
+      "results/tier_a/sw/adapters/host/tokenizer_config.json": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e",
+      "results/tier_a/sw/adapters/host/training_metadata.json": "c9c150293989ba006045c60a1ca22d321565329348a51d4eb759f4a6d0e1276c",
+      "results/tier_a/sw/data_build_summary.json": "c77819549ed830169ef0900918c48abc6e80a97dabcda0240c57765ea1f1fae4",
+      "results/tier_a/sw/host_train.jsonl": "f17a45b7cda4e76ffd9e0cb4ac3d0041de1e441ba2b0666d6a5e8fc3a433b7ea",
+      "results/tier_a/sw/pilots/P1_fake_donor_scores.json": "7591377dad9ff738835e712526e53cc5a943795779822826db4aae7117f5c780",
+      "results/tier_a/sw/pilots/P2_real_donor_scores.json": "ac5971a82f60a8594961e50680a1397146d7be638fcf828adbdf1c9f134d41a7",
+      "results/tier_a/sw/pilots/pilots.json": "d19a4eb99fca073ed425613e7b563995596a066e62ce708920cee3851b253ca8"
+    },
+    "scripts_and_environment": {
+      "env.lock": "08ba0b846ed27e56625c1df12f530d1ac79bb8503ed846488f0ce8601b057763",
+      "paper_iclr/data_manifest.py": "2be79a3fdf6144b1d8d63a2c90c80b6f4365977303d23dc33d9251ae6f1e5288",
+      "paper_iclr/run_manifest.py": "7c049af90e482323af8db485c478fcb76bc606c7f6844e2d7cc1df3e954d5cb2",
+      "paper_iclr/suture_metrics.py": "82a30cae17c8cea30e8e2e2a8861dbfdaabaede9ae10fbb1b792982aba24936a",
+      "paper_iclr/suture_torch.py": "3349bbfe363136aa3ce5a217784b03bec9e55ce5360fa439379f85598a51f616",
+      "paper_iclr/tier_a_data.py": "97ec0c12c22cfa61a54d93f7be8f050bc3d954437bb4e253aa3880fe12c4f48f",
+      "paper_iclr/tier_a_gate.py": "a05330a4a73278710c921bb01f221f88a70494de1ad7a0562265b3be279e94ab",
+      "paper_iclr/tier_a_train.py": "173e34f13c9d2f614230dd742362b3085e69716a9d3db6bb372ef63e17b07134"
+    }
+  },
+  "git_commit": null,
+  "language": "sw",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "run_kind": "data",
+  "schema_version": 1,
+  "selection_contract": {
+    "e1_merged_models_built": null,
+    "e1_sweep_is_exhaustive": null,
+    "merged_models_built_during_selection": 0,
+    "p1_p2_results": {}
+  }
+}

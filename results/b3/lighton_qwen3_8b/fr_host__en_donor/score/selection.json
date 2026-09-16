@@ -1,0 +1,24 @@
+{
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "language": "fr",
+  "merged_model_builds_during_selection": 0,
+  "published_reference_window": [
+    13,
+    22
+  ],
+  "schema_version": 1,
+  "selection": {
+    "epsilon_S": 183.3470437965393,
+    "graft": [
+      13,
+      14,
+      15
+    ],
+    "objective": 0.9189339634142816,
+    "predicted_risk": 1.667547991298139,
+    "predicted_utility": 0.9189339634142817,
+    "shape": "interval",
+    "tau": 0.05
+  },
+  "status": "SCORES_ONLY"
+}

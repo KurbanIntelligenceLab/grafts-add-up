@@ -1,0 +1,577 @@
+{
+  "candidate_rows": [
+    {
+      "end": 0,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 2.3289610147476196,
+        "injection_only": -7.0146050453186035,
+        "normalized_suture": 0.00032247907185605217,
+        "parameter_movement": -0.8174939472228289,
+        "path_integrated_state": 0.004771232604980469,
+        "risk_readout": -0.030871903523802757,
+        "suture": 0.0022620633244514465
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.525348544120789
+    },
+    {
+      "end": 1,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 1.8752150535583496,
+        "injection_only": -12.152008056640625,
+        "normalized_suture": 0.0020096496211554748,
+        "parameter_movement": -0.8296590056270361,
+        "path_integrated_state": 0.024723052978515625,
+        "risk_readout": -0.009005111642181873,
+        "suture": 0.02442127838730812
+      },
+      "start": 1,
+      "teacher_forced_sequence_logprob": -12.564828515052795
+    },
+    {
+      "end": 2,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 1.5149517059326172,
+        "injection_only": -20.882247924804688,
+        "normalized_suture": 0.0005606988764836694,
+        "parameter_movement": -0.8421968538314104,
+        "path_integrated_state": 0.011745452880859375,
+        "risk_readout": -0.0035959735978394747,
+        "suture": 0.011708652949891984
+      },
+      "start": 2,
+      "teacher_forced_sequence_logprob": -12.559179186820984
+    },
+    {
+      "end": 3,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 1.3785023093223572,
+        "injection_only": -2.9386537075042725,
+        "normalized_suture": 0.0042438115002658445,
+        "parameter_movement": -0.8503739256411791,
+        "path_integrated_state": 0.012569427490234375,
+        "risk_readout": -0.012634029146283865,
+        "suture": 0.012471092399209738
+      },
+      "start": 3,
+      "teacher_forced_sequence_logprob": -12.570083856582642
+    },
+    {
+      "end": 4,
+      "free_generation_exact_match": 0.125,
+      "method_scores": {
+        "adjoint_only": 1.3376049399375916,
+        "injection_only": -2.7461758852005005,
+        "normalized_suture": 0.0033879402897152187,
+        "parameter_movement": -0.8522062338888645,
+        "path_integrated_state": 0.009296417236328125,
+        "risk_readout": 0.002611747244372964,
+        "suture": 0.009303879924118519
+      },
+      "start": 4,
+      "teacher_forced_sequence_logprob": -12.552329421043396
+    },
+    {
+      "end": 5,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 1.4067349433898926,
+        "injection_only": -2.939244866371155,
+        "normalized_suture": 0.004046802878734102,
+        "parameter_movement": -0.8829592484980822,
+        "path_integrated_state": 0.0116424560546875,
+        "risk_readout": 0.008732144255191088,
+        "suture": 0.011894544586539268
+      },
+      "start": 5,
+      "teacher_forced_sequence_logprob": -12.569905519485474
+    },
+    {
+      "end": 6,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 1.419933021068573,
+        "injection_only": -2.6667237281799316,
+        "normalized_suture": 0.0054293751061664655,
+        "parameter_movement": -0.8979620970785618,
+        "path_integrated_state": 0.014923095703125,
+        "risk_readout": -0.0009204071247950196,
+        "suture": 0.014478643424808979
+      },
+      "start": 6,
+      "teacher_forced_sequence_logprob": -12.557386636734009
+    },
+    {
+      "end": 7,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 1.3490552306175232,
+        "injection_only": -2.5199437141418457,
+        "normalized_suture": 0.00578302886584736,
+        "parameter_movement": -0.8925552908331156,
+        "path_integrated_state": 0.01495361328125,
+        "risk_readout": -0.0006990879774093628,
+        "suture": 0.014572907239198685
+      },
+      "start": 7,
+      "teacher_forced_sequence_logprob": -12.602160215377808
+    },
+    {
+      "end": 1,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 4.204176068305969,
+        "injection_only": -19.16661310195923,
+        "normalized_suture": 0.002332128693011527,
+        "parameter_movement": -1.647152952849865,
+        "path_integrated_state": 0.029494285583496094,
+        "risk_readout": -0.03987701516598463,
+        "suture": 0.026683341711759567
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.547077298164368
+    },
+    {
+      "end": 5,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 2.744339883327484,
+        "injection_only": -5.685420751571655,
+        "normalized_suture": 0.007434743168449321,
+        "parameter_movement": -1.7351654823869467,
+        "path_integrated_state": 0.020938873291015625,
+        "risk_readout": 0.011343891499564052,
+        "suture": 0.021198424510657787
+      },
+      "start": 4,
+      "teacher_forced_sequence_logprob": -12.547294735908508
+    },
+    {
+      "end": 9,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 2.8115339875221252,
+        "injection_only": -4.4004679918289185,
+        "normalized_suture": 0.006464170112027009,
+        "parameter_movement": -1.797221327200532,
+        "path_integrated_state": 0.01393747329711914,
+        "risk_readout": -0.028378450078889728,
+        "suture": 0.014393640914931893
+      },
+      "start": 8,
+      "teacher_forced_sequence_logprob": -12.545040130615234
+    },
+    {
+      "end": 12,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 4.0329684019088745,
+        "injection_only": -6.477595925331116,
+        "normalized_suture": 0.027254226436832122,
+        "parameter_movement": -2.7036251071840525,
+        "path_integrated_state": 0.06024932861328125,
+        "risk_readout": -0.04642098071053624,
+        "suture": 0.060855807503685355
+      },
+      "start": 10,
+      "teacher_forced_sequence_logprob": -12.53264582157135
+    },
+    {
+      "end": 3,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 7.097630083560944,
+        "injection_only": -42.98751473426819,
+        "normalized_suture": 0.007136639069761041,
+        "parameter_movement": -3.3397237323224545,
+        "path_integrated_state": 0.053809165954589844,
+        "risk_readout": -0.05610701791010797,
+        "suture": 0.05086308706086129
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.534315466880798
+    },
+    {
+      "end": 7,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 5.51332813501358,
+        "injection_only": -10.872088193893433,
+        "normalized_suture": 0.018647147140463144,
+        "parameter_movement": -3.525682870298624,
+        "path_integrated_state": 0.050815582275390625,
+        "risk_readout": 0.00972439639735967,
+        "suture": 0.05024997517466545
+      },
+      "start": 4,
+      "teacher_forced_sequence_logprob": -12.51654040813446
+    },
+    {
+      "end": 11,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 5.526936233043671,
+        "injection_only": -8.947066307067871,
+        "normalized_suture": 0.027068246436647667,
+        "parameter_movement": -3.601496497169137,
+        "path_integrated_state": 0.061449527740478516,
+        "risk_readout": -0.06485059042461216,
+        "suture": 0.062408024445176125
+      },
+      "start": 8,
+      "teacher_forced_sequence_logprob": -12.559913039207458
+    },
+    {
+      "end": 17,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 4.887780010700226,
+        "injection_only": -9.916626930236816,
+        "normalized_suture": 0.04280638076341107,
+        "parameter_movement": -3.6231273375451565,
+        "path_integrated_state": 0.10840225219726562,
+        "risk_readout": -0.02562428405508399,
+        "suture": 0.10798550443723798
+      },
+      "start": 14,
+      "teacher_forced_sequence_logprob": -12.533333897590637
+    },
+    {
+      "end": 23,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 2.44144144654274,
+        "injection_only": -21.825531601905823,
+        "normalized_suture": 0.012650982197470654,
+        "parameter_movement": -3.6907486971467733,
+        "path_integrated_state": 0.070343017578125,
+        "risk_readout": 0.03325215820223093,
+        "suture": 0.07013165857642889
+      },
+      "start": 20,
+      "teacher_forced_sequence_logprob": -12.576619386672974
+    },
+    {
+      "end": 7,
+      "free_generation_exact_match": 0.125,
+      "method_scores": {
+        "adjoint_only": 12.610958218574524,
+        "injection_only": -53.85960292816162,
+        "normalized_suture": 0.025783786210224188,
+        "parameter_movement": -6.8654066026210785,
+        "path_integrated_state": 0.10462474822998047,
+        "risk_readout": -0.0463826215127483,
+        "suture": 0.10111306223552674
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.521180987358093
+    },
+    {
+      "end": 15,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 10.571861565113068,
+        "injection_only": -18.126474499702454,
+        "normalized_suture": 0.059357355665193914,
+        "parameter_movement": -7.198191367089748,
+        "path_integrated_state": 0.13701868057250977,
+        "risk_readout": -0.11168263456784189,
+        "suture": 0.13865508092567325
+      },
+      "start": 8,
+      "teacher_forced_sequence_logprob": -12.481438279151917
+    },
+    {
+      "end": 23,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 6.8651953637599945,
+        "injection_only": -33.055938839912415,
+        "normalized_suture": 0.05037005305507829,
+        "parameter_movement": -7.371303360909224,
+        "path_integrated_state": 0.17331314086914062,
+        "risk_readout": 0.02564134751446545,
+        "suture": 0.17278728494420648
+      },
+      "start": 16,
+      "teacher_forced_sequence_logprob": -12.536188006401062
+    },
+    {
+      "end": 27,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 4.066947624087334,
+        "injection_only": -68.3557254076004,
+        "normalized_suture": 0.014626806354512984,
+        "parameter_movement": -7.336771734058857,
+        "path_integrated_state": 0.08548545837402344,
+        "risk_readout": 0.050652853096835315,
+        "suture": 0.08607654296793044
+      },
+      "start": 20,
+      "teacher_forced_sequence_logprob": -12.547578692436218
+    },
+    {
+      "end": 13,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 20.722773551940918,
+        "injection_only": -67.00399684906006,
+        "normalized_suture": 0.06615418052709839,
+        "parameter_movement": -12.271532479673624,
+        "path_integrated_state": 0.19341039657592773,
+        "risk_readout": -0.12943490676116198,
+        "suture": 0.19143813278060406
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.471711874008179
+    },
+    {
+      "end": 27,
+      "free_generation_exact_match": 0.1,
+      "method_scores": {
+        "adjoint_only": 10.950747773051262,
+        "injection_only": -84.56821322441101,
+        "normalized_suture": 0.07133283856044033,
+        "parameter_movement": -12.80939188785851,
+        "path_integrated_state": 0.23668861389160156,
+        "risk_readout": 0.01441169308964163,
+        "suture": 0.23706217971630394
+      },
+      "start": 14,
+      "teacher_forced_sequence_logprob": -12.508023381233215
+    },
+    {
+      "end": 27,
+      "free_generation_exact_match": 0.075,
+      "method_scores": {
+        "adjoint_only": 31.67352132499218,
+        "injection_only": -151.57221007347107,
+        "normalized_suture": 0.13748701908753871,
+        "parameter_movement": -25.080924367532134,
+        "path_integrated_state": 0.4300990104675293,
+        "risk_readout": -0.11502321367152035,
+        "suture": 0.428500312496908
+      },
+      "start": 0,
+      "teacher_forced_sequence_logprob": -12.399678349494934
+    }
+  ],
+  "candidate_windows": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      14,
+      17
+    ],
+    [
+      20,
+      23
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      8,
+      15
+    ],
+    [
+      16,
+      23
+    ],
+    [
+      20,
+      27
+    ],
+    [
+      0,
+      13
+    ],
+    [
+      14,
+      27
+    ],
+    [
+      0,
+      27
+    ]
+  ],
+  "canonical_artifacts_modified": false,
+  "contract_sha256": "c76d13596eb90f0b8c52f902d600efb372abb7053cde3e67bc686c31f6dadb88",
+  "contract_version": 1,
+  "device": "cuda",
+  "ground_truth_source": "archived canonical v1 free-generation sweep; no new generation in this comparison",
+  "max_length": 128,
+  "methods": [
+    "suture",
+    "injection_only",
+    "adjoint_only",
+    "parameter_movement",
+    "risk_readout",
+    "normalized_suture",
+    "path_integrated_state"
+  ],
+  "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "n_candidate_windows": 24,
+  "n_layers": 28,
+  "path_integral": {
+    "interpretation": "state-space local path diagnostic, not a parameter-space certified bound",
+    "nodes": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "quadrature": "trapezoidal"
+  },
+  "prompt_limit": 8,
+  "qwen3_followup": {
+    "artifact": "results/reviewer_followup/qwen3_1_7b/repair_01/plumbing_diagnostic.json",
+    "e1_authorized": false,
+    "status": "STOP_P1_FAKE"
+  },
+  "summary": {
+    "adjoint_only": {
+      "pearson_free_generation_exact_match": -0.283528360147053,
+      "selected_free_generation_exact_match": 0.075,
+      "selected_teacher_forced_sequence_logprob": -12.399678349494934,
+      "selected_window": [
+        0,
+        27
+      ],
+      "spearman_free_generation_exact_match": -0.34438438160905965,
+      "spearman_teacher_forced_sequence_logprob": 0.8026086956521737
+    },
+    "injection_only": {
+      "pearson_free_generation_exact_match": 0.14478509856514785,
+      "selected_free_generation_exact_match": 0.1,
+      "selected_teacher_forced_sequence_logprob": -12.602160215377808,
+      "selected_window": [
+        7,
+        7
+      ],
+      "spearman_free_generation_exact_match": 0.18431840142456715,
+      "spearman_teacher_forced_sequence_logprob": -0.5504347826086956
+    },
+    "normalized_suture": {
+      "pearson_free_generation_exact_match": -0.3657102414980937,
+      "selected_free_generation_exact_match": 0.075,
+      "selected_teacher_forced_sequence_logprob": -12.399678349494934,
+      "selected_window": [
+        0,
+        27
+      ],
+      "spearman_free_generation_exact_match": -0.3579657375035015,
+      "spearman_teacher_forced_sequence_logprob": 0.6295652173913043
+    },
+    "parameter_movement": {
+      "pearson_free_generation_exact_match": 0.25677821227566683,
+      "selected_free_generation_exact_match": 0.1,
+      "selected_teacher_forced_sequence_logprob": -12.525348544120789,
+      "selected_window": [
+        0,
+        0
+      ],
+      "spearman_free_generation_exact_match": 0.23767372815273136,
+      "spearman_teacher_forced_sequence_logprob": -0.6
+    },
+    "path_integrated_state": {
+      "pearson_free_generation_exact_match": -0.3172775028119989,
+      "selected_free_generation_exact_match": 0.075,
+      "selected_teacher_forced_sequence_logprob": -12.399678349494934,
+      "selected_window": [
+        0,
+        27
+      ],
+      "spearman_free_generation_exact_match": -0.3860985461419881,
+      "spearman_teacher_forced_sequence_logprob": 0.5860869565217391
+    },
+    "risk_readout": {
+      "pearson_free_generation_exact_match": 0.37394180452631987,
+      "selected_free_generation_exact_match": 0.1,
+      "selected_teacher_forced_sequence_logprob": -12.547578692436218,
+      "selected_window": [
+        20,
+        27
+      ],
+      "spearman_free_generation_exact_match": 0.33468341311302985,
+      "spearman_teacher_forced_sequence_logprob": -0.45217391304347826
+    },
+    "suture": {
+      "pearson_free_generation_exact_match": -0.31976959547452294,
+      "selected_free_generation_exact_match": 0.075,
+      "selected_teacher_forced_sequence_logprob": -12.399678349494934,
+      "selected_window": [
+        0,
+        27
+      ],
+      "spearman_free_generation_exact_match": -0.3860985461419881,
+      "spearman_teacher_forced_sequence_logprob": 0.5834782608695652
+    }
+  }
+}

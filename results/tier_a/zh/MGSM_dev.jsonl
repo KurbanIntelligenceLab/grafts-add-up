@@ -1,0 +1,9 @@
+{"_manifest": "MGSM_dev", "metadata": {"language": "zh", "source_dataset": "juletxara/mgsm:zh:train"}, "n_records": 8, "schema_version": 1}
+{"_hash": "15a70954f21cf1895128edc7b13f9efe75d045571e721214337a832ed9b631f3", "answer_number": "11", "language": "zh", "question": "问题：罗杰有 5 个网球。他又买了 2 罐网球。每罐有 3 个网球。他现在有多少个网球？", "source_id": "mgsm:zh:train:0"}
+{"_hash": "5a42be467bc7b52fab58bb95043351591dec3e5781c56af2dd951992e11f5ee5", "answer_number": "29", "language": "zh", "question": "问题：服务器机房里有九台电脑。从周一到周四，每天又安装了五台电脑。服务器机房里现在有多少台电脑？", "source_id": "mgsm:zh:train:1"}
+{"_hash": "4ed0f27764c95d3004c9bf458af1cd2c2804ea8387f9d9f4dae9283136260642", "answer_number": "39", "language": "zh", "question": "问题：利亚有 32 块巧克力，她妹妹有 42 块。如果她们吃了 35 块，她们一共还剩下多少块？", "source_id": "mgsm:zh:train:2"}
+{"_hash": "6d96d161836f01ded5e941e050f1e85644dd9edb0af79f702ab1f915dddf83dc", "answer_number": "9", "language": "zh", "question": "问题：肖恩有五个玩具。圣诞节他从他爸爸妈妈那里各得到了两个玩具。他现在有多少个玩具？", "source_id": "mgsm:zh:train:3"}
+{"_hash": "28476660170fda9edc0f389fa5e2862b289c24ad94f245fad1380c5ff11ca8cc", "answer_number": "33", "language": "zh", "question": "问题：迈克尔有 58 个高尔夫球。周二，他丢失了 23 个高尔夫球。周三，他又丢失了 2 个。周三结束时他有多少个高尔夫球？", "source_id": "mgsm:zh:train:4"}
+{"_hash": "2715d5e402ce03e5d34870b146aa427644021653ffec6f84c8aa34b5b58f1d16", "answer_number": "8", "language": "zh", "question": "问题：奥利维亚有 23 美元。她买了五个单价 3 美元的百吉饼。她还剩多少钱？", "source_id": "mgsm:zh:train:5"}
+{"_hash": "fa772a17f669637bc7add2f6d079a1e8aec7c48c6c03f37746484665c4969afd", "answer_number": "8", "language": "zh", "question": "问题：杰森有 20 根棒棒糖。他给了丹尼一些棒棒糖。现在杰森有 12 根棒棒糖。杰森给了丹尼多少根棒棒糖？", "source_id": "mgsm:zh:train:6"}
+{"_hash": "43613bb0b1dfe8eb9560dcf19ab1b089cee1e25b00cb0c42c817227b0d890e39", "answer_number": "5", "language": "zh", "question": "问题：如果停车场里有 3 辆车，又来了 2 辆车，停车场里有多少辆车？", "source_id": "mgsm:zh:train:7"}

@@ -1,0 +1,7 @@
+{
+  "canonical_artifacts_modified": false,
+  "command": "python -m suture.reviewer_cost_diagnostics",
+  "output": "F:\\Program Files\\GitHub\\model-composition\\results\\reviewer_followup\\cost\\cost_diagnostics.json",
+  "qwen3_preflight_sha256": "734b28ff5b9be6d335e5b220216ba04c320f5aee1eb744e5b4b8a44f86464894",
+  "qwen3_snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc"
+}

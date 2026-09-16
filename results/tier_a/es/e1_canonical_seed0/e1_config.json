@@ -1,0 +1,56 @@
+{
+  "decoding": {
+    "max_new_tokens": 64,
+    "sample": true,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "generation_batch_size": 8,
+  "input_hashes": {
+    "C": "d4a97bc92ccfe42672a497a375efecd00a5d8be44929c93e074312cbffa84275",
+    "MGSM_dev": "d5021d0fb8d8e11e2e67d05fa6b991f45ba575bcbef808643b5ebcd26fbc97ed",
+    "P_risk": "0520d262414d9f43ac44fef36deebda1d57c41979224e87a0f1a03f4e3f72f1e",
+    "P_util": "d066dbdcd31d280fca265eaec0759de860cd405a70020f7be2f8a6474a60c318",
+    "retention": "96a23e770de8995c85bd0548a4036be151449d4e6b008138c8bea28178d6b6ae"
+  },
+  "language": "es",
+  "max_length": 128,
+  "measurement": {
+    "certificate_manifest": "C",
+    "development_manifest": "MGSM_dev",
+    "diagnostic_limit": null,
+    "drift_identifier": {
+      "expected_label": "__label__es",
+      "model": "models\\lid.176.ftz"
+    },
+    "objective": "free_generation_exact_match",
+    "probe_limit": null,
+    "retention_manifest": "results\\tier_a\\es\\readiness\\readiness_host.jsonl",
+    "secondary_objective": "teacher_forced_full_sequence_logprob",
+    "window_limit": null
+  },
+  "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "protocol_version": 2,
+  "score_batch_size": 4,
+  "selection": {
+    "merged_models_built": 0,
+    "prediction_source": "P_util_and_P_risk",
+    "risk_manifest": "P_risk",
+    "tau": 0.05,
+    "utility_manifest": "P_util"
+  },
+  "stop_thresholds": {
+    "max_drift_rate": 0.5,
+    "max_regret_fraction": 0.5,
+    "min_retention_rate": 0.5,
+    "min_spearman": 0.5
+  }
+}

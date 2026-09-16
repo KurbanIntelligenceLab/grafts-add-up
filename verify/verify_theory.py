@@ -499,6 +499,49 @@ report("C7 subset DP conservative and convergent", c7_ok and c7_fine < 1e-2,
        f"never violates the true constraint; one-sided gap shrinks with the "
        f"grid (max gap {c7_fine:.3e} at nbins=5000)")
 
+# Reviewer follow-up: quantify the whole gap distribution over a wider grid
+# range.  The feasibility condition is the scientific invariant; the
+# distributional summaries are diagnostics of tightness, not new theorems.
+banner("C7b  Signed-knapsack tightness over expanded grid resolutions")
+print(f"   {'nbins':>8} {'median gap':>12} {'p95 gap':>12} {'max gap':>12} {'violations':>12}")
+c7b_rows = []
+for nb in (100, 500, 2000, 10000, 50000):
+    gaps, viol = [], 0
+    for trial in range(80):
+        r7b = np.random.default_rng(31000 + trial)
+        n7b = 12
+        au = r7b.normal(0, 1, n7b)
+        ar = r7b.normal(0, 1, n7b)
+        tau = float(r7b.uniform(0, 2))
+        bb, _ = best_subset_bruteforce(au, ar, tau)
+        bd, Sd, _ = best_subset_dp(au, ar, tau, nbins=nb)
+        if bd is None:
+            continue
+        if sum(ar[i] for i in Sd) < -tau - 1e-9:
+            viol += 1
+        gaps.append(bb - bd)
+    gaps = np.asarray(gaps, dtype=float)
+    row = {
+        "nbins": nb,
+        "n": int(len(gaps)),
+        "median_gap": float(np.median(gaps)),
+        "p95_gap": float(np.percentile(gaps, 95)),
+        "max_gap": float(np.max(gaps)),
+        "violations": int(viol),
+    }
+    c7b_rows.append(row)
+    print(
+        f"   {nb:8d} {row['median_gap']:12.3e} {row['p95_gap']:12.3e} "
+        f"{row['max_gap']:12.3e} {viol:12d}"
+    )
+c7b_ok = all(row["violations"] == 0 for row in c7b_rows)
+report(
+    "C7b expanded signed-knapsack tightness",
+    c7b_ok,
+    "zero feasibility violations at every resolution; median/p95/max gaps "
+    "reported above",
+)
+
 # ---- C10: operational interval selection on the real stack ----------------
 banner("C10  Interval selection: predicted-best vs sweep-best (regret)")
 intervals = [(i, j) for i in range(L) for j in range(i, L)]
@@ -695,6 +738,127 @@ print(f"   design space enumerated by a sweep: 3^{L} = {3**L:,}")
 print(f"   numbers used by the one-pass measurement: {2*L}")
 report("C14 multi-donor superposition", r14 > 0.95 and s14 > 0.90,
        f"Pearson {r14:.4f}, Spearman {s14:.4f} over 80 three-way assignments")
+
+# Reviewer follow-up: repeat the controlled assignment test with four donors.
+# This is intentionally still a small synthetic stack; it validates the
+# assignment algebra and streamed-score accounting, not LLM-scale evidence.
+banner("C14b  Four-donor superposition and assignment-space accounting")
+donors4 = [
+    make_experts(stack, 0.10, np.random.default_rng(seed))[1]
+    for seed in (2026, 2027, 2028, 2029)
+]
+fo4 = [first_order_machinery(stack, hostM, donor_, tgt_util) for donor_ in donors4]
+
+def compose_multi_k(host_, donors_, assign):
+    return [
+        host_[l] if assign[l] == 0 else donors_[assign[l] - 1][l]
+        for l in range(L)
+    ]
+
+rng4 = np.random.default_rng(41)
+p14b, m14b = [], []
+for _ in range(160):
+    assign = rng4.integers(0, len(donors4) + 1, L)
+    pred = sum(
+        fo4[assign[l] - 1]["a"][l]
+        for l in range(L)
+        if assign[l] > 0
+    )
+    meas = (
+        stack.readout(
+            stack.trajectory(compose_multi_k(hostM, donors4, assign))[L],
+            tgt_util,
+        )
+        - phiM
+    )
+    p14b.append(pred)
+    m14b.append(meas)
+p14b, m14b = np.asarray(p14b), np.asarray(m14b)
+r14b = float(np.corrcoef(p14b, m14b)[0, 1])
+s14b = float(
+    np.corrcoef(np.argsort(np.argsort(p14b)), np.argsort(np.argsort(m14b)))[0, 1]
+)
+growth14b = [
+    {
+        "donors": k,
+        "assignments": (k + 1) ** L,
+        "streamed_donor_layer_evaluations": k * L,
+    }
+    for k in range(1, 5)
+]
+print(f"   160 random 5-way assignments: Pearson {r14b:.4f}, Spearman {s14b:.4f}")
+for row in growth14b:
+    print(
+        f"   k={row['donors']}  assignments={row['assignments']:,}  "
+        f"streamed donor evaluations={row['streamed_donor_layer_evaluations']}"
+    )
+supported14b = r14b > 0.95 and s14b > 0.90
+print(
+    f"[{'SUPPORTED' if supported14b else 'NOT SUPPORTED'}] C14b diagnostic: "
+    f"Pearson {r14b:.4f}, Spearman {s14b:.4f} over 160 five-way assignments"
+)
+conjectures["C14b four-donor superposition at scale 0.10"] = supported14b
+
+# A small scale sweep separates the combinatorial assignment accounting from
+# the finite-perturbation regime.  It is intentionally a diagnostic, not a
+# new LLM claim.
+banner("C14c  Four-donor scale sweep")
+scale_rows14c = []
+for idx, scale14c in enumerate((0.10, 0.05, 0.025, 0.0125)):
+    host14c, _ = make_experts(
+        stack, scale14c, np.random.default_rng(5100 + idx)
+    )
+    donors14c = [
+        make_experts(
+            stack, scale14c, np.random.default_rng(5200 + idx * 10 + donor_idx)
+        )[1]
+        for donor_idx in range(4)
+    ]
+    phi14c = stack.readout(stack.trajectory(host14c)[L], tgt_util)
+    fo14c = [
+        first_order_machinery(stack, host14c, donor_, tgt_util)
+        for donor_ in donors14c
+    ]
+    rng14c = np.random.default_rng(5300 + idx)
+    pred14c, meas14c = [], []
+    for _ in range(160):
+        assign = rng14c.integers(0, len(donors14c) + 1, L)
+        pred14c.append(
+            sum(
+                fo14c[assign[l] - 1]["a"][l]
+                for l in range(L)
+                if assign[l] > 0
+            )
+        )
+        meas14c.append(
+            stack.readout(
+                stack.trajectory(compose_multi_k(host14c, donors14c, assign))[L],
+                tgt_util,
+            )
+            - phi14c
+        )
+    pred14c, meas14c = np.asarray(pred14c), np.asarray(meas14c)
+    pearson14c = float(np.corrcoef(pred14c, meas14c)[0, 1])
+    spearman14c = float(
+        np.corrcoef(
+            np.argsort(np.argsort(pred14c)),
+            np.argsort(np.argsort(meas14c)),
+        )[0, 1]
+    )
+    row14c = {
+        "scale": scale14c,
+        "pearson": pearson14c,
+        "spearman": spearman14c,
+        "n_assignments": 160,
+    }
+    scale_rows14c.append(row14c)
+    print(
+        f"   scale={scale14c:<6.4f} Pearson {pearson14c:.4f} "
+        f"Spearman {spearman14c:.4f}"
+    )
+conjectures["C14c four-donor small-scale ranking"] = all(
+    row["spearman"] > 0.90 for row in scale_rows14c[1:]
+)
 
 # ---- C15: linearity in a continuous interpolation coefficient --------------
 banner("C15  Scores extend to soft coefficients alpha in [0,1]")

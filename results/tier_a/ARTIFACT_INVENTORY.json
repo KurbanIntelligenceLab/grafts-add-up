@@ -1,0 +1,2251 @@
+{
+  "blocked_by_spanish_stop": [
+    "zh canonical E1",
+    "sw canonical E1",
+    "expert seeds 1 and 2",
+    "E3-E10",
+    "Tier B",
+    "MGSM_test evaluation"
+  ],
+  "canonical_e1": "results/tier_a/es/e1_canonical_seed0",
+  "canonical_e1_immutable": true,
+  "created_at": "2026-08-24T09:16:06.898557+00:00",
+  "languages": {
+    "es": {
+      "directories": [
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/es/adapters",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/donor/donor/adapter_config.json",
+              "sha256": "13837523acfd2e202e66873d964572111149003c20f8e720659e9d385e532cbe"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/donor/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 895,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/donor/training_metadata.json",
+              "sha256": "86872b53e08b73fae34437f0a157c3367907fa73894a4ecdb855893f57ff0abf"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/host/host/adapter_config.json",
+              "sha256": "57990508c99975693ce10108d4ebbfa06c14fc7f86d0d2c81d190fa4523bad7b"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/host/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 895,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/adapters/host/training_metadata.json",
+              "sha256": "ce6b10a51aebeebf3dac8b5c6aa8ee8afd138d87183d457cd850f7c1b5160f5e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 8,
+          "reason": "16-step preliminary experts, not the publication recipe."
+        },
+        {
+          "claim": "not_citable_as_e1",
+          "class": "preliminary",
+          "directory": "results/tier_a/es/e1",
+          "files": [
+            {
+              "bytes": 94,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/e1_baseline.json",
+              "sha256": "fe6c6eceb986d4c1335efa5f87cc64aa31bc4fe0cbb23b3447d59d0135a0b9a7"
+            },
+            {
+              "bytes": 2366,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/e1_dev_aligned_scores.json",
+              "sha256": "92a4020c7177abac3b3c04e99a209d9ad1795417bc2d47a91afff686b3882c1e"
+            },
+            {
+              "bytes": 2189,
+              "gate": "PASS_E1",
+              "measured_objective": "teacher-forced utility log-probability change on MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/e1_gate.json",
+              "ranking_prediction_source": "MGSM_dev_utility_postselection_alignment",
+              "sha256": "4830c9258fda31d506351a97731837bcdcfe6bf831c3cfe25c01379d1088356c",
+              "spearman": 0.9910735634873568
+            },
+            {
+              "bytes": 2381,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/e1_scores.json",
+              "sha256": "b511f3eec30f3b8b00c34b191d2a13f931e1da219419586e44b53a329a202a01"
+            },
+            {
+              "bytes": 83412,
+              "n_lines": 406,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/e1_window_sweep.jsonl",
+              "sha256": "088809ee8ebce27f1abe241db14caba861938b57311fcf9b8d2fba22782d14eb"
+            },
+            {
+              "bytes": 3291,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1/run_manifest.json",
+              "sha256": "5947671196e1631e3046822fe051524a5fdb31f8d21035122c557a6cd13159f0"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Protocol v1 teacher-forced post-selection MGSM-dev alignment on 16-step adapters."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_cache_smoke",
+          "files": [
+            {
+              "bytes": 4366,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke/e1_baseline.json",
+              "protocol_version": 2,
+              "sha256": "b0cd2ebb2192645563364c3ee2f995dc19824a8ed7a11d66b073af6aff73dfe1"
+            },
+            {
+              "bytes": 1657,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "8dd36bc18ce9a8f009a4857aafeb8041f54b93cf311c32587b80478c9b4eb2f6"
+            },
+            {
+              "bytes": 4300,
+              "gate": "SMOKE_NOT_CANONICAL",
+              "measured_objective": "free_generation_exact_match_on_MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke/e1_gate.json",
+              "protocol_version": 2,
+              "ranking_prediction_source": "frozen_P_util_and_P_risk",
+              "sha256": "67be29bdfddd4f948d2e7cbc53a03fdf588c1fa4d1ba8841a1096bade5161260",
+              "spearman": 0.0
+            },
+            {
+              "bytes": 2392,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke/e1_selection_scores.json",
+              "sha256": "64a3f35ec623528cad4f2f78f0f9d134eeed70a5a23f71f9e69d304d4c3c27b2"
+            },
+            {
+              "bytes": 5356,
+              "n_lines": 2,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke/e1_window_sweep.jsonl",
+              "sha256": "15572e5bfc4bdfbda868ea3536ed42a57d90e721adee684ab3d14e0ef5c05d71"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 5,
+          "reason": "Cache plumbing smoke."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_cache_smoke_b8",
+          "files": [
+            {
+              "bytes": 4351,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke_b8/e1_baseline.json",
+              "protocol_version": 2,
+              "sha256": "c3cd4892febf9e7b5ea9f8c619e0c502ba8d98b3633c7440a3199318e2e6e439"
+            },
+            {
+              "bytes": 1657,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke_b8/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "6882dcef723fde51d6611ab60126457d0b6b046e108f4fd814c72ea2d751376b"
+            },
+            {
+              "bytes": 4307,
+              "gate": "SMOKE_NOT_CANONICAL",
+              "measured_objective": "free_generation_exact_match_on_MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke_b8/e1_gate.json",
+              "protocol_version": 2,
+              "ranking_prediction_source": "frozen_P_util_and_P_risk",
+              "sha256": "f3d5560325df2164d5308e70a8719477f5c2bc3b5cf7bdbbc5cc0b428a748b87",
+              "spearman": 0.0
+            },
+            {
+              "bytes": 2392,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke_b8/e1_selection_scores.json",
+              "sha256": "64a3f35ec623528cad4f2f78f0f9d134eeed70a5a23f71f9e69d304d4c3c27b2"
+            },
+            {
+              "bytes": 5322,
+              "n_lines": 2,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_cache_smoke_b8/e1_window_sweep.jsonl",
+              "sha256": "dde27a9d384e15688a5a23450346ee615e4438883803558a99ba002dbfb8fd29"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 5,
+          "reason": "Cache plumbing smoke."
+        },
+        {
+          "claim": "primary_e1_stop",
+          "class": "canonical",
+          "directory": "results/tier_a/es/e1_canonical_seed0",
+          "files": [
+            {
+              "bytes": 1425845,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/e1_baseline.json",
+              "protocol_version": 2,
+              "sha256": "a18da3c70c44a04879c5841dc6c207c3248f5114ed13c1e3dbac59df01c79551"
+            },
+            {
+              "bytes": 1707,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "56b5e8153a810c4cd5ecb2d3d1b31d182c8b30924d9515313a2913e806d6de49"
+            },
+            {
+              "bytes": 2811849,
+              "gate": "STOP_E2_REGIME_INVESTIGATION",
+              "measured_objective": "free_generation_exact_match_on_MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/e1_gate.json",
+              "protocol_version": 2,
+              "ranking_prediction_source": "frozen_P_util_and_P_risk",
+              "sha256": "668161c90061e5197b429afc2e7c384b0fae804668ba56a797818d8000afc2ea",
+              "spearman": -0.01809609071678834
+            },
+            {
+              "bytes": 2399,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/e1_selection_scores.json",
+              "sha256": "ff5a980d9c7a8111c239ab906c4747e5393ceca8fbc0c058799c0d324a17cf3d"
+            },
+            {
+              "bytes": 7239955,
+              "n_lines": 406,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/e1_window_sweep.jsonl",
+              "sha256": "3d81a1311cc370ad31bd997ab800cbeb1147c66d4fec960399b6ed97db342e3b"
+            },
+            {
+              "bytes": 42772,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0/run_manifest.json",
+              "sha256": "b50aa9cdb69e36f42e3d774a4f98a730b67e41212d97220b07eaf30dfc171eac"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Protocol-v2 free-generation exhaustive Spanish seed-0 E1."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke",
+          "files": [
+            {
+              "bytes": 1556,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "8526914390e3f78abfd8cae46190a2d4155cbc137cdd1977b16fd5125c1365e5"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 1,
+          "reason": "Incomplete canonical smoke."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke_b1",
+          "files": [
+            {
+              "bytes": 1604,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_b1/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "f121b11414d38da3eb19e5565314a4dec5c7b6a62071163052bd574c2e5bb1db"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 1,
+          "reason": "Incomplete canonical smoke."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke_batchgen",
+          "files": [
+            {
+              "bytes": 4754,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_batchgen/e1_baseline.json",
+              "protocol_version": 2,
+              "sha256": "8162a45ea901bf4350ebd9684ff092e8e6124cc6d9c53872068e4e1fbe6ce7e1"
+            },
+            {
+              "bytes": 1657,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_batchgen/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "902c7652ef91823a6c406e10b98ad7a63b547e10d1e819c1bbd8330dc0e38fbe"
+            },
+            {
+              "bytes": 2397,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_batchgen/e1_selection_scores.json",
+              "sha256": "c8eb51802277ce631e82c21b6295327aef094e0e24191fd9204445191d734bb1"
+            },
+            {
+              "bytes": 5118,
+              "n_lines": 2,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_batchgen/e1_window_sweep.jsonl",
+              "sha256": "459bb9b97d5729348b8a4d2547dacea02febd077d24c1eaef5ae21df6240d35e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 4,
+          "reason": "Incomplete canonical smoke."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke_final",
+          "files": [
+            {
+              "bytes": 4754,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_final/e1_baseline.json",
+              "protocol_version": 2,
+              "sha256": "8162a45ea901bf4350ebd9684ff092e8e6124cc6d9c53872068e4e1fbe6ce7e1"
+            },
+            {
+              "bytes": 1657,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_final/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "902c7652ef91823a6c406e10b98ad7a63b547e10d1e819c1bbd8330dc0e38fbe"
+            },
+            {
+              "bytes": 5267,
+              "gate": "SMOKE_NOT_CANONICAL",
+              "measured_objective": "free_generation_exact_match_on_MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_final/e1_gate.json",
+              "protocol_version": 2,
+              "ranking_prediction_source": "frozen_P_util_and_P_risk",
+              "sha256": "d10bcb375679ddd58c5728e1b28a1c970a6819120df1b3c42c5016869d73fb08",
+              "spearman": 0.0
+            },
+            {
+              "bytes": 2397,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_final/e1_selection_scores.json",
+              "sha256": "c8eb51802277ce631e82c21b6295327aef094e0e24191fd9204445191d734bb1"
+            },
+            {
+              "bytes": 5118,
+              "n_lines": 2,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_final/e1_window_sweep.jsonl",
+              "sha256": "459bb9b97d5729348b8a4d2547dacea02febd077d24c1eaef5ae21df6240d35e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 5,
+          "reason": "SMOKE_NOT_CANONICAL gate."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke_manualgen",
+          "files": [
+            {
+              "bytes": 1626,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_manualgen/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "16865790b16f1292271de784845b62107a131f567a1d1d036815c336008e7410"
+            },
+            {
+              "bytes": 2397,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_manualgen/e1_selection_scores.json",
+              "sha256": "c8eb51802277ce631e82c21b6295327aef094e0e24191fd9204445191d734bb1"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 2,
+          "reason": "Incomplete canonical smoke."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/e1_canonical_smoke_probe8",
+          "files": [
+            {
+              "bytes": 1627,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_probe8/e1_config.json",
+              "protocol_version": 2,
+              "sha256": "fe9458eaf9b0f133de4caad9ca1601a64eff5f0cec96cdb111170755154e1d39"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_smoke_probe8/e1_selection_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 2,
+          "reason": "Incomplete canonical smoke."
+        },
+        {
+          "claim": "not_citable_as_e1",
+          "class": "preliminary",
+          "directory": "results/tier_a/es/e1_previous_full_run",
+          "files": [
+            {
+              "bytes": 94,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/e1_baseline.json",
+              "sha256": "fe6c6eceb986d4c1335efa5f87cc64aa31bc4fe0cbb23b3447d59d0135a0b9a7"
+            },
+            {
+              "bytes": 2365,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/e1_dev_aligned_scores.json",
+              "sha256": "78ac829995edb054bfec0dda0247061c74d3782c398164bcd4a897d0610bb7d5"
+            },
+            {
+              "bytes": 2126,
+              "gate": "PASS_E1",
+              "measured_objective": "teacher-forced utility log-probability change on MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/e1_gate.json",
+              "ranking_prediction_source": "MGSM_dev_utility_postselection_alignment",
+              "sha256": "92ce9b3f98534b1def07106d9f803414e6071bf8b1d6adae25e3392af68bb315",
+              "spearman": 0.9926627926627928
+            },
+            {
+              "bytes": 2366,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/e1_scores.json",
+              "sha256": "8f86302815ad8bc171114d8bba114fb099979d943ed62a651dd7a870cbfecfd6"
+            },
+            {
+              "bytes": 83409,
+              "n_lines": 406,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/e1_window_sweep.jsonl",
+              "sha256": "09f2b4601c63895ad4794fc2e7c67d8c05d559aa0d73ce01ab182dfd32acad61"
+            },
+            {
+              "bytes": 3291,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_previous_full_run/run_manifest.json",
+              "sha256": "8cf0d8337a8d3964e8eaeaf9f21ae0834e045ced11f00052482ecc487dd03836"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Earlier teacher-forced sweep; superseded by canonical seed-0."
+        },
+        {
+          "claim": "regime_diagnostic",
+          "class": "canonical",
+          "directory": "results/tier_a/es/e2",
+          "files": [
+            {
+              "bytes": 27971,
+              "n_lines": 50,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e2/e2_regime.jsonl",
+              "sha256": "ca9f6fe023734856ab91356e14829b4640b7a6539ae724ef2e90740f1cddc7cf"
+            },
+            {
+              "bytes": 1808,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e2/e2_report.json",
+              "protocol_version": 1,
+              "sha256": "ea207181069f7961421a40e65c4ebf3d70ae5151519a8225ae7125166b7e210f",
+              "test_manifest_read": "MGSM_test was not read"
+            },
+            {
+              "bytes": 37463,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e2/retrospective_provenance.json",
+              "sha256": "0ca8be26c8f67bb5e430dde2d7e5a5a759d4dbc7b5a98fcccad0ba9a5a6d38e5"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "E2 checkpoint/graft-size regime measurement. Missing run_manifest."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/es/pilots",
+          "files": [
+            {
+              "bytes": 2399,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots/P1_fake_donor_scores.json",
+              "sha256": "9452dd624dd3e403213ab777197e02839f4aa81e09bf8e267e9aa17bc407ba18"
+            },
+            {
+              "bytes": 2368,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots/P2_real_donor_scores.json",
+              "sha256": "7120df90f2d7d92261dc566f6000ca2688205c746a9d47dbde38f89ee5a04dbb"
+            },
+            {
+              "bytes": 5765,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots/pilots.json",
+              "sha256": "26e27ca217e81673c136183c2c145ab6054538c0fff46ce6c10910b425d21f94"
+            },
+            {
+              "bytes": 3020,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots/run_manifest.json",
+              "sha256": "3d9c2db3389b6f64158b1d3594db95d685b21af78abbc5998235868e2da81d34"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Original bfloat16 P1 plumbing; replaced by pilots_final."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_fake_scale_1e4",
+          "files": [
+            {
+              "bytes": 2434,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fake_scale_1e4/P1_fake_donor_scores.json",
+              "sha256": "65b7ebfbee50acaa0327de620a56b354f7a47c2e0f7353827bceabcca0bb66ae"
+            },
+            {
+              "bytes": 2394,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fake_scale_1e4/P2_real_donor_scores.json",
+              "sha256": "eb2c3d258716eaf8a9c82debc963fa3cf17618e53697c7fe646ef12b61a10a1b"
+            },
+            {
+              "bytes": 5767,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fake_scale_1e4/pilots.json",
+              "sha256": "9b122328aafa0e821af8cb1f9b9f0b3e518b6603d7c87d38ac10c27d4b738cd0"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "plumbing_p1_p2_p3",
+          "class": "canonical",
+          "directory": "results/tier_a/es/pilots_final",
+          "files": [
+            {
+              "bytes": 2432,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_final/P1_fake_donor_scores.json",
+              "sha256": "40be23cf7218bd33f7dcc2e8db1b6d2f62e59bab18abd78cb6806dd485ca8234"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_final/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 7092,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_final/pilots.json",
+              "sha256": "0b943fbc187cbea5d4232cd12c626214a1cada8d3ebc78267eadfd7cf125449b"
+            },
+            {
+              "bytes": 42179,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_final/run_manifest.json",
+              "sha256": "a516b4b60a048bb2ad970f45040f9c4111be8548db52b216b0f7c8df3e866554"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Final float32 P1/P2/P3 on publication adapters."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_fixed",
+          "files": [
+            {
+              "bytes": 2409,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed/P1_fake_donor_scores.json",
+              "sha256": "16ffa1f301699dddd3adf5d07b492e200241afac4711911742b12d384ac39312"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 5767,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed/pilots.json",
+              "sha256": "dffd92c79c02eb36f3d87779907aa3650d5120abd8c5b2bbf19794a4fe503c8c"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_fixed32",
+          "files": [
+            {
+              "bytes": 2419,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed32/P1_fake_donor_scores.json",
+              "sha256": "ba851b0f0778a84bd6fea19d772397f7d74f3265a820f0b784553c86a10f4416"
+            },
+            {
+              "bytes": 2394,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed32/P2_real_donor_scores.json",
+              "sha256": "eb2c3d258716eaf8a9c82debc963fa3cf17618e53697c7fe646ef12b61a10a1b"
+            },
+            {
+              "bytes": 5764,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_fixed32/pilots.json",
+              "sha256": "4ca46341d4038b29406d409387135babd19b9e3b3b0feb8b5e176d521d90ca21"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_float32_fake",
+          "files": [
+            {
+              "bytes": 2432,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_float32_fake/P1_fake_donor_scores.json",
+              "sha256": "40be23cf7218bd33f7dcc2e8db1b6d2f62e59bab18abd78cb6806dd485ca8234"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_float32_fake/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 7093,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_float32_fake/pilots.json",
+              "sha256": "7478519df3dfab61218646f6c6d20ac77f08df61ef0f40c812ae7b9eaf542ba5"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_revalidated",
+          "files": [
+            {
+              "bytes": 2409,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated/P1_fake_donor_scores.json",
+              "sha256": "16ffa1f301699dddd3adf5d07b492e200241afac4711911742b12d384ac39312"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 5765,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated/pilots.json",
+              "sha256": "721f7185a64c5dc399a53a4079a7831f804876d5a46b75b32bcd0026c6772de9"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_revalidated_scale2e3",
+          "files": [
+            {
+              "bytes": 2384,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale2e3/P1_fake_donor_scores.json",
+              "sha256": "f4f6cad19ce4bef701c929ef86f8ce9918fc3c5f164dbab82bdccdc0f102133b"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale2e3/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 7038,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale2e3/pilots.json",
+              "sha256": "46deb4d045e8c57936012503ff3d852ff429ed1450354b907cea0e6d6e426fe7"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_revalidated_scale5e4",
+          "files": [
+            {
+              "bytes": 2416,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale5e4/P1_fake_donor_scores.json",
+              "sha256": "a5ed622f428cfacdacaf7feed0aba21552b109744984321b13a1e9189ae9c17d"
+            },
+            {
+              "bytes": 2405,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale5e4/P2_real_donor_scores.json",
+              "sha256": "9998d16d6d0bba48937cecf013580be1020c06dc12aee957f3f52a5ccb76bf94"
+            },
+            {
+              "bytes": 5767,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_revalidated_scale5e4/pilots.json",
+              "sha256": "ed2196fb93efa6c314a385d96e8f214e10cb2e0cc22c29b143858238092eeb02"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_single_prompt",
+          "files": [
+            {
+              "bytes": 2393,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt/P1_fake_donor_scores.json",
+              "sha256": "e45d576207e188b9593145739b56f4d80b609e02c3d311585dafab4290440d0d"
+            },
+            {
+              "bytes": 2392,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt/P2_real_donor_scores.json",
+              "sha256": "64a3f35ec623528cad4f2f78f0f9d134eeed70a5a23f71f9e69d304d4c3c27b2"
+            },
+            {
+              "bytes": 7042,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt/pilots.json",
+              "sha256": "67dd8423cb237f2894b83cede6a7c9e41eb183172a0c25fe5caf3b6d601bfa91"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "smoke",
+          "directory": "results/tier_a/es/pilots_single_prompt_debug",
+          "files": [
+            {
+              "bytes": 2393,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt_debug/P1_fake_donor_scores.json",
+              "sha256": "e45d576207e188b9593145739b56f4d80b609e02c3d311585dafab4290440d0d"
+            },
+            {
+              "bytes": 2392,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt_debug/P2_real_donor_scores.json",
+              "sha256": "64a3f35ec623528cad4f2f78f0f9d134eeed70a5a23f71f9e69d304d4c3c27b2"
+            },
+            {
+              "bytes": 7043,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/pilots_single_prompt_debug/pilots.json",
+              "sha256": "0e003f7191886f2517580dbe494223a79f60783d79b21dd75a26a3e2e7386ce6"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "P1 debug."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/es/publication_adapters",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "daa03162bb3b7aeb7f1891ee7e915b949ef66fa55f89bd1d75e0177b60150994"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "daa03162bb3b7aeb7f1891ee7e915b949ef66fa55f89bd1d75e0177b60150994"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "daa03162bb3b7aeb7f1891ee7e915b949ef66fa55f89bd1d75e0177b60150994"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0256/donor/adapter_config.json",
+              "sha256": "daa03162bb3b7aeb7f1891ee7e915b949ef66fa55f89bd1d75e0177b60150994"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0256/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/checkpoint-0256/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/donor/adapter_config.json",
+              "sha256": "daa03162bb3b7aeb7f1891ee7e915b949ef66fa55f89bd1d75e0177b60150994"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1291,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/donor/training_metadata.json",
+              "sha256": "250a2850a70f1b196d1c94db351d914c0c13c2d79a19e3c08d0af97eb06f5a00"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/host/checkpoint-0032/host/adapter_config.json",
+              "sha256": "da4e47cb433c2f8e273c67bd840ed18e4c68aed2e976611f088b147948a7d622"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/host/checkpoint-0032/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters/host/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 19,
+          "reason": "Unstable/incomplete publication attempt; donor has extra checkpoint-0256."
+        },
+        {
+          "claim": "publication_experts_seed0",
+          "class": "canonical",
+          "directory": "results/tier_a/es/publication_adapters_fixed",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "b8aaeb42ffed0e910cf340bf132f1106aff145ce81724163d9a6c8e5ff6214cb"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "b8aaeb42ffed0e910cf340bf132f1106aff145ce81724163d9a6c8e5ff6214cb"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0096/donor/adapter_config.json",
+              "sha256": "b8aaeb42ffed0e910cf340bf132f1106aff145ce81724163d9a6c8e5ff6214cb"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "b8aaeb42ffed0e910cf340bf132f1106aff145ce81724163d9a6c8e5ff6214cb"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/donor/adapter_config.json",
+              "sha256": "b8aaeb42ffed0e910cf340bf132f1106aff145ce81724163d9a6c8e5ff6214cb"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1336,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/donor/training_metadata.json",
+              "sha256": "9df5b3c43c480c5dba48a145194fb43646333bbc6130a1060a1a8c900424cd70"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0032/host/adapter_config.json",
+              "sha256": "9dfa649767eec52e9e651f2af1061920bf77f153b2d9306d929bd4e5448d7a88"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0064/host/adapter_config.json",
+              "sha256": "9dfa649767eec52e9e651f2af1061920bf77f153b2d9306d929bd4e5448d7a88"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0096/host/adapter_config.json",
+              "sha256": "9dfa649767eec52e9e651f2af1061920bf77f153b2d9306d929bd4e5448d7a88"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0128/host/adapter_config.json",
+              "sha256": "9dfa649767eec52e9e651f2af1061920bf77f153b2d9306d929bd4e5448d7a88"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/host/adapter_config.json",
+              "sha256": "9dfa649767eec52e9e651f2af1061920bf77f153b2d9306d929bd4e5448d7a88"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1334,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_fixed/host/training_metadata.json",
+              "sha256": "b6ffe26928c65932ca393cae0c18aa7237bcdf410861f675f3fb6868889442ad"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 32,
+          "reason": "128-step matched LoRA experts used by canonical E1."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/es/publication_adapters_seed0",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "188aead22420b47daa1965de5edba65b73e0f8c35a717eb717d59ea8e3244bea"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "188aead22420b47daa1965de5edba65b73e0f8c35a717eb717d59ea8e3244bea"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0096/donor/adapter_config.json",
+              "sha256": "188aead22420b47daa1965de5edba65b73e0f8c35a717eb717d59ea8e3244bea"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0096/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "188aead22420b47daa1965de5edba65b73e0f8c35a717eb717d59ea8e3244bea"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/donor/adapter_config.json",
+              "sha256": "188aead22420b47daa1965de5edba65b73e0f8c35a717eb717d59ea8e3244bea"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1336,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_seed0/donor/training_metadata.json",
+              "sha256": "c0a19e7455a9d5e19da612a9fe38916d8bf45164c135f317aa93042e74608feb"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 16,
+          "reason": "Incomplete donor-only checkpoint tree."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/es/publication_adapters_stable",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "e842ecce70ee2584f54a0293aa501b9207f12a7212a81c06458f351373b0e2b3"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "e842ecce70ee2584f54a0293aa501b9207f12a7212a81c06458f351373b0e2b3"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "e842ecce70ee2584f54a0293aa501b9207f12a7212a81c06458f351373b0e2b3"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "94e1c7e1e00a416c9b1b6b453b1cfb7bf5f6e7d3e018cb3f2b7eb09b09415b3c"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/publication_adapters_stable/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 9,
+          "reason": "Incomplete donor-only checkpoint tree."
+        },
+        {
+          "claim": "expert_readiness",
+          "class": "canonical",
+          "directory": "results/tier_a/es/readiness",
+          "files": [
+            {
+              "bytes": 6362,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/readiness_data_summary.json",
+              "sha256": "7b417d34b0c753179e34f077034c75ab2fde36d04b286bf5be9665ff8a71b5c0"
+            },
+            {
+              "bytes": 12474,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/readiness_donor.jsonl",
+              "sha256": "08cea61c2e0d786ca1254e3b0292b8b332d408746dcc28b44be3abba8afe153c"
+            },
+            {
+              "bytes": 11916,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/readiness_host.jsonl",
+              "sha256": "96a23e770de8995c85bd0548a4036be151449d4e6b008138c8bea28178d6b6ae"
+            },
+            {
+              "bytes": 37845,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/retrospective_provenance.json",
+              "sha256": "a24137088c359f0d77038acaedb11ad93186354771b810e22201c2a45b96f863"
+            },
+            {
+              "bytes": 25604,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/run_manifest.json",
+              "sha256": "9332513d000a206bca23eac92714c1e84eff95130ae7a6d2472972619334384b"
+            },
+            {
+              "bytes": 49154,
+              "donor_gain": 0.03125,
+              "gate": "PASS_READINESS",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/readiness/seed0_readiness.json",
+              "sha256": "3ed2f9b159dfb6a4c576236f4fdfdc9f58c3f482221b49f28b79770dc3f7b251"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Seed-0 readiness gate; donor gain is small but strictly positive."
+        }
+      ],
+      "mgsm_test_scored": false,
+      "root_files": [
+        {
+          "bytes": 226851,
+          "n_lines": 501,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/C.jsonl",
+          "sha256": "d4a97bc92ccfe42672a497a375efecd00a5d8be44929c93e074312cbffa84275"
+        },
+        {
+          "bytes": 114581,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/data_build_summary.json",
+          "sha256": "d45c366ad5fbac577ee3a6c2d5160bdc0a86f297c1f9c15a83b839fd619d2462"
+        },
+        {
+          "bytes": 3280,
+          "gate": "STOP_E2_REGIME_INVESTIGATION",
+          "mgsm_test_read": false,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/e1_canonical_seed0_posthoc_statistics.json",
+          "sha256": "2762a4ebdca0d627bebc40bbe46bc4ff19c412f7fee800f7e05acc32a61fa945"
+        },
+        {
+          "bytes": 668501,
+          "n_lines": 257,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/host_train.jsonl",
+          "sha256": "aaeb5145c4120ae4fb5f4d33321da8831f880720cbb205698c4da3ac7dc2bab3"
+        },
+        {
+          "bytes": 2601,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/MGSM_dev.jsonl",
+          "sha256": "d5021d0fb8d8e11e2e67d05fa6b991f45ba575bcbef808643b5ebcd26fbc97ed"
+        },
+        {
+          "bytes": 107926,
+          "n_lines": 251,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/MGSM_test.jsonl",
+          "sha256": "6d00a033c0fba66bcca5398d48f0c231caf0ab23311dde4c96118c2109b10544"
+        },
+        {
+          "bytes": 149177,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/P_risk.jsonl",
+          "sha256": "0520d262414d9f43ac44fef36deebda1d57c41979224e87a0f1a03f4e3f72f1e"
+        },
+        {
+          "bytes": 156904,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/P_util.jsonl",
+          "sha256": "d066dbdcd31d280fca265eaec0759de860cd405a70020f7be2f8a6474a60c318"
+        },
+        {
+          "bytes": 6047,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es/run_manifest.json",
+          "sha256": "11869c3d3cb474fe8df0170ef240807b196521c3bfb0faca56cf9deb87b44776"
+        }
+      ],
+      "status": "canonical_language_panel"
+    },
+    "es_smoke": {
+      "directories": [],
+      "mgsm_test_scored": false,
+      "root_files": [
+        {
+          "bytes": 3077,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/C.jsonl",
+          "sha256": "ae5e2a6e6092121b0337e04b57bf5f2a9ce87a58a20026734824d8616e455e89"
+        },
+        {
+          "bytes": 28735,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/data_build_summary.json",
+          "sha256": "54f83e55c0e8586cbd4333f31347c40ff3e9beede57fedaf0fb604957ad82f3b"
+        },
+        {
+          "bytes": 21629,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/host_train.jsonl",
+          "sha256": "205131b647693a0e656251785ea27476aa686bbf982fca586dffdb17169b6cad"
+        },
+        {
+          "bytes": 2601,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/MGSM_dev.jsonl",
+          "sha256": "d5021d0fb8d8e11e2e67d05fa6b991f45ba575bcbef808643b5ebcd26fbc97ed"
+        },
+        {
+          "bytes": 107926,
+          "n_lines": 251,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/MGSM_test.jsonl",
+          "sha256": "6d00a033c0fba66bcca5398d48f0c231caf0ab23311dde4c96118c2109b10544"
+        },
+        {
+          "bytes": 7336,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/P_risk.jsonl",
+          "sha256": "d179dcaf7f37cb8ba04344feeac568da98a0b57d2f054e25f7a2afd4b884bc8e"
+        },
+        {
+          "bytes": 5970,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/es_smoke/P_util.jsonl",
+          "sha256": "414c7fac861a15e6bc0bcd40cc8ec293a1ee645f6ed67568240e3bcc240f7dc5"
+        }
+      ],
+      "status": "smoke"
+    },
+    "sw": {
+      "directories": [
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/sw/adapters",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/donor/donor/adapter_config.json",
+              "sha256": "96dd2200e3df6f8b66427d2ea169eb8f7c04f808a1a966229c28b1878deae774"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/donor/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 895,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/donor/training_metadata.json",
+              "sha256": "1619dc04873f3a6bdfcd6f6616006c25668aa2e8f6c4ed0810a6963d40ba43d3"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/host/host/adapter_config.json",
+              "sha256": "73c9cb5b61425d935a5f2dbca15a1743265594f5c2afb9ebae728504a3be4b98"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/host/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 901,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/adapters/host/training_metadata.json",
+              "sha256": "c9c150293989ba006045c60a1ca22d321565329348a51d4eb759f4a6d0e1276c"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 8,
+          "reason": "16-step preliminary experts."
+        },
+        {
+          "claim": "not_citable_as_e1",
+          "class": "preliminary",
+          "directory": "results/tier_a/sw/e1",
+          "files": [
+            {
+              "bytes": 94,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/e1_baseline.json",
+              "sha256": "753c517564ba4c1e5dba2f501aa70154340088f6b1b820c28d31102e63816f14"
+            },
+            {
+              "bytes": 2350,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/e1_dev_aligned_scores.json",
+              "sha256": "168e8f530a120df59894e13781ea1e68f138612bceeb14aab8c9523a062e15c5"
+            },
+            {
+              "bytes": 2020,
+              "gate": "STOP_E2_REGIME_INVESTIGATION",
+              "measured_objective": "teacher-forced utility log-probability change on MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/e1_gate.json",
+              "ranking_prediction_source": "MGSM_dev_utility_postselection_alignment",
+              "sha256": "3043d4704c117a6adfd057c11ff291aa03b6f0443dc3b602df5a03ea5261ecfc",
+              "spearman": 0.989713493161769
+            },
+            {
+              "bytes": 2356,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/e1_scores.json",
+              "sha256": "dd6a5b215f564268990adec05ef8be5f586f78845eb255410d8688b87401bad9"
+            },
+            {
+              "bytes": 83469,
+              "n_lines": 406,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/e1_window_sweep.jsonl",
+              "sha256": "036470a0b1ae1aef0e47b3d89f2c5cc1a64d18ccecd197f1ef05299b2dbc5901"
+            },
+            {
+              "bytes": 3291,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e1/run_manifest.json",
+              "sha256": "7b0939382b755b28a5c7206f2b74b9160195f2b24e2bd4eea3c1ed1f3ec08e7c"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Protocol v1 teacher-forced sweep; readiness already failed."
+        },
+        {
+          "claim": "regime_diagnostic",
+          "class": "canonical",
+          "directory": "results/tier_a/sw/e2",
+          "files": [
+            {
+              "bytes": 28011,
+              "n_lines": 50,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e2/e2_regime.jsonl",
+              "sha256": "7da7da5d38229cca4b51af3f3edd7f40f6a54385da6ac83f13c15e46bd7b86fc"
+            },
+            {
+              "bytes": 1808,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e2/e2_report.json",
+              "protocol_version": 1,
+              "sha256": "d9c09e4a95959c3b37108f0343fe419d6ff30a70105f617a21b8ec4161f96cf5",
+              "test_manifest_read": "MGSM_test was not read"
+            },
+            {
+              "bytes": 37582,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/e2/retrospective_provenance.json",
+              "sha256": "1d5289616a46d7dcb91b247ecc50612d2509ba3f52ceb94b9445ebc7950ad104"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "E2 regime measurement. Missing run_manifest."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/sw/pilots",
+          "files": [
+            {
+              "bytes": 2371,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots/P1_fake_donor_scores.json",
+              "sha256": "7591377dad9ff738835e712526e53cc5a943795779822826db4aae7117f5c780"
+            },
+            {
+              "bytes": 2348,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots/P2_real_donor_scores.json",
+              "sha256": "ac5971a82f60a8594961e50680a1397146d7be638fcf828adbdf1c9f134d41a7"
+            },
+            {
+              "bytes": 5764,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots/pilots.json",
+              "sha256": "d19a4eb99fca073ed425613e7b563995596a066e62ce708920cee3851b253ca8"
+            },
+            {
+              "bytes": 3020,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots/run_manifest.json",
+              "sha256": "cd0eeb697b322151b71503008a301fe64717fab8f54573bcbb9a4b15a21788c3"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Original plumbing; replaced by pilots_final."
+        },
+        {
+          "claim": "plumbing_p1_p2_p3",
+          "class": "canonical",
+          "directory": "results/tier_a/sw/pilots_final",
+          "files": [
+            {
+              "bytes": 2396,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots_final/P1_fake_donor_scores.json",
+              "sha256": "a52e3b18e0fe1c9a8e9a86840e480d7f954395025eb8b596b79ef2127fe4ff4b"
+            },
+            {
+              "bytes": 2411,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots_final/P2_real_donor_scores.json",
+              "sha256": "5f81cce1bde20a20fb439ffccace2631548598b193d4e57daec407c90caca3ba"
+            },
+            {
+              "bytes": 7084,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots_final/pilots.json",
+              "sha256": "20de3c3961b065fa246c4fd35737e38e6a0b322733ed63bf26e1d641844d166a"
+            },
+            {
+              "bytes": 42179,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/pilots_final/run_manifest.json",
+              "sha256": "205ce3a1a6f0c9cd6ead2f0dc68b31555abd48d595c6ebe73509712bcfe2b14b"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Final float32 P1/P2/P3 on publication adapters."
+        },
+        {
+          "claim": "publication_experts_seed0",
+          "class": "canonical",
+          "directory": "results/tier_a/sw/publication_adapters_fixed",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "72ff913aed71535b535624e719c72a48b32cba0dad1262fdbf4e3654705059f3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "72ff913aed71535b535624e719c72a48b32cba0dad1262fdbf4e3654705059f3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0096/donor/adapter_config.json",
+              "sha256": "72ff913aed71535b535624e719c72a48b32cba0dad1262fdbf4e3654705059f3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "72ff913aed71535b535624e719c72a48b32cba0dad1262fdbf4e3654705059f3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/donor/adapter_config.json",
+              "sha256": "72ff913aed71535b535624e719c72a48b32cba0dad1262fdbf4e3654705059f3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1336,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/donor/training_metadata.json",
+              "sha256": "2a2f5ad0812dded8bbef2321a433175b1cd39caea473b52973df1b23e59ab296"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0032/host/adapter_config.json",
+              "sha256": "e3ee72681eb4d7d58e61c9e1ec47263f938c3bcb36c2355c9d57f479d3b1bad3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0064/host/adapter_config.json",
+              "sha256": "e3ee72681eb4d7d58e61c9e1ec47263f938c3bcb36c2355c9d57f479d3b1bad3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0096/host/adapter_config.json",
+              "sha256": "e3ee72681eb4d7d58e61c9e1ec47263f938c3bcb36c2355c9d57f479d3b1bad3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0128/host/adapter_config.json",
+              "sha256": "e3ee72681eb4d7d58e61c9e1ec47263f938c3bcb36c2355c9d57f479d3b1bad3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/host/adapter_config.json",
+              "sha256": "e3ee72681eb4d7d58e61c9e1ec47263f938c3bcb36c2355c9d57f479d3b1bad3"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1334,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/publication_adapters_fixed/host/training_metadata.json",
+              "sha256": "2957a8cfa9fd6f742fa160945d6e1d4e6c4105e7b7f1e731df40f6b543dc6624"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 32,
+          "reason": "128-step matched LoRA experts. Canonical E1 not authorized after Spanish stop."
+        },
+        {
+          "claim": "expert_readiness_failed",
+          "class": "canonical",
+          "directory": "results/tier_a/sw/readiness",
+          "files": [
+            {
+              "bytes": 6410,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/readiness_data_summary.json",
+              "sha256": "a2327a975f21ea71fc824eccf857f9134b646d132177626fb43da46b65539f65"
+            },
+            {
+              "bytes": 12811,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/readiness_donor.jsonl",
+              "sha256": "391102867d5972e0f175c1dabdedeaad8db893fe329892e238bbb0b57c4300c7"
+            },
+            {
+              "bytes": 16186,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/readiness_host.jsonl",
+              "sha256": "339f4cee89408b5db70d7a1b1a720f057a45736fd2bd898915d3bf0fb10925ba"
+            },
+            {
+              "bytes": 37964,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/retrospective_provenance.json",
+              "sha256": "d3355a005168d717f8507a580d9b1be99cded3cf326ab28806032624b9f12ad7"
+            },
+            {
+              "bytes": 25131,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/run_manifest.json",
+              "sha256": "3d41477522a1dfcb342cfedd31e820f75d266b7dfc1a9dc8bafeeac2591a7575"
+            },
+            {
+              "bytes": 43819,
+              "donor_gain": 0.0,
+              "gate": "STOP_EXPERT_READINESS",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/readiness/seed0_readiness.json",
+              "sha256": "2fe629a04a6de2ad72ce022032a9de92f387e98fa3aa23d9b57962ef9f6032cb"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "STOP_EXPERT_READINESS: donor_gain is zero."
+        }
+      ],
+      "mgsm_test_scored": false,
+      "root_files": [
+        {
+          "bytes": 234171,
+          "n_lines": 501,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/C.jsonl",
+          "sha256": "c705e4da33e9c8a1740838bded18de027e2031aae6c63e15f65c028467ce8556"
+        },
+        {
+          "bytes": 114826,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/data_build_summary.json",
+          "sha256": "c77819549ed830169ef0900918c48abc6e80a97dabcda0240c57765ea1f1fae4"
+        },
+        {
+          "bytes": 210358,
+          "n_lines": 257,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/host_train.jsonl",
+          "sha256": "f17a45b7cda4e76ffd9e0cb4ac3d0041de1e441ba2b0666d6a5e8fc3a433b7ea"
+        },
+        {
+          "bytes": 2615,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/MGSM_dev.jsonl",
+          "sha256": "a246a5cbd2bb4e951e049933fb9754f6aa0799c58e1f423ec75ba73776398f18"
+        },
+        {
+          "bytes": 108484,
+          "n_lines": 251,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/MGSM_test.jsonl",
+          "sha256": "a80a632f7e32ad0482649726497abd3db817da663a314b9b26e64fb8555b1572"
+        },
+        {
+          "bytes": 144106,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/P_risk.jsonl",
+          "sha256": "50b7a6c427fbea31a9a0a3a5d83c02d0b4633195a3955fb69b419963d0e2397b"
+        },
+        {
+          "bytes": 150922,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/P_util.jsonl",
+          "sha256": "c4dd315ca053e3c13e0cbaccb08522df7116e4853d4f044d47005913a653cf92"
+        },
+        {
+          "bytes": 5458,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/sw/run_manifest.json",
+          "sha256": "47185ba25d646f2b28378a7d3bd30c228939ae545a0522cff2ae2bde78f3c1f6"
+        }
+      ],
+      "status": "canonical_e1_blocked"
+    },
+    "verification_release": {
+      "directories": [],
+      "mgsm_test_scored": false,
+      "root_files": [
+        {
+          "bytes": 153,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/verification_release/cleanroom_summary.json",
+          "sha256": "14fd67a3a545a8c73ea755085b1e86ceef770a827d46950bf6312ea16dbf40af"
+        },
+        {
+          "bytes": 4125,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/verification_release/RELEASE_ATTESTATION.json",
+          "sha256": "4cc7a2a9e12c41d11a1ad93ace3642a50bba3371173551dbffa6293887d31b96"
+        },
+        {
+          "bytes": 41348,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/verification_release/run_manifest.json",
+          "sha256": "5c45483da07b12f72acf7d0823277f1d4de9235564ebbb15cd16015703c6661a"
+        }
+      ],
+      "status": "unclassified"
+    },
+    "zh": {
+      "directories": [
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/zh/adapters",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/donor/donor/adapter_config.json",
+              "sha256": "61ff37f786d5c64feea36adae845082fb7519caa49764224c128eba22210d7f6"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/donor/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 895,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/donor/training_metadata.json",
+              "sha256": "a557723d61f344383197c7dfa5539098b1085932b4378288a5da7c1cb5636b32"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/host/host/adapter_config.json",
+              "sha256": "a019b22e2164ad75a0b8760565ead75b8d0292902a1a520087cebe51e6c415ef"
+            },
+            {
+              "bytes": 11421990,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/host/tokenizer.json",
+              "sha256": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 896,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/adapters/host/training_metadata.json",
+              "sha256": "ad2fa704bce1ab8732893ea80de9c85ee8d33391079c02d5f619c0da7f853df8"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 8,
+          "reason": "16-step preliminary experts."
+        },
+        {
+          "claim": "not_citable_as_e1",
+          "class": "preliminary",
+          "directory": "results/tier_a/zh/e1",
+          "files": [
+            {
+              "bytes": 93,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/e1_baseline.json",
+              "sha256": "55b6bb3ce0120a3c3867ff3794d25f4010290a7e101c67f34f351ace20be1ee7"
+            },
+            {
+              "bytes": 2386,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/e1_dev_aligned_scores.json",
+              "sha256": "b61067c1bf0f82b08a387dd0f45a80b8447e349e88ccd4134c4ffe6c35116747"
+            },
+            {
+              "bytes": 2244,
+              "gate": "PASS_E1",
+              "measured_objective": "teacher-forced utility log-probability change on MGSM_dev",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/e1_gate.json",
+              "ranking_prediction_source": "MGSM_dev_utility_postselection_alignment",
+              "sha256": "c634410ca03e2d146afab477b73b158f3f4d67572f65f68dd53a956b2e29b0e1",
+              "spearman": 0.9853242846664088
+            },
+            {
+              "bytes": 2376,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/e1_scores.json",
+              "sha256": "3319ffbd2e6a835e48223dc108aae1bab001a85e93bfed8856ca37cac3b31f85"
+            },
+            {
+              "bytes": 83430,
+              "n_lines": 406,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/e1_window_sweep.jsonl",
+              "sha256": "026f53076030fda016c28265655c3b56c7b6265f3d3a55a5cadc34b43000c47b"
+            },
+            {
+              "bytes": 3291,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e1/run_manifest.json",
+              "sha256": "485026957ac40230dc26d048fb8693454789e3c20fabaaa1f6956a613d75277e"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Protocol v1 teacher-forced post-selection alignment; blocked from promotion."
+        },
+        {
+          "claim": "regime_diagnostic",
+          "class": "canonical",
+          "directory": "results/tier_a/zh/e2",
+          "files": [
+            {
+              "bytes": 28009,
+              "n_lines": 50,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e2/e2_regime.jsonl",
+              "sha256": "c7dd481257c08e2ecdcef92b6c14a0e5537e251bd182ea9cc67e0ef5c67d89a6"
+            },
+            {
+              "bytes": 1812,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e2/e2_report.json",
+              "protocol_version": 1,
+              "sha256": "f18ef6296eaced71d31ec777e34ae93cc0a2b3417082a726392d8986f4be9e9e",
+              "test_manifest_read": "MGSM_test was not read"
+            },
+            {
+              "bytes": 37453,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/e2/retrospective_provenance.json",
+              "sha256": "1d6189b4aacf73d7c80976fa2615aaf9a52b8da4315e2ac1b08eb2b6a58c3f0f"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 3,
+          "reason": "E2 regime measurement. Missing run_manifest."
+        },
+        {
+          "claim": "none",
+          "class": "superseded",
+          "directory": "results/tier_a/zh/pilots",
+          "files": [
+            {
+              "bytes": 2380,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots/P1_fake_donor_scores.json",
+              "sha256": "3b9536d47744496bf6ef22ec7c5a0f6afe0885e4e99d81ea2a035b519656e789"
+            },
+            {
+              "bytes": 2380,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots/P2_real_donor_scores.json",
+              "sha256": "57e5131fb8ce5061a4ef7eab3ecb5f8569eb14309adc45ba8e855068ac1706d0"
+            },
+            {
+              "bytes": 5766,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots/pilots.json",
+              "sha256": "4a51d003b6ceddc45cdfc23c86622085d339f29d6549adaf9546996da789f72a"
+            },
+            {
+              "bytes": 3020,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots/run_manifest.json",
+              "sha256": "6e89a5478f61178621a1a1c3dc94e2048b5c49c450197ccb955e9bc169a19a61"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Original plumbing; replaced by pilots_final."
+        },
+        {
+          "claim": "plumbing_p1_p2_p3",
+          "class": "canonical",
+          "directory": "results/tier_a/zh/pilots_final",
+          "files": [
+            {
+              "bytes": 2402,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots_final/P1_fake_donor_scores.json",
+              "sha256": "d6cdaf0a925302c35eb45a3c09532e70a552fcdb78fda93c0899447128749492"
+            },
+            {
+              "bytes": 2394,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots_final/P2_real_donor_scores.json",
+              "sha256": "e96dad9e0c899281eb00c02c114676de0742ce5de791ded0039828b06399aa93"
+            },
+            {
+              "bytes": 7076,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots_final/pilots.json",
+              "sha256": "a778e308f4e1fe92181232fbe795802e5cb75fbbd77f9b1751ad28b0755afdee"
+            },
+            {
+              "bytes": 42179,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/pilots_final/run_manifest.json",
+              "sha256": "f4992f13dd58abd86542da2771dc7243735d693d546e3709aa4d5d752a0a6192"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 4,
+          "reason": "Final float32 P1/P2/P3 on publication adapters."
+        },
+        {
+          "claim": "publication_experts_seed0",
+          "class": "canonical",
+          "directory": "results/tier_a/zh/publication_adapters_fixed",
+          "files": [
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0032/donor/adapter_config.json",
+              "sha256": "1777103794e168149306c1003226dcbba719cce3b15960b43e827ab20ece085e"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0064/donor/adapter_config.json",
+              "sha256": "1777103794e168149306c1003226dcbba719cce3b15960b43e827ab20ece085e"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0096/donor/adapter_config.json",
+              "sha256": "1777103794e168149306c1003226dcbba719cce3b15960b43e827ab20ece085e"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0128/donor/adapter_config.json",
+              "sha256": "1777103794e168149306c1003226dcbba719cce3b15960b43e827ab20ece085e"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/donor/adapter_config.json",
+              "sha256": "1777103794e168149306c1003226dcbba719cce3b15960b43e827ab20ece085e"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1336,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/donor/training_metadata.json",
+              "sha256": "aae9ddcb8ce0dd40ba9cf8556932d018c343dbbc8e77d66169016951069a50ce"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0032/host/adapter_config.json",
+              "sha256": "1a8bc97c1b02352cf5e2e91dc7804c74422598280d47c92a118037e6c0a243fc"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0032/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0032/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0064/host/adapter_config.json",
+              "sha256": "1a8bc97c1b02352cf5e2e91dc7804c74422598280d47c92a118037e6c0a243fc"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0064/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0064/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0096/host/adapter_config.json",
+              "sha256": "1a8bc97c1b02352cf5e2e91dc7804c74422598280d47c92a118037e6c0a243fc"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0096/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0096/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0128/host/adapter_config.json",
+              "sha256": "1a8bc97c1b02352cf5e2e91dc7804c74422598280d47c92a118037e6c0a243fc"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0128/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/checkpoint-0128/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1212,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/host/adapter_config.json",
+              "sha256": "1a8bc97c1b02352cf5e2e91dc7804c74422598280d47c92a118037e6c0a243fc"
+            },
+            {
+              "bytes": 11421892,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/tokenizer.json",
+              "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+            },
+            {
+              "bytes": 722,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/tokenizer_config.json",
+              "sha256": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e"
+            },
+            {
+              "bytes": 1334,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/publication_adapters_fixed/host/training_metadata.json",
+              "sha256": "5a16b6d3c9818fac442203dc7947cf1da7bcfb77802cd6e6f7d6d3b725d6c17e"
+            }
+          ],
+          "has_run_manifest": false,
+          "n_json_artifacts": 32,
+          "reason": "128-step matched LoRA experts. Canonical E1 not authorized after Spanish stop."
+        },
+        {
+          "claim": "expert_readiness",
+          "class": "canonical",
+          "directory": "results/tier_a/zh/readiness",
+          "files": [
+            {
+              "bytes": 6362,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/readiness_data_summary.json",
+              "sha256": "642e62886ac05d61b0aaf76b8436ef9b5aab3a30aef8b645efdcf6b38e3c212c"
+            },
+            {
+              "bytes": 12474,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/readiness_donor.jsonl",
+              "sha256": "08cea61c2e0d786ca1254e3b0292b8b332d408746dcc28b44be3abba8afe153c"
+            },
+            {
+              "bytes": 20573,
+              "n_lines": 33,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/readiness_host.jsonl",
+              "sha256": "d1867d3b8e854a1b0db1edd67c742eb6a12916fe71b545d28eafd5720832dc69"
+            },
+            {
+              "bytes": 37835,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/retrospective_provenance.json",
+              "sha256": "fb24962db581570c3ebeb51770c984f4f9cd094f3a836cc29d8588ffda376e18"
+            },
+            {
+              "bytes": 25117,
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/run_manifest.json",
+              "sha256": "1eac7a41fd87029f0cbcbe99c8e87c592c805f079967867c3d69509099b1a917"
+            },
+            {
+              "bytes": 47462,
+              "donor_gain": 0.03125,
+              "gate": "PASS_READINESS",
+              "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/readiness/seed0_readiness.json",
+              "sha256": "2d8a15bb82c7e6d724dcf1b2480fff36c6b0b9be614d58d6e12f1e1e5ac1f8db"
+            }
+          ],
+          "has_run_manifest": true,
+          "n_json_artifacts": 6,
+          "reason": "Seed-0 readiness PASS with the same small donor gain as Spanish."
+        }
+      ],
+      "mgsm_test_scored": false,
+      "root_files": [
+        {
+          "bytes": 325410,
+          "n_lines": 501,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/C.jsonl",
+          "sha256": "db5dc644fdc073b52cdaa3fd545991f986d27a23623f1777e330edbb11c014b4"
+        },
+        {
+          "bytes": 114581,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/data_build_summary.json",
+          "sha256": "475e6f385f31cb3460c7b874dd1b281e678801d9dc3cbd927079fe1cd2e02603"
+        },
+        {
+          "bytes": 219186,
+          "n_lines": 257,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/host_train.jsonl",
+          "sha256": "456ea379404d1b284385f339a374d69da802b6aa205fd2abc8a92ba75e201a69"
+        },
+        {
+          "bytes": 2479,
+          "n_lines": 9,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/MGSM_dev.jsonl",
+          "sha256": "0ce73d3625e76bc3871ea6598fd7c91b93d36ccea7de83f26b6f4510edfc8635"
+        },
+        {
+          "bytes": 98866,
+          "n_lines": 251,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/MGSM_test.jsonl",
+          "sha256": "f950a944748d176278a818f3c4934bac7ccfec5df86b21f4ac79aff7c2cda455"
+        },
+        {
+          "bytes": 137289,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/P_risk.jsonl",
+          "sha256": "ab3dfaa86aadb1bc862d748643016afff29544838da83c44d99625605347dd17"
+        },
+        {
+          "bytes": 153139,
+          "n_lines": 201,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/P_util.jsonl",
+          "sha256": "602e49bc80049684a4819b3f75df20ea98f1a189feaa7095624ea63a8ba01872"
+        },
+        {
+          "bytes": 5458,
+          "path": "F:/Program Files/GitHub/model-composition/results/tier_a/zh/run_manifest.json",
+          "sha256": "b9b7413c0231469817a223cd64a703a79846b5ab785a0b8602146501734267af"
+        }
+      ],
+      "status": "canonical_e1_blocked"
+    }
+  },
+  "mgsm_test_policy": "hashed_for_integrity_never_scored",
+  "schema_version": 1
+}

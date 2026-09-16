@@ -1,0 +1,1679 @@
+{
+  "excluded_classes": {
+    "generated_outputs": "LaTeX intermediates, PDFs, build logs, caches, and bytecode.",
+    "internal_process": "Author-only review, advisor, novelty, and submission-gate notes.",
+    "local_checkpoints": "Model weights, adapter binaries, tokenizer copies, and local Hugging Face snapshots.",
+    "superseded_runs": "Smoke, preliminary, abandoned, and superseded result directories."
+  },
+  "file_count": 277,
+  "files": [
+    {
+      "bytes": 447,
+      "path": ".env.example",
+      "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
+      "sha256": "4c66a8a9bb574a6d87441cdf288fa0998666ef471b4563dbb94788f671d97076"
+    },
+    {
+      "bytes": 1474,
+      "path": ".gitignore",
+      "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
+      "sha256": "48bc11c7bd4057f558043bcecaf641b4cf97d57ec85db78d1381e45c0f7d5bfc"
+    },
+    {
+      "bytes": 282,
+      "path": "CITATION.cff",
+      "rationale": "Machine-readable citation metadata for the reproducibility package.",
+      "sha256": "f71466d9308c19ac92906c8efb819d4504f194358d8a984c26e8b4e7310e3a5f"
+    },
+    {
+      "bytes": 1095,
+      "path": "LICENSE",
+      "rationale": "Software license for the released code and documentation.",
+      "sha256": "0aadca21706ffa5430d4947401a782e56d23304c15fddf7bdc355181e46f7c65"
+    },
+    {
+      "bytes": 9377,
+      "path": "README.md",
+      "rationale": "Reviewer-facing overview, setup, reproduction workflow, and claim boundaries.",
+      "sha256": "2022daa20d7373973d6405f9757bc20b7d3eab2d7e76c73d404390182b3e4ac7"
+    },
+    {
+      "bytes": 8046,
+      "path": "configs/b3_lighton_qwen3_8b_v1.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90"
+    },
+    {
+      "bytes": 14589,
+      "path": "configs/experimental_contract_v1.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "5a1856bae2a58cf9cf24dcef49f87983b442f950bd5134a9b1b2586e39094852"
+    },
+    {
+      "bytes": 7089,
+      "path": "configs/experimental_contract_v2.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "95cf8b238d58e267c064d5ddb6fc2c7b75aadf6a1514bbf18bc965c0a22f7bcb"
+    },
+    {
+      "bytes": 1636,
+      "path": "configs/powered_spanish_ranking_v1.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "83883daad53e2da5ac9ee6fd3377867fad82388f72bbd6abd3c7e8fc5ad4bbcb"
+    },
+    {
+      "bytes": 2642,
+      "path": "configs/reviewer_followup_contract_v1.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "79659248c94fca72376bcab8a0f888868fd70460e449f00297798e31a25d8366"
+    },
+    {
+      "bytes": 2867,
+      "path": "configs/reviewer_llm_comparison_v1.json",
+      "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
+      "sha256": "3653d334c34b0a1189c75159478c94eb486a2047470ff1c67bcbcfa606febb12"
+    },
+    {
+      "bytes": 8632,
+      "path": "docs/FILES_RATIONALE.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "4aa52dbca41e04aef99cec8e75b18b3ddfc04a2f39e121f3d6c6fdf97744025c"
+    },
+    {
+      "bytes": 3674,
+      "path": "docs/PROJECT_EXPLAINER.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "5b13accc883fc22ec3da1ab4ebeb7b8706c447e5479bd78bbbbd654e762500d5"
+    },
+    {
+      "bytes": 3468,
+      "path": "docs/artifact_inventory.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "eca8acd936d2af31f52429628b906f395a1ffd5cc9d6cf5d5c160e68e5638053"
+    },
+    {
+      "bytes": 9376,
+      "path": "docs/b3_runbook.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "06742f77ecd5959abc41254cdac1c6e44c0a246532d7b62a7abadb9bac637443"
+    },
+    {
+      "bytes": 2313,
+      "path": "docs/build_report.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "c1f2883cacd860bc409890520c8fa879ed4494937604e899ec84044d19c7fb1b"
+    },
+    {
+      "bytes": 11751,
+      "path": "docs/experimental_status.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "0b893f3d7e2e9fa65027013a17baf9d5001af42efed53086c1fc56f7a3d925de"
+    },
+    {
+      "bytes": 1760,
+      "path": "docs/paper_compile.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "32f0e920ab92fd4800294b115a1a19c93da774d84c45f3763a4472973299c5ba"
+    },
+    {
+      "bytes": 3269,
+      "path": "docs/reproducibility.md",
+      "rationale": "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation.",
+      "sha256": "b64776ff23cd41373d50201cf2dbc683a01dbd8b9e377b0722fab1bb55497050"
+    },
+    {
+      "bytes": null,
+      "note": "Self-entry is intentionally unhashed because the manifest contains its own inventory.",
+      "path": "manifests/submission_manifest.json",
+      "rationale": "Machine-readable release inventory; this file records the rationale for every other included file.",
+      "sha256": null
+    },
+    {
+      "bytes": 789,
+      "path": "paper/build.sh",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "e7b4498f11feacc7cf4df2f3d38f8dea293b057be10842946b0f36ee2083c5ff"
+    },
+    {
+      "bytes": 4301,
+      "path": "paper/figs/fig1_teaser.tex",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "a38ac3e238a9feaf3634db6c22d1d1780084e6eb431a6dcefc1739212046cd93"
+    },
+    {
+      "bytes": 6857,
+      "path": "paper/figs/fig2_verify.tex",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "c988c50096b11111e818d2d7468f4b2a125c69fed2ba81ed95b0406363ccdf13"
+    },
+    {
+      "bytes": 94,
+      "path": "paper/figs/fig_ablation.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "2b3f0ead33478618a491d775a74e8990cbd6c0d9b4eaa969b18fabfc4f21c4a2"
+    },
+    {
+      "bytes": 1559,
+      "path": "paper/figs/fig_certify.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "7071a0e9aa11388f9eb474cfd0c533bc11a8052cfbdbf377c7577369058a7ff2"
+    },
+    {
+      "bytes": 14,
+      "path": "paper/figs/fig_certify_thresh.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "3f396633accf360df9762903fe3100620ee2cba2c701941757f4cf8b703e01c9"
+    },
+    {
+      "bytes": 50,
+      "path": "paper/figs/fig_certify_uncert.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "9101c77ee2d4046c0d1b607a0e8c6d40a6ea662f03548aaab9eec3d82d9e3de4"
+    },
+    {
+      "bytes": 1949,
+      "path": "paper/figs/fig_intervals.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "7b6ee98970a94d0b46c22d854e49b74d40f0f237e18f12a8cd6a807e3957563b"
+    },
+    {
+      "bytes": 33,
+      "path": "paper/figs/fig_intervals_pick.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "db0ac20e68eb06ee1b72be9fcf827122b6a168dd7ccb05d3ddff2eb72583a151"
+    },
+    {
+      "bytes": 351,
+      "path": "paper/figs/fig_profile.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "635ae4c0e571653380470f01216a5410ea096b20e37f5d3436262f908f187147"
+    },
+    {
+      "bytes": 7,
+      "path": "paper/figs/fig_profile_pick.tex",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "cf97fbca78600bf4846371410af1a91c20bb0f4df99f60f5820ef21a93fe7c1e"
+    },
+    {
+      "bytes": 169,
+      "path": "paper/figs/fig_regime.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "39151251ea89c4346fea09532cca0372eefbb45efd5bc42a24da0e9f1c7f0228"
+    },
+    {
+      "bytes": 214,
+      "path": "paper/figs/fig_remainder.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "6d9c6fc07ec4af14ff428065727abdce0e24d0d65d2607bae8c2909979de36ab"
+    },
+    {
+      "bytes": 215,
+      "path": "paper/figs/fig_remainder_ref.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "4ef0ecad0f441c9a583560128164d86d4b71cf66d20d8f5beaa7f704874bf4ea"
+    },
+    {
+      "bytes": 2567,
+      "path": "paper/figs/fig_scatter.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "016ebe5e4fc5380962e298a7ec279fd5cb2a76cf2310d2addf3cbb7af0c981d0"
+    },
+    {
+      "bytes": 26973,
+      "path": "paper/iclr2027_conference.bst",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5"
+    },
+    {
+      "bytes": 9025,
+      "path": "paper/iclr2027_conference.sty",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
+    },
+    {
+      "bytes": 93684,
+      "path": "paper/main.tex",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "26d4b95680022dde2442f4cb770b6d6c9632435df37461255d924130c8b30886"
+    },
+    {
+      "bytes": 35120,
+      "path": "paper/suture.bib",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "ea5404cef46aa21c4ec1f90a63357af6f7f7f4e0e9d673fdc69a94c70f3d1e0f"
+    },
+    {
+      "bytes": 486,
+      "path": "pyproject.toml",
+      "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
+      "sha256": "72e7b2c476ac13b7d4f8f736ba6285172cf34007180fd123bed59fce84c497b4"
+    },
+    {
+      "bytes": 608,
+      "path": "requirements-gpu.txt",
+      "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
+      "sha256": "a5ef68fb0f6b0515dc08b5cea661f3e6e228ab7586cf8ef16e25cd0f30603f84"
+    },
+    {
+      "bytes": 139,
+      "path": "requirements.txt",
+      "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
+      "sha256": "c230395d22bfc27571440138ae0e928440c196c8b692bc58f69d10cd9432ab77"
+    },
+    {
+      "bytes": 175642,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/MGSM_rev2_test.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "7748f3b0bf034a61f1d1bef34e98b9481d8f15a1f63324c70220308a308565de"
+    },
+    {
+      "bytes": 465883,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_risk.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "cbbc73950852f68b4b0a438778a5d6826fa95b856511872e813a7b4d9e892896"
+    },
+    {
+      "bytes": 401043,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "08812b37aa798046b5084312fe04d2ebbad52b673b8d284637e4a627ae0582f1"
+    },
+    {
+      "bytes": 78096,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/data_build_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "a02a4842145bda8f0be71f9363e927d0eff79b49a8835efc7a4e0aab3d9aec3e"
+    },
+    {
+      "bytes": 19832,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/measurement_data_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "f2b3547497c480ee34bd83f14447da3e0ba0dec4131bfc9a4ee9caee508818a5"
+    },
+    {
+      "bytes": 21520,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/measurement_run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "7df3469b6cb0b4733fae0f001fb7b315f2132bca0c22be755dc6f51b6a85e5dc"
+    },
+    {
+      "bytes": 81414,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "7818bfac466916273243cbf39e0bc391d1e7245c657de1a11104deeccb171ed9"
+    },
+    {
+      "bytes": 7572,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/measure/measure.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "be2bcbaaabfa62d334ab380aac065c9a62c94029722c5486afdb6777517845f8"
+    },
+    {
+      "bytes": 159469,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/measure/measurements.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "a0dfc49d3e0b9c36095613313c5bbae98f0b2b0a1c2947559c1668ac8b81faee"
+    },
+    {
+      "bytes": 9088,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/measure/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "e311cfeefa94501d111d22cd55d670f664e047c551c6cf4dbc5cf183037da534"
+    },
+    {
+      "bytes": 6168,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/preflight/preflight_report.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "ed8f4623d7d74bad9c6b190214fa6d049481b72e86696c097d635c41c167a8ad"
+    },
+    {
+      "bytes": 6798,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/preflight/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "27d84fb8a2eb56281c646de89d947cc4f4054aea68b8cb8dfc332007471d9fd7"
+    },
+    {
+      "bytes": 7631,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/score/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "3f6e01dd154c02bc824889933e60ccdf5d346fd1d769cacb307fe4c977d1593e"
+    },
+    {
+      "bytes": 490,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/score/selection.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "86b8ceb6df16e4471e1f8d346d055db25cbb3099226905f35c65e312db8569a2"
+    },
+    {
+      "bytes": 142277,
+      "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/score/selection_scores.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "0f777702d2c15894938ddfd5cfb5b7cec4d57083784b29e474cdda30c34244dd"
+    },
+    {
+      "bytes": 1312,
+      "path": "results/b3/lighton_qwen3_8b/posthoc_statistics.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "3a55e8f8942b905152c13ca04fdda4fc7758549ec955206e6ed22af8cd6397c9"
+    },
+    {
+      "bytes": 163088,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/MGSM_rev2_test.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "cea1c6cd0b715aa8f9d37c854bb84e863dbea410d3f9ee7ea7e61be7b1c28504"
+    },
+    {
+      "bytes": 437698,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "f29d42ec1a37fd1e8bb825b67e1ec09f5697b1ef6901e0175e62d8651e36a88c"
+    },
+    {
+      "bytes": 378100,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "322b697febf460b5b266c901e0f5e6d5bd4aefd56b1245adc4e3ae3a6ca4cdd5"
+    },
+    {
+      "bytes": 78096,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/data_build_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "ef3b3ec86a2f737d8a8a7895f7da4a134f691b685ecab7961c1fbb7e32cfa4f3"
+    },
+    {
+      "bytes": 19832,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/measurement_data_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "772710aa174891f0c916af34e74763d031181df3649847d9136acb11147081bc"
+    },
+    {
+      "bytes": 21520,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/measurement_run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "4a13446033f6187f1b654d585a18d8593d08760a71077389770beca902c34673"
+    },
+    {
+      "bytes": 81414,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "182695d50badd54246ec4e8d2990f8a7c642e72b4d84808b9b359e81c26d6786"
+    },
+    {
+      "bytes": 7654,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/measure/measure.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "8904b68f520656147fc53544b7db13dab34c515fb24e6a627fa6f808eba3b188"
+    },
+    {
+      "bytes": 166504,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/measure/measurements.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "f4fd0e78a5cc4c003723185f51ae496cd425c802db3ce48316625af886a59e76"
+    },
+    {
+      "bytes": 9184,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/measure/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "7148f9ad0967c663a87a2be3f26b6b7b9c731e5d296daec16868c0e53747991c"
+    },
+    {
+      "bytes": 6168,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/preflight/preflight_report.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "b3389e2d370568e6eff1ee58d3542a774958a6347c862c816cb2e2a4c9949b41"
+    },
+    {
+      "bytes": 6798,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/preflight/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "6fba02e9dbbf81c162cbb58f05b57fb980cb8258b78cdb409226fc461e5e5046"
+    },
+    {
+      "bytes": 7738,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "606c4e0c5a9a45231821be5005c133e77b934dc4b6162fff230adc6e9ebcedfd"
+    },
+    {
+      "bytes": 579,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "4e6e0b7ccde54bf930e27bad8ff25fc62e89b3e544528be48bb4222f6636ed97"
+    },
+    {
+      "bytes": 141589,
+      "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection_scores.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "8a641158f585b1ec0348a4744bb9e5a5b11129906bb3374a01480260224d7c05"
+    },
+    {
+      "bytes": 2667,
+      "path": "results/reviewer_followup/controlled/controlled_summary.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "0441f83f285dc4d77d4f82761a1304393340d525b9588eb62200fcaec26d29ce"
+    },
+    {
+      "bytes": 32538,
+      "path": "results/reviewer_followup/controlled/verify_theory_output.txt",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "b25704ccce5d1d86bd86a96de71871517ffda4caf3f2b6a0d7c3eb8aea0638c3"
+    },
+    {
+      "bytes": 7249,
+      "path": "results/reviewer_followup/cost/cost_diagnostics.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "fa29e1b24f82ba6fafaeaaab59dca350e91febe580cea1d4996fce427b25f36e"
+    },
+    {
+      "bytes": 420,
+      "path": "results/reviewer_followup/cost/run_manifest.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "989f4f56f4174f89396bd5f992a227274c277d4006ffbf0a1d81144d6c766920"
+    },
+    {
+      "bytes": 17736,
+      "path": "results/reviewer_followup/llm_comparison/comparison.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "656f74b354d0fbe281b9148f5a0b0be7cd5fe333910c6e1ea37831a988d56775"
+    },
+    {
+      "bytes": 329,
+      "path": "results/reviewer_followup/llm_comparison/run_manifest.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "ef7fb881ae20f4a52db3c195a6dfd628dce39e518ae65ea8532080ecae1174bf"
+    },
+    {
+      "bytes": 867,
+      "path": "results/reviewer_followup/powered_spanish_ranking/posthoc_statistics.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "2ed5c7f61b1bd96559900ac9615962119b7fb53d5e08c617e46cb3a8bb101070"
+    },
+    {
+      "bytes": 2021,
+      "path": "results/reviewer_followup/powered_spanish_ranking/ranking_config.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "250b76a73bf27c2122a077becb64a325a76b870fee1b115f49b21f319311f5af"
+    },
+    {
+      "bytes": 298,
+      "path": "results/reviewer_followup/powered_spanish_ranking/ranking_summary.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "f59baab6f64b3bc3410c79fa8d79f1cbc6360d48940ed38faedfe92da9238892"
+    },
+    {
+      "bytes": 5544,
+      "path": "results/reviewer_followup/powered_spanish_ranking/run.log",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "b63f1f6deb6c46ea94eeb022e1319109fa6fb7e707e28ee2cbea55f037582071"
+    },
+    {
+      "bytes": 11936002,
+      "path": "results/reviewer_followup/powered_spanish_ranking/window_sweep.jsonl",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "8457c61be5914d30c9a1ae92c7610f2c336fd5ca44cf3b1dbe8cb4ecb5d5b50a"
+    },
+    {
+      "bytes": 4344,
+      "path": "results/reviewer_followup/qwen3_1_7b/plumbing_diagnostic.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "d13b640f3ba0b7a3f688932057022aa3201c471ad397e98e3ec32642dfb14267"
+    },
+    {
+      "bytes": 4283,
+      "path": "results/reviewer_followup/qwen3_1_7b/repair_01/plumbing_diagnostic.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "0f997e39464bfd7a99988a9570a141d3b7196be72acf19a8d56126c575ad104d"
+    },
+    {
+      "bytes": 640,
+      "path": "results/reviewer_followup/qwen3_1_7b/repair_01/run_manifest.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "44ad6a4ce8345c916e3f5e63bd7c159787a929260cb79cba6bf187973908f1c0"
+    },
+    {
+      "bytes": 629,
+      "path": "results/reviewer_followup/qwen3_1_7b/run_manifest.json",
+      "rationale": "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper.",
+      "sha256": "2fa5a0f26ed4fd46c309a32b9d1ca923f8585f44964efda82601fcc75f469353"
+    },
+    {
+      "bytes": 111366,
+      "path": "results/tier_a/ARTIFACT_INVENTORY.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "1a9e4141c3be2967e2406067d4d34037326f1cb4abfbbbf685032c1e89613853"
+    },
+    {
+      "bytes": 4125,
+      "path": "results/tier_a/RELEASE_ATTESTATION.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0647315d125e9026b5f4e3df7f9248fffb05437f0c4370aab584634b5c186b11"
+    },
+    {
+      "bytes": 226851,
+      "path": "results/tier_a/es/C.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d4a97bc92ccfe42672a497a375efecd00a5d8be44929c93e074312cbffa84275"
+    },
+    {
+      "bytes": 2601,
+      "path": "results/tier_a/es/MGSM_dev.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d5021d0fb8d8e11e2e67d05fa6b991f45ba575bcbef808643b5ebcd26fbc97ed"
+    },
+    {
+      "bytes": 107926,
+      "path": "results/tier_a/es/MGSM_test.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "6d00a033c0fba66bcca5398d48f0c231caf0ab23311dde4c96118c2109b10544"
+    },
+    {
+      "bytes": 149177,
+      "path": "results/tier_a/es/P_risk.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0520d262414d9f43ac44fef36deebda1d57c41979224e87a0f1a03f4e3f72f1e"
+    },
+    {
+      "bytes": 156904,
+      "path": "results/tier_a/es/P_util.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d066dbdcd31d280fca265eaec0759de860cd405a70020f7be2f8a6474a60c318"
+    },
+    {
+      "bytes": 112976,
+      "path": "results/tier_a/es/data_build_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "cb6416cf27ad4673ba2d986975af280e1ac6a0bc616f9120c1e26b3b6a7878ec"
+    },
+    {
+      "bytes": 1405161,
+      "path": "results/tier_a/es/e1_canonical_seed0/e1_baseline.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "cd35e0ae16f682bfc6391bee1cb0deeaec50d68a1940ac9c54d74dd3b388caad"
+    },
+    {
+      "bytes": 1651,
+      "path": "results/tier_a/es/e1_canonical_seed0/e1_config.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "00bbf4886781517f9a271909fc19f01930b9d6b2a7a60ff74065f03120e4fe4a"
+    },
+    {
+      "bytes": 2771201,
+      "path": "results/tier_a/es/e1_canonical_seed0/e1_gate.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "4a4422ad5a7adb3e672c7c08f2224f419d6727ea03684dd3e059958f462ea752"
+    },
+    {
+      "bytes": 2303,
+      "path": "results/tier_a/es/e1_canonical_seed0/e1_selection_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "26761189c93dcf36b30afcf23e0583776a6f0882ee0aeaf25b29a7bdd23b340d"
+    },
+    {
+      "bytes": 7239549,
+      "path": "results/tier_a/es/e1_canonical_seed0/e1_window_sweep.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "f05a6c5fe0a90a4042dbe3a9ad101449555effa0bac72eb2e18e53adfa71fd52"
+    },
+    {
+      "bytes": 42217,
+      "path": "results/tier_a/es/e1_canonical_seed0/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "7113300bac3a02b6080da0754a8c0cb52f45875162b472f78539ecb7241f01c3"
+    },
+    {
+      "bytes": 3280,
+      "path": "results/tier_a/es/e1_canonical_seed0_posthoc_statistics.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "2762a4ebdca0d627bebc40bbe46bc4ff19c412f7fee800f7e05acc32a61fa945"
+    },
+    {
+      "bytes": 27921,
+      "path": "results/tier_a/es/e2/e2_regime.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "93af5d6c79f40e663dc092c4e30c1c0804f5fb11c4a9c4f1c7dc2bd8891323e6"
+    },
+    {
+      "bytes": 1749,
+      "path": "results/tier_a/es/e2/e2_report.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "c445b1ca8b7761306940d81b4eb6f30df2d1f90a42ecf3ed99f7149d1c057b71"
+    },
+    {
+      "bytes": 36938,
+      "path": "results/tier_a/es/e2/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "864bbd530c4402c46d42c49208e07a1744ced4b95376aee8667e783228b2710c"
+    },
+    {
+      "bytes": 668501,
+      "path": "results/tier_a/es/host_train.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "aaeb5145c4120ae4fb5f4d33321da8831f880720cbb205698c4da3ac7dc2bab3"
+    },
+    {
+      "bytes": 2336,
+      "path": "results/tier_a/es/pilots_final/P1_fake_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "deefceed9bdf5d555f8a1f483b9df5611d0cb73b06a19ee50caf8673749e04b6"
+    },
+    {
+      "bytes": 2309,
+      "path": "results/tier_a/es/pilots_final/P2_real_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d11b9c56b5a8f1523559a58fefc5e0d477a434aa8d20c0c95099cc5643b5774e"
+    },
+    {
+      "bytes": 6663,
+      "path": "results/tier_a/es/pilots_final/pilots.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "4ed450e5308ba9857afabf3f3683d766a63bf5c16ca3ab4db2425ca6dc1eb950"
+    },
+    {
+      "bytes": 41627,
+      "path": "results/tier_a/es/pilots_final/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "92cc68e08a0f08b6c74d77578c569f3596a4fd69c719313ad9e91ed459c517f7"
+    },
+    {
+      "bytes": 6243,
+      "path": "results/tier_a/es/readiness/readiness_data_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "ef87c67b0541ee907f1dd2e242be0cc0d933eabc6b6dccdf899b242df6f8ab83"
+    },
+    {
+      "bytes": 12474,
+      "path": "results/tier_a/es/readiness/readiness_donor.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "08cea61c2e0d786ca1254e3b0292b8b332d408746dcc28b44be3abba8afe153c"
+    },
+    {
+      "bytes": 11916,
+      "path": "results/tier_a/es/readiness/readiness_host.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "96a23e770de8995c85bd0548a4036be151449d4e6b008138c8bea28178d6b6ae"
+    },
+    {
+      "bytes": 37317,
+      "path": "results/tier_a/es/readiness/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0f85997e8730aa161f5f542cea5c773e26087a3538bf44cffb348cf96d61926f"
+    },
+    {
+      "bytes": 25252,
+      "path": "results/tier_a/es/readiness/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "49de9c9746b17e11fdd8a9b2885e38fe75835a3af691ee95f8b95b7ac602968d"
+    },
+    {
+      "bytes": 48092,
+      "path": "results/tier_a/es/readiness/seed0_readiness.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "e291e7233d40dd2588c9f6bdf257e6a1f2df37d3db8cac758fb8f20dfdec713c"
+    },
+    {
+      "bytes": 5975,
+      "path": "results/tier_a/es/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "b9df347850f704ec1d5bed7c09d259b44a2ceb38a58f7b60bbad837c26565f46"
+    },
+    {
+      "bytes": 234171,
+      "path": "results/tier_a/sw/C.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "c705e4da33e9c8a1740838bded18de027e2031aae6c63e15f65c028467ce8556"
+    },
+    {
+      "bytes": 2615,
+      "path": "results/tier_a/sw/MGSM_dev.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "a246a5cbd2bb4e951e049933fb9754f6aa0799c58e1f423ec75ba73776398f18"
+    },
+    {
+      "bytes": 108484,
+      "path": "results/tier_a/sw/MGSM_test.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "a80a632f7e32ad0482649726497abd3db817da663a314b9b26e64fb8555b1572"
+    },
+    {
+      "bytes": 144106,
+      "path": "results/tier_a/sw/P_risk.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "50b7a6c427fbea31a9a0a3a5d83c02d0b4633195a3955fb69b419963d0e2397b"
+    },
+    {
+      "bytes": 150922,
+      "path": "results/tier_a/sw/P_util.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "c4dd315ca053e3c13e0cbaccb08522df7116e4853d4f044d47005913a653cf92"
+    },
+    {
+      "bytes": 113220,
+      "path": "results/tier_a/sw/data_build_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "37a648e975bb8272ad05c8c92d696e4938d90589f544c242d7d84cf720a581b4"
+    },
+    {
+      "bytes": 27961,
+      "path": "results/tier_a/sw/e2/e2_regime.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "80d2a77b8dc880d6389152d121c30010be6c246f328dfc0b46233af513f48d66"
+    },
+    {
+      "bytes": 1749,
+      "path": "results/tier_a/sw/e2/e2_report.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "b131cf79ee76c045deda4027b269c350502ac9a3a04e39b61cbbdd9f03557b4e"
+    },
+    {
+      "bytes": 37054,
+      "path": "results/tier_a/sw/e2/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "7b2a1ee7db3b9b71ae826b67ecaf05ea17a6371a3dd8b0c4a4b312f2c0baea45"
+    },
+    {
+      "bytes": 210358,
+      "path": "results/tier_a/sw/host_train.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "f17a45b7cda4e76ffd9e0cb4ac3d0041de1e441ba2b0666d6a5e8fc3a433b7ea"
+    },
+    {
+      "bytes": 2300,
+      "path": "results/tier_a/sw/pilots_final/P1_fake_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "bff025e0cac9e5a29e874e3234b257e55979f61e9c6b80212a0ba635584aaf1a"
+    },
+    {
+      "bytes": 2315,
+      "path": "results/tier_a/sw/pilots_final/P2_real_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "610d56fc4c8bf8cd6a70fcf98189d0d966f9291ed844b2ff5d43ffe509dca5d8"
+    },
+    {
+      "bytes": 6655,
+      "path": "results/tier_a/sw/pilots_final/pilots.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "cdb5da0a4f56ebbb7d218ebc8072045ffd5e551b6f83d601ea01cc57930066c2"
+    },
+    {
+      "bytes": 41627,
+      "path": "results/tier_a/sw/pilots_final/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "e000f2bca8472b225e2460610d124cfbc22931286af69c266cfd29688b3f9dd2"
+    },
+    {
+      "bytes": 6291,
+      "path": "results/tier_a/sw/readiness/readiness_data_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "33888137494c16239386d60229269a2f10c6ef242dbf708f625d2506477ad914"
+    },
+    {
+      "bytes": 12811,
+      "path": "results/tier_a/sw/readiness/readiness_donor.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "391102867d5972e0f175c1dabdedeaad8db893fe329892e238bbb0b57c4300c7"
+    },
+    {
+      "bytes": 16186,
+      "path": "results/tier_a/sw/readiness/readiness_host.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "339f4cee89408b5db70d7a1b1a720f057a45736fd2bd898915d3bf0fb10925ba"
+    },
+    {
+      "bytes": 37433,
+      "path": "results/tier_a/sw/readiness/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "5624ffee8a34664fd85da157ce4ff8fd224e67b52d61613b855874a4ce4c4864"
+    },
+    {
+      "bytes": 24784,
+      "path": "results/tier_a/sw/readiness/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "02321e39f595368c5dee673ac6591777570affc03cd59e24fbe9358ab62dcaa5"
+    },
+    {
+      "bytes": 42756,
+      "path": "results/tier_a/sw/readiness/seed0_readiness.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "b66ba41f73973bddc25940d6c2c1b6a9aac75e87e509bb881e8c14b69570ef01"
+    },
+    {
+      "bytes": 5391,
+      "path": "results/tier_a/sw/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "f91d6b7e28e3000445416336bf204c704bbbb103a4351a49f93ef690f296c316"
+    },
+    {
+      "bytes": 4302,
+      "path": "results/tier_a/tier_a_replication_statistics.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "bc342b30f2107cd4f5810b927a1f714217205eb88565dd642c774c3c83d70fe8"
+    },
+    {
+      "bytes": 4125,
+      "path": "results/tier_a/verification_release/RELEASE_ATTESTATION.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0647315d125e9026b5f4e3df7f9248fffb05437f0c4370aab584634b5c186b11"
+    },
+    {
+      "bytes": 42217,
+      "path": "results/tier_a/verification_release/cleanroom_p1.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "1b4f399768494aca83eb17bdfd6205e18a2420ca48cd95ea173ab62984675d8f"
+    },
+    {
+      "bytes": 24788,
+      "path": "results/tier_a/verification_release/cleanroom_p3.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "2c2aed533e3d379736c423335b7b80ff1cc607f5ef31209c50fc50caeb065ce2"
+    },
+    {
+      "bytes": 153,
+      "path": "results/tier_a/verification_release/cleanroom_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "e9eca0440712e2eef3866fea216ee02cbf49bf8758152f924ae8740477b4de21"
+    },
+    {
+      "bytes": 83,
+      "path": "results/tier_a/verification_release/figdata.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d2c852431ffcc82dcedfef956defc44e86246411d0a952015abe7a9f1e839ec4"
+    },
+    {
+      "bytes": 92,
+      "path": "results/tier_a/verification_release/iclr2027_style_zip.sha256",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "101f586233a889b4bce6f3bd0038b88dc1572ca6d7b323e94849826bfc59de9a"
+    },
+    {
+      "bytes": 40777,
+      "path": "results/tier_a/verification_release/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "72cd139a9fc38b7b5f58196c91a689e9f725019ddf0ced40e007d4edb541a368"
+    },
+    {
+      "bytes": 18,
+      "path": "results/tier_a/verification_release/smoke.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "35988d8d2a641d6a0e8fecfc7e733d50a5debd2109023e102584c8110c2d6857"
+    },
+    {
+      "bytes": 67,
+      "path": "results/tier_a/verification_release/theory.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "efa668acde3cbbfd3fe43232d3ac997c9e8a194a3b3b49f590d838bf7307a985"
+    },
+    {
+      "bytes": 26,
+      "path": "results/tier_a/verification_release/unittest.log",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "b6ca92c0399368230de243273166016924a9e13dcad08682c29ec8c33ef3d575"
+    },
+    {
+      "bytes": 325410,
+      "path": "results/tier_a/zh/C.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "db5dc644fdc073b52cdaa3fd545991f986d27a23623f1777e330edbb11c014b4"
+    },
+    {
+      "bytes": 2479,
+      "path": "results/tier_a/zh/MGSM_dev.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0ce73d3625e76bc3871ea6598fd7c91b93d36ccea7de83f26b6f4510edfc8635"
+    },
+    {
+      "bytes": 98866,
+      "path": "results/tier_a/zh/MGSM_test.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "f950a944748d176278a818f3c4934bac7ccfec5df86b21f4ac79aff7c2cda455"
+    },
+    {
+      "bytes": 137289,
+      "path": "results/tier_a/zh/P_risk.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "ab3dfaa86aadb1bc862d748643016afff29544838da83c44d99625605347dd17"
+    },
+    {
+      "bytes": 153139,
+      "path": "results/tier_a/zh/P_util.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "602e49bc80049684a4819b3f75df20ea98f1a189feaa7095624ea63a8ba01872"
+    },
+    {
+      "bytes": 112976,
+      "path": "results/tier_a/zh/data_build_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "217eae9351e4845747e43bdacb3d87378695ff99b5b6d66afdb0245bd3508fc4"
+    },
+    {
+      "bytes": 27959,
+      "path": "results/tier_a/zh/e2/e2_regime.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "a61920c31b5a14252a18f769e506de617dae48aea080075784740a62273349d9"
+    },
+    {
+      "bytes": 1753,
+      "path": "results/tier_a/zh/e2/e2_report.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "3e81aa486574776f38d95406d21fdeae0a60fc303fd1f6ae0930651948054c01"
+    },
+    {
+      "bytes": 36927,
+      "path": "results/tier_a/zh/e2/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d8c3df9067fd8f98aae94e81e8d515cd2d5d33aaca6ef0d6946765f941524d4f"
+    },
+    {
+      "bytes": 219186,
+      "path": "results/tier_a/zh/host_train.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "456ea379404d1b284385f339a374d69da802b6aa205fd2abc8a92ba75e201a69"
+    },
+    {
+      "bytes": 2306,
+      "path": "results/tier_a/zh/pilots_final/P1_fake_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "0f940661f641535383b7229135cca30d58f7649392738a91c0d12b4e0d35c932"
+    },
+    {
+      "bytes": 2298,
+      "path": "results/tier_a/zh/pilots_final/P2_real_donor_scores.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "7ef477e7c5f17918a2c2edeea29669bf2da6411dc36710dc457d54fbe10ba05f"
+    },
+    {
+      "bytes": 6647,
+      "path": "results/tier_a/zh/pilots_final/pilots.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "21836ce9110d5733adaf5ac44a8add63184280d1848cfbd39831475a3374b8c9"
+    },
+    {
+      "bytes": 41627,
+      "path": "results/tier_a/zh/pilots_final/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "32bf6449090563ddce27ba32f11c680b0a2e6ca7e3667ffff67b0dc00d53299d"
+    },
+    {
+      "bytes": 6243,
+      "path": "results/tier_a/zh/readiness/readiness_data_summary.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "5c68237f8f0a0a32ef25fc762b968270fe2012b18ab39dc76a153d94dad9186c"
+    },
+    {
+      "bytes": 12474,
+      "path": "results/tier_a/zh/readiness/readiness_donor.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "08cea61c2e0d786ca1254e3b0292b8b332d408746dcc28b44be3abba8afe153c"
+    },
+    {
+      "bytes": 20573,
+      "path": "results/tier_a/zh/readiness/readiness_host.jsonl",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "d1867d3b8e854a1b0db1edd67c742eb6a12916fe71b545d28eafd5720832dc69"
+    },
+    {
+      "bytes": 37306,
+      "path": "results/tier_a/zh/readiness/retrospective_provenance.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "7291aa3853c35f5f430e851e333a5b2a8da08dd13611d4aeb4b1efa5601bd3e3"
+    },
+    {
+      "bytes": 24770,
+      "path": "results/tier_a/zh/readiness/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "4a92a8e2d9adf40b5b6721a8e824b86693a984e43e36fed447c47a4ee7bdf526"
+    },
+    {
+      "bytes": 46400,
+      "path": "results/tier_a/zh/readiness/seed0_readiness.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "1ac228856878e35395b113516354176ac1a681e85e0165d86576f90be1418be5"
+    },
+    {
+      "bytes": 5391,
+      "path": "results/tier_a/zh/run_manifest.json",
+      "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
+      "sha256": "22e8529c20d66ba066de9d408251e9409b884b248dfba167ade8aebb444f9e4b"
+    },
+    {
+      "bytes": 128731,
+      "path": "results/v2/qwen3_1_7b/es/data/Belebele.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "fdb15836fecb50a20cd9c61900b13b9d77e1afc0f90cec881b3d478a1c43063a"
+    },
+    {
+      "bytes": 364513,
+      "path": "results/v2/qwen3_1_7b/es/data/C.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "3e7a069ed95b0a2f3a15ae2fa7d003ce80891c3032701ddc519a2cb344a67c24"
+    },
+    {
+      "bytes": 32769,
+      "path": "results/v2/qwen3_1_7b/es/data/MGSM_dev.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "3ffa08b4882cd1960141a68216f8a4703079edff7d03888c9f51229fece0a13c"
+    },
+    {
+      "bytes": 95428,
+      "path": "results/v2/qwen3_1_7b/es/data/MGSM_test.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "c7c8839aaf23cae701351c5632eb7f3eec6644818aa8a7d0c0d1990d2760bfd6"
+    },
+    {
+      "bytes": 344748,
+      "path": "results/v2/qwen3_1_7b/es/data/P_risk.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "d615dd18c3f86c6933b40088d2b87474b2156ee53d9aae329125137721518973"
+    },
+    {
+      "bytes": 393276,
+      "path": "results/v2/qwen3_1_7b/es/data/P_util.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "a9b2ba022d6e8b2657b3d17c8c5903ed797a674a5048c6d3ec7835523f50b43f"
+    },
+    {
+      "bytes": 302155,
+      "path": "results/v2/qwen3_1_7b/es/data/data_build_summary.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "8a0010e9351064a6bf66f8a3df7c134a0017291c590c712a82bf867ca6c50dc0"
+    },
+    {
+      "bytes": 27533,
+      "path": "results/v2/qwen3_1_7b/es/data/expert_validation_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "0ffd7b6716b3b7a5768df5f65ed29f1b1a58704ba913ce97d3f6975d6b68cda9"
+    },
+    {
+      "bytes": 54046,
+      "path": "results/v2/qwen3_1_7b/es/data/expert_validation_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "35928e9df9d85e812427bffbf982c30d533d8b2af226cf83da7ca5beff3d0f2c"
+    },
+    {
+      "bytes": 825770,
+      "path": "results/v2/qwen3_1_7b/es/data/host_train.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "cdcac94b0ff0c8f82d0eaf6e2193d95808f4dbf38428593a6dc28c620d8416ae"
+    },
+    {
+      "bytes": 54895,
+      "path": "results/v2/qwen3_1_7b/es/data/readiness_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6fe0656cdf7b45fd80b52b8e24e73ffa6c5af1faab32d56726b37d795a4e8b20"
+    },
+    {
+      "bytes": 108892,
+      "path": "results/v2/qwen3_1_7b/es/data/readiness_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "a50a609a9fd8b703dd017b331ab2bae89a15055a73ed8c3fb9dddb8be97d0a50"
+    },
+    {
+      "bytes": 56073,
+      "path": "results/v2/qwen3_1_7b/es/data/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "ca663b8193c38f8352f7908b29f6ff9f8d290445b10065f94dc1c1ce2dee307d"
+    },
+    {
+      "bytes": 2293,
+      "path": "results/v2/qwen3_1_7b/es/pilots/P1_fake_donor_scores.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "c88629637caff6140dfeeb484fdff046872e7b5c48ccac310e42d19d96b32589"
+    },
+    {
+      "bytes": 2276,
+      "path": "results/v2/qwen3_1_7b/es/pilots/P2_real_donor_scores.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6bd5f44e190059efcc61bb2a1dfee6aa32700e08706028779e3c4192c6127ea7"
+    },
+    {
+      "bytes": 6631,
+      "path": "results/v2/qwen3_1_7b/es/pilots/pilots.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "e4cf0d6a58530796ce397b9184b5be50e1e9c767f1debe17059ef383515e219a"
+    },
+    {
+      "bytes": 427390,
+      "path": "results/v2/qwen3_1_7b/es/readiness/readiness.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "1d6c5bafb1756d40847f75e4b0c0567d06603d1e69199e1c244e888541b92211"
+    },
+    {
+      "bytes": 59939,
+      "path": "results/v2/qwen3_1_7b/es/readiness/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "7d53edf16f83614eb53b0e9edd3f7ee09ca9bdf17d9bb8e1462fc169d359fb47"
+    },
+    {
+      "bytes": 685,
+      "path": "results/v2/qwen3_1_7b/panel_status.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "7271546a4e2ab7b9dd23b8531ca949dce42eb1bf62ebef5d9e5ad30e077e70ea"
+    },
+    {
+      "bytes": 1687,
+      "path": "results/v2/qwen3_1_7b/preflight/preflight_report.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "734b28ff5b9be6d335e5b220216ba04c320f5aee1eb744e5b4b8a44f86464894"
+    },
+    {
+      "bytes": 118362,
+      "path": "results/v2/qwen3_1_7b/sw/data/Belebele.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "d30d3509760f62edc5de1fba186f5d51f50414e44aeec4eabf89abeccfbd113c"
+    },
+    {
+      "bytes": 328127,
+      "path": "results/v2/qwen3_1_7b/sw/data/C.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6001cab4eaf0104710a0da50cd8dc08b42a380396601a7c2d088ddfa63606a68"
+    },
+    {
+      "bytes": 32855,
+      "path": "results/v2/qwen3_1_7b/sw/data/MGSM_dev.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "a90369ebe70748cf0d68ad739e18d19c51c67e338a0079e59ce768fe5339d653"
+    },
+    {
+      "bytes": 95900,
+      "path": "results/v2/qwen3_1_7b/sw/data/MGSM_test.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "7d7df3676be681a0c09de36c41b9d7fb16ff45fe020a524b4ef2e88c75e4b069"
+    },
+    {
+      "bytes": 359447,
+      "path": "results/v2/qwen3_1_7b/sw/data/P_risk.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "017501292efa34a78b3d7d443eb3980ce63fa48f442f28fefd1c85e42b183a0d"
+    },
+    {
+      "bytes": 384107,
+      "path": "results/v2/qwen3_1_7b/sw/data/P_util.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6d706cc6e3d3bac6bf94845dd4feb0efe750e86ed94e1ee0529169240a3833c4"
+    },
+    {
+      "bytes": 302064,
+      "path": "results/v2/qwen3_1_7b/sw/data/data_build_summary.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "9b6bd0b49b4f8cdaaba20f094ab08064eb5748332539c3db8b39c23f40d22677"
+    },
+    {
+      "bytes": 27533,
+      "path": "results/v2/qwen3_1_7b/sw/data/expert_validation_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "0ffd7b6716b3b7a5768df5f65ed29f1b1a58704ba913ce97d3f6975d6b68cda9"
+    },
+    {
+      "bytes": 60974,
+      "path": "results/v2/qwen3_1_7b/sw/data/expert_validation_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "ce862288fed63f20f817db58d11485c53381f968a7b135c6d1f8ee778a1d3a30"
+    },
+    {
+      "bytes": 920582,
+      "path": "results/v2/qwen3_1_7b/sw/data/host_train.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "043c8c7c723550de6d7986b6bb10bc335749c6842480a264e2dde8868ba8c245"
+    },
+    {
+      "bytes": 54895,
+      "path": "results/v2/qwen3_1_7b/sw/data/readiness_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6fe0656cdf7b45fd80b52b8e24e73ffa6c5af1faab32d56726b37d795a4e8b20"
+    },
+    {
+      "bytes": 107521,
+      "path": "results/v2/qwen3_1_7b/sw/data/readiness_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "10ca579dd14b9009d8703526a195892cd967bc065667573611374d27f1dc1fb3"
+    },
+    {
+      "bytes": 65811,
+      "path": "results/v2/qwen3_1_7b/sw/data/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "b7726c4bd9e83dc2b171e5dde7992b1f0b487896a178a7cd9c73f37fa8e359e9"
+    },
+    {
+      "bytes": 381591,
+      "path": "results/v2/qwen3_1_7b/sw/readiness/readiness.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "a9b0eec05eed2bd14a956c7e25c70385e361797b67a692d9d076d93306c4258b"
+    },
+    {
+      "bytes": 67270,
+      "path": "results/v2/qwen3_1_7b/sw/readiness/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "74f4226fe48a9c9caa90a3f425c49c38467599522478e2d9e3f4f4a96066d36d"
+    },
+    {
+      "bytes": 1899,
+      "path": "results/v2/qwen3_1_7b/v3_panel_statistics.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "b99d663940fdc3810080e1418f095f126da58e4dd5f4be8c22c918cdc6ef2f2d"
+    },
+    {
+      "bytes": 106154,
+      "path": "results/v2/qwen3_1_7b/zh/data/Belebele.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "9eb9efe2301330475f7c77173faf5cfd8138dca6aae99365db110e9f2da1a47e"
+    },
+    {
+      "bytes": 367385,
+      "path": "results/v2/qwen3_1_7b/zh/data/C.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "af632382913b5258970dd8cd53690a93815dca17d372548af371758d216e2af5"
+    },
+    {
+      "bytes": 30275,
+      "path": "results/v2/qwen3_1_7b/zh/data/MGSM_dev.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "a574f98f02e297737f4d6c7c0d5c1ce9a837c4f950f8a878ac680036eb205c07"
+    },
+    {
+      "bytes": 88862,
+      "path": "results/v2/qwen3_1_7b/zh/data/MGSM_test.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "af38d3f8ce19f61b99ccd5ba62e196f2b5f9014c26572d2f7ec62fca49c1bb22"
+    },
+    {
+      "bytes": 323724,
+      "path": "results/v2/qwen3_1_7b/zh/data/P_risk.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "332f79e47d9728e89e2351a83c9f1ba568730e7f2f9b7a407179da6f25213bba"
+    },
+    {
+      "bytes": 376498,
+      "path": "results/v2/qwen3_1_7b/zh/data/P_util.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "f78ab857c3656662c41362e1d48d41ca58cc03b7202116ed853c1326696199f0"
+    },
+    {
+      "bytes": 302150,
+      "path": "results/v2/qwen3_1_7b/zh/data/data_build_summary.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "ed83b0304ae08ac98f3248e2d7473996dc39d4b226f45229c6208fe0202c33c0"
+    },
+    {
+      "bytes": 27533,
+      "path": "results/v2/qwen3_1_7b/zh/data/expert_validation_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "0ffd7b6716b3b7a5768df5f65ed29f1b1a58704ba913ce97d3f6975d6b68cda9"
+    },
+    {
+      "bytes": 65627,
+      "path": "results/v2/qwen3_1_7b/zh/data/expert_validation_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "8d173adf813f0ae5038bcd8e44973e036057c2a37713de2d65d233bd6af97c8f"
+    },
+    {
+      "bytes": 939781,
+      "path": "results/v2/qwen3_1_7b/zh/data/host_train.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "13a7dd8a4267a3f17cc9cd41e9c1270e25f97f78b3a1ddc8bf973b0030439dbf"
+    },
+    {
+      "bytes": 54895,
+      "path": "results/v2/qwen3_1_7b/zh/data/readiness_donor.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "6fe0656cdf7b45fd80b52b8e24e73ffa6c5af1faab32d56726b37d795a4e8b20"
+    },
+    {
+      "bytes": 127904,
+      "path": "results/v2/qwen3_1_7b/zh/data/readiness_host.jsonl",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "230887a46f012112379a8986454ec0bde2af4e2b1720b3a6878fc4a080df047a"
+    },
+    {
+      "bytes": 62239,
+      "path": "results/v2/qwen3_1_7b/zh/data/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "d1dc981e83927dba7297ccf192ec2dab4968beb342157fb28b07318830e86fb9"
+    },
+    {
+      "bytes": 438881,
+      "path": "results/v2/qwen3_1_7b/zh/readiness/readiness.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "72b81268f946cd8937efff7b454477d456236f2ff99a434e1324bc4e459722ec"
+    },
+    {
+      "bytes": 63698,
+      "path": "results/v2/qwen3_1_7b/zh/readiness/run_manifest.json",
+      "rationale": "Frozen Qwen3-1.7B readiness, data, or stopped-panel artifact documenting the scoped follow-up.",
+      "sha256": "4856f76de0242af56c80527c7960a08bda22a0371eac56f041b5882d8960fcda"
+    },
+    {
+      "bytes": 72,
+      "path": "scripts/__init__.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "e857d3abf021b6a7ef1966cde8acb7274c392a2b2d62dd08b7f2b2435249c4d5"
+    },
+    {
+      "bytes": 6852,
+      "path": "scripts/generate_submission_manifest.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "3d67a93dffe26d866ba26ec7c27320107b4639c2f7d5ffd06f22cbce3c916869"
+    },
+    {
+      "bytes": 224,
+      "path": "scripts/run_b3.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "a8dcc4c63761e8773c7e87c892516643bbaa7950df1149d34fff0678630a3637"
+    },
+    {
+      "bytes": 1269,
+      "path": "scripts/run_theory_checks.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "c712f3277d6ca1d9162c2ba832899c25ac428ea4c4d86855007782bb2f0063eb"
+    },
+    {
+      "bytes": 195,
+      "path": "scripts/run_tier_a.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "aea89c717cbeab30267353735be15a5210c44ba1b0b9e1fd75b54a7e81bb3434"
+    },
+    {
+      "bytes": 6694,
+      "path": "scripts/write_release_bundle.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "25aef4e51451517901b3890a333b5634a3df5fbb4fba7a6366bfade209ebf042"
+    },
+    {
+      "bytes": 72,
+      "path": "src/suture/__init__.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "4da7266a7850985701e4a0bfee7ebcffd396f58b42684be3582bcbd28fd00154"
+    },
+    {
+      "bytes": 21435,
+      "path": "src/suture/b3_data.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "a381734fa32b0ef57a4cfe67f7ed61bd8235505c9a0f81d0184685de49255279"
+    },
+    {
+      "bytes": 48494,
+      "path": "src/suture/b3_lighton.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "5f269f203d7955f10db9c8239cb4e180d1a619e808ee8598b1dd631344fc3366"
+    },
+    {
+      "bytes": 5657,
+      "path": "src/suture/data_manifest.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "402f0cae84c15165be92d161b29a4d31c8ffe2ca5316481e25e151b09f6a1170"
+    },
+    {
+      "bytes": 709,
+      "path": "src/suture/paths.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "96b499d42ae51e15b02e84a3d2c7558a6a94e3bd22a6bbeb42a4c6f275f71a6f"
+    },
+    {
+      "bytes": 10223,
+      "path": "src/suture/powered_spanish_ranking.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "9ee61a9bd514cfe9409e5e2d09b3cabce60f9ccf5762880c3d83d7bb71b01005"
+    },
+    {
+      "bytes": 13645,
+      "path": "src/suture/reviewer_cost_diagnostics.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "460a273e82e506b4f4b5fac6a155c7f1add129c5e4e94d5de83692f768994961"
+    },
+    {
+      "bytes": 11995,
+      "path": "src/suture/reviewer_followup.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "398e924dd3c71a60e1dde82a86cca063e00db58acdd1dcfea83fc8a0a598ffdd"
+    },
+    {
+      "bytes": 17857,
+      "path": "src/suture/reviewer_llm_comparison.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "c2cee7c6e5d8ec0ca86778061c08dc3a0b84c2da9885ff0cd8feb6f09a9ab85c"
+    },
+    {
+      "bytes": 15087,
+      "path": "src/suture/run_manifest.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "97b22c50bc7fca4183606f8c9cf7d64ae0fe9dbae98f71ffb7851c6b2ce81379"
+    },
+    {
+      "bytes": 30327,
+      "path": "src/suture/suture_metrics.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "4ce994e813c551c86590a1bde5f74899ee6adb5e0aa4e45895d2886dbe2f3e8a"
+    },
+    {
+      "bytes": 44929,
+      "path": "src/suture/suture_torch.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "ffe401653fe11cad1543e2cec09687a3d882f4b0e74ad78eab0c1235381f97d7"
+    },
+    {
+      "bytes": 6234,
+      "path": "src/suture/tier_a_checkpoint.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "ba39272633154ea3cc205255c4bcfb4bf0459f96b768508df7092ac0251826c3"
+    },
+    {
+      "bytes": 10624,
+      "path": "src/suture/tier_a_config.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "e2a3a3079b6a097876be11a534a63a36bea9bc3f88113b6653dfff66e7556243"
+    },
+    {
+      "bytes": 35998,
+      "path": "src/suture/tier_a_data.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "256caabe2fc23b6dc985c4a123695f99b0171b8abc74613fbdfc430b12835dbd"
+    },
+    {
+      "bytes": 20266,
+      "path": "src/suture/tier_a_e1_v2.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "90f691fefcc7e59ae5673cf15d48fcdec16a79d55e5227f29d67976014b28fd1"
+    },
+    {
+      "bytes": 10829,
+      "path": "src/suture/tier_a_e2.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "fbd8bf8a5054d458be10431481ac4512726dc1b19c99493f8e3fbe7031b54bca"
+    },
+    {
+      "bytes": 6954,
+      "path": "src/suture/tier_a_eval.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "f7ca76cf406d599ba78186d147b986f289b631d9b9af018d8a1df723683f6399"
+    },
+    {
+      "bytes": 60100,
+      "path": "src/suture/tier_a_gate.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "e23686a854912f0ccd778d9d0872f3800e88f6cf138c85ccbc176db760c5c460"
+    },
+    {
+      "bytes": 14851,
+      "path": "src/suture/tier_a_inventory.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "6390c71fa36c22e707479cd15080cd595a1d7d51e31ae5ab44b327eceb0f8cc7"
+    },
+    {
+      "bytes": 18736,
+      "path": "src/suture/tier_a_preflight.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "71fa889fed12355487a16423e5bf67345615f67431845fc77a6af392184e26b4"
+    },
+    {
+      "bytes": 18675,
+      "path": "src/suture/tier_a_readiness.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "0d608b550b37ada305dfb1f20d0b77000d128bf29048022b693267b48c05dda8"
+    },
+    {
+      "bytes": 6160,
+      "path": "src/suture/tier_a_readiness_data.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "2ae551b8c5ccae60dd0dd7902397c8339fcfa2b8e9587639d4a6a5a0cf3e22d8"
+    },
+    {
+      "bytes": 3143,
+      "path": "src/suture/tier_a_release_attestation.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "b991ce7804184ed4ef3885b6dd095f417e769de12b9b7a6cab164f406d2e9165"
+    },
+    {
+      "bytes": 25972,
+      "path": "src/suture/tier_a_stats.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "392366fd2981d75265a867c3958ad7fbd1c24f40881cf7e48c6e4fee3e2a08a1"
+    },
+    {
+      "bytes": 7988,
+      "path": "src/suture/tier_a_text.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "8073818184d1083546f9be931729cc61259abfbc5d3925bb877a5a47bb531de6"
+    },
+    {
+      "bytes": 13792,
+      "path": "src/suture/tier_a_train.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "01673be9374084a2bb65f6fa9c8fd7c14b61d93357198ccea2b8f65d041dfb8c"
+    },
+    {
+      "bytes": 16428,
+      "path": "src/suture/tier_a_v2.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "722cb87e70ef9e3e90178fa3e289bc3f79f44db170820bad7e8be5fa7dc3f27c"
+    },
+    {
+      "bytes": 11202,
+      "path": "src/suture_iclr2027.egg-info/PKG-INFO",
+      "rationale": "Public repository metadata required to reproduce or audit the submission.",
+      "sha256": "a0682c170d71a73fde9b64675cd131e0628ddbb8dfe293b22e6c42b5e095cbde"
+    },
+    {
+      "bytes": 1302,
+      "path": "src/suture_iclr2027.egg-info/SOURCES.txt",
+      "rationale": "Public repository metadata required to reproduce or audit the submission.",
+      "sha256": "24c1e3b04991c47c10c9e441ff4fa913196547b612ac587921aef9dddbabf94b"
+    },
+    {
+      "bytes": 1,
+      "path": "src/suture_iclr2027.egg-info/dependency_links.txt",
+      "rationale": "Public repository metadata required to reproduce or audit the submission.",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 7,
+      "path": "src/suture_iclr2027.egg-info/top_level.txt",
+      "rationale": "Public repository metadata required to reproduce or audit the submission.",
+      "sha256": "a3e779ad9f12561aab899c665ecb795ad3026c105de5b64222905bdaa998f940"
+    },
+    {
+      "bytes": 11979,
+      "path": "tests/test_b3_contract.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "ba39f1f06d3b4f515812f885af3014faf39e1e0e1f34f5ced80ed2654038915b"
+    },
+    {
+      "bytes": 3048,
+      "path": "tests/test_b3_data.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "76fa93310a2c39b9910a958ca16848659a59751cc316b432b3eb800c9cca983e"
+    },
+    {
+      "bytes": 1428,
+      "path": "tests/test_data_manifest.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "9d675ada6a5ed0ae53f70a7ee119bc3e0ea07ba0ec164c67e36730076eee9e85"
+    },
+    {
+      "bytes": 6065,
+      "path": "tests/test_e1_artifacts.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "9feeb69287a903682243e64934ad318a204d58327b8faf1bc3c64d768b28f2ed"
+    },
+    {
+      "bytes": 2011,
+      "path": "tests/test_inventory.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "459ff7d243a8d46808c218956f13cfa6cf3504d8cce572f9d24eebb071efbabe"
+    },
+    {
+      "bytes": 3747,
+      "path": "tests/test_run_manifest.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "dd7032c573954690607d75b4b38ea000cf6317c6c1e5799225cba7c5e576db93"
+    },
+    {
+      "bytes": 17981,
+      "path": "tests/test_suture_torch.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "a336232e53ffbe4a8a6fc772bc81278350189d7aeffbe79b545f33815ea2fb51"
+    },
+    {
+      "bytes": 2021,
+      "path": "tests/test_tier_a_readiness.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "d7d438707df2a5af93d7be32cdfbe680771dcc84d3001d626b9d29c6818ec35f"
+    },
+    {
+      "bytes": 2606,
+      "path": "tests/test_tier_a_stats.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "ea61b1e78548b563d540c907bea1b46dca81bb3cd3a6c49f560323aeec4100d3"
+    },
+    {
+      "bytes": 6886,
+      "path": "tests/test_v2_guards.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "dc327d839e7c2c089feafae4148b5b5cbb7c9886f8da7e38f4d887a201b8aa30"
+    },
+    {
+      "bytes": 5067,
+      "path": "tests/test_v2_setup.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "f1a0514123acd4374ab6df3c6ef9571e45e406bea523d392d5e0ac508a443924"
+    },
+    {
+      "bytes": 3805,
+      "path": "verify/corrections_check.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "5727b98d0433bc1961fb5fab7b7e48af281fd9800345a46329ee7ecfe3925723"
+    },
+    {
+      "bytes": 6971,
+      "path": "verify/independent_check.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "a76f0c78e537ebf3d041df04ff9c30ebe955546144d87371bab6c40b68f9a872"
+    },
+    {
+      "bytes": 5411,
+      "path": "verify/make_figdata.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "610f0428a0a02a36519eca8195e5c5267262ffcd22b95c12a7d98a5b93d3234c"
+    },
+    {
+      "bytes": 5737,
+      "path": "verify/power_analysis.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "55eebc00b2d30c8c1513c0549e501bc5850f601ba468d0f7897751123b2a9a59"
+    },
+    {
+      "bytes": 24857,
+      "path": "verify/toy_transfer.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "e6ee9853adade598de799042b95e21f693eeb3c874c2f1db6db01768d5805f38"
+    },
+    {
+      "bytes": 42576,
+      "path": "verify/verify_theory.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
+    }
+  ],
+  "generated_at": "2026-09-16T16:29:42.874823+00:00",
+  "kind": "public_submission_manifest",
+  "root": "repository checkout",
+  "schema_version": 1,
+  "weights_included": false
+}

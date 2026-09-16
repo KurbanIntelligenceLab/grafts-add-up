@@ -5,6 +5,7 @@ __pycache__/
 
 # Environments
 .env
+models/
 .venv
 .venv-rlvr/
 env/
@@ -50,8 +51,29 @@ paper/*.pdf
 paper/*.fdb_latexmk
 paper/*.fls
 paper/*.synctex.gz
+paper/*.toc
 
 # Optional large generated training weights (metadata retained in results/)
 results/supplementary/**/checkpoints/
 results/supplementary/**/final_adapter/*.safetensors
 results/supplementary/**/final_adapter/*.bin
+
+# Tier-A generated weights stay out of git; JSON/JSONL evidence may be added
+# explicitly. Tokenizer JSON can be regenerated from the pinned checkpoint.
+results/**/*.safetensors
+results/**/*.bin
+results/**/*.pt
+results/**/*.ckpt
+results/**/tokenizer.json
+results/**/adapters/
+results/**/publication_adapters*/
+results/**/checkpoint/
+results/**/shared/
+
+# Abandoned expanded B3 follow-up (non-reportable partial outputs)
+results/b3_expanded/
+results/tier_a/verification_release/*.zip
+verify/toy_transfer_results.json
+
+# Local LaTeX build directory
+paper/build/

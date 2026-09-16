@@ -1,0 +1,151 @@
+\pgfplotsset{
+  sutbase/.style={
+    width=2.72cm, height=2.40cm, scale only axis,
+    tick label style={font=\scriptsize},
+    label style={font=\scriptsize},
+    tick align=outside, tick pos=left,
+    every axis plot/.append style={line join=round},
+    grid=major, grid style={draw=black!8, line width=0.3pt},
+    axis line style={black!45, line width=0.5pt},
+    tick style={black!45, line width=0.4pt},
+    axis on top,
+  },
+}
+\tikzset{
+  panellab/.style={font=\footnotesize\bfseries, anchor=south west},
+  inplot/.style={font=\scriptsize, text=black!65, fill=white,
+                 fill opacity=0.86, text opacity=1, inner sep=1.6pt,
+                 rounded corners=1pt},
+}
+
+\begin{tikzpicture}
+
+% ================= (a) predicted vs measured over graft sets ==============
+\begin{axis}[sutbase, name=pa, at={(0cm,4.30cm)}, anchor=south west,
+  xlabel={predicted $\sum_{\ell\in S} a_\ell$},
+  ylabel={measured $\Delta\varphi(S)$},
+  xmin=-0.62, xmax=0.70, ymin=-0.68, ymax=0.72,
+  xtick={-0.5,0,0.5}, ytick={-0.5,0,0.5},
+]
+\addplot[no marks, draw=black!35, dashed, line width=0.6pt, forget plot]
+  coordinates {(-0.62,-0.62) (0.70,0.70)};
+\addplot[only marks, mark=*, mark size=1.0pt,
+         draw=oiBlue, fill=oiBlue, fill opacity=0.6, draw opacity=0.8]
+  table[x=pred, y=meas] {figs/fig_scatter.dat};
+\node[inplot, anchor=north west] at (rel axis cs:0.03,0.97) {$r=0.980$};
+
+\end{axis}
+\node[panellab] at ($(pa.north west)+(-0.95cm,0.14cm)$)
+  {(a)~\normalfont\footnotesize 104 random graft sets};
+
+% ================= (b) remainder scaling =================================
+\begin{axis}[sutbase, name=pb, at={(4.35cm,4.30cm)}, anchor=south west,
+  xlabel={$\varepsilon_S$ (total injection)},
+  ylabel={$|R(S)|$ on $\varphi$},
+  xmode=log, ymode=log,
+  xmin=0.9, xmax=24, ymin=8e-4, ymax=6e-1,
+  ytick={1e-3,1e-2,1e-1},
+]
+\addplot[no marks, draw=black!35, line width=0.7pt, forget plot]
+  table[x=eps, y=ref] {figs/fig_remainder_ref.dat};
+\addplot[only marks, mark=*, mark size=1.4pt, draw=oiVermil, fill=oiVermil]
+  table[x=eps, y=err] {figs/fig_remainder.dat};
+\node[inplot, anchor=north west, align=left] at (rel axis cs:0.03,0.97)
+  {fitted slope $2.055$\\[-1pt] grey line: slope $2$};
+\end{axis}
+\node[panellab] at ($(pb.north west)+(-0.95cm,0.14cm)$)
+  {(b)~\normalfont\footnotesize remainder is second order};
+
+% ================= (c) validity regime ===================================
+\begin{axis}[sutbase, name=pc, at={(8.70cm,4.30cm)}, anchor=south west,
+  xlabel={fine-tuning scale},
+  ylabel={Spearman (rank)},
+  xmode=log, xmin=0.042, xmax=2.1,
+  ymin=-0.12, ymax=1.62, ytick={0,0.5,1},
+  y label style={text=oiBlue},
+  yticklabel style={text=oiBlue}, ytick style={oiBlue},
+]
+% shade the regime where the method is not trustworthy
+\addplot[draw=none, fill=black!6, forget plot]
+  coordinates {(0.3,-0.12) (2.1,-0.12) (2.1,1.62) (0.3,1.62)} \closedcycle;
+\addplot[mark=*, mark size=1.5pt, color=oiBlue, mark options={fill=oiBlue},
+         line width=1.0pt] table[x=scale, y=spearman] {figs/fig_regime.dat};
+\node[inplot, text=black!45, anchor=north east, font=\scriptsize]
+  at (rel axis cs:0.62,0.99) {not usable};
+
+\end{axis}
+\begin{axis}[sutbase, at={(8.70cm,4.30cm)}, anchor=south west,
+  xmode=log, xmin=0.042, xmax=2.1, ymin=0, ymax=3.7,
+  axis x line=none, axis y line*=right,
+  ylabel={rel.\ error}, y label style={text=oiOrange},
+  ylabel style={font=\scriptsize},
+  tick pos=right, ylabel near ticks,
+  ytick={0,1,2,3},
+  grid=none,
+  y label style={text=oiOrange},
+  yticklabel style={text=oiOrange}, ytick style={oiOrange},
+]
+\addplot[mark=square*, mark size=1.3pt, color=oiOrange,
+         mark options={fill=oiOrange, solid}, line width=1.0pt, densely dashed]
+  table[x=scale, y=relerr] {figs/fig_regime.dat};
+
+\end{axis}
+\node[panellab] at ($(pc.north west)+(-0.95cm,0.14cm)$)
+  {(c)~\normalfont\footnotesize where ranking stops working};
+
+
+% ============== (d) certification: margin against remainder ==============
+\begin{axis}[sutbase, name=pe, at={(0cm,0cm)}, anchor=south west,
+  xlabel={score margin $A(\widehat{S})-A(S)$},
+  ylabel={$|r(S)|+|r(\widehat{S})|$},
+  xmode=log, ymode=log,
+  xmin=0.018, xmax=1.15, ymin=0.018, ymax=1.15,
+  xtick={0.1,1}, ytick={0.1,1},
+]
+% the oracle margin condition certifies everything below this line
+\addplot[no marks, draw=black!40, dashed, line width=0.6pt, forget plot]
+  coordinates {(0.018,0.018) (1.15,1.15)};
+% the deployable test is a vertical cut at q + |r(S_hat)|
+\addplot[no marks, draw=oiOrange, line width=0.7pt, forget plot]
+  coordinates {(0.14331,0.018) (0.14331,1.15)};
+\addplot[only marks, mark=*, mark size=1.0pt, draw=oiBlue, fill=oiBlue,
+         fill opacity=0.55, draw opacity=0.7]
+  table[x=margin, y=oracle] {figs/fig_certify.dat};
+% competitors the margin condition cannot certify, read from the data itself
+\addplot[only marks, mark=o, mark size=1.9pt, draw=oiVermil, line width=0.6pt]
+  table[x=margin, y=oracle] {figs/fig_certify_uncert.dat};
+
+\end{axis}
+\node[panellab] at ($(pe.north west)+(-1.05cm,0.14cm)$)
+  {(d)~\normalfont\footnotesize certification, not correlation};
+
+% ================= (e) mechanism ablation, 12 stacks ======================
+% Values are the width-6 block of figs/fig_ablation.dat, written by the same run
+% of verify/verify_theory.py that fills Table 1. Whiskers are +/- 1 sd over the
+% 12 stacks, clipped at zero because regret is non-negative by definition.
+\begin{axis}[sutbase, name=pd, width=5.80cm, at={(5.05cm,0cm)}, anchor=south west,
+  xlabel={selection regret},
+  xmin=-0.015, xmax=0.63, xtick={0,0.2,0.4,0.6},
+  ymin=-0.7, ymax=4.7, y dir=reverse, ytick={0,1,2,3,4},
+  yticklabels={\textsc{Suture}, no adjoint, no injection, param.\ change, random},
+  yticklabel style={font=\scriptsize}, ymajorgrids=false,
+]
+% random-scores reference line
+\addplot[no marks, draw=oiGrey, dashed, line width=0.6pt, forget plot]
+  coordinates {(0.3291,-0.7) (0.3291,4.7)};
+% whiskers, +/- 1 sd clipped at 0
+\addplot[no marks, draw=oiGrey, line width=0.7pt, forget plot] coordinates {(0.0389,1) (0.4837,1)};
+\addplot[no marks, draw=oiGrey, line width=0.7pt, forget plot] coordinates {(0.0000,2) (0.5959,2)};
+\addplot[no marks, draw=oiGrey, line width=0.7pt, forget plot] coordinates {(0.0686,3) (0.5128,3)};
+\addplot[no marks, draw=oiGrey, line width=0.7pt, forget plot] coordinates {(0.0634,4) (0.5948,4)};
+\addplot[no marks, draw=oiBlue, line width=0.9pt, forget plot] coordinates {(0.0000,0) (0.0784,0)};
+% means
+\addplot[only marks, mark=*, mark size=1.7pt, draw=oiGrey, fill=oiGrey, forget plot]
+  coordinates {(0.2613,1) (0.2523,2) (0.2907,3) (0.3291,4)};
+\addplot[only marks, mark=*, mark size=2.3pt, draw=oiBlue, fill=oiBlue, forget plot]
+  coordinates {(0.0266,0)};
+\end{axis}
+\node[panellab] at ($(pd.north west)+(-0.15cm,0.14cm)$)
+  {(e)~\normalfont\footnotesize both factors are load-bearing};
+
+\end{tikzpicture}

@@ -1,0 +1,71 @@
+{
+  "blocked_details": {
+    "es": {
+      "belebele_drop": -0.0390625,
+      "donor_em": 0.2421875,
+      "donor_gain": 0.125,
+      "gate": "PASS_READINESS",
+      "host_logprob_gain": 0.1960471400525421,
+      "host_nonempty_rate": 1.0,
+      "host_target_language_rate": 0.9140625
+    },
+    "sw": {
+      "belebele_drop": 0.0234375,
+      "donor_em": 0.2421875,
+      "donor_gain": 0.125,
+      "gate": "STOP_EXPERT_READINESS",
+      "host_logprob_gain": 0.3850985374301672,
+      "host_nonempty_rate": 1.0,
+      "host_target_language_rate": 0.7890625
+    },
+    "zh": {
+      "belebele_drop": -0.03125,
+      "donor_em": 0.2421875,
+      "donor_gain": 0.125,
+      "gate": "STOP_EXPERT_READINESS",
+      "host_logprob_gain": 0.25333778373897076,
+      "host_nonempty_rate": 0.984375,
+      "host_target_language_rate": 0.890625
+    }
+  },
+  "blocked_languages": [
+    "es",
+    "zh",
+    "sw"
+  ],
+  "classification": "expert_or_setup_failure",
+  "comparison_to_v2": "new_study_applicability_comparison_not_an_erased_retry",
+  "contract_version": 2,
+  "expert_seeds_measured": [
+    0
+  ],
+  "holm_adjusted_p_values": {},
+  "languages": [],
+  "mgsm_test_read": false,
+  "p_values_averaged_across_seeds": false,
+  "results": {},
+  "schema": {
+    "classifications": [
+      "broad_improvement",
+      "language_dependent_applicability",
+      "persistent_cross_set_failure",
+      "expert_or_setup_failure"
+    ],
+    "contract_version": 2,
+    "required_language_fields": [
+      "spearman_cross_set_exact_match",
+      "pearson_cross_set_exact_match",
+      "accuracy_regret",
+      "accuracy_regret_fraction_of_achievable_gain",
+      "top5_overlap",
+      "selected_drift_rate",
+      "belebele_retention",
+      "readiness_gains",
+      "bootstrap",
+      "e2_regime",
+      "compute"
+    ],
+    "schema_version": 1
+  },
+  "v2_spanish_canonical": "results/tier_a/es/e1_canonical_seed0"
+}

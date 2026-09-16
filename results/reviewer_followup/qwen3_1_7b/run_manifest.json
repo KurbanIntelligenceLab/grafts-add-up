@@ -1,0 +1,12 @@
+{
+  "canonical_artifacts_modified": false,
+  "command": "python -m suture.reviewer_followup",
+  "contract": "suture\\contracts\\reviewer_followup_contract_v1.json",
+  "contract_sha256": "9edc53ef588367311a9f619486e8a4e8cd21dd8b3196852e8007effeb15cf576",
+  "data_dir": "results\\v2\\qwen3_1_7b\\es\\data",
+  "donor_dir": "results\\v2\\qwen3_1_7b\\shared\\donor\\checkpoint-0512\\donor",
+  "host_dir": "results\\v2\\qwen3_1_7b\\es\\adapters\\host\\checkpoint-1024\\host",
+  "max_length": 128,
+  "output_dir": "F:\\Program Files\\GitHub\\model-composition\\results\\reviewer_followup\\qwen3_1_7b",
+  "prompt_limit": 4
+}

@@ -1,0 +1,105 @@
+{
+  "protocol": "reviewer_followup_local",
+  "command": "python verify/verify_theory.py",
+  "canonical_artifacts_modified": false,
+  "multi_donor": {
+    "existing_two_donor": {
+      "n_assignments": 80,
+      "pearson": 0.961,
+      "spearman": 0.9651,
+      "assignment_space_for_l12": 531441
+    },
+    "four_donor_scale_0.10": {
+      "n_assignments": 160,
+      "pearson": 0.8935,
+      "spearman": 0.9028,
+      "supported_at_threshold": false
+    },
+    "assignment_space_and_streaming_cost": [
+      {
+        "donors": 1,
+        "assignments": 4096,
+        "streamed_donor_layer_evaluations": 12
+      },
+      {
+        "donors": 2,
+        "assignments": 531441,
+        "streamed_donor_layer_evaluations": 24
+      },
+      {
+        "donors": 3,
+        "assignments": 16777216,
+        "streamed_donor_layer_evaluations": 36
+      },
+      {
+        "donors": 4,
+        "assignments": 244140625,
+        "streamed_donor_layer_evaluations": 48
+      }
+    ],
+    "four_donor_scale_sweep": [
+      {
+        "scale": 0.1,
+        "n_assignments": 160,
+        "pearson": 0.9523,
+        "spearman": 0.9434
+      },
+      {
+        "scale": 0.05,
+        "n_assignments": 160,
+        "pearson": 0.9776,
+        "spearman": 0.9695
+      },
+      {
+        "scale": 0.025,
+        "n_assignments": 160,
+        "pearson": 0.9943,
+        "spearman": 0.9944
+      },
+      {
+        "scale": 0.0125,
+        "n_assignments": 160,
+        "pearson": 0.9976,
+        "spearman": 0.9964
+      }
+    ],
+    "interpretation": "Four-donor ranking is supported in the controlled small-perturbation regime, but the scale-0.10 diagnostic is not promoted to a general claim."
+  },
+  "signed_knapsack": {
+    "n_trials_per_resolution": 80,
+    "violations": 0,
+    "grid_rows": [
+      {
+        "nbins": 100,
+        "median_gap": 0.0,
+        "p95_gap": 0.2795,
+        "max_gap": 0.9862
+      },
+      {
+        "nbins": 500,
+        "median_gap": 0.0,
+        "p95_gap": 0.0,
+        "max_gap": 0.7051
+      },
+      {
+        "nbins": 2000,
+        "median_gap": 0.0,
+        "p95_gap": 0.0,
+        "max_gap": 0.0
+      },
+      {
+        "nbins": 10000,
+        "median_gap": 0.0,
+        "p95_gap": 0.0,
+        "max_gap": 0.0
+      },
+      {
+        "nbins": 50000,
+        "median_gap": 0.0,
+        "p95_gap": 0.0,
+        "max_gap": 0.0
+      }
+    ],
+    "interpretation": "Conservative rounding produced no true-constraint violations; the reported gap summaries are empirical tightness diagnostics, not a worst-case optimality guarantee."
+  }
+}

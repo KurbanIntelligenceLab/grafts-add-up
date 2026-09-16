@@ -1,0 +1,69 @@
+{
+  "contract_version": 1,
+  "contract_name": "reviewer_followup_local",
+  "contract_status": "authorized_local_followup",
+  "frozen_at": "2026-09-12T19:41:00+03:00",
+  "purpose": "Address reviewer questions without modifying canonical v1 or v2 artifacts.",
+  "source_contracts": [
+    "configs/experimental_contract_v1.json",
+    "configs/experimental_contract_v2.json"
+  ],
+  "base_model": {
+    "id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "snapshot": "models/Qwen3-1.7B-70d244cc",
+    "fallback": null,
+    "quantized_substitute": false
+  },
+  "artifacts": {
+    "result_root": "results/reviewer_followup/qwen3_1_7b",
+    "canonical_v1_immutable": "results/tier_a/es/e1_canonical_seed0",
+    "canonical_v2_immutable": "results/v2/qwen3_1_7b"
+  },
+  "compute": {
+    "device": "single RTX 3060 Ti, 8192 MiB",
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "max_length": 128,
+    "expert_training": "reuse the exact v2 Spanish PASS_READINESS adapters; no retraining",
+    "eight_b_replication": "not run; exceeds local VRAM"
+  },
+  "plumbing_gate": {
+    "purpose": "Distinguish adapter correctness from a large-perturbation linearisation failure.",
+    "zero_donor": {
+      "expected": "all injections, predictions, and measured changes are zero up to floating-point tolerance",
+      "grafts": [
+        [],
+        [0],
+        [13],
+        [27],
+        [0, 1],
+        [13, 14],
+        [26, 27]
+      ]
+    },
+    "fake_donor": {
+      "noise_scales": [0.000001, 0.00001, 0.0001],
+      "grafts": "representative early/middle/late singletons, adjacent pairs, and deterministic seeded sets of size 4",
+      "seed": 991,
+      "minimum_singleton_spearman": 0.9,
+      "interpretation": "A failed large-scale score is an applicability stop, not an implementation failure."
+    },
+    "real_donor": {
+      "grafts": "same singleton/pair probe set as fake donor",
+      "purpose": "Report the real Qwen3 local linearisation diagnostic without authorizing E1."
+    },
+    "stop_rules": [
+      "STOP_SETUP if the exact pinned preflight or adapter pin fails.",
+      "STOP_P1_ZERO if the zero-donor invariant fails.",
+      "STOP_P1_FAKE if all small fake-donor scales fail the singleton gate.",
+      "P1_PASS_DIAGNOSTIC_ONLY does not authorize a ranking sweep; a separate contract is required."
+    ]
+  },
+  "analysis_policy": {
+    "no_threshold_changes_after_results": true,
+    "no_mgsm_test": true,
+    "no_writes_to_canonical_results": true,
+    "local_diagnostics_are_not_worst_case_lipschitz_bounds": true
+  }
+}

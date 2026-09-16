@@ -1,0 +1,9 @@
+{
+  "canonical_artifacts_modified": false,
+  "command": "python -m suture.reviewer_llm_comparison",
+  "contract": "suture\\contracts\\reviewer_llm_comparison_v1.json",
+  "contract_sha256": "c76d13596eb90f0b8c52f902d600efb372abb7053cde3e67bc686c31f6dadb88",
+  "device": "cuda",
+  "max_length": 128,
+  "prompt_limit": 8
+}

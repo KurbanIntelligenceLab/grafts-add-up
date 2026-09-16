@@ -1,0 +1,28 @@
+{
+  "contract_sha256": "5531b523e0425e7f9a53d31890d9b7a13aa33745fa7ce00a74b7a90206321ec3",
+  "contract_version": 2,
+  "ended_at": "2026-08-24T08:50:20.952139+00:00",
+  "languages": {
+    "es": {
+      "readiness": "PASS_READINESS",
+      "setup_issues": []
+    },
+    "sw": {
+      "readiness": "STOP_EXPERT_READINESS",
+      "setup_issues": []
+    },
+    "zh": {
+      "readiness": "STOP_EXPERT_READINESS",
+      "setup_issues": []
+    }
+  },
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "setup_issues": {
+    "es": [],
+    "sw": [],
+    "zh": []
+  },
+  "started_at": "2026-08-24T00:36:51.940751+00:00",
+  "status": "COMPLETED"
+}

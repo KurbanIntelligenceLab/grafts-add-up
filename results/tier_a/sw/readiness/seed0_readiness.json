@@ -1,0 +1,1063 @@
+{
+  "donor_expert": {
+    "exact_match": 0.0,
+    "items": [
+      {
+        "exact_match": false,
+        "expected_answer": "760",
+        "generation": "360\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of hours Rafael worked during the week.\n2",
+        "source_id": "gsm8k:train:1024"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "640",
+        "generation": "600\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of parents who agree to the tuition fee increase.",
+        "source_id": "gsm8k:train:1025"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "17 feet\nTo solve this problem, we need to follow these steps:\n\n1. Determine Mr. Martinez's height by adding 2 feet to Ch",
+        "source_id": "gsm8k:train:1026"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "240",
+        "generation": "John paid $240 for the color drawing.\nTo solve this problem, we need to follow these steps:\n\n1. Determine the cost of a black and",
+        "source_id": "gsm8k:train:1027"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "5100",
+        "generation": "1480 kg\nTo solve this problem, we need to determine the weights of the steel, tin, and copper bars first, and then use",
+        "source_id": "gsm8k:train:1028"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "77",
+        "generation": "140\nTo solve this problem, we need to calculate the daily milk production for each cow and then find out how much milk they produce in a",
+        "source_id": "gsm8k:train:1029"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "84",
+        "generation": "48 ounces\nTo solve this problem, we need to follow these steps:\n\n1. Convert the initial amount of water from gallons to ounces.\n2.",
+        "source_id": "gsm8k:train:1030"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "480",
+        "generation": "510\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of boys who initially attended the game.\n2.",
+        "source_id": "gsm8k:train:1031"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "8",
+        "generation": "2\nTo solve this problem, we need to calculate the total number of chickens in both Susie's and Britney's flocks and then find the",
+        "source_id": "gsm8k:train:1032"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "2400",
+        "generation": "1200\nTo solve this problem, we need to calculate the total number of calories James burns from dancing each week and then subtract the calories he",
+        "source_id": "gsm8k:train:1033"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "8",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Determine the amount of cream cheese used based on the amount of sugar.",
+        "source_id": "gsm8k:train:1034"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "960",
+        "generation": "1200\nTo solve this problem, we need to follow these steps:\n\n1. Determine the number of girls using the given information about the difference",
+        "source_id": "gsm8k:train:1035"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "40",
+        "generation": "48\nTo solve this problem, we need to follow these steps:\n\n1. Determine how many markers Austin has based on the information given about Steve.",
+        "source_id": "gsm8k:train:1036"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1400",
+        "generation": "John spent $1800 on his computer, counting the savings from selling the old card.\nTo solve this problem, we need to calculate the total amount",
+        "source_id": "gsm8k:train:1037"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "9",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Start with the total number of seeds planted.\n2. Subtract the number",
+        "source_id": "gsm8k:train:1038"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "30",
+        "generation": "30\nTo solve this problem, we need to determine how many apartments have exactly one resident. Let's break it down step by step.\n\n1.",
+        "source_id": "gsm8k:train:1039"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "33",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of chickens.\n2. Calculate the total number of goats",
+        "source_id": "gsm8k:train:1040"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "130",
+        "generation": "120\nTo solve this problem, we need to determine how many of the 650 vaccinated people were children. We know that 8",
+        "source_id": "gsm8k:train:1041"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "28",
+        "generation": "8\nTo solve this problem, we need to determine how many candy bars Kim saves over 16 weeks. Let's break it down step by step",
+        "source_id": "gsm8k:train:1042"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "7200",
+        "generation": "James paid $4800 for the living room set after applying the 10% discount.\nTo solve this problem, we need to follow these steps",
+        "source_id": "gsm8k:train:1043"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "60000",
+        "generation": "The total duration of the advertisements is 5 * 3 = 15 minutes. Since one minute of advertising costs $4000, the total",
+        "source_id": "gsm8k:train:1044"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "6",
+        "generation": "Andy still has 2 more white socks than black socks after losing half of his white socks.\nTo solve this problem, we need to follow these steps:\n\n1",
+        "source_id": "gsm8k:train:1045"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "12\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of roses Susan initially had.\n2. Determine how",
+        "source_id": "gsm8k:train:1046"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "18\nTo solve this problem, we need to follow these steps:\n\n1. Determine Becky's current age.\n2. Use Becky's age to find",
+        "source_id": "gsm8k:train:1047"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "350",
+        "generation": "300\nTo solve this problem, we need to determine how much water is used by each of the four neighborhoods and then subtract that from the total",
+        "source_id": "gsm8k:train:1048"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "46\nTo solve this problem, we need to determine Mark's score based on the given information about the scores in the math test.\n\n1. **",
+        "source_id": "gsm8k:train:1049"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "38",
+        "generation": "48\nTo solve this problem, we need to determine how many photos each person has based on the given information. Let's break it down step by",
+        "source_id": "gsm8k:train:1050"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "7",
+        "generation": "24\nTo solve this problem, we need to set up an equation based on the information given and then solve for the unknown quantity.\n\nLet's denote",
+        "source_id": "gsm8k:train:1051"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "25",
+        "generation": "23\nTo solve this problem, we need to determine the ages of James, John, and Tim based on the given information.\n\n1. **D",
+        "source_id": "gsm8k:train:1052"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "105",
+        "generation": "280\nTo solve this problem, we need to calculate the total number of pages Jane reads in one day and then multiply that by the number of",
+        "source_id": "gsm8k:train:1053"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "135",
+        "generation": "$234.00\nTo solve this problem, we need to calculate the total cost of attending the concert by considering all the expenses involved. Let",
+        "source_id": "gsm8k:train:1054"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3500000",
+        "generation": "3450000\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the population of New York by finding two",
+        "source_id": "gsm8k:train:1055"
+      }
+    ],
+    "n": 32
+  },
+  "donor_gain": 0.0,
+  "gate": "STOP_EXPERT_READINESS",
+  "host_base": {
+    "items": [
+      {
+        "generation": "\"Nakaziwa ya kiprinting na kipagwachukua brochure. Nafuwa ya kiprinting 20",
+        "language_label": "__label__en",
+        "language_probability": 0.4476390779018402,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1120",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 10
+      },
+      {
+        "generation": "\"Kwa kama Alice na Clara hapa ya pensa cha Alice na Clara yake zaidi, kama Alice ya pensa 60",
+        "language_label": "__label__jv",
+        "language_probability": 0.18728728592395782,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1121",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Tim kama mwanambo na 3 kwa siku wa wajiru, ndiyo kama mwanambo na",
+        "language_label": "__label__sw",
+        "language_probability": 0.7336887121200562,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1122",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "\"Hii kama hapa, he naa gari wa Evan, wa $1, na hapa kama hapa, he naa k",
+        "language_label": "__label__en",
+        "language_probability": 0.4228672385215759,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1123",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Hapa kwa kumi hapa 12 x\" Respond in English: \"Here is the result of multiplying by 12.\" Respond in",
+        "language_label": "__label__en",
+        "language_probability": 0.8589354753494263,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1124",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Mimi kama angela kama kutoka kwa kitchen supplies, na kusaidia halau ya poti\" Respond in English: \"",
+        "language_label": "__label__en",
+        "language_probability": 0.3587762117385864,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1125",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Mimi kama mwanambo wa Lego kwa kusimba kubadhiwa na 40 kugacha ya type A",
+        "language_label": "__label__sw",
+        "language_probability": 0.7961000800132751,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1126",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mason kwa muda ya kusimba kama kuhusu kushindani na kubadhiwa kama kushind",
+        "language_label": "__label__sw",
+        "language_probability": 0.8852027058601379,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1127",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Mushrooms na kama muda ya kwa kubadhi ya kubadhi ya kubadhi ya kubadhi ya",
+        "language_label": "__label__sw",
+        "language_probability": 0.8993593454360962,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1128",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mwanambo wa chikirwa kama 50 poundu ya zambani, mwanambo wa chikirwa k",
+        "language_label": "__label__sw",
+        "language_probability": 0.6346948146820068,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1129",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Makani kuhudi 50 paket, na kwa kumi, makani kuhudi 100 paket.\" Respond",
+        "language_label": "__label__sw",
+        "language_probability": 0.6487288475036621,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1130",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Kuwa kama muda ya kipata kwa each tire, kufanya $7, na 50 centi za taxa.",
+        "language_label": "__label__sw",
+        "language_probability": 0.5150249600410461,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1131",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Nakaziwa wa kaziwa na mafanu ya 852, 25% hii ya kaziwa zaid",
+        "language_label": "__label__sw",
+        "language_probability": 0.7121517062187195,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1132",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Maurice ndiwa na mwanu wa kubalika kama pamoja. Hii hapa 100 kub",
+        "language_label": "__label__sw",
+        "language_probability": 0.5207802653312683,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1133",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Hendrani hapa 30 loloopu kama Alison. Kwa 60 loloopu, Alison hapa half",
+        "language_label": "__label__nl",
+        "language_probability": 0.44542911648750305,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1134",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Kuwa na kama Reggie hapa 48 shillings. Reggie mwanambo 5 kitabu, kaichii",
+        "language_label": "__label__en",
+        "language_probability": 0.30310600996017456,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1135",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Hii hawana hujifaa na kufikiria jamaa ya juma na kufikir\" Respond in English:",
+        "language_label": "__label__en",
+        "language_probability": 0.20796778798103333,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1136",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "James has 7 + 4 × (52 - 7) oreos. Respond in Swahili:\nJames kama 7 + 4",
+        "language_label": "__label__en",
+        "language_probability": 0.6985000371932983,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1137",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 18
+      },
+      {
+        "generation": "\"Jaye hapa kwa muda ya kama kwanza, kwa muda ya kama kwanza, kwa muda ya",
+        "language_label": "__label__sw",
+        "language_probability": 0.9664402008056641,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1138",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Nye chini wa kwa mwanafunzi ya kwa mwanafunzi ya kwa mwanafunzi ya kwa",
+        "language_label": "__label__sw",
+        "language_probability": 0.9900327920913696,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1139",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "\"Kuwa kama kwanza 40 gaari ya basketball, na kuna 70% ya gaari ya kusimba",
+        "language_label": "__label__sw",
+        "language_probability": 0.5402125716209412,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1140",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Njia ya kipet shopi hapa hadi 12 ngoma, 9 ngoma, 5 ngoma, na",
+        "language_label": "__label__en",
+        "language_probability": 0.36086413264274597,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1141",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "Cape May ndi 15 sawingu na ya naa ya naa naa naa naa naa naa naa naa na",
+        "language_label": "__label__nl",
+        "language_probability": 0.3196989893913269,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1142",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 18
+      },
+      {
+        "generation": "\"Kendra ndiwa na $100 kama mwanu wa shiira. Kena kuna kubadhiwa 2",
+        "language_label": "__label__sw",
+        "language_probability": 0.3912997245788574,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1143",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "Michael ha dwa kama. Kama hapa ya mimi wa mimi na mimi wa mimi, hapa ya mimi wa mimi",
+        "language_label": "__label__sw",
+        "language_probability": 0.6326189041137695,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1144",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Daria kama mimi wa kwa kazi ya kipata na kwa kuma kwa kumi ya kipata na kwa",
+        "language_label": "__label__sw",
+        "language_probability": 0.9383866786956787,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1145",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Jane's mami akamwa kama $0.50 za pata kwa kukwani ya kubadhi ya kubad",
+        "language_label": "__label__sw",
+        "language_probability": 0.8532282114028931,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1146",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "\"Na kikirisho wa muda zaidi 9000 kubuza, na kwa kikirisho wa",
+        "language_label": "__label__sw",
+        "language_probability": 0.8008095026016235,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1147",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": "\"Kwa muda ya kama 1 cup, 480 kwanza kwa muda ya kama 1/2 cup.",
+        "language_label": "__label__sw",
+        "language_probability": 0.7622618675231934,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1148",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mandy naa kama 10 patakiwa kama 4 naa.\" Respond in English: \"Mandy has 10",
+        "language_label": "__label__en",
+        "language_probability": 0.7308869957923889,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1149",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Nakaziwa na kama ndiweza 30 mi na 3 maani wa mwanu za 3 maani, na",
+        "language_label": "__label__kw",
+        "language_probability": 0.2675061821937561,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1150",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Pau ndiwa 10 pezi ya chikiriki na kufanya kiswali.\" Respond in English: \"Pau",
+        "language_label": "__label__en",
+        "language_probability": 0.5102494955062866,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1151",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      }
+    ],
+    "n": 32,
+    "nonempty_rate": 1.0,
+    "target_language_rate": 0.5625
+  },
+  "host_expert": {
+    "items": [
+      {
+        "generation": "\"Nakaziwa ya kiprinting na kipagwachukua brochure. Nafuwa ya kiprinting 20",
+        "language_label": "__label__en",
+        "language_probability": 0.4476390779018402,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1120",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 10
+      },
+      {
+        "generation": "\"Kwa kama Alice na Clara hapa ya pensa cha Alice na Clara yake zaidi, kama Alice ya pensa 60",
+        "language_label": "__label__jv",
+        "language_probability": 0.18728728592395782,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1121",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Tim kama mwanambo na 3 kwa siku wa wajiru, ndiyo kama mwanambo na",
+        "language_label": "__label__sw",
+        "language_probability": 0.7336887121200562,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1122",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "\"Hii kama hapa, he naa gari wa Evan, wa $1, na hapa kama hapa, he naa k",
+        "language_label": "__label__en",
+        "language_probability": 0.4228672385215759,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1123",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Hapa kwa kumi hapa 12 x\" Respond in English: \"Here is the result of multiplying by 12.\" Respond in",
+        "language_label": "__label__en",
+        "language_probability": 0.8589354753494263,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1124",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Mimi kama angela kama kutoka kwa kitchen supplies, na kusaidia halau ya poti\" Respond in English: \"",
+        "language_label": "__label__en",
+        "language_probability": 0.3587762117385864,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1125",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Mimi kama mwanambo wa Lego kwa kusimba kubadhiwa na 40 kugacha ya type A",
+        "language_label": "__label__sw",
+        "language_probability": 0.7961000800132751,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1126",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mason kwa muda ya kusimba kama kuhusu kushindani na kubadhiwa kama kushind",
+        "language_label": "__label__sw",
+        "language_probability": 0.8852027058601379,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1127",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Mushrooms na kama muda ya kwa kubadhi ya kubadhi ya kubadhi ya kubadhi ya",
+        "language_label": "__label__sw",
+        "language_probability": 0.8993593454360962,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1128",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mwanambo wa chikirwa kama 50 poundu ya zambani, mwanambo wa chikirwa k",
+        "language_label": "__label__sw",
+        "language_probability": 0.6346948146820068,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1129",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Makani kuhudi 50 paket, na kwa kumi, makani kuhudi 100 paket.\" Respond",
+        "language_label": "__label__sw",
+        "language_probability": 0.6487288475036621,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1130",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Kuwa kama muda ya kipata kwa each tire, kufanya $7, na 50 centi za taxa.",
+        "language_label": "__label__sw",
+        "language_probability": 0.5150249600410461,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1131",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Nakaziwa wa kaziwa na mafanu ya 852, 25% hii ya kaziwa zaid",
+        "language_label": "__label__sw",
+        "language_probability": 0.7121517062187195,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1132",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Maurice ndiwa na mwanu wa kubalika kama pamoja. Hii hapa 100 kub",
+        "language_label": "__label__sw",
+        "language_probability": 0.5207802653312683,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1133",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Hendrani hapa 30 loloopu kama Alison. Kwa 60 loloopu, Alison hapa half",
+        "language_label": "__label__nl",
+        "language_probability": 0.44542911648750305,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1134",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Kuwa na kama Reggie hii ya 48 shillings. Reggie kuhusu 5 kitabu, muda kukh",
+        "language_label": "__label__sw",
+        "language_probability": 0.37758389115333557,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1135",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Hii hawana hujifaa na kufikiria jamaa ya juma na kufikir\" Respond in English:",
+        "language_label": "__label__en",
+        "language_probability": 0.20796778798103333,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1136",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "James has 7 + 4 × (52 - 7) oreos. Respond in Swahili:\nJames kama 7 + 4",
+        "language_label": "__label__en",
+        "language_probability": 0.6985000371932983,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1137",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 18
+      },
+      {
+        "generation": "\"Jaye hapa kwa muda ya kama kwanza, kwa muda ya kama kwanza, kwa muda ya",
+        "language_label": "__label__sw",
+        "language_probability": 0.9664402008056641,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1138",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Nye chini wa kwa mwanafunzi ya kwa mwanafunzi ya kwa mwanafunzi ya kwa",
+        "language_label": "__label__sw",
+        "language_probability": 0.9900327920913696,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1139",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "\"Kuwa kama kwanza 40 gaari ya basketball, na kuna 70% ya gaari ya kusimba",
+        "language_label": "__label__sw",
+        "language_probability": 0.5402125716209412,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1140",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Njia ya kipet shopi hapa hadi 12 ngoma, 9 ngoma, 5 ngoma, na",
+        "language_label": "__label__en",
+        "language_probability": 0.36086413264274597,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1141",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "Cape May ndi 15 sawingu na ya naa ya naa naa naa naa naa naa naa naa na",
+        "language_label": "__label__nl",
+        "language_probability": 0.3196989893913269,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1142",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 18
+      },
+      {
+        "generation": "\"Kendra ndiwa na $100 kama mwanu wa shiira. Kena kuna kubadhiwa 2",
+        "language_label": "__label__sw",
+        "language_probability": 0.3912997245788574,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1143",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "Michael ha dwa kama. Kama hapa ya mimi wa mimi na mimi wa mimi, hapa ya mimi wa mimi",
+        "language_label": "__label__sw",
+        "language_probability": 0.6326189041137695,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1144",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 19
+      },
+      {
+        "generation": "\"Daria kama mimi wa kwa kazi ya kipata na kwa kuma kwa kumi ya kipata na kwa",
+        "language_label": "__label__sw",
+        "language_probability": 0.9383866786956787,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1145",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 17
+      },
+      {
+        "generation": "\"Jane's mami akamwa kama $0.50 za pata kwa kukwani ya kubadhi ya kubad",
+        "language_label": "__label__sw",
+        "language_probability": 0.8532282114028931,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1146",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 13
+      },
+      {
+        "generation": "Na kikirisho wa muda zaidi 9000 kubuza, na kwa kikirisho wa m",
+        "language_label": "__label__sw",
+        "language_probability": 0.8437111377716064,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1147",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "\"Kwa muda ya kama 1 cup, 480 kwanza kwa muda ya kama 1/2 cup.",
+        "language_label": "__label__sw",
+        "language_probability": 0.7622618675231934,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1148",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Mandy naa kama 8 patakiwa kama 6 naa. Kwa muda ya 2 katika 6,",
+        "language_label": "__label__sw",
+        "language_probability": 0.7476454973220825,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1149",
+        "target_language": "sw",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "\"Nakaziwa na kama ndiweza 30 mi na 3 maani wa mwanu za 3 maani, na",
+        "language_label": "__label__kw",
+        "language_probability": 0.2675061821937561,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1150",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 15
+      },
+      {
+        "generation": "\"Pau ndiwa 10 pezi ya chikiriki na kufanya kiswali.\" Respond in English: \"Pau",
+        "language_label": "__label__en",
+        "language_probability": 0.5102494955062866,
+        "nonempty": true,
+        "source_id": "gsm8k:train:1151",
+        "target_language": "sw",
+        "target_language_match": false,
+        "token_count": 13
+      }
+    ],
+    "n": 32,
+    "nonempty_rate": 1.0,
+    "target_language_rate": 0.625
+  },
+  "language": "sw",
+  "lid_model": "models\\lid.176.ftz",
+  "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "readiness_donor": {
+    "exact_match": 0.0,
+    "items": [
+      {
+        "exact_match": false,
+        "expected_answer": "760",
+        "generation": "Rafael makes $360 in total for the week.\nTo solve this problem, we need to calculate the total number of hours Rafael worked during the week and",
+        "source_id": "gsm8k:train:1024"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "640",
+        "generation": "600\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of parents who agree to the tuition fee increase.",
+        "source_id": "gsm8k:train:1025"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "17 feet\nTo solve this problem, we need to follow these steps:\n\n1. Determine Mr. Martinez's height by adding 2 feet to Ch",
+        "source_id": "gsm8k:train:1026"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "240",
+        "generation": "John paid $240 for the color drawing.\nTo solve this problem, we need to follow these steps:\n\n1. Determine the cost of a black and",
+        "source_id": "gsm8k:train:1027"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "5100",
+        "generation": "1480 kg\nTo solve this problem, we need to determine the weights of the steel, tin, and copper bars first, and then use",
+        "source_id": "gsm8k:train:1028"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "77",
+        "generation": "14\nTo solve this problem, we need to calculate the daily milk production for each cow and then find out how much milk they produce in a week",
+        "source_id": "gsm8k:train:1029"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "84",
+        "generation": "48 ounces\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of Dixie cups needed.\n2. Determine",
+        "source_id": "gsm8k:train:1030"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "480",
+        "generation": "510\nTo solve this problem, we need to follow these steps:\n\n1. Determine the number of boys who initially attended the game.\n2.",
+        "source_id": "gsm8k:train:1031"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "8",
+        "generation": "2\nTo solve this problem, we need to calculate the total number of chickens in both Susie's and Britney's flocks and then find the",
+        "source_id": "gsm8k:train:1032"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "2400",
+        "generation": "1200\nTo solve this problem, we need to break it down into smaller steps:\n\n1. Calculate the number of calories James burns per hour",
+        "source_id": "gsm8k:train:1033"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "8",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Determine the amount of cream cheese used based on the amount of sugar.",
+        "source_id": "gsm8k:train:1034"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "960",
+        "generation": "1200\nTo solve this problem, we need to determine the number of girls at the event first. We know that the difference between the number",
+        "source_id": "gsm8k:train:1035"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "40",
+        "generation": "48\nTo solve this problem, we need to follow these steps:\n\n1. Determine how many markers Austin has based on the information given about Steve.",
+        "source_id": "gsm8k:train:1036"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1400",
+        "generation": "John spent $1800 on his computer, counting the savings from selling the old card.\nTo solve this problem, we need to break down the costs",
+        "source_id": "gsm8k:train:1037"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "9",
+        "generation": "10\nTo solve this problem, we need to follow the steps outlined in the question carefully. Let's break it down:\n\n1. **Initial Number",
+        "source_id": "gsm8k:train:1038"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "30",
+        "generation": "30\nTo solve this problem, we need to determine how many apartments have exactly one resident. Let's break it down step by step.\n\n1.",
+        "source_id": "gsm8k:train:1039"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "33",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of chickens.\n2. Determine the total number of goats",
+        "source_id": "gsm8k:train:1040"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "130",
+        "generation": "120\nTo solve this problem, we need to determine how many of the 650 vaccinated people were children. We know that 8",
+        "source_id": "gsm8k:train:1041"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "28",
+        "generation": "To determine how many candy bars Kim had saved after 16 weeks, we need to follow these steps:\n\n1. Calculate the total number of candy bars Kim",
+        "source_id": "gsm8k:train:1042"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "7200",
+        "generation": "James paid $4800 for the living room set after applying the 10% discount.\nTo solve this problem, we need to follow these steps",
+        "source_id": "gsm8k:train:1043"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "60000",
+        "generation": "The total duration of the advertisements is 5 * 3 = 15 minutes. Since one minute of advertising costs $4000, the total",
+        "source_id": "gsm8k:train:1044"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "6",
+        "generation": "Andy still has 2 more white socks than black socks after losing half of his white socks.\nTo solve this problem, we need to follow these steps:\n\n1",
+        "source_id": "gsm8k:train:1045"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "12\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of roses Susan initially had.\n2. Determine how",
+        "source_id": "gsm8k:train:1046"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "18\nTo solve this problem, we need to follow these steps:\n\n1. Determine Becky's current age.\n2. Use Becky's age to find",
+        "source_id": "gsm8k:train:1047"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "350",
+        "generation": "300\nTo solve this problem, we need to determine how much water is used by each of the four neighborhoods and then subtract that from the total",
+        "source_id": "gsm8k:train:1048"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "49\nTo solve this problem, we need to determine Mark's score based on the given information about the scores in the math test.\n\n1. **",
+        "source_id": "gsm8k:train:1049"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "38",
+        "generation": "48\nTo solve this problem, we need to determine how many photos each person has based on the given information. Let's break it down step by",
+        "source_id": "gsm8k:train:1050"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "7",
+        "generation": "Let's denote the number of animals in the Rain Forest exhibit as \\( R \\). According to the problem, the number of animals in the Reptile House",
+        "source_id": "gsm8k:train:1051"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "25",
+        "generation": "To solve this problem, we need to determine the current ages of James, John, and Tim based on the given information.\n\n1. **Determine John's",
+        "source_id": "gsm8k:train:1052"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "105",
+        "generation": "280\nTo solve this problem, we need to calculate the total number of pages Jane reads in one day and then multiply that by the number of",
+        "source_id": "gsm8k:train:1053"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "135",
+        "generation": "$234.00\nTo solve this problem, we need to calculate the total cost of attending the concert by considering all the expenses involved. Let",
+        "source_id": "gsm8k:train:1054"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3500000",
+        "generation": "3450000\nTo solve this problem, we need to follow these steps:\n\n1. Determine the population of New York by calculating two",
+        "source_id": "gsm8k:train:1055"
+      }
+    ],
+    "n": 32
+  },
+  "thresholds": {
+    "donor_gain_must_be_strictly_positive": true,
+    "min_nonempty_rate": 0.9,
+    "min_target_language_rate": 0.5
+  }
+}

@@ -1,0 +1,1062 @@
+{
+  "donor_expert": {
+    "exact_match": 0.0625,
+    "items": [
+      {
+        "exact_match": false,
+        "expected_answer": "5",
+        "generation": "10\nTo solve this problem, we need to determine how many trips Elysse and her brother will make together to carry a total of 3",
+        "source_id": "gsm8k:train:512"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "44",
+        "generation": "Jennifer starts with a total of 10 + 20 + (2 * 10) = 60 fruits. After giving her sister two",
+        "source_id": "gsm8k:train:513"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "45",
+        "generation": "35\nTo solve this problem, we need to follow these steps:\n\n1. Start with the total number of stickers Clara brought to school (10",
+        "source_id": "gsm8k:train:514"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "24",
+        "generation": "16%\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of degrees the temperature is below 32 degrees.",
+        "source_id": "gsm8k:train:515"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "180",
+        "generation": "140 minutes\nTo solve this problem, we need to calculate the total time Max spent on each subject and then sum them up.\n\nHere's a",
+        "source_id": "gsm8k:train:516"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "14\nTo solve this problem, we need to calculate the total distance Roger rode his bike by adding the distances he rode in the morning and evening.",
+        "source_id": "gsm8k:train:517"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "30",
+        "generation": "20\nTo solve this problem, we need to set up equations based on the information given and then solve for the number of marbles each person has",
+        "source_id": "gsm8k:train:518"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "468",
+        "generation": "Harrison spends $126 on croissants in a year.\nTo solve this problem, we need to calculate the total amount Harrison spends on croissants",
+        "source_id": "gsm8k:train:519"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3",
+        "generation": "1\nTo solve this problem, we need to determine how many layers of rock consist of only one type and then count those layers.\n\nHere's the step",
+        "source_id": "gsm8k:train:520"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Micah picks 2 dozen strawberries, which is equal to 24 strawberries. He eats 6 strawberries, so he has 24 - 6",
+        "source_id": "gsm8k:train:521"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3",
+        "generation": "4\nTo solve this problem, we need to determine the number of Barnyard owls that are making the given number of hoots per minute.",
+        "source_id": "gsm8k:train:522"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "4",
+        "generation": "10\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of loads of laundry Hayes does in a year.",
+        "source_id": "gsm8k:train:523"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "234",
+        "generation": "There are 280 books now.\nTo solve this problem, we need to follow these steps:\n\n1. Start with the initial number of books in the",
+        "source_id": "gsm8k:train:524"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "5",
+        "generation": "To solve this problem, we need to follow these steps:\n\n1. Calculate the total distance Carla needs to travel.\n2. Determine the amount of gas required based",
+        "source_id": "gsm8k:train:525"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "10",
+        "generation": "27\nTo solve this problem, we need to calculate the number of pages Mack writes each day and then sum them up.\n\nHere's the step-by",
+        "source_id": "gsm8k:train:526"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "350",
+        "generation": "190\nTo solve this problem, we need to add up the calorie content of all the ingredients in the salad. Let's break it down step",
+        "source_id": "gsm8k:train:527"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1825",
+        "generation": "16,750\nTo solve this problem, we need to calculate the total cost of buying the dirt bikes, off-road vehicles, and registering",
+        "source_id": "gsm8k:train:528"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "26",
+        "generation": "1\nTo solve this problem, we need to determine how many rides are required for each type of ticket (one-way and 30-day pass)",
+        "source_id": "gsm8k:train:529"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Each person will get 6 cookies, 9 candies, and 3 brownies.\nTo solve this problem, we need to divide the total number of each",
+        "source_id": "gsm8k:train:530"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "10",
+        "generation": "The zoo spent 4 hours recovering animals.\nTo solve this problem, we need to follow these steps:\n\n1. Identify the number of animals that escaped from the",
+        "source_id": "gsm8k:train:531"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "132",
+        "generation": "76\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of golf balls Dan buys.\n2. Calculate the number",
+        "source_id": "gsm8k:train:532"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "36",
+        "generation": "20\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of children who were allowed to draw jelly beans.\n2",
+        "source_id": "gsm8k:train:533"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "24",
+        "generation": "Jessica is currently 14 years old.\nTo solve this problem, we need to determine Jessica's current age based on the information given about her relationship with Claire",
+        "source_id": "gsm8k:train:534"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Tim paid $15 for eggs.\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of eggs Tim bought.\n2",
+        "source_id": "gsm8k:train:535"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "60",
+        "generation": "104\nTo solve this problem, we need to determine the number of votes for each type of cake and then sum them up. Let's break",
+        "source_id": "gsm8k:train:536"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "34560",
+        "generation": "$24,800\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the hourly wage of an experienced sailor.\n2",
+        "source_id": "gsm8k:train:537"
+      },
+      {
+        "exact_match": true,
+        "expected_answer": "3450",
+        "generation": "The reseller should sell the bag for $3450.\nTo solve this problem, we need to calculate the selling price of the luxury bag that will",
+        "source_id": "gsm8k:train:538"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1500",
+        "generation": "The company needs to plant 1500 more trees.\nTo solve this problem, we can break it down into a few steps:\n\n1. Calculate the",
+        "source_id": "gsm8k:train:539"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "30\nTo solve this problem, we need to calculate the total number of sides on all the cookie cutters Emery has. We can do this",
+        "source_id": "gsm8k:train:540"
+      },
+      {
+        "exact_match": true,
+        "expected_answer": "3",
+        "generation": "Tonya buys 3 lego sets for her older sister.\nTo solve this problem, we need to determine how much money Tonya spends on each gift and",
+        "source_id": "gsm8k:train:541"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "76",
+        "generation": "To solve this problem, we'll break it down into several steps:\n\n1. Calculate the total number of cakes Sara bakes over 5 days.\n2.",
+        "source_id": "gsm8k:train:542"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1150",
+        "generation": "The total amount gathered by the class is $1300.\nTo solve this problem, we need to calculate the total amount of money collected from all the",
+        "source_id": "gsm8k:train:543"
+      }
+    ],
+    "n": 32
+  },
+  "donor_gain": 0.03125,
+  "gate": "PASS_READINESS",
+  "host_base": {
+    "items": [
+      {
+        "generation": "例如，对于输入 \"hello,world\"，输出应该是 [\"hello\", \"world\"]。\n\n以下是您需要完成的任务：\n\n1. 定义函数 `",
+        "language_label": "__label__zh",
+        "language_probability": 0.949436604976654,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:756",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "例如，对于输入 (4, 8)，函数应该返回 8；对于输入 (5, 9)，函数应该返回 -1。\n\n```rust",
+        "language_label": "__label__zh",
+        "language_probability": 0.7683795094490051,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:757",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "请确保函数能够处理大整数。\n\n示例：\n```rust\nfn main() {\n    assert_eq!(rounded_avg(5, 7), \"",
+        "language_label": "__label__zh",
+        "language_probability": 0.5865009427070618,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:758",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "例如，如果输入是 [1, 5, 9]，则输出应该是 [1, 5, 9]。\n\n示例：\n```",
+        "language_label": "__label__zh",
+        "language_probability": 0.9936801791191101,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:759",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "返回排序后的字符串数组。\n\n示例：\n```rust\nfn by_length(arr: Vec<i32>) -> Vec<String> {\n    let mut names =",
+        "language_label": "__label__ja",
+        "language_probability": 0.437492698431015,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:760",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "例如，5 的阶乘是 120。\ni 的数字之和是从 1 到 i 的数字的总和。例如，5",
+        "language_label": "__label__zh",
+        "language_probability": 0.9963271617889404,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:761",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "如果不存在，则返回 (-1, -1)。\n\n示例 1：\n输入：n = 9\n输出：(3, 6)\n解释",
+        "language_label": "__label__zh",
+        "language_probability": 0.7353838086128235,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:762",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": "因此，-123 将被视为负数。\n\n示例：\n```rust\nfn main() {\n    let nums = vec![1, -2",
+        "language_label": "__label__zh",
+        "language_probability": 0.6839321851730347,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:763",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "位置。\n例如，如果数组 [1, 2, 3, 4] 被右移一次，它将变为 [4,",
+        "language_label": "__label__zh",
+        "language_probability": 0.9973951578140259,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:764",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "您可以使用任何标准库中的函数来完成此任务。\n\n```rust\nfn exchange(lst1: Vec<i32>, lst2: Vec<i32",
+        "language_label": "__label__zh",
+        "language_probability": 0.9948673248291016,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:765",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 7
+      },
+      {
+        "generation": "例如，对于输入 \"a b c a\"，输出应该是 {\"a\": 3}。\n\n```rust\nuse std::collections::HashMap;\n\nfn histogram",
+        "language_label": "__label__ja",
+        "language_probability": 0.4170597493648529,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:766",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 12
+      },
+      {
+        "generation": "例如，对于输入 \"abcde\" 和 \"a\"，输出应该是 (\"cde\", true)，因为删除 \"a\" 后得到的字符串 \"",
+        "language_label": "__label__zh",
+        "language_probability": 0.9664547443389893,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:767",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "例如，如果输入是 [\"123\", \"456\", \"789\"], 输出应该是 [\"1\", \"0\", \"3\"]。",
+        "language_label": "__label__wuu",
+        "language_probability": 0.6779245138168335,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:768",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 8
+      },
+      {
+        "generation": "例如，对于数组 [3, 1, -2, 4]，其最小和为 -2。\n\n### 示例\n```rust\nfn main",
+        "language_label": "__label__zh",
+        "language_probability": 0.9239802360534668,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:769",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": "如果无法清空所有井，则返回 -1。\n\n示例：\n\n```rust\nfn max_fill(grid: Vec<Vec<i32>>, capacity:i32",
+        "language_label": "__label__zh",
+        "language_probability": 0.4818025529384613,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:770",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "例如，如果两个数字有相同的 1 数量，那么较小的那个数字应该排在前面。\n\n### 示例\n```rust\nfn main() {",
+        "language_label": "__label__zh",
+        "language_probability": 0.9281197786331177,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:771",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "此外，你不能使用任何内置的字符串操作或库函数来处理字符串。\n\n示例：\n```rust\nfn main() {\n    let s = \"",
+        "language_label": "__label__zh",
+        "language_probability": 0.963775634765625,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:772",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，对于输入 \"hello\"，输出将是 \"e\"，因为 \"o\" 和 \"u\" 都是辅音，但 \"e\"",
+        "language_label": "__label__zh",
+        "language_probability": 0.9906681776046753,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:773",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "示例 1：\n\n输入：lst = [\"()(\", \")\"]\n输出：\"是\"\n解释：我们可以将它们连接成 \"()(())\"。\n\n示例",
+        "language_label": "__label__zh",
+        "language_probability": 0.8731155395507812,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:774",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "。\n\n示例：\n```rust\nfn maximum_120(arr: Vec<i32>, k: i32) -> Vec<i32>",
+        "language_label": "__label__ja",
+        "language_probability": 0.65497887134552,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:775",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，对于输入 `[1, 2, 3, 4]`，输出应该是 `5`（因为 `2 + 4 =",
+        "language_label": "__label__zh",
+        "language_probability": 0.8472854495048523,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:776",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "* 100\n3.  -1000 <= arr[i] <= 1000\n\n### 解题思路\n此处撰写",
+        "language_label": "__label__en",
+        "language_probability": 0.25455936789512634,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:777",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 11
+      },
+      {
+        "generation": "是，对于任何正整数 n，这个序列都会到达 1。\n\n例如，对于 n = 6，collatz 序列为 [6",
+        "language_label": "__label__zh",
+        "language_probability": 0.9990321397781372,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:778",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "2 的天数不少于 1 天或高于 28 天（闰年除外）。\n3. 年份是 4",
+        "language_label": "__label__zh",
+        "language_probability": 0.9919624328613281,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:779",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "。\n\n示例 1：\n输入：txt = \"Hello World\"\n输出：[\"Hello\", \"World\"]\n\n示例 2：\n输入：txt = \"",
+        "language_label": "__label__ja",
+        "language_probability": 0.3077097237110138,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:780",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 14
+      },
+      {
+        "generation": "例如：\n- is_sorted(vec![1, 2, 4, 20]) 返回 true\n- is_sorted(vec![1, 20",
+        "language_label": "__label__zh",
+        "language_probability": 0.854705810546875,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:781",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": ") 的交集是 (2, 3)，而这个交集的长度为 1，这是一个素数。\n如果两个区间没有交集，则",
+        "language_label": "__label__zh",
+        "language_probability": 0.9971364736557007,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:782",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 6
+      },
+      {
+        "generation": "如果数组中的所有元素都是零，则返回 0。\n\n### 示例\n\n```rust\nfn main() {\n    assert_eq!(prod_signs(vec![1",
+        "language_label": "__label__zh",
+        "language_probability": 0.8359398245811462,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:783",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "格（即，上下左右四个方向）。路径中的每个单元格的值必须是路径中所有其他单元格值之和。\n\n例如，对于网格",
+        "language_label": "__label__zh",
+        "language_probability": 0.9992483854293823,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:784",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 2
+      },
+      {
+        "generation": "1 + 2 / 2 = 3\ntri(4) = 1 + 4 / 2 = 5\ntri(6",
+        "language_label": "__label__en",
+        "language_probability": 0.47940197587013245,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:785",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "如果 n 是 0，则返回 1。\n\n示例：\n```rust\nassert_eq!(digits(1), 1);\nassert_eq!(digits(4",
+        "language_label": "__label__zh",
+        "language_probability": 0.783048152923584,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:786",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，对于输入 \"[[]]\"，该函数应该返回 True，而对于输入 \"[]\" 或 \"]\"，它应该返回 False。\n\n```rust\nfn is_nested",
+        "language_label": "__label__ja",
+        "language_probability": 0.7142819762229919,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:787",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 10
+      }
+    ],
+    "n": 32,
+    "nonempty_rate": 1.0,
+    "target_language_rate": 0.75
+  },
+  "host_expert": {
+    "items": [
+      {
+        "generation": "例如，如果输入字符串为 \"hello,world\"，则输出应为 [\"hello\", \"world\"]。\n\n以下是您需要完成的任务：\n\n1. �",
+        "language_label": "__label__zh",
+        "language_probability": 0.9934611320495605,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:756",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 7
+      },
+      {
+        "generation": "例如，对于输入 (4, 8)，函数应该返回 8；对于输入 (5, 9)，函数应该返回 -1。\n\n```rust",
+        "language_label": "__label__zh",
+        "language_probability": 0.7683795094490051,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:757",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "请确保函数能够处理大整数。\n\n```rust\nfn rounded_avg(n: i32, m: i32) -> String {\n    if",
+        "language_label": "__label__zh",
+        "language_probability": 0.41981664299964905,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:758",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": "如果两个数字有相同的奇数位，那么它们应该按照它们在原列表中的顺序排列。\n\n示例 1：\n输入：x = [1",
+        "language_label": "__label__zh",
+        "language_probability": 0.9857524037361145,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:759",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 6
+      },
+      {
+        "generation": "返回排序后的字符串数组。\n\n示例：\n```rust\nfn by_length(arr: Vec<i32>) -> Vec<String> {\n    let mut names =",
+        "language_label": "__label__ja",
+        "language_probability": 0.437492698431015,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:760",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 13
+      },
+      {
+        "generation": "例如，5 的阶乘是 120。\ni 的数字之和是从 1 到 i 的数字的总和。例如，5",
+        "language_label": "__label__zh",
+        "language_probability": 0.9963271617889404,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:761",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "如果不存在，则返回 (-1, -1)。\n\n示例 1：\n输入：n = 9\n输出：(3, 6)\n解释",
+        "language_label": "__label__zh",
+        "language_probability": 0.7353838086128235,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:762",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": "因此，-123 将被视为负数。\n\n示例：\n```rust\nfn main() {\n    let nums = vec![1, -2",
+        "language_label": "__label__zh",
+        "language_probability": 0.6839321851730347,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:763",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "位置。\n例如，如果数组 [1, 2, 3, 4] 被右移一次，它将变为 [4,",
+        "language_label": "__label__zh",
+        "language_probability": 0.9973951578140259,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:764",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "您可以使用任何标准库中的函数来完成此任务。\n\n```rust\nfn exchange(lst1: Vec<i32>, lst2: Vec<i32",
+        "language_label": "__label__zh",
+        "language_probability": 0.9948673248291016,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:765",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 7
+      },
+      {
+        "generation": "例如，对于输入 \"a b c a\"，输出应该是 {\"a\": 2}。\n\n```rust\nuse std::collections::HashMap;\n\nfn histogram",
+        "language_label": "__label__ja",
+        "language_probability": 0.4724995195865631,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:766",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 12
+      },
+      {
+        "generation": "如果字符串是回文，则返回 (s, true)，否则返回 (s, false)\n示例 1：\n输入：s = \"abba\",",
+        "language_label": "__label__zh",
+        "language_probability": 0.755102276802063,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:767",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，如果输入是 [\"123\", \"456\", \"789\"], 输出应该是 [\"1\", \"0\", \"3\"]。",
+        "language_label": "__label__wuu",
+        "language_probability": 0.6779245138168335,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:768",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 8
+      },
+      {
+        "generation": "例如，对于数组 [3, 1, -2, 4]，其最小和为 -2。\n\n### 示例\n```rust\nassert_eq",
+        "language_label": "__label__zh",
+        "language_probability": 0.9813858270645142,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:769",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "如果无法清空所有井，请返回 -1。\n\n示例：\n\n```rust\nfn max_fill(grid: Vec<Vec<i32>>, capacity:i32",
+        "language_label": "__label__zh",
+        "language_probability": 0.4913598299026489,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:770",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "例如，如果两个数字有相同的 1 数量，那么较小的那个数字应该排在前面。\n\n### 示例\n```rust\nfn main() {",
+        "language_label": "__label__zh",
+        "language_probability": 0.9281197786331177,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:771",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "此外，你也可以假设字符串中的每个单词都至少有一个字母。\n\n示例：\n\n```rust\nfn main() {\n    let s = \"Mary had a",
+        "language_label": "__label__zh",
+        "language_probability": 0.48308756947517395,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:772",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 12
+      },
+      {
+        "generation": "例如，对于输入 \"hello\"，输出将是 \"e\"，因为 \"o\" 和 \"u\" 都是辅音，但 \"e\"",
+        "language_label": "__label__zh",
+        "language_probability": 0.9906681776046753,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:773",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 8
+      },
+      {
+        "generation": "```rust\nfn match_parens(lst: Vec<&str>) -> &str {\n    let mut left_count = 0;\n    let mut right",
+        "language_label": "__label__en",
+        "language_probability": 0.7078099846839905,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:774",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 15
+      },
+      {
+        "generation": "。\n\n示例：\n```rust\nfn maximum_120(arr: Vec<i32>, k: i32) -> Vec<i32>",
+        "language_label": "__label__ja",
+        "language_probability": 0.65497887134552,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:775",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，对于输入 `[1, 2, 3, 4]`，输出应该是 `5`（因为 `2 + 4 =",
+        "language_label": "__label__zh",
+        "language_probability": 0.8472854495048523,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:776",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "* 100\n\n### 解题思路\n此处撰写解题思路\n\n### 代码\n\n```rust\nimpl Solution {\n    pub fn add_elements",
+        "language_label": "__label__zh",
+        "language_probability": 0.26851886510849,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:777",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 14
+      },
+      {
+        "generation": "是，对于任何正整数 n，这个序列都会到达 1。\n\n例如，对于 n = 6，collatz 序列为 [6",
+        "language_label": "__label__zh",
+        "language_probability": 0.9990321397781372,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:778",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "2 的天数不少于 1 天或高于 28 天（闰年除外）。\n3. 年份是 4 的",
+        "language_label": "__label__zh",
+        "language_probability": 0.9984694719314575,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:779",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "。\n\n示例：\n\n```rust\nfn split_words(txt: &str) -> Vec<String> {\n    if txt.contains(' ') {\n        txt.split_whitespace().",
+        "language_label": "__label__ja",
+        "language_probability": 0.3731920123100281,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:780",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 14
+      },
+      {
+        "generation": "例如：\n- is_sorted(vec![1, 2, 4, 20]) 返回 true\n- is_sorted(vec![1, 20",
+        "language_label": "__label__zh",
+        "language_probability": 0.854705810546875,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:781",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 11
+      },
+      {
+        "generation": ") 的交集是 (2, 3)，而这个交集的长度是 1，这是一个素数。\n如果两个区间没有交集，则",
+        "language_label": "__label__zh",
+        "language_probability": 0.996825098991394,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:782",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 6
+      },
+      {
+        "generation": "如果数组中的所有元素都是零，则返回 0。\n\n### 示例\n\n```rust\nfn main() {\n    assert_eq!(prod_signs(vec![1",
+        "language_label": "__label__zh",
+        "language_probability": 0.8359398245811462,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:783",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 9
+      },
+      {
+        "generation": "格（即，上下左右四个方向）。路径中的每个单元格的值必须是路径中所有其他单元格值之和。\n\n例如，对于网格",
+        "language_label": "__label__zh",
+        "language_probability": 0.9992483854293823,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:784",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 2
+      },
+      {
+        "generation": "1 + 2 / 2 = 3\ntri(4) = 1 + 4 / 2 = 5\ntri(6",
+        "language_label": "__label__en",
+        "language_probability": 0.47940197587013245,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:785",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 17
+      },
+      {
+        "generation": "如果 n 是 0，则返回 1。\n\n示例：\n```rust\nassert_eq!(digits(1), 1);\nassert_eq!(digits(4",
+        "language_label": "__label__zh",
+        "language_probability": 0.783048152923584,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:786",
+        "target_language": "zh",
+        "target_language_match": true,
+        "token_count": 10
+      },
+      {
+        "generation": "例如，对于输入 \"[[]]\"，该函数应该返回 True，而对于输入 \"[]\" 或 \"]\"，它应该返回 False。\n\n```rust\nfn is_nested",
+        "language_label": "__label__ja",
+        "language_probability": 0.7142819762229919,
+        "nonempty": true,
+        "source_id": "multilingual_reward_bench:zho_Hans:test:787",
+        "target_language": "zh",
+        "target_language_match": false,
+        "token_count": 10
+      }
+    ],
+    "n": 32,
+    "nonempty_rate": 1.0,
+    "target_language_rate": 0.75
+  },
+  "language": "zh",
+  "lid_model": "models\\lid.176.ftz",
+  "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "readiness_donor": {
+    "exact_match": 0.03125,
+    "items": [
+      {
+        "exact_match": false,
+        "expected_answer": "5",
+        "generation": "10\nTo solve this problem, we need to determine how many trips Elysse and her brother will make together to carry 30 bags of",
+        "source_id": "gsm8k:train:512"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "44",
+        "generation": "Jennifer starts with a total of 10 + 20 + (2 * 10) = 50 fruits. After giving her sister two",
+        "source_id": "gsm8k:train:513"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "45",
+        "generation": "35\nTo solve this problem, we need to follow these steps:\n\n1. Start with the total number of stickers Clara brought to school.\n2.",
+        "source_id": "gsm8k:train:514"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "24",
+        "generation": "16%\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the number of degrees the temperature is below 32 degrees.",
+        "source_id": "gsm8k:train:515"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "180",
+        "generation": "140 minutes\nTo solve this problem, we need to calculate the total time Max spent on each subject and then sum them up.\n\nHere's a",
+        "source_id": "gsm8k:train:516"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "12",
+        "generation": "12\nTo solve this problem, we need to add up the distances Roger rode his bike in the morning and evening.\n\nMorning distance: 2 miles",
+        "source_id": "gsm8k:train:517"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "30",
+        "generation": "20\nTo solve this problem, we need to set up equations based on the information given and then solve for the number of marbles each person has",
+        "source_id": "gsm8k:train:518"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "468",
+        "generation": "Harrison spends $147 on croissants in a year.\nTo solve this problem, we need to calculate the total amount Harrison spends on croissants",
+        "source_id": "gsm8k:train:519"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3",
+        "generation": "1\nTo solve this problem, we need to determine how many layers of rock consist of only one type and then count those layers.\n\nHere's the step",
+        "source_id": "gsm8k:train:520"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Micah picks 2 dozen strawberries, which is equal to 24 strawberries. He eats 6 strawberries, so he has 24 - 6",
+        "source_id": "gsm8k:train:521"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3",
+        "generation": "4\nTo solve this problem, we need to determine how many barnyard owls are making the given number of hoots per minute. Let's",
+        "source_id": "gsm8k:train:522"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "4",
+        "generation": "To determine how many packs of detergent pods Hayes will need for a full year of laundry, we can break down the problem into smaller steps:\n\n1. Calculate the",
+        "source_id": "gsm8k:train:523"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "234",
+        "generation": "There are 280 books now.\nTo solve this problem, we need to follow these steps:\n\n1. Start with the initial number of books in the",
+        "source_id": "gsm8k:train:524"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "5",
+        "generation": "To solve this problem, we need to follow these steps:\n\n1. Calculate the total distance Carla needs to travel.\n2. Determine the amount of gas required based",
+        "source_id": "gsm8k:train:525"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "10",
+        "generation": "27\nTo solve this problem, we need to calculate the number of pages Mack writes each day and then sum them up.\n\nHere's the step-by",
+        "source_id": "gsm8k:train:526"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "350",
+        "generation": "190\nTo solve this problem, we need to add up the calorie content of all the ingredients in the salad. Let's break it down step",
+        "source_id": "gsm8k:train:527"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1825",
+        "generation": "1675\nTo solve this problem, we need to calculate the total cost of the dirt bikes, the off-road vehicles, and the registration fees",
+        "source_id": "gsm8k:train:528"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "26",
+        "generation": "To determine the minimum number of rides needed for a 30-day pass to be strictly cheaper than a one-way ticket, we can follow these steps:\n\n1",
+        "source_id": "gsm8k:train:529"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Each person will get 6 cookies, 9 candies, and 3 brownies.\nTo solve this problem, we need to divide the total number of each",
+        "source_id": "gsm8k:train:530"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "10",
+        "generation": "The zoo spent 4 hours recovering animals.\nTo solve this problem, we need to follow these steps:\n\n1. Identify the number of animals that escaped from the",
+        "source_id": "gsm8k:train:531"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "132",
+        "generation": "To solve this problem, we need to calculate the total number of golf balls purchased by Dan, Gus, and Chris. Here's a step-by-step approach:",
+        "source_id": "gsm8k:train:532"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "36",
+        "generation": "20\nTo solve this problem, we need to follow these steps:\n\n1. Calculate how many children were allowed to draw jelly beans.\n2. Determine",
+        "source_id": "gsm8k:train:533"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "24",
+        "generation": "Jessica is currently 14 years old.\nTo solve this problem, we need to determine Jessica's current age based on the information given about her relationship with Claire",
+        "source_id": "gsm8k:train:534"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "18",
+        "generation": "Tim paid $15 for eggs.\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the total number of eggs Tim bought.\n2",
+        "source_id": "gsm8k:train:535"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "60",
+        "generation": "104\nTo solve this problem, we need to determine the number of votes for each type of cake and then sum them up. Let's break",
+        "source_id": "gsm8k:train:536"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "34560",
+        "generation": "$24,800\nTo solve this problem, we need to follow these steps:\n\n1. Calculate the hourly wage of an experienced sailor.\n2",
+        "source_id": "gsm8k:train:537"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "3450",
+        "generation": "To determine how much the reseller should sell the bag to achieve a 15% profit, we need to follow these steps:\n\n1. Calculate the amount",
+        "source_id": "gsm8k:train:538"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1500",
+        "generation": "The company needs to plant 1500 more trees.\nTo solve this problem, we can break it down into a few steps:\n\n1. Calculate the",
+        "source_id": "gsm8k:train:539"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "46",
+        "generation": "To solve this problem, we need to calculate the total number of sides on all the cookie cutters Emery has. We can do this by multiplying the number",
+        "source_id": "gsm8k:train:540"
+      },
+      {
+        "exact_match": true,
+        "expected_answer": "3",
+        "generation": "Tonya buys 3 lego sets for her older sister.\nTo solve this problem, we need to determine how much money Tonya spends on each gift and",
+        "source_id": "gsm8k:train:541"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "76",
+        "generation": "To solve this problem, we'll break it down into several steps:\n\n1. Calculate the total number of cakes Sara bakes over 5 days.\n2.",
+        "source_id": "gsm8k:train:542"
+      },
+      {
+        "exact_match": false,
+        "expected_answer": "1150",
+        "generation": "The class was able to gather together $1300.\nTo solve this problem, we need to calculate the total amount of money collected by the class.",
+        "source_id": "gsm8k:train:543"
+      }
+    ],
+    "n": 32
+  },
+  "thresholds": {
+    "min_nonempty_rate": 0.9,
+    "min_target_language_rate": 0.5
+  }
+}

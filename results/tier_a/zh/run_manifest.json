@@ -1,0 +1,67 @@
+{
+  "command": "python -u paper_iclr/tier_a_data.py --language zh --output-dir results/tier_a/zh --device cuda --translation-batch-size 4 --max-new-tokens 96",
+  "created_at": "2026-08-12T09:54:49.798517+00:00",
+  "files": {
+    "inputs": {
+      "results/tier_a/zh/C.jsonl": "db5dc644fdc073b52cdaa3fd545991f986d27a23623f1777e330edbb11c014b4",
+      "results/tier_a/zh/MGSM_dev.jsonl": "0ce73d3625e76bc3871ea6598fd7c91b93d36ccea7de83f26b6f4510edfc8635",
+      "results/tier_a/zh/MGSM_test.jsonl": "f950a944748d176278a818f3c4934bac7ccfec5df86b21f4ac79aff7c2cda455",
+      "results/tier_a/zh/P_risk.jsonl": "ab3dfaa86aadb1bc862d748643016afff29544838da83c44d99625605347dd17",
+      "results/tier_a/zh/P_util.jsonl": "602e49bc80049684a4819b3f75df20ea98f1a189feaa7095624ea63a8ba01872",
+      "results/tier_a/zh/data_build_summary.json": "475e6f385f31cb3460c7b874dd1b281e678801d9dc3cbd927079fe1cd2e02603",
+      "results/tier_a/zh/host_train.jsonl": "456ea379404d1b284385f339a374d69da802b6aa205fd2abc8a92ba75e201a69"
+    },
+    "outputs": {
+      "results/tier_a/zh/C.jsonl": "db5dc644fdc073b52cdaa3fd545991f986d27a23623f1777e330edbb11c014b4",
+      "results/tier_a/zh/MGSM_dev.jsonl": "0ce73d3625e76bc3871ea6598fd7c91b93d36ccea7de83f26b6f4510edfc8635",
+      "results/tier_a/zh/MGSM_test.jsonl": "f950a944748d176278a818f3c4934bac7ccfec5df86b21f4ac79aff7c2cda455",
+      "results/tier_a/zh/P_risk.jsonl": "ab3dfaa86aadb1bc862d748643016afff29544838da83c44d99625605347dd17",
+      "results/tier_a/zh/P_util.jsonl": "602e49bc80049684a4819b3f75df20ea98f1a189feaa7095624ea63a8ba01872",
+      "results/tier_a/zh/adapters/donor/README.md": "a70eb4d38ca247c37c5509ffeefd75812320790f5254d917486bf9c7ee63ac9e",
+      "results/tier_a/zh/adapters/donor/chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+      "results/tier_a/zh/adapters/donor/donor/adapter_config.json": "61ff37f786d5c64feea36adae845082fb7519caa49764224c128eba22210d7f6",
+      "results/tier_a/zh/adapters/donor/donor/adapter_model.safetensors": "8401bbd0d062ac96584555069941cd40a3d00722d146d297f1d2bf900e375d49",
+      "results/tier_a/zh/adapters/donor/tokenizer.json": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee",
+      "results/tier_a/zh/adapters/donor/tokenizer_config.json": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e",
+      "results/tier_a/zh/adapters/donor/training_metadata.json": "a557723d61f344383197c7dfa5539098b1085932b4378288a5da7c1cb5636b32",
+      "results/tier_a/zh/adapters/host/README.md": "a70eb4d38ca247c37c5509ffeefd75812320790f5254d917486bf9c7ee63ac9e",
+      "results/tier_a/zh/adapters/host/chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+      "results/tier_a/zh/adapters/host/host/adapter_config.json": "a019b22e2164ad75a0b8760565ead75b8d0292902a1a520087cebe51e6c415ef",
+      "results/tier_a/zh/adapters/host/host/adapter_model.safetensors": "da0b4b8ebffffc7fb88dde3fc51480cce727d37e216f35d05b3638d062ba6cc5",
+      "results/tier_a/zh/adapters/host/tokenizer.json": "716ec13e363ec927a345aa1d39bb8ed88a0ce7fadcdef14509b1f2afd64a8bee",
+      "results/tier_a/zh/adapters/host/tokenizer_config.json": "421faf34672feeb6c6129dbf011e81bd55780f959dca41e45ed1a2c261559f1e",
+      "results/tier_a/zh/adapters/host/training_metadata.json": "ad2fa704bce1ab8732893ea80de9c85ee8d33391079c02d5f619c0da7f853df8",
+      "results/tier_a/zh/data_build_summary.json": "475e6f385f31cb3460c7b874dd1b281e678801d9dc3cbd927079fe1cd2e02603",
+      "results/tier_a/zh/host_train.jsonl": "456ea379404d1b284385f339a374d69da802b6aa205fd2abc8a92ba75e201a69",
+      "results/tier_a/zh/pilots/P1_fake_donor_scores.json": "3b9536d47744496bf6ef22ec7c5a0f6afe0885e4e99d81ea2a035b519656e789",
+      "results/tier_a/zh/pilots/P2_real_donor_scores.json": "57e5131fb8ce5061a4ef7eab3ecb5f8569eb14309adc45ba8e855068ac1706d0",
+      "results/tier_a/zh/pilots/pilots.json": "4a51d003b6ceddc45cdfc23c86622085d339f29d6549adaf9546996da789f72a"
+    },
+    "scripts_and_environment": {
+      "env.lock": "08ba0b846ed27e56625c1df12f530d1ac79bb8503ed846488f0ce8601b057763",
+      "paper_iclr/data_manifest.py": "2be79a3fdf6144b1d8d63a2c90c80b6f4365977303d23dc33d9251ae6f1e5288",
+      "paper_iclr/run_manifest.py": "7c049af90e482323af8db485c478fcb76bc606c7f6844e2d7cc1df3e954d5cb2",
+      "paper_iclr/suture_metrics.py": "82a30cae17c8cea30e8e2e2a8861dbfdaabaede9ae10fbb1b792982aba24936a",
+      "paper_iclr/suture_torch.py": "3349bbfe363136aa3ce5a217784b03bec9e55ce5360fa439379f85598a51f616",
+      "paper_iclr/tier_a_data.py": "97ec0c12c22cfa61a54d93f7be8f050bc3d954437bb4e253aa3880fe12c4f48f",
+      "paper_iclr/tier_a_gate.py": "a05330a4a73278710c921bb01f221f88a70494de1ad7a0562265b3be279e94ab",
+      "paper_iclr/tier_a_train.py": "173e34f13c9d2f614230dd742362b3085e69716a9d3db6bb372ef63e17b07134"
+    }
+  },
+  "git_commit": null,
+  "language": "zh",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "run_kind": "data",
+  "schema_version": 1,
+  "selection_contract": {
+    "e1_merged_models_built": null,
+    "e1_sweep_is_exhaustive": null,
+    "merged_models_built_during_selection": 0,
+    "p1_p2_results": {}
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "contract_version": 2,
+  "contract_status": "authorized_qwen3_study",
+  "frozen_at": "2026-08-24T02:00:00+03:00",
+  "authorization": {
+    "source": "author-led Qwen3 study after evaluator repair",
+    "decision": "Measure Qwen3-1.7B with fail-closed evaluators and full denominators. Do not weaken thresholds.",
+    "not_a_retry_of_v1": true,
+    "v1_spanish_result_remains_reported": true
+  },
+  "paper": {
+    "short_name": "SUTURE",
+    "target": "ICLR 2027",
+    "framing": "controlled-stack theory; v1 Spanish E1 retained; v2 is the Qwen3 measurement",
+    "runbook": "docs/iclr/RUNBOOK.txt",
+    "selection_rule": "No merged model may be materialized while computing scores or selecting a graft."
+  },
+  "base_model": {
+    "id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "architecture": "qwen3",
+    "class_name": "Qwen3ForCausalLM",
+    "parameter_count": 2031739904,
+    "n_layers": 28,
+    "hidden_size": 2048,
+    "vocab_size": 151936,
+    "dtype": "bfloat16",
+    "fallback": null,
+    "forbidden": [
+      "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "Qwen/Qwen2.5-1.5B",
+      "any quantized or GGUF substitute",
+      "any other revision"
+    ],
+    "preflight_policy": "If the exact snapshot cannot be acquired or loaded, record STOP_SETUP and stop. Never continue on an older model."
+  },
+  "compute": {
+    "gpu_class": "single 8-12 GB GPU",
+    "duration": "several days",
+    "batch_size": 1,
+    "generation_batch_size": 1,
+    "score_batch_size": 1,
+    "gradient_checkpointing": true,
+    "max_length": 128,
+    "expert_seeds": [
+      0
+    ],
+    "expert_seed_limitation": "v2 tests cross-language behavior, not training-seed robustness"
+  },
+  "decoding": {
+    "enable_thinking": false,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "max_new_tokens": 128,
+    "ranking_decode_seeds": [
+      0
+    ],
+    "stability_decode_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "experts": {
+    "donor": {
+      "role": "English math skill expert",
+      "shared_across_languages": true,
+      "source_data": "GSM8K train split, disjoint from readiness and validation"
+    },
+    "hosts": [
+      {
+        "language": "es",
+        "script_resource_axis": "high_resource_latin"
+      },
+      {
+        "language": "zh",
+        "script_resource_axis": "high_resource_non_latin"
+      },
+      {
+        "language": "sw",
+        "script_resource_axis": "lower_resource"
+      }
+    ],
+    "matching": {
+      "base_checkpoint": "identical Qwen3 revision for every expert",
+      "recipe": "identical LoRA rank, optimizer, schedule, sequence length, batch convention, and seed",
+      "adapter_policy": "LoRA rank 8"
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "steps": 1024,
+      "continuation_steps_if_needed": 1536,
+      "batch_size": 1,
+      "gradient_accumulation": 8,
+      "max_length": 128,
+      "learning_rate": 1e-05,
+      "checkpoint_steps": [
+        128,
+        256,
+        512,
+        768,
+        1024
+      ],
+      "checkpoint_selection": "among checkpoints that meet the role-specific passing thresholds, select maximum validation gain; if none pass, record max-gain checkpoint as failed and stop"
+    },
+    "readiness": {
+      "n_donor": 128,
+      "n_host": 128,
+      "min_donor_gain": 0.1,
+      "min_donor_exact_match": 0.2,
+      "min_host_nonempty_rate": 0.9,
+      "min_host_target_language_rate": 0.9,
+      "min_host_logprob_gain_nats_per_token": 0.05,
+      "max_belebele_drop_versus_base": 0.05,
+      "failed_language_gets_no_e1": true,
+      "logprob_policy": "fail closed unless every declared validation/readiness row contributes a finite completion log-probability; left-truncate the prompt to preserve completion tokens",
+      "belebele_scorer": "multiple_choice_logprob",
+      "host_data_policy": "natural target-language instruction/response only; exclude code; source-balanced sampling"
+    }
+  },
+  "data": {
+    "results_root": "results/v2/qwen3_1_7b",
+    "do_not_reuse_v1_manifests": true,
+    "utility_probe": {
+      "name": "P_util",
+      "size": 500
+    },
+    "risk_probe": {
+      "name": "P_risk",
+      "size": 500
+    },
+    "certificate_calibration": {
+      "name": "C",
+      "size": 1000
+    },
+    "host_train": {
+      "name": "host_train",
+      "min_size": 1000,
+      "gsm8k_supplement_forbidden": true
+    },
+    "development": {
+      "name": "MGSM_dev",
+      "n_items": 64,
+      "source": "juletxara/mgsm:{lang}:test indices selected by SHA-256 of mgsm:item:{index}",
+      "same_ids_across_languages": true
+    },
+    "test": {
+      "name": "MGSM_test",
+      "n_items": 186,
+      "source": "remaining juletxara/mgsm:{lang}:test indices",
+      "touch": "once, after analysis code is frozen, only for host/selected/dev-oracle"
+    },
+    "retention": {
+      "name": "Belebele",
+      "n_items": 128,
+      "source": "facebook/belebele frozen per language"
+    },
+    "integrity": {
+      "mechanism": "SHA-256 canonical-record hashes",
+      "missing_hash_policy": "fail closed"
+    }
+  },
+  "canonical_e1_protocol": {
+    "language_order": [
+      "es",
+      "zh",
+      "sw"
+    ],
+    "stop_only_for": [
+      "setup failure",
+      "integrity failure",
+      "plumbing P1/P3 failure",
+      "per-language expert-readiness failure"
+    ],
+    "do_not_stop_zh_sw_because_spanish_e1_fails": true,
+    "interpret_only_after_eligible_panel_finishes": true,
+    "selection": {
+      "tau": 0.05,
+      "merged_models_built_during_selection": 0
+    },
+    "measurement": {
+      "ranking_decode_seeds": [
+        0
+      ],
+      "stability_windows": [
+        "host_baseline",
+        "selected",
+        "dev_oracle",
+        "top5_predicted"
+      ],
+      "stability_decode_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "belebele_on": [
+        "host_baseline",
+        "selected",
+        "dev_oracle"
+      ]
+    },
+    "stop_thresholds": {
+      "min_spearman": 0.5,
+      "max_regret_fraction": 0.5,
+      "max_drift_rate": 0.5
+    }
+  },
+  "hard_gates": {
+    "preflight": "exact Qwen3 snapshot loads; architecture and parameter count match",
+    "P1": {
+      "minimum_spearman": 0.9
+    },
+    "P3": {
+      "relative_agreement_target": 0.0001
+    },
+    "P2": "same-probe diagnostic; not a stop"
+  },
+  "analysis": {
+    "holm_correction": "three-language primary panel among languages that reached E1",
+    "classify_as": [
+      "broad_improvement",
+      "language_dependent_applicability",
+      "persistent_cross_set_failure",
+      "expert_or_setup_failure"
+    ],
+    "v1_comparison": "new-study applicability comparison; do not erase v1 numbers"
+  },
+  "immutable_v1": {
+    "canonical_e1": "results/tier_a/es/e1_canonical_seed0",
+    "contract": "configs/experimental_contract_v1.json"
+  },
+  "setup_abort_and_rerun": [
+    "incomplete_denominator",
+    "code_or_wrong_language_host_data",
+    "generate_parse_belebele",
+    "missing_panel_status_or_manifests",
+    "broken_orchestrator_or_e1_syntax",
+    "checkpoint_rule_mismatch"
+  ]
+}

@@ -17,8 +17,13 @@ spec = importlib.util.spec_from_file_location("vt", os.path.join(
 from verify_theory import (Stack, make_experts, compose, first_order_machinery,
                            block, best_interval_fast)   # noqa: E402
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "figs")
-os.makedirs(OUT, exist_ok=True)
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+OUT_DIRS = [
+    os.path.join(ROOT, "paper", "figs"),
+]
+for OUT in OUT_DIRS:
+    os.makedirs(OUT, exist_ok=True)
+OUT = OUT_DIRS[0]
 
 RNG = np.random.default_rng(0)
 L, d, dm, T, V = 12, 24, 48, 5, 30
@@ -31,12 +36,13 @@ phi_h = stack.readout(xs_h[L], tgt_util)
 
 
 def w(name, rows, header):
-    p = os.path.join(OUT, name)
-    with open(p, "w") as f:
-        f.write(header + "\n")
-        for r in rows:
-            f.write(" ".join(f"{x:.8g}" for x in r) + "\n")
-    print("wrote", p, f"({len(rows)} rows)")
+    for directory in OUT_DIRS:
+        p = os.path.join(directory, name)
+        with open(p, "w") as f:
+            f.write(header + "\n")
+            for r in rows:
+                f.write(" ".join(f"{x:.8g}" for x in r) + "\n")
+        print("wrote", p, f"({len(rows)} rows)")
 
 
 # ---- panel (a): predicted vs measured over many random graft sets ----------
@@ -119,6 +125,6 @@ fo_r = first_order_machinery(stack, host, donor, tgt_risk)
 w("fig_profile.dat", [(l, fo["a"][l], fo_r["a"][l]) for l in range(L)], "layer util risk")
 _, arg = best_interval_fast(fo["a"], fo_r["a"], 0.05)
 print(f"  profile: constrained pick at tau=0.05 -> {arg}")
-with open(os.path.join(OUT, "fig_profile_pick.tex"), "w") as f:
+with open(os.path.join(OUT_DIRS[0], "fig_profile_pick.tex"), "w") as f:
     f.write(f"{arg[0]}\n{arg[1]}\n")
 print("done")

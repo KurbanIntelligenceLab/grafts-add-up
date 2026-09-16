@@ -1,0 +1,134 @@
+{
+  "blocked_languages": [
+    "zh",
+    "sw"
+  ],
+  "expert_seeds_requested": [
+    0
+  ],
+  "holm_adjusted_p_values": {
+    "es": 0.0938906109389061
+  },
+  "languages": [
+    "es"
+  ],
+  "mgsm_test_read": false,
+  "missing_canonical_runs": [],
+  "p_values_averaged_across_seeds": false,
+  "results": {
+    "es": [
+      {
+        "accuracy_regret": 0.05,
+        "accuracy_regret_fraction_of_achievable_gain": 2.0000000000000004,
+        "baseline_exact_match": 0.1,
+        "bootstrap": {
+          "ci95": [
+            0.0,
+            0.125
+          ],
+          "item_ids": [
+            "mgsm:es:train:0",
+            "mgsm:es:train:1",
+            "mgsm:es:train:2",
+            "mgsm:es:train:3",
+            "mgsm:es:train:4",
+            "mgsm:es:train:5",
+            "mgsm:es:train:6",
+            "mgsm:es:train:7"
+          ],
+          "mean": 0.05042,
+          "n_items": 8,
+          "observed_regret": 0.05,
+          "p_regret_le_zero": 0.0938906109389061
+        },
+        "c_set": {
+          "baseline_certificate": {
+            "delta": 0.05,
+            "empirical_rate": 0.2196,
+            "level_used": 0.05,
+            "n_calibration": 2500,
+            "n_candidates_certified": 1,
+            "n_drift": 549,
+            "upper_bound": 0.23365869296639116
+          },
+          "baseline_empirical_rate": 0.2196,
+          "certificate": {
+            "delta": 0.05,
+            "empirical_rate": 0.222,
+            "level_used": 0.05,
+            "n_calibration": 2500,
+            "n_candidates_certified": 1,
+            "n_drift": 555,
+            "upper_bound": 0.23610968544501362
+          },
+          "is_certificate_until_bound_applied": false,
+          "n_selected": 2500,
+          "selected_empirical_rate": 0.222,
+          "source": "C_held_out_prompts",
+          "status": "empirical_plus_clopper_pearson"
+        },
+        "decode_seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "expert_seeds_measured": [
+          0
+        ],
+        "gate": "STOP_E2_REGIME_INVESTIGATION",
+        "language": "es",
+        "mgsm_test_read": false,
+        "n_dev_items": 8,
+        "n_windows": 406,
+        "p_values_averaged_across_seeds": false,
+        "path": "results/tier_a/es/e1_canonical_seed0",
+        "pearson_cross_set_exact_match": -0.011885167725392167,
+        "retention": {
+          "alias_of": "target_language_nonempty_check",
+          "belebele_or_knowledge": "unmeasured",
+          "measured_name": "target_language_nonempty_check",
+          "n": 32,
+          "nonempty_rate": 1.0,
+          "not_general_capability_retention": true,
+          "target_language_rate": 1.0
+        },
+        "same_probe_versus_cross_set": {
+          "cross_set_failure_is_bookkeeping": false,
+          "headline_ranking": "cross_set_P_util_P_risk_to_MGSM_dev",
+          "same_probe_linearisation": "P2_and_E2_on_selection_probes",
+          "teacher_forced_on_MGSM_dev_is_still_cross_set": true
+        },
+        "selected_exact_match": 0.075,
+        "spearman_cross_set_exact_match": -0.01809609071678834,
+        "spearman_cross_set_teacher_forced": 0.8774941533562224,
+        "sweep_best_exact_match": 0.125,
+        "target_language_nonempty_check": {
+          "belebele_or_knowledge": "unmeasured",
+          "measured_name": "target_language_nonempty_check",
+          "n": 32,
+          "nonempty_rate": 1.0,
+          "not_general_capability_retention": true,
+          "target_language_rate": 1.0
+        },
+        "task_set_drift": {
+          "baseline_rate": 0.42500000000000004,
+          "is_certificate": false,
+          "n": 406,
+          "selected_rate": 0.5,
+          "source": "MGSM_dev_free_generation"
+        },
+        "timing": {
+          "run_manifest_duration_seconds": 0.0,
+          "run_manifest_duration_status": "unknown_after_resume",
+          "selection_score_seconds_recorded": 0.0,
+          "selection_timing_status": "unknown_after_resume",
+          "sweep_seconds_recorded": 41448.7424092,
+          "sweep_timing_status": "partial_after_resume",
+          "sweep_windows_resumed": 50
+        }
+      }
+    ]
+  }
+}

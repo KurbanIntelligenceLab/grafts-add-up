@@ -1,0 +1,59 @@
+{
+  "checkpoints": {
+    "checkpoint-0032": {
+      "mean_epsilon_S": 6.19267634274438,
+      "mean_jacobian_gap_proxy": 171.85,
+      "mean_relative_magnitude_error": 1.1171140332922966,
+      "mean_remainder": -0.013398658030928346,
+      "n": 10,
+      "spearman": 0.33333333333333326
+    },
+    "checkpoint-0064": {
+      "mean_epsilon_S": 4.89436704237014,
+      "mean_jacobian_gap_proxy": 197.2,
+      "mean_relative_magnitude_error": 0.9772048153993305,
+      "mean_remainder": -0.004131319227599306,
+      "n": 10,
+      "spearman": 0.5515151515151515
+    },
+    "checkpoint-0096": {
+      "mean_epsilon_S": 7.111336212046444,
+      "mean_jacobian_gap_proxy": 197.35,
+      "mean_relative_magnitude_error": 0.8378826731941812,
+      "mean_remainder": -0.00141586656900472,
+      "n": 10,
+      "spearman": 0.5878787878787878
+    },
+    "checkpoint-0128": {
+      "mean_epsilon_S": 6.385506965778768,
+      "mean_jacobian_gap_proxy": 189.775,
+      "mean_relative_magnitude_error": 2.437967132099143,
+      "mean_remainder": 0.008357240421173629,
+      "n": 10,
+      "spearman": 0.7212121212121211
+    },
+    "final": {
+      "mean_epsilon_S": 5.085859458334744,
+      "mean_jacobian_gap_proxy": 162.6,
+      "mean_relative_magnitude_error": 0.9477082058741999,
+      "mean_remainder": -0.004515468022873392,
+      "n": 10,
+      "spearman": 0.7212121212121211
+    }
+  },
+  "graft_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "grafts_per_size": 2,
+  "language": "es",
+  "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "output": "results\\tier_a\\es\\e2\\e2_regime.jsonl",
+  "probe_limit": 8,
+  "protocol_version": 1,
+  "test_manifest_read": "MGSM_test was not read"
+}

@@ -1,0 +1,13 @@
+{
+  "best_exact_match": 0.03125,
+  "complete": true,
+  "host_window_not_in_sweep": "host is the empty graft; this sweep is windows only",
+  "n_items": 64,
+  "n_windows": 406,
+  "selected_exact_match": 0.015625,
+  "selected_window": [
+    1,
+    27
+  ],
+  "spearman": 0.129366686458215
+}

@@ -1,0 +1,55 @@
+{
+  "analysis": {
+    "bootstrap_interval": "percentile_95",
+    "bootstrap_resamples": 20000,
+    "metric": "answer_logprob_per_token",
+    "paired_unit": "MGSM-Rev2 test record",
+    "seed": 20260913
+  },
+  "comparisons": {
+    "fr": {
+      "n_records": 250,
+      "published_reference_minus_host": {
+        "ci95": [
+          0.677159,
+          0.828782
+        ],
+        "mean": 0.752893,
+        "fraction_positive": 0.916
+      },
+      "selected_minus_host": {
+        "ci95": [
+          0.35846,
+          0.437443
+        ],
+        "mean": 0.397948,
+        "fraction_positive": 0.928
+      }
+    },
+    "zh": {
+      "n_records": 250,
+      "published_reference_minus_host": {
+        "ci95": [
+          1.359584,
+          1.555755
+        ],
+        "mean": 1.457385,
+        "fraction_positive": 0.98
+      },
+      "selected_minus_host": {
+        "ci95": [
+          1.209789,
+          1.445685
+        ],
+        "mean": 1.326342,
+        "fraction_positive": 0.964
+      }
+    }
+  },
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "source_sha256": {
+    "fr_measurements": "a0dfc49d3e0b9c36095613313c5bbae98f0b2b0a1c2947559c1668ac8b81faee",
+    "zh_measurements": "f4fd0e78a5cc4c003723185f51ae496cd425c802db3ce48316625af886a59e76"
+  },
+  "status": "posthoc_only_no_contract_mutation"
+}

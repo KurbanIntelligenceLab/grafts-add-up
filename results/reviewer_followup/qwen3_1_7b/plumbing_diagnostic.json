@@ -1,0 +1,187 @@
+{
+  "contract_sha256": "9edc53ef588367311a9f619486e8a4e8cd21dd8b3196852e8007effeb15cf576",
+  "contract_version": 1,
+  "device": "cuda",
+  "donor_dir": "results\\v2\\qwen3_1_7b\\shared\\donor\\checkpoint-0512\\donor",
+  "gate": "STOP_P1_ZERO",
+  "grafts": [
+    [],
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      7
+    ],
+    [
+      13
+    ],
+    [
+      14
+    ],
+    [
+      20
+    ],
+    [
+      26
+    ],
+    [
+      27
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      12,
+      13,
+      14,
+      15
+    ],
+    [
+      24,
+      25,
+      26,
+      27
+    ]
+  ],
+  "host_dir": "results\\v2\\qwen3_1_7b\\es\\adapters\\host\\checkpoint-1024\\host",
+  "interpretation": "This diagnostic does not authorize E1, MGSM-test, or a new claim about free-generation ranking.",
+  "language": "es",
+  "max_length": 128,
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "prompt_limit": 4,
+  "ranking_authorized": false,
+  "results": [
+    {
+      "graft_sizes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "zero_donor",
+      "max_abs_measured": 0.0,
+      "max_abs_predicted": 0.0035191059578210115,
+      "max_injection_norm": 137.3756866455078,
+      "mean_epsilon": 27.352720576174118,
+      "mean_injection_norm": 11.8467240982822,
+      "merged_models_built_after_selection": 18,
+      "n_grafts": 17,
+      "noise_scale": 0.0,
+      "pearson": 0.0,
+      "spearman": 0.0,
+      "wall_clock_seconds": 14.256137300002592,
+      "zero_donor_invariant": false
+    },
+    {
+      "graft_sizes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "fake_donor",
+      "max_abs_measured": 0.042481422424316406,
+      "max_abs_predicted": 0.00547437381464988,
+      "max_injection_norm": 137.39569091796875,
+      "mean_epsilon": 50.924324191668454,
+      "mean_injection_norm": 22.17795202029603,
+      "merged_models_built_after_selection": 18,
+      "n_grafts": 17,
+      "noise_scale": 1e-06,
+      "pearson": -0.293666889621214,
+      "spearman": -0.37500000000000006,
+      "wall_clock_seconds": 53.99748059999911,
+      "zero_donor_invariant": false
+    },
+    {
+      "graft_sizes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "fake_donor",
+      "max_abs_measured": 0.09118175506591797,
+      "max_abs_predicted": 0.008578189415857196,
+      "max_injection_norm": 137.51873397827148,
+      "mean_epsilon": 65.16002317912438,
+      "mean_injection_norm": 27.97857911778348,
+      "merged_models_built_after_selection": 18,
+      "n_grafts": 17,
+      "noise_scale": 1e-05,
+      "pearson": -0.06655460814296346,
+      "spearman": -0.056372549019607844,
+      "wall_clock_seconds": 87.90821050000159,
+      "zero_donor_invariant": false
+    },
+    {
+      "graft_sizes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "fake_donor",
+      "max_abs_measured": 0.059764862060546875,
+      "max_abs_predicted": 0.014679529704153538,
+      "max_injection_norm": 207.3552474975586,
+      "mean_epsilon": 91.48700805972604,
+      "mean_injection_norm": 37.0319579073361,
+      "merged_models_built_after_selection": 18,
+      "n_grafts": 17,
+      "noise_scale": 0.0001,
+      "pearson": 0.0898475014514331,
+      "spearman": 0.24264705882352944,
+      "wall_clock_seconds": 37.06091070000184,
+      "zero_donor_invariant": false
+    },
+    {
+      "graft_sizes": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "real_donor",
+      "max_abs_measured": 0.6176834106445312,
+      "max_abs_predicted": 0.5284935832023621,
+      "max_injection_norm": 738.1697082519531,
+      "mean_epsilon": 259.64403909094193,
+      "mean_injection_norm": 96.13375518577439,
+      "merged_models_built_after_selection": 18,
+      "n_grafts": 17,
+      "noise_scale": null,
+      "pearson": 0.9772918829540369,
+      "spearman": 0.9166666666666667,
+      "wall_clock_seconds": 228.96839430000182,
+      "zero_donor_invariant": false
+    }
+  ]
+}

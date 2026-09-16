@@ -1,0 +1,86 @@
+% Figure 1. Two panels.
+%   (a) how the L scores are acquired: one host forward pass, donor blocks
+%       evaluated OFF the host path, one backward pass. No merged model.
+%   (b) why that is enough: every composition is a subset sum of those L numbers.
+%       Bars are the real per-unit utility scores from figs/fig_profile.dat and
+%       the shaded window is the one SUTURE selects (figs/fig_profile_pick.tex);
+%       its sum is the predicted value in figs/fig_intervals_pick.dat.
+\begin{tikzpicture}[
+  font=\footnotesize,
+  hostb/.style ={draw=oiBlue!70, fill=oiBlue!10, rounded corners=1.5pt,
+                 minimum width=9mm, minimum height=6.5mm, line width=0.6pt},
+  donb/.style  ={draw=oiVermil!70, fill=oiVermil!8, rounded corners=1.5pt,
+                 minimum width=9mm, minimum height=6mm, line width=0.6pt},
+  stream/.style={-{Latex[length=1.9mm,width=1.4mm]}, line width=0.8pt, draw=oiBlue!80},
+  offpath/.style={-{Latex[length=1.5mm,width=1.1mm]}, line width=0.55pt,
+                  draw=oiVermil!85, dashed, dash pattern=on 1.5pt off 1.2pt},
+  back/.style  ={-{Latex[length=1.9mm,width=1.4mm]}, line width=0.7pt, draw=oiGreen!85},
+  lab/.style   ={font=\scriptsize, inner sep=1pt},
+  panellab/.style={font=\footnotesize\bfseries, anchor=south west}
+]
+
+% ================================ panel (a) ================================
+\node[hostb] (h0) at (0,0)    {$B_0$};
+\node[hostb] (h1) at (1.6,0)  {$B_1$};
+\node[hostb] (h2) at (3.2,0)  {$B_2$};
+\node[hostb] (h3) at (5.25,0)  {$B_{L\text{-}1}$};
+\node[lab, text=black!45] at (4.22,0) {$\cdots$};
+
+\draw[stream] (-0.95,0) -- (h0.west);
+\draw[stream] (h0) -- (h1);
+\draw[stream] (h1) -- (h2);
+\draw[stream] (h2.east) -- (4.05,0);
+\draw[stream] (4.55,0) -- (h3.west);
+\draw[stream] (h3.east) -- (6.25,0);
+\node[lab, anchor=east] at (-1.00,0) {$x_0$};
+\node[lab, anchor=west] at (6.30,0) {$\varphi$};
+\node[lab, text=oiBlue!80!black, anchor=south] at (2.7,0.40)
+  {one host forward pass, caching $x^{\mathrm{h}}_\ell$};
+
+\foreach \x/\name/\idx in {0/d0/{0}, 1.6/d1/{1}, 3.2/d2/{2}, 5.25/d3/{L\text{-}1}} {
+  \node[donb] (\name) at (\x,-1.35) {$B^{\mathrm{d}}_{\idx}$};
+  \draw[offpath] (\x-0.30,-0.36) -- (\x-0.30,-1.02);
+  \draw[offpath] (\x+0.30,-1.02) -- (\x+0.30,-0.36);
+}
+\node[lab, text=oiVermil!85!black, anchor=north] at (2.7,-1.80)
+  {donor blocks streamed, evaluated at the host's own $x^{\mathrm{h}}_\ell$:\;\;$v_\ell$};
+
+\draw[back] (6.25,0.95) -- (-0.95,0.95);
+\node[lab, text=oiGreen!65!black, anchor=south] at (2.7,0.98)
+  {one backward pass through the host: $s_\ell=\partial\varphi/\partial x_{\ell+1}$};
+
+\node[lab, anchor=north, align=center] at (2.7,-2.20)
+  {$a_\ell=\langle s_\ell,\,v_\ell\rangle$\,:\; $L$ numbers per readout,
+   \textbf{no merged model built}};
+\node[panellab] at (-1.30,1.35) {(a)~\normalfont\footnotesize the whole measurement};
+
+% ================================ panel (b) ================================
+\begin{scope}[shift={(8.05,0)}]
+\begin{axis}[
+  width=4.35cm, height=2.9cm, scale only axis,
+  at={(0cm,-1.85cm)}, anchor=south west,
+  ybar, bar width=2.4pt,
+  xmin=-0.9, xmax=11.9, xtick={0,4,8,11}, xticklabel style={font=\scriptsize},
+  ymin=-0.27, ymax=0.31, ytick={-0.2,0,0.2}, yticklabel style={font=\scriptsize},
+  xlabel={unit $\ell$}, ylabel={$a^{\mathsf{u}}_\ell$},
+  label style={font=\scriptsize},
+  tick align=outside, tick pos=left,
+  axis line style={black!45, line width=0.5pt}, tick style={black!45},
+  grid=major, grid style={draw=black!8, line width=0.3pt}, axis on top,
+]
+\fill[oiBlue!12] (axis cs:7.5,-0.27) rectangle (axis cs:10.5,0.31);
+\addplot[draw=oiGrey, fill=oiGrey!40, line width=0.4pt, bar shift=0pt]
+  table[x=layer, y=util] {figs/fig_profile.dat};
+\addplot[draw=oiBlue, fill=oiBlue!70, line width=0.4pt, bar shift=0pt]
+  coordinates {(8,0.14998) (9,0.07375) (10,0.10884)};
+\node[lab, anchor=north west, text=black!60] at (rel axis cs:0.02,0.98)
+  {$\textstyle\sum_{\ell\in S} a^{\mathsf{u}}_\ell = 0.333$};
+\node[lab, anchor=south east, text=black!60] at (rel axis cs:0.985,0.03)
+  {measured $0.357$};
+\end{axis}
+\node[lab, anchor=north, align=center, text=black!70] at (2.05,-2.86)
+  {any $S$ is a subset sum of these bars};
+\node[panellab] at (-0.75,1.35) {(b)~\normalfont\footnotesize why $L$ numbers suffice};
+\end{scope}
+
+\end{tikzpicture}

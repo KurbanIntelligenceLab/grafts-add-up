@@ -1,0 +1,210 @@
+{
+  "canonical_artifacts_modified": false,
+  "device": "cuda",
+  "donor_scaling": {
+    "controlled_synthetic_scaling_artifact": "results/reviewer_followup/controlled/controlled_summary.json",
+    "measured_donors": 1,
+    "multiple_donor_models_available": false,
+    "status": "not_measured_because_only_one_real_donor_pair_is_available"
+  },
+  "interpretation": "All timings are local warmup/repeated diagnostics. Directional Jacobian and adjoint values are local proxies, not certified global smoothness constants.",
+  "max_length": 128,
+  "models": [
+    {
+      "dtype": "torch.bfloat16",
+      "label": "Qwen3-1.7B-v2",
+      "max_length": 128,
+      "memory_note": "peak_allocated_gib is per timed stage after warmup; CUDA allocator state is not a model-independent capacity bound",
+      "model_id": "Qwen/Qwen3-1.7B",
+      "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "n_layers": 28,
+      "n_parameters": 1738007552,
+      "prompt_limit": 2,
+      "score_diagnostics": {
+        "max_injection_norm": 347.86912536621094,
+        "mean_injection_norm": 51.12236117890903,
+        "multiple_donor_models_available": false,
+        "one_donor_only": true
+      },
+      "smoothness": {
+        "adjoint_relative_error_proxy": {
+          "delta_norm": 0.00099945068359375,
+          "directional_derivative": -1.8402934074401855e-06,
+          "finite_difference": 3.164344032605482e-06,
+          "finite_difference_extrapolation": "quadratic_in_step_squared",
+          "finite_difference_step_scales": [
+            0.0005,
+            0.001,
+            0.002,
+            0.004
+          ],
+          "layer": 14.0,
+          "relative_error": 1.582252153856445
+        },
+        "directional_jacobian_gap_proxy": 74.0,
+        "interpretation": "directional local proxies only; not global or worst-case Lipschitz constants"
+      },
+      "timings": {
+        "backward_adjoint": {
+          "median_seconds": 0.6470255999993242,
+          "p95_seconds": 0.648913080001148,
+          "peak_allocated_gib": 3.7541213035583496,
+          "repeats": 3,
+          "seconds": [
+            0.6470255999993242,
+            0.6491228000013507,
+            0.6270800999991479
+          ],
+          "warmup": true
+        },
+        "candidate_forward_two_layers": {
+          "median_seconds": 0.39678720000301837,
+          "p95_seconds": 0.39747389999974986,
+          "peak_allocated_gib": 3.691512107849121,
+          "repeats": 3,
+          "seconds": [
+            0.37986280000041006,
+            0.39678720000301837,
+            0.3975501999993867
+          ],
+          "warmup": true
+        },
+        "host_forward": {
+          "median_seconds": 0.2714568000010331,
+          "p95_seconds": 0.3118369200001325,
+          "peak_allocated_gib": 3.3045883178710938,
+          "repeats": 3,
+          "seconds": [
+            0.31632360000003246,
+            0.2714568000010331,
+            0.25734599999850616
+          ],
+          "warmup": true
+        },
+        "score_acquisition": {
+          "median_seconds": 3.85443309999755,
+          "p95_seconds": 4.267485040000611,
+          "peak_allocated_gib": 4.234088897705078,
+          "repeats": 3,
+          "seconds": [
+            3.840800099998887,
+            4.313379700000951,
+            3.85443309999755
+          ],
+          "warmup": true
+        },
+        "streamed_one_donor_all_layers": {
+          "median_seconds": 1.715023900000233,
+          "p95_seconds": 1.7657395299975178,
+          "peak_allocated_gib": 4.111560821533203,
+          "repeats": 3,
+          "seconds": [
+            1.7713745999972161,
+            1.715023900000233,
+            1.685368099999323
+          ],
+          "warmup": true
+        }
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "label": "Qwen2.5-Coder-1.5B-v1",
+      "max_length": 128,
+      "memory_note": "peak_allocated_gib is per timed stage after warmup; CUDA allocator state is not a model-independent capacity bound",
+      "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+      "n_layers": 28,
+      "n_parameters": 1552946688,
+      "prompt_limit": 2,
+      "score_diagnostics": {
+        "max_injection_norm": 13.933635234832764,
+        "mean_injection_norm": 3.4291158680404936,
+        "multiple_donor_models_available": false,
+        "one_donor_only": true
+      },
+      "smoothness": {
+        "adjoint_relative_error_proxy": {
+          "delta_norm": 0.00099945068359375,
+          "directional_derivative": 2.2724270820617676e-07,
+          "finite_difference": -0.0007893217325210537,
+          "finite_difference_extrapolation": "quadratic_in_step_squared",
+          "finite_difference_step_scales": [
+            0.0005,
+            0.001,
+            0.002,
+            0.004
+          ],
+          "layer": 14.0,
+          "relative_error": 1.0004061733639302
+        },
+        "directional_jacobian_gap_proxy": 133.0,
+        "interpretation": "directional local proxies only; not global or worst-case Lipschitz constants"
+      },
+      "timings": {
+        "backward_adjoint": {
+          "median_seconds": 0.6976175000017975,
+          "p95_seconds": 0.774017690000619,
+          "peak_allocated_gib": 3.4200267791748047,
+          "repeats": 3,
+          "seconds": [
+            0.7825066000004881,
+            0.6817798000010953,
+            0.6976175000017975
+          ],
+          "warmup": true
+        },
+        "candidate_forward_two_layers": {
+          "median_seconds": 0.3717854999995325,
+          "p95_seconds": 0.45410255999959187,
+          "peak_allocated_gib": 3.3548336029052734,
+          "repeats": 3,
+          "seconds": [
+            0.3717854999995325,
+            0.4632488999995985,
+            0.3704578999968362
+          ],
+          "warmup": true
+        },
+        "host_forward": {
+          "median_seconds": 0.291829300000245,
+          "p95_seconds": 0.31490223999971934,
+          "peak_allocated_gib": 2.9550981521606445,
+          "repeats": 3,
+          "seconds": [
+            0.291829300000245,
+            0.3174658999996609,
+            0.27453500000046915
+          ],
+          "warmup": true
+        },
+        "score_acquisition": {
+          "median_seconds": 3.43420320000223,
+          "p95_seconds": 3.6958224000030895,
+          "peak_allocated_gib": 3.7025794982910156,
+          "repeats": 3,
+          "seconds": [
+            3.43420320000223,
+            3.724891200003185,
+            3.0849436999997124
+          ],
+          "warmup": true
+        },
+        "streamed_one_donor_all_layers": {
+          "median_seconds": 1.3943594000011217,
+          "p95_seconds": 1.4206035800008976,
+          "peak_allocated_gib": 3.801309585571289,
+          "repeats": 3,
+          "seconds": [
+            1.4235196000008727,
+            1.2067865999997593,
+            1.3943594000011217
+          ],
+          "warmup": true
+        }
+      }
+    }
+  ],
+  "prompt_limit": 2,
+  "protocol": "reviewer_followup_local"
+}

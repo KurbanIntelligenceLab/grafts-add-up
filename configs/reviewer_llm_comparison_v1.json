@@ -1,0 +1,72 @@
+{
+  "contract_version": 1,
+  "contract_name": "reviewer_llm_comparison_local",
+  "frozen_at": "2026-09-12T20:44:00+03:00",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+    "role": "valid local v1 pair after the Qwen3 follow-up stopped at fake-donor P1"
+  },
+  "inputs": {
+    "data_dir": "results/tier_a/es",
+    "host_adapter": "results/tier_a/es/adapters/host/host",
+    "donor_adapter": "results/tier_a/es/adapters/donor/donor",
+    "free_generation_ground_truth": "results/tier_a/es/e1_canonical_seed0/e1_window_sweep.jsonl",
+    "candidate_windows": [
+      [0, 0],
+      [1, 1],
+      [2, 2],
+      [3, 3],
+      [4, 4],
+      [5, 5],
+      [6, 6],
+      [7, 7],
+      [0, 1],
+      [4, 5],
+      [8, 9],
+      [10, 12],
+      [0, 3],
+      [4, 7],
+      [8, 11],
+      [14, 17],
+      [20, 23],
+      [0, 7],
+      [8, 15],
+      [16, 23],
+      [20, 27],
+      [0, 13],
+      [14, 27],
+      [0, 27]
+    ],
+    "utility_probe_records": 8,
+    "risk_probe_records": 8,
+    "max_length": 128,
+    "ground_truth": "archived canonical free-generation exact match on the same MGSM-dev rows; no new candidate generation and no test-set access"
+  },
+  "fixed_methods": {
+    "suture": "sum of utility adjoint-times-injection layer scores; risk is reported separately and is not used to post-hoc tune rankings",
+    "injection_only": "negative sum of donor-host residual injection norms; the sign convention prefers smaller changes and is fixed before reading outcomes",
+    "adjoint_only": "sum of utility adjoint L2 norms; donor direction is ignored",
+    "parameter_movement": "negative sum of host/donor LoRA parameter-distance norms per layer; the sign convention prefers smaller movement",
+    "risk_readout": "sum of layer scores formed with the fixed language-risk readout instead of the utility readout",
+    "normalized_suture": "sum of utility adjoint-times-injection scores divided per layer by injection norm plus 1e-12",
+    "path_integrated_state": "five-node trapezoidal path integral of the utility directional derivative along the straight host-state to donor-update path for each layer"
+  },
+  "evaluation": {
+    "same_candidate_windows_for_every_method": true,
+    "metrics": [
+      "Spearman with archived free-generation exact match",
+      "Pearson with archived free-generation exact match",
+      "Spearman with archived teacher-forced sequence log-probability",
+      "selected_window_by_each_method"
+    ],
+    "readout_and_normalization_variants_are_fixed": true,
+    "threshold_tuning": false,
+    "qwen3_e1_authorized": false,
+    "mgsm_test_read": false,
+    "writes_to_canonical_artifacts": false
+  },
+  "artifacts": {
+    "result_root": "results/reviewer_followup/llm_comparison"
+  }
+}

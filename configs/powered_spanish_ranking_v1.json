@@ -1,0 +1,38 @@
+{
+  "contract_version": 1,
+  "contract_name": "powered_spanish_ranking_v1",
+  "contract_status": "frozen_isolated_followup",
+  "frozen_at": "2026-09-15T03:10:00+03:00",
+  "purpose": "Close the Coder free-generation ranking loop with enough MGSM items that a perfect ranker can beat Spearman 0.5. Does not modify canonical v1/v2 or B3 artifacts.",
+  "source_artifacts": {
+    "selection_scores": "results/tier_a/es/e1_canonical_seed0/e1_selection_scores.json",
+    "host_adapter": "results/tier_a/es/adapters/host",
+    "donor_adapter": "results/tier_a/es/adapters/donor",
+    "mgsm_test": "results/tier_a/es/MGSM_test.jsonl"
+  },
+  "result_root": "results/reviewer_followup/powered_spanish_ranking",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a"
+  },
+  "measurement": {
+    "language": "es",
+    "windows": "all 406 contiguous intervals over 28 layers",
+    "item_selection": "hash-frozen first 64 of MGSM_test after sorting by SHA256(source_id)",
+    "n_items": 64,
+    "decoding": {
+      "sample": false,
+      "seeds": [0],
+      "max_new_tokens": 64,
+      "max_length": 128
+    },
+    "objective": "free_generation_exact_match",
+    "selection": "reuse frozen canonical SUTURE scores; zero merged-model builds during selection"
+  },
+  "stop_rules": [
+    "STOP_SETUP if the pinned adapters, base revision, or MGSM_test hash cannot be verified.",
+    "STOP_WRITE if the output path is under results/tier_a or a canonical E1 directory.",
+    "Do not evaluate MGSM_test items beyond the frozen 64-item subset.",
+    "Do not overwrite e1_canonical_seed0."
+  ]
+}
