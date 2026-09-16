@@ -1,15 +1,15 @@
 {
   "command": [
-    "F:\\Program Files\\GitHub\\model-composition\\suture\\b3_data.py",
+    "suture\\b3_data.py",
     "--language",
     "zh",
     "--translation-snapshot",
-    "models/Qwen3-1.7B-70d244cc",
+    "<model-cache>/Qwen3-1.7B-70d244cc",
     "--device",
     "cuda:0"
   ],
   "contract": {
-    "path": "F:\\Program Files\\GitHub\\model-composition\\suture\\contracts\\b3_lighton_qwen3_8b_v1.json",
+    "path": "suture\\contracts\\b3_lighton_qwen3_8b_v1.json",
     "sha256": "3f50b465b260a883300c05b828732a71d498c3cfc8dcc3843282500a2f970c3c"
   },
   "created_at": "2026-09-13T19:09:21.227236+00:00",
@@ -35,7 +35,7 @@
     },
     "language": "zh",
     "risk": {
-      "file_sha256": "f29d42ec1a37fd1e8bb825b67e1ec09f5697b1ef6901e0175e62d8651e36a88c",
+      "file_sha256": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
       "manifest_name": "b3_zh_P_risk",
       "metadata": {
         "contract_name": "b3_lighton_qwen3_8b_v1",
@@ -55,7 +55,7 @@
           "translation": {
             "batch_size": 1,
             "id": "Qwen/Qwen3-1.7B",
-            "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+            "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
             "max_new_tokens": 96,
             "method": "greedy chat generation with thinking disabled",
             "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
@@ -72,14 +72,14 @@
         "translation_model": {
           "batch_size": 1,
           "id": "Qwen/Qwen3-1.7B",
-          "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+          "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
           "max_new_tokens": 96,
           "method": "greedy chat generation with thinking disabled",
           "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
         }
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\zh_host__en_donor\\data\\P_risk.jsonl",
+      "path": "results\\b3\\lighton_qwen3_8b\\zh_host__en_donor\\data\\P_risk.jsonl",
       "record_hashes": [
         "52a64001fb1d80cfb742167e5c36aac409c714142f96df7a1e390fc2b2f77dee",
         "54a96b017647e0d593a2e8981bfe8c19a5fd2a83007ebf7ffb7999232140ced8",
@@ -586,9 +586,9 @@
     "schema_version": 1,
     "status": "PASS_DATA",
     "translation_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
-    "translation_snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc",
+    "translation_snapshot": "models\\Qwen3-1.7B-70d244cc",
     "utility": {
-      "file_sha256": "322b697febf460b5b266c901e0f5e6d5bd4aefd56b1245adc4e3ae3a6ca4cdd5",
+      "file_sha256": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea",
       "manifest_name": "b3_zh_P_util",
       "metadata": {
         "contract_name": "b3_lighton_qwen3_8b_v1",
@@ -608,7 +608,7 @@
           "translation": {
             "batch_size": 1,
             "id": "Qwen/Qwen3-1.7B",
-            "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+            "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
             "max_new_tokens": 96,
             "method": "greedy chat generation with thinking disabled",
             "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
@@ -625,14 +625,14 @@
         "translation_model": {
           "batch_size": 1,
           "id": "Qwen/Qwen3-1.7B",
-          "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+          "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
           "max_new_tokens": 96,
           "method": "greedy chat generation with thinking disabled",
           "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
         }
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\zh_host__en_donor\\data\\P_util.jsonl",
+      "path": "results\\b3\\lighton_qwen3_8b\\zh_host__en_donor\\data\\P_util.jsonl",
       "record_hashes": [
         "9ac9f5b4ba9674b57c7ade47b8aca1aeaec8794ee1e1eec1114fcdc18ab71ab7",
         "5105e9ab1e2a67fe50bd926697137d8d5af8f736d26b0c0ee949d259f08f76f9",

@@ -83,7 +83,16 @@ def _relative(path: Path, root: Path) -> str:
     try:
         return path.resolve().relative_to(root.resolve()).as_posix()
     except ValueError:
-        return str(path.resolve()).replace("\\", "/")
+        return f"<external>/{path.name}"
+
+
+def _portable_command(command: str, root: Path) -> str:
+    """Remove checkout-specific prefixes from a recorded command."""
+
+    value = str(command)
+    for prefix in (str(root), root.as_posix()):
+        value = value.replace(prefix, "<repo>")
+    return value.replace("\\", "/")
 
 
 def _hash_files(paths: Iterable[Path], root: Path) -> Dict[str, str]:
@@ -129,18 +138,11 @@ def _git_state(root: Path) -> Dict[str, Any]:
         "--untracked-files=all",
     )
     diff = _git_output(root, "diff", "--no-ext-diff", "--binary")
-    status_text = status.decode("utf-8", errors="replace")
-    untracked = [
-        line[3:]
-        for line in status_text.splitlines()
-        if line.startswith("?? ")
-    ]
     return {
         "commit": _git_revision(root),
         "dirty": bool(status.strip()),
         "status_sha256": _sha256_bytes(status),
         "diff_sha256": _sha256_bytes(diff),
-        "untracked_paths": untracked,
     }
 
 
@@ -278,7 +280,7 @@ def write_manifest(
             else None
         ),
         "seed": seed,
-        "command": command,
+        "command": _portable_command(command, root),
         "python": sys.version,
         "platform": platform.platform(),
         "hardware": {
@@ -342,7 +344,7 @@ def write_retrospective_audit(
         "run_kind": run_kind,
         "stage": run_kind,
         "language": language,
-        "command": command,
+        "command": _portable_command(command, root),
         "reason": reason,
         "started_at": None,
         "ended_at": None,

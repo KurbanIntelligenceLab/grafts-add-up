@@ -6,7 +6,7 @@
   },
   "language": "fr",
   "risk": {
-    "file_sha256": "cbbc73950852f68b4b0a438778a5d6826fa95b856511872e813a7b4d9e892896",
+    "file_sha256": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
     "manifest_name": "b3_fr_P_risk",
     "metadata": {
       "contract_name": "b3_lighton_qwen3_8b_v1",
@@ -26,7 +26,7 @@
         "translation": {
           "batch_size": 1,
           "id": "Qwen/Qwen3-1.7B",
-          "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+          "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
           "max_new_tokens": 96,
           "method": "greedy chat generation with thinking disabled",
           "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
@@ -43,14 +43,14 @@
       "translation_model": {
         "batch_size": 1,
         "id": "Qwen/Qwen3-1.7B",
-        "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+        "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
         "max_new_tokens": 96,
         "method": "greedy chat generation with thinking disabled",
         "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       }
     },
     "n_records": 500,
-    "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_risk.jsonl",
+    "path": "results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_risk.jsonl",
     "record_hashes": [
       "b0d136bddfe67430eb17ef7c0cb22dd652f4758eda2cb2dd5baa4919139f1688",
       "acf8e72e3899896bdca28f2c63a8684b0737b8a21e3e74923f5645a2810c9bf7",
@@ -557,9 +557,9 @@
   "schema_version": 1,
   "status": "PASS_DATA",
   "translation_config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
-  "translation_snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc",
+  "translation_snapshot": "models\\Qwen3-1.7B-70d244cc",
   "utility": {
-    "file_sha256": "08812b37aa798046b5084312fe04d2ebbad52b673b8d284637e4a627ae0582f1",
+    "file_sha256": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
     "manifest_name": "b3_fr_P_util",
     "metadata": {
       "contract_name": "b3_lighton_qwen3_8b_v1",
@@ -579,7 +579,7 @@
         "translation": {
           "batch_size": 1,
           "id": "Qwen/Qwen3-1.7B",
-          "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+          "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
           "max_new_tokens": 96,
           "method": "greedy chat generation with thinking disabled",
           "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
@@ -596,14 +596,14 @@
       "translation_model": {
         "batch_size": 1,
         "id": "Qwen/Qwen3-1.7B",
-        "local_snapshot": "models/Qwen3-1.7B-70d244cc",
+        "local_snapshot": "<model-cache>/Qwen3-1.7B-70d244cc",
         "max_new_tokens": 96,
         "method": "greedy chat generation with thinking disabled",
         "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       }
     },
     "n_records": 500,
-    "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_util.jsonl",
+    "path": "results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_util.jsonl",
     "record_hashes": [
       "169b125e6811e0ddae5effd1752e3480cfb8e7111135372046328c6ab760d7f7",
       "e01ae3510b7d4ccc618935a87e8f1163808ed1db7ae2e81e99aebc2c5ced4bf8",

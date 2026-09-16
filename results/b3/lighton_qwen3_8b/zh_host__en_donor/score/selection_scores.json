@@ -86,7 +86,7 @@
         "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
       },
       "id": "lightonai/Qwen3-8B-EN",
-      "path": "/workspace/models/Qwen3-8B-EN",
+      "path": "<model-cache>/Qwen3-8B-EN",
       "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1",
       "snapshot_sha256": "54bf2b933a9ed5b1ea21eb5f0dca2eaaf3cd39b4c7565d90c086ae4c33cf9c19",
       "tokenizer": {
@@ -140,7 +140,7 @@
         "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
       },
       "id": "lightonai/Qwen3-8B-ZH",
-      "path": "/workspace/models/Qwen3-8B-ZH",
+      "path": "<model-cache>/Qwen3-8B-ZH",
       "revision": "b100a627fcbe1af4391de73cb962e7564aff877a",
       "snapshot_sha256": "d2b665ac3c279688e5aba76121cbb28ccb2eb25288810df1aff2245438f9371a",
       "tokenizer": {
@@ -164,8 +164,8 @@
     "pair_compatible": true
   },
   "probe_paths": {
-    "risk": "/workspace/model-composition/results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
-    "utility": "/workspace/model-composition/results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl"
+    "risk": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
+    "utility": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl"
   },
   "risk": [
     0.15635890513658524,

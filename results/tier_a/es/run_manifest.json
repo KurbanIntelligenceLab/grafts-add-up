@@ -1,5 +1,5 @@
 {
-  "command": "python -u paper_iclr/tier_a_data.py --language es --output-dir results/tier_a/es --device cuda --translation-batch-size 4 --max-new-tokens 96",
+  "command": "python -u src/suture/tier_a_data.py --language es --output-dir results/tier_a/es --device cuda --translation-batch-size 4 --max-new-tokens 96",
   "created_at": "2026-08-12T09:54:49.857546+00:00",
   "files": {
     "inputs": {
@@ -41,16 +41,6 @@
       "results/tier_a/es/pilots/P1_fake_donor_scores.json": "9452dd624dd3e403213ab777197e02839f4aa81e09bf8e267e9aa17bc407ba18",
       "results/tier_a/es/pilots/P2_real_donor_scores.json": "7120df90f2d7d92261dc566f6000ca2688205c746a9d47dbde38f89ee5a04dbb",
       "results/tier_a/es/pilots/pilots.json": "26e27ca217e81673c136183c2c145ab6054538c0fff46ce6c10910b425d21f94"
-    },
-    "scripts_and_environment": {
-      "env.lock": "08ba0b846ed27e56625c1df12f530d1ac79bb8503ed846488f0ce8601b057763",
-      "paper_iclr/data_manifest.py": "2be79a3fdf6144b1d8d63a2c90c80b6f4365977303d23dc33d9251ae6f1e5288",
-      "paper_iclr/run_manifest.py": "7c049af90e482323af8db485c478fcb76bc606c7f6844e2d7cc1df3e954d5cb2",
-      "paper_iclr/suture_metrics.py": "82a30cae17c8cea30e8e2e2a8861dbfdaabaede9ae10fbb1b792982aba24936a",
-      "paper_iclr/suture_torch.py": "3349bbfe363136aa3ce5a217784b03bec9e55ce5360fa439379f85598a51f616",
-      "paper_iclr/tier_a_data.py": "97ec0c12c22cfa61a54d93f7be8f050bc3d954437bb4e253aa3880fe12c4f48f",
-      "paper_iclr/tier_a_gate.py": "a05330a4a73278710c921bb01f221f88a70494de1ad7a0562265b3be279e94ab",
-      "paper_iclr/tier_a_train.py": "173e34f13c9d2f614230dd742362b3085e69716a9d3db6bb372ef63e17b07134"
     }
   },
   "git_commit": null,

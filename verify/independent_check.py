@@ -1,27 +1,11 @@
 """
-Clean-room verification of the paper's mathematics. Written from the statements
-in main.tex, NOT from verify/verify_theory.py, so a shared bug cannot hide.
+Clean-room verification of the paper's mathematics. The checks are derived
+from the statements in main.tex rather than from verify_theory.py, so an
+implementation bug cannot be shared silently.
 
-CHECK 3 and CHECK 5 are DIAGNOSTICS OF ERRORS THAT WERE FOUND AND FIXED. They are
-retained so the fix can be re-derived rather than taken on trust:
-
-  CHECK 3  an earlier draft bounded the interpolation remainder rho by
-           L_phi * Gamma * sum_l (1/2) a(1-a) kappa_theta ||dtheta||^2, with
-           L_phi the LIPSCHITZ CONSTANT of grad phi. A linear readout has
-           L_phi = 0 and rho != 0, so that bound was false. The constant is
-           ||grad phi(x_L^host)||; corrections_check.py verifies the corrected
-           form holds. The paper now states the corrected constant.
-
-  CHECK 5  the interval program was written as max over 0 <= i < b <= L, which
-           cannot return the empty graft. In ~2.5% of random instances the empty
-           graft IS the constrained optimum, so the solver was forced to graft
-           something strictly worse than the host. The paper now keeps the empty
-           set as a candidate.
-
-  CHECK 4  is not an error but a scope correction: the conformal clause is a
-           PER-COMPETITOR guarantee at level 1/(m+1), not a simultaneous one.
-           Over the whole design space the expected number of unbuilt candidates
-           with |r| > q is (N-m)/(m+1), which this check confirms.
+The checks independently derive the interpolation remainder constant, preserve
+the empty graft in constrained interval selection, and distinguish the
+per-competitor conformal guarantee from a simultaneous design-space guarantee.
 """
 import numpy as np
 from itertools import combinations

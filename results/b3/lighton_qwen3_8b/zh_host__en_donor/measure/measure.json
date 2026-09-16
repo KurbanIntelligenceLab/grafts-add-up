@@ -57,10 +57,10 @@
   },
   "interpretation": "held-out candidate comparison; not a full 666-window ground-truth sweep",
   "language": "zh",
-  "measurement_manifest": "/workspace/model-composition/results/b3/lighton_qwen3_8b/zh_host__en_donor/data/MGSM_rev2_test.jsonl",
-  "measurement_manifest_sha256": "cea1c6cd0b715aa8f9d37c854bb84e863dbea410d3f9ee7ea7e61be7b1c28504",
+  "measurement_manifest": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/MGSM_rev2_test.jsonl",
+  "measurement_manifest_sha256": "4b5d98b158f332d95f21aa9cd2de217939c24890d79ba778f68d9ae98eda729d",
   "measurement_merged_model_builds": 3,
-  "measurements_path": "/workspace/model-composition/results/b3/lighton_qwen3_8b/zh_host__en_donor/measure/measurements.jsonl",
+  "measurements_path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/measure/measurements.jsonl",
   "measurements_sha256": "f4fd0e78a5cc4c003723185f51ae496cd425c802db3ce48316625af886a59e76",
   "objective": "mean teacher-forced answer log-probability per target token",
   "pair": {
@@ -97,7 +97,7 @@
         "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
       },
       "id": "lightonai/Qwen3-8B-EN",
-      "path": "/workspace/models/Qwen3-8B-EN",
+      "path": "<model-cache>/Qwen3-8B-EN",
       "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1",
       "snapshot_sha256": "54bf2b933a9ed5b1ea21eb5f0dca2eaaf3cd39b4c7565d90c086ae4c33cf9c19",
       "tokenizer": {
@@ -151,7 +151,7 @@
         "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
       },
       "id": "lightonai/Qwen3-8B-ZH",
-      "path": "/workspace/models/Qwen3-8B-ZH",
+      "path": "<model-cache>/Qwen3-8B-ZH",
       "revision": "b100a627fcbe1af4391de73cb962e7564aff877a",
       "snapshot_sha256": "d2b665ac3c279688e5aba76121cbb28ccb2eb25288810df1aff2245438f9371a",
       "tokenizer": {
@@ -175,7 +175,7 @@
     "pair_compatible": true
   },
   "schema_version": 1,
-  "selection_artifact": "/workspace/model-composition/results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection.json",
+  "selection_artifact": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection.json",
   "selection_artifact_sha256": "4e6e0b7ccde54bf930e27bad8ff25fc62e89b3e544528be48bb4222f6636ed97",
   "selection_merged_model_builds": 0,
   "status": "PASS_MEASURE"

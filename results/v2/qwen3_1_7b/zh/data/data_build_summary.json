@@ -62,7 +62,7 @@
           "n_records": 128,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\Belebele.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\Belebele.jsonl"
       },
       "C": {
         "file_sha256": "af632382913b5258970dd8cd53690a93815dca17d372548af371758d216e2af5",
@@ -76,7 +76,7 @@
           "n_records": 1000,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\C.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\C.jsonl"
       },
       "MGSM_dev": {
         "file_sha256": "a574f98f02e297737f4d6c7c0d5c1ce9a837c4f950f8a878ac680036eb205c07",
@@ -91,7 +91,7 @@
           "n_records": 64,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_dev.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_dev.jsonl"
       },
       "MGSM_test": {
         "file_sha256": "af38d3f8ce19f61b99ccd5ba62e196f2b5f9014c26572d2f7ec62fca49c1bb22",
@@ -106,7 +106,7 @@
           "n_records": 186,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_test.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_test.jsonl"
       },
       "P_risk": {
         "file_sha256": "332f79e47d9728e89e2351a83c9f1ba568730e7f2f9b7a407179da6f25213bba",
@@ -121,7 +121,7 @@
           "n_records": 500,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\P_risk.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\P_risk.jsonl"
       },
       "P_util": {
         "file_sha256": "f78ab857c3656662c41362e1d48d41ca58cc03b7202116ed853c1326696199f0",
@@ -136,7 +136,7 @@
           "n_records": 500,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\P_util.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\P_util.jsonl"
       },
       "expert_validation_donor": {
         "file_sha256": "0ffd7b6716b3b7a5768df5f65ed29f1b1a58704ba913ce97d3f6975d6b68cda9",
@@ -149,7 +149,7 @@
           "n_records": 64,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_donor.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_donor.jsonl"
       },
       "expert_validation_host": {
         "file_sha256": "8d173adf813f0ae5038bcd8e44973e036057c2a37713de2d65d233bd6af97c8f",
@@ -162,7 +162,7 @@
           "n_records": 64,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_host.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_host.jsonl"
       },
       "host_train": {
         "file_sha256": "13a7dd8a4267a3f17cc9cd41e9c1270e25f97f78b3a1ddc8bf973b0030439dbf",
@@ -176,7 +176,7 @@
           "n_records": 1000,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\host_train.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\host_train.jsonl"
       },
       "readiness_donor": {
         "file_sha256": "6fe0656cdf7b45fd80b52b8e24e73ffa6c5af1faab32d56726b37d795a4e8b20",
@@ -189,7 +189,7 @@
           "n_records": 128,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\readiness_donor.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\readiness_donor.jsonl"
       },
       "readiness_host": {
         "file_sha256": "230887a46f012112379a8986454ec0bde2af4e2b1720b3a6878fc4a080df047a",
@@ -202,7 +202,7 @@
           "n_records": 128,
           "schema_version": 1
         },
-        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\readiness_host.jsonl"
+        "path": "results\\v2\\qwen3_1_7b\\zh\\data\\readiness_host.jsonl"
       }
     }
   },
@@ -246,7 +246,7 @@
         "source_dataset": "facebook/belebele:zho_Hans"
       },
       "n_records": 128,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\Belebele.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\Belebele.jsonl",
       "record_hashes": [
         "994430040810542f91ed4d01456446819236ccc9234d1545f26a2a99be1ad878",
         "e95a9856075f4e260210f488f8707000c1b9754f28e35094831e0ae42d6387aa",
@@ -387,7 +387,7 @@
         "translation_model": "dataset-provided"
       },
       "n_records": 1000,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\C.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\C.jsonl",
       "record_hashes": [
         "b050e868c6227ee49c87725527a13a412e4306061838f9420c86cee05e25cf12",
         "661050b3d1a6574d6ed2af0813ea09aa8aa2d9a326b199a60848178b942da6d1",
@@ -1401,7 +1401,7 @@
         "split": "hash_frozen_64_of_250"
       },
       "n_records": 64,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_dev.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_dev.jsonl",
       "record_hashes": [
         "10bb6f68bdef39d82ff9c4dfab7da8ed9b82c199abd422fb6313dfcfd57cd490",
         "411cc629a05a98b3d1c6eb3be2b502a1bf9c61a30a7783c7e0d9744f494af975",
@@ -1479,7 +1479,7 @@
         "split": "hash_frozen_186_holdout"
       },
       "n_records": 186,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_test.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\MGSM_test.jsonl",
       "record_hashes": [
         "9968da32a225f86f8eaea6ed00c4321bbe20aba118905af18640fbd00db39829",
         "c2557947da616187e0cd85aa6f6909a40c1e7cbf49e7d30d4c4f3cf6975259af",
@@ -1679,7 +1679,7 @@
         "translation_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\P_risk.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\P_risk.jsonl",
       "record_hashes": [
         "af66a5e782f4e68da22877c77ce4cbe2fed3ed3115f886502ae94916e0111272",
         "3261d57922349f2a5905f0a19d1f40444e5e480846aa73913913e02e74847e6c",
@@ -2193,7 +2193,7 @@
         "translation_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\P_util.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\P_util.jsonl",
       "record_hashes": [
         "471f8e82e4bec47b019be707fe4e070ab1e12dd19c291c165487ca9d4ea3a9f4",
         "cc7603c4644d0d25bb48ff03ec486472854925a9165bc70f6e9a693cec4e8edd",
@@ -2705,7 +2705,7 @@
         "purpose": "checkpoint_selection_only"
       },
       "n_records": 64,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_donor.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_donor.jsonl",
       "record_hashes": [
         "c8bcc8af5cf039a0f912823ac8ed00d75d5eda87d18ceae61f18ccabc97a2630",
         "f5671b303489c6c1e34d6784237c7fada258a2ffc14fd8fdcdbe2dc2848871f6",
@@ -2781,7 +2781,7 @@
         "purpose": "checkpoint_selection_only"
       },
       "n_records": 64,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_host.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\expert_validation_host.jsonl",
       "record_hashes": [
         "d3a419a753dcf02125b754f658ca9be7b535b8d5fc084f3787aa4b636cfcce8d",
         "dd8cbc6a7a44f65a8ecfe4b822687952e857aa750102f748619aa9189eb7078f",
@@ -2858,7 +2858,7 @@
         "source_dataset": "CohereLabsCommunity/multilingual-reward-bench,shibing624/alpaca-zh"
       },
       "n_records": 1000,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\host_train.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\host_train.jsonl",
       "record_hashes": [
         "ac7eb070c342126643142d5c9df3ad6861df83bc4d6f13dc2252b780ad9543e5",
         "01545cd2523098494ffef9d5a071522a72806cc03bae1961da5c702a8dafc675",
@@ -3870,7 +3870,7 @@
         "purpose": "final_readiness_only"
       },
       "n_records": 128,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\readiness_donor.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\readiness_donor.jsonl",
       "record_hashes": [
         "63208b502f616180ae42f428273fae68a2f8d884c5589e984bad9ef581e4aa53",
         "381f37bc00c195aa58e1e383e141426d999dd1a0bfda52c263f1a66677b6a6aa",
@@ -4010,7 +4010,7 @@
         "purpose": "final_readiness_only"
       },
       "n_records": 128,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\zh\\data\\readiness_host.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\zh\\data\\readiness_host.jsonl",
       "record_hashes": [
         "4ecd1d9057ca3f5893241d78c4dffe91d6674b595406491602e75b4c2923d864",
         "dc5324c7cf8b02e31c2270a479e9070506a2b3064772a7b6428b096d5b178dee",

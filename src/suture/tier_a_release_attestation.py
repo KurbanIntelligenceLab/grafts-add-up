@@ -32,7 +32,6 @@ CANONICAL_PATHS = [
     "results/tier_a/zh/pilots_final/pilots.json",
     "results/tier_a/sw/pilots_final/pilots.json",
     "configs/experimental_contract_v1.json",
-    "results/tier_a/ARTIFACT_INVENTORY.json",
 ]
 
 

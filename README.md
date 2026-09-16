@@ -30,7 +30,7 @@ free-generation ranking remains negative.
 ├── tests/                 # Offline regression and fail-closed guard tests
 ├── scripts/               # Reviewer-facing command-line entry points
 ├── results/               # Curated JSON/JSONL evidence; no model weights
-├── docs/                  # Protocols, artifact inventory, and explanations
+├── docs/                  # File rationale and project explanation
 ├── manifests/             # Machine-readable per-file release inventory
 ├── requirements.txt       # CPU dependencies for theory and offline checks
 └── requirements-gpu.txt  # Pinned GPU dependencies for optional reruns
@@ -144,7 +144,7 @@ The public result tree is intentionally curated:
   preflight, selection, measurement, manifests, and post-hoc statistics.
 - `results/tier_a/` contains the canonical Spanish E1 evidence, the
   language-panel probe data, readiness and regime diagnostics, final plumbing
-  pilots, release attestation, and verification logs.
+  pilots, and release attestation.
 - `results/v2/qwen3_1_7b/` contains Qwen3-1.7B preflight/readiness/data and
   the stopped Spanish plumbing panel. It contains no Qwen3 E1 result.
 - `results/reviewer_followup/` contains controlled multi-donor diagnostics,
@@ -174,9 +174,10 @@ Validate the contract before downloading or loading models:
 python scripts/run_b3.py validate-contract
 ```
 
-The completed cloud protocol and exact model revisions are documented in
-[`docs/b3_runbook.md`](docs/b3_runbook.md). Scoring and held-out measurement
-require an A100-class GPU and the public LightOn snapshots:
+The exact model revisions and measurement protocol are recorded in
+[`configs/b3_lighton_qwen3_8b_v1.json`](configs/b3_lighton_qwen3_8b_v1.json).
+Scoring and held-out measurement require an A100-class GPU and the public
+LightOn snapshots:
 
 ```bash
 python scripts/run_b3.py score --language fr \
@@ -219,14 +220,10 @@ To regenerate the clean-room paper bundle and release attestation:
 ```bash
 python scripts/write_release_bundle.py
 python -m suture.tier_a_release_attestation
-python -m suture.tier_a_inventory
 ```
 
-`archive/`, local checkpoints, generated LaTeX files, and superseded/smoke
-experiments are excluded by policy and ignored by Git. Existing run manifests
-retain historical source paths and hashes from the original experiment
-workspace; they are preserved as provenance records and are not silently
-rewritten.
+Run manifests retain portable commands, model pins, and input/output hashes as
+provenance records without recording local workstation paths.
 
 ## Data provenance and licenses
 
@@ -244,10 +241,5 @@ workflow; the canonical local pipeline does not require external API calls.
 - [`paper/main.tex`](paper/main.tex) — anonymous ICLR manuscript.
 - [`docs/PROJECT_EXPLAINER.md`](docs/PROJECT_EXPLAINER.md) — method and
   experiment overview.
-- [`docs/reproducibility.md`](docs/reproducibility.md) — resource requirements,
-  frozen versus rerunnable components, and expected limitations.
-- [`docs/FILES_RATIONALE.md`](docs/FILES_RATIONALE.md) — inclusion/exclusion
-  decisions and traceability policy.
-- [`docs/artifact_inventory.md`](docs/artifact_inventory.md) — Tier-A artifact
-  classifications.
-- [`docs/paper_compile.md`](docs/paper_compile.md) — clean-room compile rules.
+- [`docs/FILES_RATIONALE.md`](docs/FILES_RATIONALE.md) — public-file selection
+  and traceability policy.

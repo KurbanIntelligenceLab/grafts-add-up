@@ -3,7 +3,7 @@
     "allow_download": false,
     "config_sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
     "model_id": "Qwen/Qwen3-1.7B",
-    "path": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc",
+    "path": "models\\Qwen3-1.7B-70d244cc",
     "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
   },
   "config": {
@@ -28,7 +28,7 @@
     "dtype": "torch.bfloat16",
     "n_parameters_including_tied_lm_head": 2031739904,
     "n_parameters_unique": 1720574976,
-    "snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc"
+    "snapshot": "models\\Qwen3-1.7B-70d244cc"
   },
   "model_id": "Qwen/Qwen3-1.7B",
   "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",

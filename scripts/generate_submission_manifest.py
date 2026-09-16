@@ -1,8 +1,8 @@
 """Generate the machine-readable public-file inventory.
 
-The manifest is intentionally derived from the release tree rather than from
-Git's index.  This lets reviewers inspect the exact file-level rationale before
-the first commit is created and keeps ignored local weights out of the list.
+The manifest is derived from Git-visible files and a small public-root
+allowlist. This prevents ignored local environments, archives, model weights,
+and generated packaging output from entering the release inventory.
 """
 
 from __future__ import annotations
@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
@@ -17,6 +18,27 @@ from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "manifests" / "submission_manifest.json"
+PUBLIC_ROOTS = {
+    "configs",
+    "docs",
+    "manifests",
+    "paper",
+    "results",
+    "scripts",
+    "src",
+    "tests",
+    "verify",
+}
+PUBLIC_ROOT_FILES = {
+    ".env.example",
+    ".gitignore",
+    "CITATION.cff",
+    "LICENSE",
+    "README.md",
+    "pyproject.toml",
+    "requirements-gpu.txt",
+    "requirements.txt",
+}
 SKIP_DIRECTORIES = {
     ".git",
     ".cursor",
@@ -24,7 +46,20 @@ SKIP_DIRECTORIES = {
     "__pycache__",
     "archive",
     "build",
+    "dist",
+    ".eggs",
+    ".venv",
+    "env",
     "models",
+    "paper_acl",
+    "Project-1",
+    "Project-2",
+    "verification_release",
+    "venv",
+    "ENV",
+    "workspace",
+    "analysis",
+    "external",
 }
 SKIP_NAMES = {".env", "submission_manifest.json"}
 SKIP_SUFFIXES = {
@@ -38,10 +73,18 @@ SKIP_SUFFIXES = {
     ".pdf",
     ".synctex.gz",
     ".toc",
+    ".pyc",
     ".safetensors",
     ".bin",
     ".pt",
     ".ckpt",
+}
+SKIP_RESULT_DIRECTORIES = {
+    "adapters",
+    "checkpoints",
+    "checkpoint",
+    "publication_adapters",
+    "shared",
 }
 
 
@@ -55,15 +98,25 @@ def _sha256(path: Path) -> str:
 
 def _included(path: Path) -> bool:
     relative_parts = path.relative_to(ROOT).parts
+    if not relative_parts:
+        return False
+    if len(relative_parts) == 1:
+        if relative_parts[0] not in PUBLIC_ROOT_FILES:
+            return False
+    elif relative_parts[0] not in PUBLIC_ROOTS:
+        return False
     if any(part in SKIP_DIRECTORIES for part in relative_parts[:-1]):
+        return False
+    if any(part.endswith(".egg-info") for part in relative_parts[:-1]):
+        return False
+    if relative_parts[:1] == ("results",) and any(
+        part in SKIP_RESULT_DIRECTORIES for part in relative_parts[:-1]
+    ):
         return False
     if path.name in SKIP_NAMES or path.name == "tokenizer.json":
         return False
     if any(path.name.endswith(suffix) for suffix in SKIP_SUFFIXES):
-        # Small verification and run logs under results/ are part of the
-        # provenance record; LaTeX/build logs elsewhere are generated output.
-        if relative_parts[:1] != ("results",):
-            return False
+        return False
     if relative_parts[:1] == ("paper",):
         return path.name in {
             "main.tex",
@@ -108,14 +161,28 @@ def _rationale(relative: str) -> str:
     if relative.startswith("results/reviewer_followup/"):
         return "Frozen reviewer-response diagnostic or powered Spanish ranking artifact referenced by the paper."
     if relative.startswith("docs/"):
-        return "Public protocol, artifact inventory, project explanation, reproducibility, or paper-build documentation."
+        return "Reviewer-facing project explanation or public-file selection rationale."
     if relative.startswith("manifests/"):
         return "Machine-readable release inventory; this file records the rationale for every other included file."
     return "Public repository metadata required to reproduce or audit the submission."
 
 
 def _iter_files() -> Iterable[Path]:
-    for path in sorted(ROOT.rglob("*")):
+    """Yield existing files visible to Git and allowed by the release policy."""
+
+    result = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    paths = sorted(
+        ROOT / Path(name)
+        for name in result.stdout.splitlines()
+        if name.strip()
+    )
+    for path in paths:
         if path.is_file() and _included(path):
             yield path
 
@@ -150,12 +217,6 @@ def build_manifest() -> dict:
         "file_count": len(files),
         "weights_included": False,
         "files": files,
-        "excluded_classes": {
-            "local_checkpoints": "Model weights, adapter binaries, tokenizer copies, and local Hugging Face snapshots.",
-            "generated_outputs": "LaTeX intermediates, PDFs, build logs, caches, and bytecode.",
-            "internal_process": "Author-only review, advisor, novelty, and submission-gate notes.",
-            "superseded_runs": "Smoke, preliminary, abandoned, and superseded result directories.",
-        },
     }
 
 

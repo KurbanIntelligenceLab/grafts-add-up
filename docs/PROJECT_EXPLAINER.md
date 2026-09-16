@@ -1,83 +1,95 @@
-# Project explainer
+# Project Explainer
 
-## Problem
+This repository accompanies the paper **“Grafts Add Up: First-Order Scoring of
+Layer Compositions.”** It provides the manuscript, the SUTURE scoring
+implementation, frozen experiment contracts, retained evidence, and the
+verification code needed to reproduce the reported analyses.
+
+## What the paper studies
 
 Layer composition transfers a capability from a donor Transformer to a host
-model by replacing a selected set of corresponding layers. The usual method
-evaluates every candidate graft as a separate merged model. For a model with
-`L` layers, that makes candidate selection proportional to the number of
-compositions and requires repeated forward passes through separately built
-models.
+model by replacing corresponding layers. The usual approach builds and scores
+one merged model for every candidate graft. SUTURE estimates candidate effects
+from the host trajectory and the donor-layer injections instead.
 
-SUTURE asks whether the candidate effects can be estimated from the experts'
-existing trajectories instead.
+## Main idea
 
-## First-order score
+For each layer, SUTURE evaluates the donor injection on the host trajectory.
+The host adjoint for a selected utility or risk readout propagates that
+injection through the remaining network. Contracting the injection with the
+adjoint produces a first-order score for the layer.
 
-For each layer, the method computes a donor injection on the host trajectory.
-The host's adjoint for a selected utility or risk readout propagates the
-injection to the end of the network. The first-order contribution is the
-contraction of those two quantities. A candidate interval is scored by
-summing its layer contributions.
+The resulting scores:
 
-The method therefore needs:
+1. use one host forward trajectory;
+2. use one adjoint calculation per readout;
+3. evaluate donor blocks in a streamed pass; and
+4. score all candidate intervals without building a merged model for each one.
 
-1. one host forward trajectory;
-2. one host reverse/adjoint calculation per readout;
-3. streamed donor-block evaluations at each layer;
-4. no merged candidate models during selection.
+Under the smoothness assumptions in the paper, the approximation remainder is
+second order in the fine-tuning scale. Utility and risk scores can be combined
+as a constrained interval-selection problem, and the same decomposition
+extends to subsets and multiple donors.
 
-The approximation error is controlled by the second-order remainder in the
-fine-tuning scale under the smoothness assumptions stated in the paper. A
-utility score and a risk score can be combined as a constrained interval
-selection problem. The same per-unit decomposition also supports arbitrary
-subsets and multiple donors in the controlled experiments.
-
-## Experimental lanes
+## Experimental settings
 
 ### Controlled-stack verification
 
-`verify/verify_theory.py` constructs synthetic stacks where exhaustive
-composition search is available as ground truth. It checks the superposition
-identity, remainder behavior, adjoint contraction, interval/subset optimizers,
-drift certificate, regime boundary, ablations, and seed variation. The
-independent and corrections checks rederive selected constants without
-importing the main harness.
+`verify/verify_theory.py` constructs synthetic stacks with exhaustive
+composition ground truth. It checks the superposition identity, remainder
+scaling, adjoint contraction, interval and subset optimizers, drift
+certificates, regime behavior, and selection regret.
 
 ### Tier-A language-model evidence
 
-The Tier-A lane uses frozen data contracts, local Qwen-family checkpoints,
-matched adapters, and explicit readiness/plumbing gates. The canonical
-Spanish E1 result is retained as a stopped configuration-specific result.
-Contract-v2 artifacts document Qwen3-1.7B readiness and plumbing boundaries;
-they do not authorize a Qwen3 E1 claim.
+The Tier-A lane uses frozen data contracts, matched adapters, and explicit
+readiness and plumbing checks. The retained Spanish E1 artifacts and
+contract-v2 records document the configuration-specific evidence and its
+applicability boundary.
 
 ### B3 scale check
 
-The B3 lane evaluates public LightOn Qwen3-8B specialists. It scores all
-declared contiguous intervals using independent utility and risk probes, then
-measures only the host, selected, and published reference candidates on
-held-out MGSM-Rev2 records. The retained French and Chinese numbers are
-teacher-forced answer log-probability comparisons. They should not be
-interpreted as a full held-out sweep or as evidence for free-generation
-ranking.
+The B3 lane evaluates public LightOn Qwen3-8B specialists. It scores declared
+contiguous intervals using utility and risk probes, then measures the host,
+selected, and reference candidates on held-out MGSM-Rev2 records.
 
-### Reviewer-response diagnostics
+The retained French and Chinese results report teacher-forced
+answer-log-probability comparisons for three candidates. They are not a
+full-window sweep or a free-generation ranking.
 
-The reviewer-followup artifacts contain controlled multi-donor and signed
-selection checks, local cost diagnostics, score-variant comparisons, and an
-isolated powered Spanish free-generation ranking. These runs are separate
-contracts and cannot modify the canonical Tier-A roots.
+## Main results
 
-## Reading the result tree
+In the controlled stack, the first-order scores rank exhaustive candidates at
+approximately Spearman `0.95 ± 0.05`. The sampled-competitor procedure
+certifies approximately `65 ± 10` of `77` competitors as dominated while
+building 11 models against a 78-candidate sweep.
 
-`results/` is evidence, not a scratch directory. Canonical files are
-immutable by convention and many runners enforce this with fail-closed path
-guards. A result's `run_manifest.json` records the command, model pin,
-environment information, input/output hashes, and selection invariants. The
-artifact inventory distinguishes canonical, preliminary, smoke, and
-superseded runs.
+The B3 scale check reports selected-host gains of `+0.398` and `+1.326`
+nats/token for French and Chinese, respectively, under the teacher-forced
+objective.
 
-Weights are not required to inspect the retained outputs. A complete
-from-scratch rerun requires the public checkpoints and local hardware
-described by the relevant contract and `docs/reproducibility.md`.
+## Scope and limitations
+
+The first-order score is an approximation whose quality depends on the
+fine-tuning scale and the stated smoothness assumptions. The language-model
+evidence is contract-specific and uses the objectives recorded in the
+corresponding JSON artifacts. In particular, B3 does not establish a
+free-generation ranking claim.
+
+## Repository contents
+
+- `paper/` contains the manuscript and compile inputs.
+- `src/suture/` contains the installable scoring and experiment package.
+- `configs/` contains frozen model, data, and protocol contracts.
+- `verify/` and `tests/` contain numerical checks and regression tests.
+- `scripts/` contains the public command-line entry points.
+- `results/` contains retained JSON/JSONL evidence and provenance records.
+- `docs/FILES_RATIONALE.md` explains why each public path is retained.
+
+## Takeaway
+
+SUTURE replaces repeated candidate-model construction with a first-order score
+computed from host trajectories, donor injections, and adjoints. The theory
+harness verifies the decomposition in controlled settings, while the retained
+language-model artifacts show how the contracts and claim boundaries apply to
+larger experimental systems.

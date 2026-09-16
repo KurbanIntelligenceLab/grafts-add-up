@@ -7,7 +7,7 @@
     "short_name": "SUTURE",
     "target": "ICLR 2027",
     "framing": "controlled-stack theory plus a failed language-model applicability gate",
-    "runbook": "docs/iclr/RUNBOOK.txt",
+    "runbook": "README.md",
     "selection_rule": "No merged model may be materialized while computing scores or selecting a graft."
   },
   "base_model": {

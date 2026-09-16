@@ -6454,7 +6454,7 @@
   },
   "host_logprob_gain": 0.25333778373897076,
   "language": "zh",
-  "lid_model": "F:\\Program Files\\GitHub\\model-composition\\models\\lid.176.ftz",
+  "lid_model": "models\\lid.176.ftz",
   "model_id": "Qwen/Qwen3-1.7B",
   "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
   "readiness_donor": {

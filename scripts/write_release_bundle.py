@@ -101,13 +101,6 @@ def main() -> int:
     ]
     fig_dir = paper / "figs"
     bundle = ver / "suture_iclr2027_cleanroom.zip"
-    forbidden = (
-        "ADVISOR_GATE.md",
-        "HUMAN_GATES.md",
-        "CONTRACT_V2_GATED.md",
-        "env.lock",
-        "REDFLAGS.txt",
-    )
     with zipfile.ZipFile(bundle, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for name in members:
             zf.write(paper / name, name)
@@ -115,7 +108,12 @@ def main() -> int:
             if path.suffix.lower() in {".tex", ".dat"}:
                 zf.write(path, f"figs/{path.name}")
         names = set(zf.namelist())
-        leaked = [item for item in forbidden if item in names or any(n.endswith(item) for n in names)]
+        allowed = set(members) | {
+            f"figs/{path.name}"
+            for path in fig_dir.iterdir()
+            if path.suffix.lower() in {".tex", ".dat"}
+        }
+        leaked = sorted(names - allowed)
         if leaked:
             raise SystemExit(f"clean-room zip must not contain {leaked}")
 

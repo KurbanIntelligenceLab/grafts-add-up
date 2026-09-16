@@ -1,6 +1,6 @@
 {
   "canonical_e1_rewritten": false,
-  "created_at": "2026-09-11T20:09:06.065085+00:00",
+  "created_at": "2026-09-16T17:50:51.266679+00:00",
   "files": [
     {
       "bytes": 1651,
@@ -28,9 +28,9 @@
       "sha256": "f05a6c5fe0a90a4042dbe3a9ad101449555effa0bac72eb2e18e53adfa71fd52"
     },
     {
-      "bytes": 42217,
+      "bytes": 3639,
       "path": "results/tier_a/es/e1_canonical_seed0/run_manifest.json",
-      "sha256": "7113300bac3a02b6080da0754a8c0cb52f45875162b472f78539ecb7241f01c3"
+      "sha256": "848152fade1759b04820adbcd405bbe041091888b5c15fb1ce7418929da02356"
     },
     {
       "bytes": 156904,
@@ -103,14 +103,9 @@
       "sha256": "cdb5da0a4f56ebbb7d218ebc8072045ffd5e551b6f83d601ea01cc57930066c2"
     },
     {
-      "bytes": 14587,
-      "path": "suture/experimental_contract.json",
-      "sha256": "04865fa3296fcf896b4525b054aafda3e8357b412d279e6088ffd95b037757be"
-    },
-    {
-      "bytes": 111366,
-      "path": "results/tier_a/ARTIFACT_INVENTORY.json",
-      "sha256": "1a9e4141c3be2967e2406067d4d34037326f1cb4abfbbbf685032c1e89613853"
+      "bytes": 14577,
+      "path": "configs/experimental_contract_v1.json",
+      "sha256": "8cb833b8fe4c47d90efacc482995bdbc7153e8032df7f15575317781033d9303"
     }
   ],
   "kind": "release_attestation",

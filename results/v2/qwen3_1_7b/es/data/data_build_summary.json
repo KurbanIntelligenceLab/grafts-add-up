@@ -257,7 +257,7 @@
         "source_dataset": "facebook/belebele:spa_Latn"
       },
       "n_records": 128,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\Belebele.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\Belebele.jsonl",
       "record_hashes": [
         "270bbd0f2363b43115835dbad9aa09ef92af3a58ad53774eb96f471c1cdb9354",
         "591c8be406c549bfd195e2dd092c7688f3edf9b0377be113b9c2ed4c0283c71f",
@@ -1413,7 +1413,7 @@
         "split": "hash_frozen_64_of_250"
       },
       "n_records": 64,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\MGSM_dev.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\MGSM_dev.jsonl",
       "record_hashes": [
         "80a43c1a22881241713f83a75ffcb0714ac5f53c1d137d5a94994c5299f269e8",
         "404552cae48624d9bca1f0399b36cd8d849a6cd2b2394c2e7e2d7a0fcfd8d174",
@@ -1491,7 +1491,7 @@
         "split": "hash_frozen_186_holdout"
       },
       "n_records": 186,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\MGSM_test.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\MGSM_test.jsonl",
       "record_hashes": [
         "ef9c2d69ecf92e32d177bb93377dcd6d231a92e9a54c9d097528133473e18164",
         "125e48fd47935d790be662f4806bb9f862ebe100316e7fcc09774cba5189fa76",
@@ -1691,7 +1691,7 @@
         "translation_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\P_risk.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\P_risk.jsonl",
       "record_hashes": [
         "20b4cfea1e2be2138be6788f867958e94ab713ae3ddea1b3e4ac98ff8b1a48a3",
         "0c874897b95b711aa9599627c02df33b83d139040ce5ec72a5d7549fb03510e8",
@@ -2205,7 +2205,7 @@
         "translation_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
       },
       "n_records": 500,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\P_util.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\P_util.jsonl",
       "record_hashes": [
         "e5bc53a7e8a648a7e0179cb9b4062b965caf7f985d2020a9ebdab6c3d34fb8ea",
         "8dcccddda4fd2931650594a12fc25a08a5e20b5ac06414438349d5c6e1b942aa",
@@ -2717,7 +2717,7 @@
         "purpose": "checkpoint_selection_only"
       },
       "n_records": 64,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\expert_validation_donor.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\expert_validation_donor.jsonl",
       "record_hashes": [
         "c8bcc8af5cf039a0f912823ac8ed00d75d5eda87d18ceae61f18ccabc97a2630",
         "f5671b303489c6c1e34d6784237c7fada258a2ffc14fd8fdcdbe2dc2848871f6",
@@ -3884,7 +3884,7 @@
         "purpose": "final_readiness_only"
       },
       "n_records": 128,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\v2\\qwen3_1_7b\\es\\data\\readiness_donor.jsonl",
+      "path": "results\\v2\\qwen3_1_7b\\es\\data\\readiness_donor.jsonl",
       "record_hashes": [
         "63208b502f616180ae42f428273fae68a2f8d884c5589e984bad9ef581e4aa53",
         "381f37bc00c195aa58e1e383e141426d999dd1a0bfda52c263f1a66677b6a6aa",

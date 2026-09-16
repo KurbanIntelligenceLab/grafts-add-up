@@ -7,6 +7,6 @@
   "donor_dir": "results\\v2\\qwen3_1_7b\\shared\\donor\\checkpoint-0512\\donor",
   "host_dir": "results\\v2\\qwen3_1_7b\\es\\adapters\\host\\checkpoint-1024\\host",
   "max_length": 128,
-  "output_dir": "F:\\Program Files\\GitHub\\model-composition\\results\\reviewer_followup\\qwen3_1_7b\\repair_01",
+  "output_dir": "results\\reviewer_followup\\qwen3_1_7b\\repair_01",
   "prompt_limit": 4
 }

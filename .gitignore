@@ -57,6 +57,8 @@ paper/*.toc
 results/supplementary/**/checkpoints/
 results/supplementary/**/final_adapter/*.safetensors
 results/supplementary/**/final_adapter/*.bin
+results/tier_a/verification_release/
+results/**/*.log
 
 # Tier-A generated weights stay out of git; JSON/JSONL evidence may be added
 # explicitly. Tokenizer JSON can be regenerated from the pinned checkpoint.

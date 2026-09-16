@@ -1,14 +1,14 @@
 {
   "command": [
-    "F:\\Program Files\\GitHub\\model-composition\\suture\\b3_data.py",
+    "suture\\b3_data.py",
     "--language",
     "fr",
     "--translation-snapshot",
-    "models/Qwen3-1.7B-70d244cc",
+    "<model-cache>/Qwen3-1.7B-70d244cc",
     "--measurement-only"
   ],
   "contract": {
-    "path": "F:\\Program Files\\GitHub\\model-composition\\suture\\contracts\\b3_lighton_qwen3_8b_v1.json",
+    "path": "suture\\contracts\\b3_lighton_qwen3_8b_v1.json",
     "sha256": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90"
   },
   "created_at": "2026-09-13T19:29:56.478138+00:00",
@@ -29,7 +29,7 @@
   "inputs": {
     "language": "fr",
     "manifest": {
-      "file_sha256": "7748f3b0bf034a61f1d1bef34e98b9481d8f15a1f63324c70220308a308565de",
+      "file_sha256": "3e50eb2e051301ed2fa4e99921e5d5dbee7115474397716d7f0653eed4ee633f",
       "manifest_name": "b3_fr_MGSM_rev2_test",
       "metadata": {
         "contract_name": "b3_lighton_qwen3_8b_v1",
@@ -37,8 +37,8 @@
         "language": "fr",
         "objective": "mean teacher-forced answer log-probability per target token",
         "selection_manifests": {
-          "P_risk": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_risk.jsonl",
-          "P_util": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_util.jsonl"
+          "P_risk": "results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_risk.jsonl",
+          "P_util": "results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\P_util.jsonl"
         },
         "source": {
           "configs": {
@@ -53,7 +53,7 @@
         }
       },
       "n_records": 250,
-      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\MGSM_rev2_test.jsonl",
+      "path": "results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\MGSM_rev2_test.jsonl",
       "record_hashes": [
         "95f925368153c4a823aee2c1ce76f139edefdf44befad4939153aafde3cc10dd",
         "409eac859b380b1fd6e47dadfeb5d4c87d3249df81f58982a9d296c001ad54c7",
@@ -309,7 +309,7 @@
     },
     "schema_version": 1,
     "status": "PASS_HELD_OUT_DATA",
-    "tokenizer_snapshot": "F:\\Program Files\\GitHub\\model-composition\\models\\Qwen3-1.7B-70d244cc"
+    "tokenizer_snapshot": "models\\Qwen3-1.7B-70d244cc"
   },
   "run_kind": "b3_measurement_data",
   "schema_version": 1,

@@ -12,7 +12,7 @@
     "short_name": "SUTURE",
     "target": "ICLR 2027",
     "framing": "controlled-stack theory; v1 Spanish E1 retained; v2 is the Qwen3 measurement",
-    "runbook": "docs/iclr/RUNBOOK.txt",
+    "runbook": "README.md",
     "selection_rule": "No merged model may be materialized while computing scores or selecting a graft."
   },
   "base_model": {
