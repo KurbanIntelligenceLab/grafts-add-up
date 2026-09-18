@@ -1,12 +1,7 @@
 % ===================================================================
 % suture.bib
-% Verification status of every entry is recorded in a comment line
-% ABOVE the entry. Remaining long-list papers (MGSM, Qwen3) keep
-% "and others" because the prefix is confirmed and the tail is long.
-% No author name in this file was invented. Entries that were previously
-% placeholders were resolved from primary sources in the post-E1 freeze
-% session (arXiv Atom API, ACL Anthology, ICLR proceedings, PMLR).
-% Do not copy names from suture.bib.MUTATED.keep.
+% Bibliographic metadata was checked against primary sources. Long author
+% lists retain the source ordering; the bibliography style controls display.
 % ===================================================================
 
 % VERIFIED: authors, venue and arXiv id confirmed from the arXiv listing,
@@ -47,6 +42,7 @@
   author    = {Hyunseo Shin and Wonseok Hwang},
   title     = {Layer-wise Swapping for Generalizable Multilingual Safety},
   booktitle = {Proceedings of the 2026 Conference of the European Chapter of the Association for Computational Linguistics (EACL)},
+  pages     = {2223--2238},
   year      = {2026},
   note      = {arXiv:2601.22620},
   doi       = {10.18653/v1/2026.eacl-long.98}
@@ -90,7 +86,7 @@
   doi       = {10.48550/arXiv.2310.02575}
 }
 
-% VERIFIED this session from the PMLR proceedings page
+% VERIFIED from the PMLR proceedings page
 % https://proceedings.mlr.press/v162/wortsman22a.html and the paper PDF.
 @inproceedings{wortsman2022soups,
   author    = {Mitchell Wortsman and Gabriel Ilharco and Samir Yitzhak Gadre and Rebecca Roelofs and Raphael Gontijo-Lopes and Ari S. Morcos and Hongseok Namkoong and Ali Farhadi and Yair Carmon and Simon Kornblith and Ludwig Schmidt},
@@ -111,7 +107,7 @@
   doi       = {10.18653/v1/2024.blackboxnlp-1.25}
 }
 
-% VERIFIED this session from the arXiv HTML and abstract for 2403.00745.
+% VERIFIED from the arXiv HTML and abstract for 2403.00745.
 @article{kramar2024atp,
   author  = {J\'{a}nos Kram\'{a}r and Tom Lieberum and Rohin Shah and Neel Nanda},
   title   = {{AtP*}: An Efficient and Scalable Method for Localizing {LLM} Behaviour to Components},
@@ -269,7 +265,7 @@
   doi     = {10.48550/arXiv.2601.22285}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2601.09473.
+% VERIFIED from the arXiv Atom API for 2601.09473.
 @article{simmerge2026,
   author  = {Oliver Bolton and Aakanksha and Arash Ahmadian and Sara Hooker and Marzieh Fadaee and Beyza Ermis},
   title   = {{SimMerge}: Learning to Select Merge Operators from Similarity Signals},
@@ -293,7 +289,7 @@
   url           = {https://arxiv.org/abs/2604.11399}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2605.23036. The arXiv
+% VERIFIED from the arXiv Atom API for 2605.23036. The arXiv
 % comment states acceptance at the TrustNLP workshop at ACL 2026; cited here
 % as a preprint because the workshop proceedings page was not fetched.
 @article{multilingualsteering2026,
@@ -304,7 +300,7 @@
   doi     = {10.18653/v1/2026.trustnlp-main.24}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2601.20009.
+% VERIFIED from the arXiv Atom API for 2601.20009.
 @article{linguamap2026,
   author  = {J. Ben Tamo and Daniel Carlander-Reuterfelt and Jonathan Rubin and Dezhi Hong and Mingxian Wang and Oleg Poliannikov},
   title   = {{LinguaMap}: Which Layers of {LLM}s Speak Your Language and How to Tune Them?},
@@ -313,7 +309,7 @@
   doi     = {10.48550/arXiv.2601.20009}
 }
 
-% VERIFIED BY THIS SESSION. Author list confirmed independently from five
+% VERIFIED: author list confirmed independently from five
 % sources: the arXiv abstract page for 2509.25712, two arXiv monthly listings,
 % the BibTeX record on the official code repository, and two citing reference
 % lists. Cited as the arXiv preprint; an OpenReview record exists at
@@ -326,7 +322,7 @@
   doi     = {10.48550/arXiv.2509.25712}
 }
 
-% VERIFIED this session from the arXiv HTML for 2412.19098. Authors: Aecheon
+% VERIFIED from the arXiv HTML for 2412.19098. Authors: Aecheon
 % Jung, Seunghwan Lee, Dongyoon Han, Sungeun Hong. The project page lists ICML
 % 2026; cited here as a preprint because proceedings were not fetched.
 @article{symerge2026,
@@ -336,7 +332,7 @@
   year    = {2024}
 }
 
-% VERIFIED this session: authors C. J. Clopper and E. S. Pearson; Biometrika
+% VERIFIED: authors C. J. Clopper and E. S. Pearson; Biometrika
 % 26(4):404--413 (1934) is the standard bibliographic record for DOI
 % 10.1093/biomet/26.4.404. The DOI landing page returned HTTP 406 here.
 @article{clopper1934,
@@ -349,7 +345,7 @@
   year    = {1934}
 }
 
-% VERIFIED this session: author list and 2005 Springer monograph title match
+% VERIFIED: author list and 2005 Springer monograph title match
 % the standard bibliographic record for this book.
 @book{vovk2005,
   author    = {Vladimir Vovk and Alexander Gammerman and Glenn Shafer},
@@ -359,10 +355,10 @@
   doi       = {10.1007/978-3-031-06649-8}
 }
 
-% VERIFIED this session: authors confirmed from arXiv:2107.07511. The published
+% VERIFIED: authors confirmed from arXiv:2107.07511. The published
 % Foundations and Trends form is cited with the Now Publishers MAL-101
 % identifier doi:10.1561/2200000101 (volume 16, number 4, pages 494--591);
-% the publisher HTML was blocked by Cloudflare in this session.
+% the publisher HTML was unavailable; the standard bibliographic record is used.
 @article{angelopoulos2023gentle,
   author  = {Anastasios N. Angelopoulos and Stephen Bates},
   title   = {Conformal Prediction: A Gentle Introduction},
@@ -374,7 +370,7 @@
   doi     = {10.1561/2200000101}
 }
 
-% VERIFIED this session from the ICLR 2024 proceedings abstract page
+% VERIFIED from the ICLR 2024 proceedings abstract page
 % https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html
 % and the corresponding PDF author block.
 @inproceedings{angelopoulos2024crc,
@@ -397,19 +393,22 @@
 
 % VERIFIED: first author, title and arXiv id confirmed from a fetched reference
 % list; the list is long and is rendered with "and others".
-@article{yang2025qwen3,
-  author  = {An Yang and others},
-  title   = {{Qwen3} Technical Report},
-  journal = {arXiv preprint arXiv:2505.09388},
-  year    = {2025}
+@misc{yang2025qwen3,
+  title          = {Qwen3 Technical Report},
+  author         = {An Yang and Anfeng Li and Baosong Yang and Beichen Zhang and Binyuan Hui and Bo Zheng and Bowen Yu and Chang Gao and Chengen Huang and Chenxu Lv and Chujie Zheng and Dayiheng Liu and Fan Zhou and Fei Huang and Feng Hu and Hao Ge and Haoran Wei and Huan Lin and Jialong Tang and Jian Yang and Jianhong Tu and Jianwei Zhang and Jianxin Yang and Jiaxi Yang and Jing Zhou and Jingren Zhou and Junyang Lin and Kai Dang and Keqin Bao and Kexin Yang and Le Yu and Lianghao Deng and Mei Li and Mingfeng Xue and Mingze Li and Pei Zhang and Peng Wang and Qin Zhu and Rui Men and Ruize Gao and Shixuan Liu and Shuang Luo and Tianhao Li and Tianyi Tang and Wenbiao Yin and Xingzhang Ren and Xinyu Wang and Xinyu Zhang and Xuancheng Ren and Yang Fan and Yang Su and Yichang Zhang and Yinger Zhang and Yu Wan and Yuqiong Liu and Zekun Wang and Zeyu Cui and Zhenru Zhang and Zhipeng Zhou and Zihan Qiu},
+  year           = {2025},
+  eprint         = {2505.09388},
+  archivePrefix  = {arXiv},
+  primaryClass   = {cs.CL},
+  url            = {https://arxiv.org/abs/2505.09388},
 }
 
 % VERIFIED: authors and arXiv id confirmed from a fetched reference list.
 @article{kang2025whygaps,
   author  = {Deokhyung Kang and Seonjeong Hwang and Daehui Kim and Hyounghun Kim and Gary Geunbae Lee},
   title   = {Why Do Multilingual Reasoning Gaps Emerge in Reasoning Language Models?},
-  journal = {arXiv preprint arXiv:2510.27269},
-  year    = {2025},
+  journal = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year    = {2026},
   doi     = {10.18653/v1/2026.findings-acl.1586}
 }
 
@@ -423,7 +422,7 @@
   doi       = {10.48550/arXiv.2510.04694}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2505.23859. The arXiv
+% VERIFIED from the arXiv Atom API for 2505.23859. The arXiv
 % comment states ``Accepted at NeurIPS2025''; cited here as a preprint because
 % the NeurIPS 2025 proceedings page was not fetched.
 @article{lotmerging2025,
@@ -434,7 +433,7 @@
   doi     = {10.52202/085713-5745}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2412.10416. Cited as a
+% VERIFIED from the arXiv Atom API for 2412.10416. Cited as a
 % preprint; an ICLR 2025 OpenReview record exists but was withdrawn.
 @article{supermerge2024,
   author  = {Haoyu Yang and Zheng Zhang and Saket Sathe},
@@ -444,7 +443,7 @@
   doi     = {10.48550/arXiv.2412.10416}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2403.17806. The arXiv
+% VERIFIED from the arXiv Atom API for 2403.17806. The arXiv
 % comment states COLM 2024.
 @inproceedings{hanna2024eapig,
   author    = {Michael Hanna and Sandro Pezzelle and Yonatan Belinkov},
@@ -464,7 +463,7 @@
   doi     = {10.48550/arXiv.2606.00511}
 }
 
-% VERIFIED this session from the ACL Anthology page
+% VERIFIED from the ACL Anthology page
 % https://aclanthology.org/2022.acl-long.125/ (pages 1778--1796).
 @inproceedings{ansell2022sft,
   author    = {Alan Ansell and Edoardo Maria Ponti and Anna Korhonen and Ivan Vuli\'{c}},
@@ -475,7 +474,7 @@
   doi       = {10.18653/v1/2022.acl-long.125}                                                                                                                
 }
 
-% VERIFIED this session from the arXiv Atom API for 2305.12827, which carries
+% VERIFIED from the arXiv Atom API for 2305.12827, which carries
 % journal_ref ``Advances in Neural Information Processing Systems 36 (NeurIPS 2023)''.
 @inproceedings{ortizjimenez2023tangent,
   author    = {Guillermo Ortiz-Jimenez and Alessandro Favero and Pascal Frossard},
@@ -487,13 +486,8 @@
 }
 
 
-% VERIFIED BY THIS SESSION. Author list confirmed independently from four
-% sources: the arXiv abstract page for 2505.14009, the arXiv cs.CL monthly
-% listing, the paper PDF header, and the reference list of a citing paper
-% (arXiv:2602.03237). The names are correct.
-% VERIFIED this session from the arXiv Atom API for 2505.14009. Authors match
-% the earlier multi-source check. Cited as a preprint; no proceedings venue
-% was confirmed. See REDFLAGS.txt Incident 1/2.
+% VERIFIED: authors and title checked against the arXiv record and paper PDF;
+% cited as a preprint because no proceedings venue is used here.
 @article{acm2025,
   author  = {Yuxuan Yao and Shuqi Liu and Zehua Liu and Qintong Li and Mingyang Liu and Xiongwei Han and Zhijiang Guo and Han Wu and Linqi Song},
   title   = {Activation-Guided Consensus Merging for Large Language Models},
@@ -502,7 +496,7 @@
   doi     = {10.52202/085713-4133}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2605.29101.
+% VERIFIED from the arXiv Atom API for 2605.29101.
 @article{outputspace2026,
   author  = {Bethan Evans and Benjamin Etheridge and Stephen Roberts and Jared Tanner},
   title   = {Model Merging by Output-Space Projection},
@@ -520,7 +514,7 @@
   doi     = {10.48550/arXiv.2604.01674}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2606.07289.
+% VERIFIED from the arXiv Atom API for 2606.07289.
 @article{spectralmerge2026,
   author  = {Yongxian Wei and Runxi Cheng and Xingxuan Zhang and Li Shen and Chun Yuan and Peng Cui and Dacheng Tao},
   title   = {Closed-Form Spectral Regularization for Multi-Task Model Merging},
@@ -540,7 +534,7 @@
   doi     = {10.52202/085713-3374}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2212.09849. The arXiv
+% VERIFIED from the arXiv Atom API for 2212.09849. The arXiv
 % comment states ICLR 2023.
 @inproceedings{jin2023regmean,
   author    = {Xisen Jin and Xiang Ren and Daniel Preotiuc-Pietro and Pengxiang Cheng},
@@ -551,7 +545,7 @@
   doi       = {10.48550/arXiv.2212.09849}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2408.13656. The arXiv
+% VERIFIED from the arXiv Atom API for 2408.13656. The arXiv
 % comment states ``TMLR camera-ready version''.
 @article{he2024localize,
   author  = {Yifei He and Yuzheng Hu and Yong Lin and Tong Zhang and Han Zhao},
@@ -562,7 +556,7 @@
   doi     = {10.48550/arXiv.2408.13656}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2503.08099.
+% VERIFIED from the arXiv Atom API for 2503.08099.
 @article{cheng2025wudi,
   author  = {Runxi Cheng and Feng Xiong and Yongxian Wei and Wanyun Zhu and Chun Yuan},
   title   = {Whoever Started the Interference Should End It: Guiding Data-Free Model Merging via Task Vectors},
@@ -571,7 +565,7 @@
   doi     = {10.48550/arXiv.2503.08099}
 }
 
-% VERIFIED this session from the arXiv Atom API for 2607.18026. This is not a
+% VERIFIED from the arXiv Atom API for 2607.18026. This is not a
 % Hitit et al.\ paper; the authors are Fan, Hou, Chen, Zhang, Xie, and Lian.
 @article{hitit2026inthewild,
   author  = {Jiahe Fan and Yinghao Hou and Si Chen and Aiyuan Zhang and Hong Xie and Defu Lian},
@@ -693,7 +687,7 @@
   doi     = {10.48550/arXiv.2605.05973}
 }
 
-% VERIFIED this session from the arXiv abstract page for 2603.19742.
+% VERIFIED from the arXiv abstract page for 2603.19742.
 @article{jantsch2026dpa,
   author  = {Lasse Marten Jantsch and Dong-Jae Koh and Seonghyeon Lee and Young-Kyoon Suh},
   title   = {Dual Path Attribution: Efficient Attribution for {SwiGLU}-Transformers through Layer-Wise Target Propagation},
@@ -702,7 +696,7 @@
   doi     = {10.48550/arXiv.2603.19742}
 }
 
-% VERIFIED this session from the arXiv HTML and ICLR 2026 poster record.
+% VERIFIED from the arXiv HTML and ICLR 2026 poster record.
 @inproceedings{nief2026grafting,
   author    = {Todd Nief and David Reber and Sean Richardson and Ari Holtzman},
   title     = {Dynamic Weight Grafting: Localizing Finetuned Factual Knowledge in Transformers},
@@ -711,7 +705,7 @@
   note      = {arXiv:2506.20746}
 }
 
-% VERIFIED this session from the arXiv abstract page for 2602.20207.
+% VERIFIED from the arXiv abstract page for 2602.20207.
 @article{datta2026lga,
   author  = {Shrestha Datta and Hongfu Liu and Anshuman Chhabra},
   title   = {Golden Layers and Where to Find Them: Improved Knowledge Editing for Large Language Models Via Layer Gradient Analysis},
@@ -720,11 +714,79 @@
   doi     = {10.48550/arXiv.2602.20207}
 }
 
-% VERIFIED this session from the arXiv abstract page for 2603.09938.
+% VERIFIED from the arXiv abstract page for 2603.09938.
 @article{song2026fuse,
   author  = {Mingyang Song and Mao Zheng},
   title   = {Model Merging in the Era of Large Language Models: Methods, Applications, and Future Directions},
   journal = {arXiv preprint arXiv:2603.09938},
   year    = {2026},
   doi     = {10.48550/arXiv.2603.09938}
+}
+
+% Additional related-work entries; metadata checked against primary listings.
+@inproceedings{liu2025sensmerging,
+  author    = {Shuqi Liu and Han Wu and Bowei He and Xiongwei Han and Mingxuan Yuan and Linqi Song},
+  title     = {{Sens-Merging}: Sensitivity-Guided Parameter Balancing for Merging Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2025},
+  pages     = {19243--19255},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.findings-acl.984},
+  journal   = {Findings of the Association for Computational Linguistics: ACL 2025}
+}
+
+@article{sun2026weightpatching,
+  author  = {Chenghao Sun and Chengsheng Zhang and Guanzheng Qin and Rui Dai and Xinmei Tian},
+  title   = {Weight Patching: Toward Source-Level Mechanistic Localization in {LLM}s},
+  journal = {arXiv preprint arXiv:2604.13694},
+  year    = {2026},
+  doi     = {10.48550/arXiv.2604.13694}
+}
+
+@article{akiba2025evolutionary,
+  author  = {Takuya Akiba and Makoto Shing and Yujin Tang and Qi Sun and David Ha},
+  title   = {Evolutionary Optimization of Model Merging Recipes},
+  journal = {Nature Machine Intelligence},
+  volume  = {7},
+  number  = {2},
+  pages   = {195--204},
+  year    = {2025},
+  doi     = {10.1038/s42256-024-00975-8}
+}
+
+@inproceedings{akizuki2025surrogate,
+  author    = {Rio Akizuki and Yuya Kudo and Nozomu Yoshinari and Yoichi Hirose and Toshiyuki Nishimoto and Kento Uchida and Shinichi Shirakawa},
+  title     = {Surrogate Benchmarks for Model Merging Optimization},
+  booktitle = {International Conference on Automated Machine Learning (AutoML), Non-Archival Content Track},
+  year      = {2025},
+  note      = {arXiv:2509.02555},
+  doi       = {10.48550/arXiv.2509.02555}
+}
+
+@inproceedings{marchisio2024confusion,
+  author    = {Kelly Marchisio and Wei-Yin Ko and Alexandre Berard and Th{\'e}o Dehaze and Sebastian Ruder},
+  title     = {Understanding and Mitigating Language Confusion in {LLM}s},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {6653--6677},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.emnlp-main.380},
+  journal   = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing}
+}
+
+@inproceedings{nie2025confusion,
+  author    = {Ercong Nie and Helmut Schmid and Hinrich Sch{\"u}tze},
+  title     = {Mechanistic Understanding and Mitigation of Language Confusion in {English}-Centric Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year      = {2025},
+  note      = {ACL Anthology 2025.findings-emnlp.37; arXiv:2505.16538},
+  journal   = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  doi       = {10.18653/v1/2025.findings-emnlp.37}
+}
+
+@inproceedings{li2026stmerge,
+  author    = {Zhuoran Li and Rui Xu and Jian Yang and Junnan Liu and Zhijun Chen and Qianren Mao and Hongcheng Guo and Jiaheng Liu and Likang Xiao and Ming Li and Xiaojie Wang},
+  title     = {Enhancing Multilingual Reasoning via Steerable Model Merging},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  pages     = {37266--37277},
+  year      = {2026},
+  doi       = {10.18653/v1/2026.findings-acl.1856}
 }

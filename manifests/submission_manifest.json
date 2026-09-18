@@ -1,5 +1,5 @@
 {
-  "file_count": 253,
+  "file_count": 264,
   "files": [
     {
       "bytes": 447,
@@ -8,16 +8,16 @@
       "sha256": "4c66a8a9bb574a6d87441cdf288fa0998666ef471b4563dbb94788f671d97076"
     },
     {
-      "bytes": 1530,
+      "bytes": 1669,
       "path": ".gitignore",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "da4454172354e2a6f8d5a3e285483a9b4095ae617c8c33d602d893bdf4d633b8"
+      "sha256": "5e64b009d39a6baf4643b73f7a81929106a4c75b11cbbc15b9f39016b218e185"
     },
     {
-      "bytes": 282,
+      "bytes": 296,
       "path": "CITATION.cff",
       "rationale": "Machine-readable citation metadata for the reproducibility package.",
-      "sha256": "f71466d9308c19ac92906c8efb819d4504f194358d8a984c26e8b4e7310e3a5f"
+      "sha256": "304c6c2d94bc02758d8c388679efd3f108a8c51aef6a743f6f6e5bf6440a52af"
     },
     {
       "bytes": 1095,
@@ -26,10 +26,10 @@
       "sha256": "0aadca21706ffa5430d4947401a782e56d23304c15fddf7bdc355181e46f7c65"
     },
     {
-      "bytes": 8840,
+      "bytes": 9214,
       "path": "README.md",
       "rationale": "Reviewer-facing overview, setup, reproduction workflow, and claim boundaries.",
-      "sha256": "0ca31b7b5e7085faf9303a63fa6fe5532b4f8ebe001cf0a458acdefff050a96c"
+      "sha256": "a37c6f32cac79e91737bd0e50372caff78fb6fb70e2301993f22cbd60f7c5f98"
     },
     {
       "bytes": 8046,
@@ -68,10 +68,10 @@
       "sha256": "3653d334c34b0a1189c75159478c94eb486a2047470ff1c67bcbcfa606febb12"
     },
     {
-      "bytes": 3305,
+      "bytes": 3643,
       "path": "docs/FILES_RATIONALE.md",
       "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "ef27443d216ac8c57f6767ddd8e90a8ca4446eb51ba41d16830213933a706187"
+      "sha256": "777e823f6e9b8c67051a2c673412fa45f09cbdad3a60fc87b62bb48f18886d35"
     },
     {
       "bytes": 4100,
@@ -93,28 +93,40 @@
       "sha256": "e7b4498f11feacc7cf4df2f3d38f8dea293b057be10842946b0f36ee2083c5ff"
     },
     {
-      "bytes": 4301,
+      "bytes": 7794,
       "path": "paper/figs/fig1_teaser.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "a38ac3e238a9feaf3634db6c22d1d1780084e6eb431a6dcefc1739212046cd93"
+      "sha256": "818928b81ef76727d9aed3d4b848239bffeb70832a8c46b259c7c71d25023624"
     },
     {
-      "bytes": 6857,
+      "bytes": 7411,
       "path": "paper/figs/fig2_verify.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "c988c50096b11111e818d2d7468f4b2a125c69fed2ba81ed95b0406363ccdf13"
+      "sha256": "92b4508184cc4aee7b47045914f9dd427a9d8dbab4392ac006166bbaae689093"
     },
     {
       "bytes": 94,
       "path": "paper/figs/fig_ablation.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "2b3f0ead33478618a491d775a74e8990cbd6c0d9b4eaa969b18fabfc4f21c4a2"
+      "sha256": "68ceeaadc245bf0b2fa5fadf515f05139090c925a186e5e54a73e8e76d1e6291"
     },
     {
-      "bytes": 1559,
+      "bytes": 194,
+      "path": "paper/figs/fig_ablation2.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "c926456d817f9547576caeccb4bb71cfda46d158b21ff1a12f5a7fd1d3919433"
+    },
+    {
+      "bytes": 835,
+      "path": "paper/figs/fig_cert48.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "25fd467e8984e5a162729799599377410b693dff1bd32719a7a165f2880e3461"
+    },
+    {
+      "bytes": 1921,
       "path": "paper/figs/fig_certify.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "7071a0e9aa11388f9eb474cfd0c533bc11a8052cfbdbf377c7577369058a7ff2"
+      "sha256": "037b02522ce57593afc11f7c0eeafd4ac34f1a9a382ffbd36d1934a88494baa6"
     },
     {
       "bytes": 14,
@@ -123,58 +135,94 @@
       "sha256": "3f396633accf360df9762903fe3100620ee2cba2c701941757f4cf8b703e01c9"
     },
     {
-      "bytes": 50,
+      "bytes": 61,
       "path": "paper/figs/fig_certify_uncert.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "9101c77ee2d4046c0d1b607a0e8c6d40a6ea662f03548aaab9eec3d82d9e3de4"
+      "sha256": "d5bce95eea596f143bd2c07f52524704cc9c429da9414090d0aa95e946cba509"
     },
     {
-      "bytes": 1949,
+      "bytes": 1870,
       "path": "paper/figs/fig_intervals.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "7b6ee98970a94d0b46c22d854e49b74d40f0f237e18f12a8cd6a807e3957563b"
+      "sha256": "633243eb3ed7f5e393af96ae8f5f037b78ab01cba8a0b530faa66ded4c74abad"
     },
     {
-      "bytes": 33,
+      "bytes": 31,
       "path": "paper/figs/fig_intervals_pick.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "db0ac20e68eb06ee1b72be9fcf827122b6a168dd7ccb05d3ddff2eb72583a151"
+      "sha256": "0d76845915000de416f9902ae693546c22bae0fd1a9099984f279bf5959e6df4"
     },
     {
-      "bytes": 351,
+      "bytes": 336,
       "path": "paper/figs/fig_profile.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "635ae4c0e571653380470f01216a5410ea096b20e37f5d3436262f908f187147"
+      "sha256": "84c7cd3d3eddf088e0aee1cca127186153788bcbcf9dfd7b442ca2c47b0745e8"
     },
     {
-      "bytes": 7,
+      "bytes": 5,
       "path": "paper/figs/fig_profile_pick.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "cf97fbca78600bf4846371410af1a91c20bb0f4df99f60f5820ef21a93fe7c1e"
+      "sha256": "09c3699d9cdb4891b267938b3dd0425503eca52d777bdaef37e88fb3cfd1da1e"
     },
     {
-      "bytes": 169,
+      "bytes": 160,
       "path": "paper/figs/fig_regime.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "39151251ea89c4346fea09532cca0372eefbb45efd5bc42a24da0e9f1c7f0228"
+      "sha256": "ea552c215075ddded71c8e02c4d83482a73b48fc70ee46df7dacfb08fba219f0"
     },
     {
-      "bytes": 214,
+      "bytes": 166,
+      "path": "paper/figs/fig_regime_multi.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "c6a15d36724aaf4b5eaa80cbecb433d3786d96d70a54b5e773c01bbafcbfa49e"
+    },
+    {
+      "bytes": 1715,
+      "path": "paper/figs/fig_regret_ecdf.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "352d35df1e5fa826e83b6f413dae2c2d2e1af97d8e32ed1b9731ce5d41744b3b"
+    },
+    {
+      "bytes": 206,
       "path": "paper/figs/fig_remainder.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "6d9c6fc07ec4af14ff428065727abdce0e24d0d65d2607bae8c2909979de36ab"
+      "sha256": "abeee68b37c3abc0f64eaa5fd6a324c059b11426804c17ce73ece7e47fc3e8ff"
     },
     {
-      "bytes": 215,
+      "bytes": 206,
       "path": "paper/figs/fig_remainder_ref.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "4ef0ecad0f441c9a583560128164d86d4b71cf66d20d8f5beaa7f704874bf4ea"
+      "sha256": "72cc94fdd5787949c1f6222bd19c8a059a74bdd6be5c92400f1e6f7fcbfcc07d"
     },
     {
-      "bytes": 2567,
+      "bytes": 2460,
       "path": "paper/figs/fig_scatter.dat",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "016ebe5e4fc5380962e298a7ec279fd5cb2a76cf2310d2addf3cbb7af0c981d0"
+      "sha256": "ba9abe49433a6b63b40c3a0ceba1dff9805b7c368ded957c51bbfe1b11ba0733"
+    },
+    {
+      "bytes": 484,
+      "path": "paper/figs/fig_super48.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "d597e251b50465011e8db02f4ad989c506c0cc4b1c28c28ac35261eba693b0c4"
+    },
+    {
+      "bytes": 881,
+      "path": "paper/figs/fig_windows_feasible.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "78ff5167e84dd5c235422d9378944ccc3fafb5f12e60e3b90db6ec0a949c38cd"
+    },
+    {
+      "bytes": 646,
+      "path": "paper/figs/fig_windows_infeasible.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "577c20a174dbfd1d5c59000915f4edc008ce55c5f31bd65a75da51d1b4b438b7"
+    },
+    {
+      "bytes": 29,
+      "path": "paper/figs/fig_windows_pick.dat",
+      "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
+      "sha256": "717e1fc13fbb597afb262f7ab43586643db87e198398ffb960958b201b6af79d"
     },
     {
       "bytes": 26973,
@@ -189,22 +237,22 @@
       "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
     },
     {
-      "bytes": 93684,
+      "bytes": 82254,
       "path": "paper/main.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "26d4b95680022dde2442f4cb770b6d6c9632435df37461255d924130c8b30886"
+      "sha256": "1173cd4c4da3ae9dde94d16ea1907eeea1f78840cb826685fd3221a71ca75e8e"
     },
     {
-      "bytes": 35120,
+      "bytes": 38489,
       "path": "paper/suture.bib",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "ea5404cef46aa21c4ec1f90a63357af6f7f7f4e0e9d673fdc69a94c70f3d1e0f"
+      "sha256": "2171530b41d33b1b456fb4b99c0fe7896b7583923d283ca373d9a0bc56f95202"
     },
     {
-      "bytes": 486,
+      "bytes": 500,
       "path": "pyproject.toml",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "72e7b2c476ac13b7d4f8f736ba6285172cf34007180fd123bed59fce84c497b4"
+      "sha256": "7a7043ad82f5001610d3ad6f6d7674073699e076ddad532c1614cc548e99fb6c"
     },
     {
       "bytes": 608,
@@ -307,6 +355,18 @@
       "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/score/selection_scores.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
       "sha256": "a14430d81e960cc01310ad6c991d0c1fd04a0b9269f14b9feed5ea5a7dea9f19"
+    },
+    {
+      "bytes": 1504,
+      "path": "results/b3/lighton_qwen3_8b/posthoc_language_fidelity.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "43c99f914c7ed545c1c7753517d261f8a178d0ad375639a1dcff77c3b90172d9"
+    },
+    {
+      "bytes": 1031,
+      "path": "results/b3/lighton_qwen3_8b/posthoc_selected_vs_published.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "a2d9e6c633e61f8a438939f05fea89a6a0fc405109c49bcc7e5347291ff00c45"
     },
     {
       "bytes": 1312,
@@ -1275,6 +1335,12 @@
       "sha256": "a381734fa32b0ef57a4cfe67f7ed61bd8235505c9a0f81d0184685de49255279"
     },
     {
+      "bytes": 21169,
+      "path": "src/suture/b3_language_fidelity.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "9999ec388d9d346583aba75e27bf40d61e3ca9507a8cf5bc409e1f5bf27a1b63"
+    },
+    {
       "bytes": 48494,
       "path": "src/suture/b3_lighton.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
@@ -1521,7 +1587,7 @@
       "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
     }
   ],
-  "generated_at": "2026-09-16T17:53:02.032678+00:00",
+  "generated_at": "2026-09-18T19:38:52.615261+00:00",
   "kind": "public_submission_manifest",
   "root": "repository checkout",
   "schema_version": 1,

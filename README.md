@@ -1,7 +1,7 @@
 # SUTURE: Grafts Add Up
 
-Reproducibility repository for **“Grafts Add Up: First-Order Scoring of Layer
-Compositions,”** submitted to ICLR 2027. The package contains the manuscript,
+Reproducibility repository for **“Grafts Add Up: Scoring Every Layer Swap in One Forward–Backward Pass,”**
+submitted to ICLR 2027. The package contains the manuscript,
 the theory and scoring implementation, frozen experiment contracts, curated
 JSON/JSONL evidence, and offline checks needed to audit the reported results.
 
@@ -140,8 +140,11 @@ intermediates and the generated PDF are ignored by Git.
 
 The public result tree is intentionally curated:
 
-- `results/b3/lighton_qwen3_8b/` contains the complete FR/ZH B3 data,
-  preflight, selection, measurement, manifests, and post-hoc statistics.
+- `results/b3/lighton_qwen3_8b/` contains the tracked FR/ZH B3 preflight,
+  selection, answer-measurement evidence, and post-hoc statistics. The
+  language-fidelity follow-up is represented by the path-free aggregate
+  summary; its per-record probes, measurements, and run manifests remain
+  author-only.
 - `results/tier_a/` contains the canonical Spanish E1 evidence, the
   language-panel probe data, readiness and regime diagnostics, final plumbing
   pilots, and release attestation.
@@ -151,9 +154,11 @@ The public result tree is intentionally curated:
   cost diagnostics, score-variant comparisons, and the powered Spanish
   ranking.
 
-These artifacts reproduce the reported analyses without new API calls or
-retraining. The code also supports optional reruns when the exact public
-checkpoints and required hardware are available.
+These artifacts reproduce the retained analyses without new API calls or
+retraining. The language-model aggregate results whose per-record inputs remain
+private cannot be recomputed from this checkout alone. The code also supports
+optional reruns when the exact public checkpoints and required hardware are
+available.
 
 ### Tier-A contract-v2 panel
 
@@ -222,8 +227,9 @@ python scripts/write_release_bundle.py
 python -m suture.tier_a_release_attestation
 ```
 
-Run manifests retain portable commands, model pins, and input/output hashes as
-provenance records without recording local workstation paths.
+Public run manifests retain portable commands, model pins, and input/output
+hashes as provenance records without recording local workstation paths.
+Author-only language-fidelity manifests are intentionally excluded.
 
 ## Data provenance and licenses
 

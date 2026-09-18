@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or artifacts, please cite the accompanying ICLR paper."
-title: "Grafts Add Up: First-Order Scoring of Layer Compositions"
+title: "Grafts Add Up: Scoring Every Layer Swap in One Forward–Backward Pass"
 type: software
 version: 1.0.0
 date-released: 2026-09-16

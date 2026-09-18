@@ -43,7 +43,9 @@ release attestation, and manifest generation.
 
 `results/`
 Contains the JSON, JSONL, manifests, statistics, and attestation needed to
-inspect the paper's retained experimental evidence.
+inspect the paper's retained experimental evidence. Author-only raw
+language-fidelity probes, per-record measurements, and run manifests are
+excluded from the public tree.
 
 `docs/`
 Contains this selection rationale and a plain-language project explainer.
@@ -70,7 +72,8 @@ machine-readable citation metadata.
 
 `results/b3/lighton_qwen3_8b/`
 Contains the French and Chinese B3 data construction, preflight, selection,
-held-out measurement, run manifests, and post-hoc statistics.
+held-out answer measurement, aggregate language-fidelity summary, and post-hoc
+statistics. Raw language-fidelity records and manifests remain author-only.
 
 `results/tier_a/`
 Contains the canonical Spanish E1 artifacts, language-panel probe data, final
@@ -84,7 +87,9 @@ contract-v2 plumbing artifacts.
 Contains controlled multi-donor diagnostics, cost measurements, score-variant
 comparisons, and the powered Spanish ranking.
 
-The retained result files are sufficient to inspect the reported numbers
-without rerunning model collection. Their run manifests preserve a portable
+The retained result files are sufficient to inspect the released evidence
+without rerunning model collection. Public run manifests preserve a portable
 command record, model pin, input/output hashes, and selection invariants
-without recording local workspace paths.
+without recording local workspace paths. The language-model aggregate results
+whose per-record inputs remain private cannot be recomputed from this checkout
+alone.

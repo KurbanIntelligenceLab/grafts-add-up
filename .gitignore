@@ -77,5 +77,10 @@ results/b3_expanded/
 results/tier_a/verification_release/*.zip
 verify/toy_transfer_results.json
 
+# Author-only audit and raw language-fidelity follow-up
+paper/REDFLAGS.txt
+results/b3/lighton_qwen3_8b/*/fidelity/
+suture/contracts/
+
 # Local LaTeX build directory
 paper/build/

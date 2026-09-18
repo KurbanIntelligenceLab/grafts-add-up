@@ -1,0 +1,39 @@
+{
+  "analysis": {
+    "bootstrap_interval": "percentile_95",
+    "bootstrap_resamples": 20000,
+    "metric": "answer_logprob_per_token",
+    "paired_unit": "MGSM-Rev2 test record",
+    "seed": 20260913
+  },
+  "comparisons": {
+    "fr": {
+      "n_records": 250,
+      "selected_minus_published": {
+        "ci95": [
+          -0.4166674993864696,
+          -0.2934524038902919
+        ],
+        "mean": -0.3549454439163208,
+        "fraction_positive": 0.2
+      }
+    },
+    "zh": {
+      "n_records": 250,
+      "selected_minus_published": {
+        "ci95": [
+          -0.22240308904012046,
+          -0.03882749790191669
+        ],
+        "mean": -0.13104311828613283,
+        "fraction_positive": 0.448
+      }
+    }
+  },
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "source_sha256": {
+    "fr_measurements": "a0dfc49d3e0b9c36095613313c5bbae98f0b2b0a1c2947559c1668ac8b81faee",
+    "zh_measurements": "f4fd0e78a5cc4c003723185f51ae496cd425c802db3ce48316625af886a59e76"
+  },
+  "status": "posthoc_only_no_contract_mutation"
+}

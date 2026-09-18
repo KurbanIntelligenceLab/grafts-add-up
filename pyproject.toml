@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "suture-iclr2027"
 version = "1.0.0"
-description = "Reproducibility package for Grafts Add Up: First-Order Scoring of Layer Compositions"
+description = "Reproducibility package for Grafts Add Up: Scoring Every Layer Swap in One Forward–Backward Pass"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }

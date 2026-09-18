@@ -1,0 +1,63 @@
+{
+  "analysis": {
+    "bootstrap_interval": "percentile_95",
+    "metric": "target-language-minus-English first-token log-probability",
+    "paired_unit": "held-out language record",
+    "n_records_per_language": 76
+  },
+  "candidates": [
+    "host",
+    "selected",
+    "published"
+  ],
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "generation_lid": {
+    "reason": "BF16 cached and uncached greedy decoding was not part of this study.",
+    "status": "NOT_RUN"
+  },
+  "languages": {
+    "fr": {
+      "means": {
+        "host": 2.644,
+        "selected": 3.714,
+        "published": 3.584
+      },
+      "selected_minus_host": {
+        "ci95": [
+          0.9672998337,
+          1.1690119314
+        ],
+        "mean": 1.0700192075
+      },
+      "selected_minus_published": {
+        "ci95": [
+          -0.0296108757,
+          0.2907326896
+        ],
+        "mean": 0.1295093235
+      }
+    },
+    "zh": {
+      "means": {
+        "host": 7.737,
+        "selected": 8.004,
+        "published": 8.319
+      },
+      "selected_minus_host": {
+        "ci95": [
+          0.0344244646,
+          0.5050737183
+        ],
+        "mean": 0.2675812495
+      },
+      "selected_minus_published": {
+        "ci95": [
+          -0.5416472115,
+          -0.0859052758
+        ],
+        "mean": -0.3148418853
+      }
+    }
+  },
+  "source_note": "Per-record probes, measurements, and run manifests remain in the authors' archive; this file contains only the aggregate values reported by the manuscript."
+}
