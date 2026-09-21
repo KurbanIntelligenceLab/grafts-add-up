@@ -1,0 +1,747 @@
+{
+  "baselines": {
+    "attribution_probe_counts": {
+      "risk": 500,
+      "utility": 500
+    },
+    "parameter_movement": [
+      44.86083908804549,
+      32.9306267996651,
+      33.51542479618811,
+      37.13742745980552,
+      43.497706039144404,
+      46.03121443757095,
+      46.9464051013084,
+      46.78999345748654,
+      46.656138667009046,
+      45.36188253570514,
+      43.59624000901918,
+      41.75215992146316,
+      39.95585655251762,
+      38.52975754666828,
+      37.28946004159275,
+      36.25462372748442,
+      35.63534938463671,
+      34.83618564768235,
+      34.536022384209616,
+      35.5254403334989,
+      36.563627786912775,
+      37.41160189980321,
+      39.491202291714075,
+      41.81941071221233,
+      44.804794550424724,
+      46.71572608466717,
+      47.92756050911388,
+      49.37077087060704,
+      50.97724535839831,
+      52.302020712530116,
+      53.70913006952715,
+      54.56544786475133,
+      55.07168416050055,
+      54.11266812502823,
+      49.8044869167599,
+      43.26810586042931
+    ],
+    "weight_attribution_risk": [
+      -0.2773394825346768,
+      -0.4169818330500857,
+      0.41701723293063697,
+      -0.45306654458865525,
+      -1.151099321242189,
+      -0.7267515849964693,
+      -0.7442574467224767,
+      -0.6088288381767343,
+      0.07831846147798933,
+      -0.10460048202841427,
+      0.4452238850850845,
+      -0.11872234027518425,
+      0.4569209489065688,
+      0.5044476432907977,
+      0.6143874458671781,
+      0.4318098650716711,
+      0.23197713270469103,
+      0.39101652995910263,
+      0.8461329695708991,
+      0.16603417150743188,
+      0.047300296068031454,
+      0.0763368349506054,
+      0.010900617946346756,
+      -0.40079047938488654,
+      -0.05404254508150916,
+      0.18219102367490997,
+      -0.8185617520104861,
+      -0.10192328571801772,
+      -0.4345238239000901,
+      0.4345428784675023,
+      -0.004177302330441307,
+      0.5414552537217678,
+      0.30500303466344486,
+      0.08690268171485513,
+      0.28649859041639136,
+      -0.40660206523770465
+    ],
+    "weight_attribution_utility": [
+      -0.08980648125323933,
+      -0.07064558944589226,
+      0.003602408546459628,
+      -0.11620425694569712,
+      -0.3625001212615025,
+      -0.25346789495737176,
+      -0.2584622119155829,
+      -0.13847638950007968,
+      0.2139479830248456,
+      0.08616739657320431,
+      -0.14665761251791265,
+      -0.21922108337527607,
+      -0.21768526284291875,
+      0.37747006825960855,
+      0.3439187227205839,
+      0.21211930914517144,
+      -0.11418595135246869,
+      -0.4589009060432436,
+      0.058209531672735466,
+      -0.415266348963778,
+      -0.2585829341468052,
+      -0.07586003563877602,
+      0.19119071506039473,
+      0.09252478453094955,
+      0.022086009554943303,
+      0.30717803514481057,
+      -0.2780974060568551,
+      0.06571256280853413,
+      0.09288364154595183,
+      0.13015065438623424,
+      0.4914173524300568,
+      -0.053288563011810765,
+      0.08196481440510252,
+      -0.1712827226141526,
+      -0.18542215373023646,
+      -0.12517687208065764
+    ]
+  },
+  "calibration": {
+    "fit": {
+      "mae": 0.5912101105639983,
+      "n_windows": 10,
+      "rmse": 0.746541003495416,
+      "slope_b": 0.45197079529248435
+    },
+    "n_windows": 10,
+    "probe_counts": {
+      "private_per_record": true,
+      "risk_probe_count": 500,
+      "utility_probe_count": 500
+    },
+    "seed": 20260919,
+    "windows": [
+      {
+        "graft": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "measured_risk": 0.3599609432220459,
+        "measured_utility": 2.9808109436035157,
+        "predicted_risk": -0.9630325991809368,
+        "predicted_utility": -1.0763485829476267
+      },
+      {
+        "graft": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "measured_risk": 0.26067959022521975,
+        "measured_utility": 2.883181356430054,
+        "predicted_risk": 0.23054775407910344,
+        "predicted_utility": -0.9395916343368589
+      },
+      {
+        "graft": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "measured_risk": 1.2167419338226317,
+        "measured_utility": 2.6443665952682496,
+        "predicted_risk": 0.6318522434607148,
+        "predicted_utility": -1.2929490201324225
+      },
+      {
+        "graft": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "measured_risk": 1.8148487987518311,
+        "measured_utility": 1.1132152633666992,
+        "predicted_risk": 3.7845756757520137,
+        "predicted_utility": -0.7429352668859064
+      },
+      {
+        "graft": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "measured_risk": -1.097156997680664,
+        "measured_utility": 1.8910729780197144,
+        "predicted_risk": 1.1907616475820542,
+        "predicted_utility": 0.3228554971590638
+      },
+      {
+        "graft": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "measured_risk": 0.0399937744140625,
+        "measured_utility": 0.6866741800308227,
+        "predicted_risk": 0.9791934713982045,
+        "predicted_utility": -0.5699714388921857
+      },
+      {
+        "graft": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "measured_risk": -0.2926715240478516,
+        "measured_utility": 1.013975845336914,
+        "predicted_risk": -0.14297212130576364,
+        "predicted_utility": -0.26075319960713383
+      },
+      {
+        "graft": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "measured_risk": -1.4216988220214843,
+        "measured_utility": 1.3594872312545776,
+        "predicted_risk": -1.551887593410909,
+        "predicted_utility": -0.3083812437653542
+      },
+      {
+        "graft": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "measured_risk": -1.2913027667999268,
+        "measured_utility": 2.3232718687057496,
+        "predicted_risk": -1.13555762174353,
+        "predicted_utility": 0.9707071103751658
+      },
+      {
+        "graft": [
+          32
+        ],
+        "measured_risk": 0.31284078979492186,
+        "measured_utility": 0.14234877967834472,
+        "predicted_risk": 0.3368867484033108,
+        "predicted_utility": 0.10937863037735224
+      }
+    ]
+  },
+  "canonical_artifacts_modified": false,
+  "contract_name": "b3_lighton_qwen3_8b_v1",
+  "contract_version": 1,
+  "frozen_grafts_not_remeasured": {
+    "original_selected": [
+      13,
+      14,
+      15
+    ],
+    "published_reference": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "generation_lid": {
+    "reason": "BF16 cached and uncached greedy decoding remains outside this follow-up.",
+    "status": "NOT_RUN"
+  },
+  "hardware": {
+    "cuda_version": "12.4",
+    "device": "cuda:0",
+    "minimum_memory_gib": 40.0,
+    "name": "NVIDIA A100 80GB PCIe",
+    "total_memory_gib": 79.249755859375
+  },
+  "language": "fr",
+  "language_manifest": {
+    "header_schema_version": 1,
+    "n_records": 76,
+    "sha256": "7ce9cf377165a27b40641eb7d56059a0e5b08f2860a4704e2ec00a86cadf83f4"
+  },
+  "new_grafts_measured": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ]
+  ],
+  "pair": {
+    "donor": {
+      "id": "lightonai/Qwen3-8B-EN",
+      "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1",
+      "snapshot_sha256": "54bf2b933a9ed5b1ea21eb5f0dca2eaaf3cd39b4c7565d90c086ae4c33cf9c19"
+    },
+    "host": {
+      "id": "lightonai/Qwen3-8B-FR",
+      "revision": "a53d601e18842b62bd43b3718cf3900ba2d7bbf6",
+      "snapshot_sha256": "956acd5828b86561d0c32c2f05364ccad5278aea5142824eff817f52e04df545"
+    }
+  },
+  "private_records": {
+    "calibration": "private/calibration.jsonl",
+    "held_out": "private/heldout_measurements.jsonl",
+    "status": "RETAINED_AUTHOR_ONLY"
+  },
+  "roles": {
+    "movement_calibrated_feasible": {
+      "basis": "movement utility with fitted SUTURE language feasibility",
+      "feasible": true,
+      "graft": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "held_out_answer": {
+        "delta_vs_host": {
+          "ci95": [
+            -0.036175364081064844,
+            0.20308465908050508
+          ],
+          "fraction_positive": 0.548,
+          "mean": 0.08216893946329754,
+          "n_records": 250
+        },
+        "mean": -8.725959688568116,
+        "n_records": 250,
+        "source": "new_followup_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "delta_vs_host": {
+          "ci95": [
+            1.7988789677619934,
+            2.234587576828504
+          ],
+          "fraction_positive": 0.9736842105263158,
+          "mean": 2.018370590711895,
+          "n_records": 76
+        },
+        "mean": 4.662173497049432,
+        "n_records": 76,
+        "source": "new_followup_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": 0.20644342967112886,
+      "predicted_utility": 1559.554237704082
+    },
+    "movement_unconstrained": {
+      "basis": "sum of per-layer host-donor L2 movement",
+      "feasible": true,
+      "graft": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "held_out_answer": {
+        "delta_vs_host": {
+          "ci95": [
+            -0.036175364081064844,
+            0.20308465908050508
+          ],
+          "fraction_positive": 0.548,
+          "mean": 0.08216893946329754,
+          "n_records": 250
+        },
+        "mean": -8.725959688568116,
+        "n_records": 250,
+        "source": "new_followup_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "delta_vs_host": {
+          "ci95": [
+            1.7988789677619934,
+            2.234587576828504
+          ],
+          "fraction_positive": 0.9736842105263158,
+          "mean": 2.018370590711895,
+          "n_records": 76
+        },
+        "mean": 4.662173497049432,
+        "n_records": 76,
+        "source": "new_followup_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": 0.20644342967112886,
+      "predicted_utility": 1559.554237704082
+    },
+    "suture_calibrated": {
+      "basis": "frozen SUTURE utility with fitted language slope",
+      "feasible": true,
+      "graft": [
+        13,
+        14,
+        15
+      ],
+      "held_out_answer": {
+        "mean": -8.410181022198994,
+        "n_records": 250,
+        "source": "frozen_b3_language_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "mean": 3.714,
+        "n_records": 76,
+        "source": "frozen_b3_language_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": 0.7536829918154047,
+      "predicted_utility": 0.9189339634142817
+    },
+    "suture_uncalibrated": {
+      "basis": "frozen uncalibrated B3 selection",
+      "feasible": true,
+      "graft": [
+        13,
+        14,
+        15
+      ],
+      "held_out_answer": {
+        "mean": -8.410181022198994,
+        "n_records": 250,
+        "source": "frozen_b3_language_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "mean": 3.714,
+        "n_records": 76,
+        "source": "frozen_b3_language_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": 1.667547991298139,
+      "predicted_utility": 0.9189339634142817
+    },
+    "weight_attribution_calibrated_feasible": {
+      "basis": "weight attribution utility with first-order language attribution",
+      "feasible": true,
+      "graft": [
+        13,
+        14,
+        15
+      ],
+      "held_out_answer": {
+        "mean": -8.410181022198994,
+        "n_records": 250,
+        "source": "frozen_b3_language_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "mean": 3.714,
+        "n_records": 76,
+        "source": "frozen_b3_language_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": 0.7008462331794515,
+      "predicted_utility": 0.9335081001253638
+    },
+    "weight_attribution_unconstrained": {
+      "basis": "first-order host weight attribution on utility probes",
+      "feasible": false,
+      "graft": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "held_out_answer": {
+        "delta_vs_host": {
+          "ci95": [
+            1.152652101407051,
+            1.3370662238232294
+          ],
+          "fraction_positive": 0.98,
+          "mean": 1.243405586751302,
+          "n_records": 250
+        },
+        "mean": -7.564723041280111,
+        "n_records": 250,
+        "source": "new_followup_measurement",
+        "unit": "nats per target token"
+      },
+      "held_out_language": {
+        "delta_vs_host": {
+          "ci95": [
+            -1.4392232085529126,
+            -1.0849422461108158
+          ],
+          "fraction_positive": 0.05263157894736842,
+          "mean": -1.2585233889128034,
+          "n_records": 76
+        },
+        "mean": 1.385279517424734,
+        "n_records": 76,
+        "source": "new_followup_measurement",
+        "unit": "target-language-minus-English first-token log-probability"
+      },
+      "predicted_risk": -0.36097590980052185,
+      "predicted_utility": 1.143722600798312
+    }
+  },
+  "schema_version": 1,
+  "scores": {
+    "fitted_risk_slope_applied_to": "frozen per-layer risk scores",
+    "n_layers": 36,
+    "n_probe_risk": 500,
+    "n_probe_utility": 500,
+    "score_artifact_sha256": "a14430d81e960cc01310ad6c991d0c1fd04a0b9269f14b9feed5ea5a7dea9f19"
+  },
+  "status": "PASS_LLM_FEEDBACK_FOLLOWUP"
+}

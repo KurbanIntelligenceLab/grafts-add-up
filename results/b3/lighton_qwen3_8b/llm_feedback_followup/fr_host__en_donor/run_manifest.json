@@ -1,0 +1,29 @@
+{
+  "calibration_seed": 20260919,
+  "canonical_artifacts_modified": false,
+  "contract_sha256": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90",
+  "created_at": "2026-09-19T15:08:58.968683+00:00",
+  "environment": {
+    "numpy": "1.26.4",
+    "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.14.1"
+  },
+  "hardware": {
+    "cuda_version": "12.4",
+    "device": "cuda:0",
+    "minimum_memory_gib": 40.0,
+    "name": "NVIDIA A100 80GB PCIe",
+    "total_memory_gib": 79.249755859375
+  },
+  "language": "fr",
+  "language_manifest_sha256": "7ce9cf377165a27b40641eb7d56059a0e5b08f2860a4704e2ec00a86cadf83f4",
+  "measurement_manifest_sha256": "3e50eb2e051301ed2fa4e99921e5d5dbee7115474397716d7f0653eed4ee633f",
+  "risk_manifest_sha256": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+  "run_kind": "b3_llm_feedback_followup",
+  "schema_version": 1,
+  "score_sha256": "a14430d81e960cc01310ad6c991d0c1fd04a0b9269f14b9feed5ea5a7dea9f19",
+  "selection_sha256": "86b8ceb6df16e4471e1f8d346d055db25cbb3099226905f35c65e312db8569a2",
+  "utility_manifest_sha256": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729"
+}

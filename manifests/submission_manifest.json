@@ -1,5 +1,5 @@
 {
-  "file_count": 264,
+  "file_count": 269,
   "files": [
     {
       "bytes": 447,
@@ -8,10 +8,10 @@
       "sha256": "4c66a8a9bb574a6d87441cdf288fa0998666ef471b4563dbb94788f671d97076"
     },
     {
-      "bytes": 1669,
+      "bytes": 1772,
       "path": ".gitignore",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "5e64b009d39a6baf4643b73f7a81929106a4c75b11cbbc15b9f39016b218e185"
+      "sha256": "a4c799495dae0217c3359f4a3e5d875d49fc53e1f44a6e93f165a6c0e6e5dfa8"
     },
     {
       "bytes": 296,
@@ -68,10 +68,10 @@
       "sha256": "3653d334c34b0a1189c75159478c94eb486a2047470ff1c67bcbcfa606febb12"
     },
     {
-      "bytes": 3643,
+      "bytes": 3934,
       "path": "docs/FILES_RATIONALE.md",
       "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "777e823f6e9b8c67051a2c673412fa45f09cbdad3a60fc87b62bb48f18886d35"
+      "sha256": "fa416a59ac92d888f44b3de2e85c99e6e58074bd00efc408d4321db8645eaa7b"
     },
     {
       "bytes": 4100,
@@ -237,16 +237,16 @@
       "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
     },
     {
-      "bytes": 82254,
+      "bytes": 82065,
       "path": "paper/main.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "1173cd4c4da3ae9dde94d16ea1907eeea1f78840cb826685fd3221a71ca75e8e"
+      "sha256": "f36229ab510c5f8f9904ca9f49f001f393172af9bf60a0357f5100bf6ac3ed48"
     },
     {
-      "bytes": 38489,
+      "bytes": 39399,
       "path": "paper/suture.bib",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "2171530b41d33b1b456fb4b99c0fe7896b7583923d283ca373d9a0bc56f95202"
+      "sha256": "84f6177cd2ca733cf09c23b4f9de2d6b0c164354936ad39e1e7de1ab85cfdd2a"
     },
     {
       "bytes": 500,
@@ -355,6 +355,30 @@
       "path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/score/selection_scores.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
       "sha256": "a14430d81e960cc01310ad6c991d0c1fd04a0b9269f14b9feed5ea5a7dea9f19"
+    },
+    {
+      "bytes": 1288,
+      "path": "results/b3/lighton_qwen3_8b/llm_feedback_followup/fr_host__en_donor/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "fea33cb91bdc88632efe8c3951dfc2bb5596c054e9fb663640035c0da25d77d6"
+    },
+    {
+      "bytes": 16544,
+      "path": "results/b3/lighton_qwen3_8b/llm_feedback_followup/fr_host__en_donor/summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "c1af9a3087ad8b206394c3a25b796c6aea3db6a35dced09c5993bb2823e998c3"
+    },
+    {
+      "bytes": 1288,
+      "path": "results/b3/lighton_qwen3_8b/llm_feedback_followup/zh_host__en_donor/run_manifest.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "8a59c59738f9257f10bb0dcae814b7900f55cd0d8a4bc8bc6c1e92cf6ae78767"
+    },
+    {
+      "bytes": 16342,
+      "path": "results/b3/lighton_qwen3_8b/llm_feedback_followup/zh_host__en_donor/summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "3feb15b7ca109ef64f950f645e4b1cf573729f6ee0767dd9b9f4f1750dcbe726"
     },
     {
       "bytes": 1504,
@@ -1293,10 +1317,10 @@
       "sha256": "e857d3abf021b6a7ef1966cde8acb7274c392a2b2d62dd08b7f2b2435249c4d5"
     },
     {
-      "bytes": 7685,
+      "bytes": 7716,
       "path": "scripts/generate_submission_manifest.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
-      "sha256": "f9083009b3a5cde9981429f1ec1eded5aa9ab837febc8bb57683260a9a5d8143"
+      "sha256": "8ce9bd6def35774a19eeb7755a0d615da4caff938a48825316f30852caea960b"
     },
     {
       "bytes": 224,
@@ -1345,6 +1369,12 @@
       "path": "src/suture/b3_lighton.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
       "sha256": "5f269f203d7955f10db9c8239cb4e180d1a619e808ee8598b1dd631344fc3366"
+    },
+    {
+      "bytes": 37205,
+      "path": "src/suture/b3_llm_feedback_followup.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "1d5bdb22bb2f4d6654a7a217cd5e36c541f8600b4c02da99b90bef9557165166"
     },
     {
       "bytes": 5657,
@@ -1587,7 +1617,7 @@
       "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
     }
   ],
-  "generated_at": "2026-09-18T19:38:52.615261+00:00",
+  "generated_at": "2026-09-21T01:42:23.520973+00:00",
   "kind": "public_submission_manifest",
   "root": "repository checkout",
   "schema_version": 1,

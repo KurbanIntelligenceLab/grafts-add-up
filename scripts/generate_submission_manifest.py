@@ -52,6 +52,7 @@ SKIP_DIRECTORIES = {
     "env",
     "models",
     "paper_acl",
+    "private",
     "Project-1",
     "Project-2",
     "verification_release",
@@ -61,7 +62,7 @@ SKIP_DIRECTORIES = {
     "analysis",
     "external",
 }
-SKIP_NAMES = {".env", "submission_manifest.json"}
+SKIP_NAMES = {".env", "submission_manifest.json", "llm_feedback"}
 SKIP_SUFFIXES = {
     ".aux",
     ".bbl",

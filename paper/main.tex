@@ -272,6 +272,10 @@ coefficients through the merged model \citep{yang2024adamerging, symerge2026}
 also pass through every candidate, so every existing route to
 \eqref{eq:program} spends at least one model per candidate; the next section
 shows that the structure of the program makes this unnecessary.
+We use the first-response-token scalar because it is the differentiable
+readout needed by Theorem~\ref{thm:superposition}; this is an analytical
+compromise, not a claim that first-token confidence captures compounding
+autoregressive errors or mid-generation language collapse.
 
 % ============================================================================
 \section{Why grafts add up}
@@ -375,6 +379,11 @@ by an instruction to respond in that language, with $\mathcal{T}_{\mathrm{own}}$
 the tokens of the language's own name and $\mathcal{T}_{\mathrm{en}}$ those of
 ``English''. Both pass through the host's final normalization and output head, so
 they are differentiable in $x_L$, as Theorem~\ref{thm:superposition} requires.
+For a multi-token answer or language name, these are deliberately bags of
+protocol-listed candidate tokens at the first response position, not sequence
+likelihoods: the adjoint only sees the distribution at that position. This
+choice keeps the scalar differentiable and makes clear what the proxy does not
+measure.
 How closely $\varphi_\risk$ agrees with the language of free generation has not
 been measured (Section~\ref{sec:limitations});
 Appendix~\ref{app:protocol} gives templates, token sets, and probe counts.
@@ -405,15 +414,22 @@ selects
 \end{equation}
 the calibrated first-order version of \eqref{eq:program}. All $L(L+1)/2$ windows,
 $666$ for a 36-layer model, are scored exactly from prefix sums. We fix $\tau=0.05$ nats before any measurement;
-in the seeded stack the choice is stable across
+we leave $A_\util$ uncalibrated because only its ordering enters this argmax;
+using the same builds to calibrate it could instead reduce the task-remainder
+variance in the certificate, but is not part of the default procedure.
+In the seeded stack the choice is stable across
 $\tau\in\{0.02,0.05,0.10,0.20,0.40\}$, selecting $[8,10]$ at every value but the
 tightest, where it falls back to $[1,2]$, and satisfying the true constraint in
 all five cases (Table~\ref{tab:verify-full}). The implementation returns the best
-feasible non-empty window; the host should be kept if $\mathcal{F}$ is empty or
-that window's predicted gain is not positive. The conformal certificate requires
-$|\mathcal{F}|\ge m+2$; when fewer feasible competitors exist, the selected
-window is returned without a certificate. The runs of
-Section~\ref{sec:protocol} predate calibration and use $b=1$.
+feasible non-empty window, then builds it and measures its true language change.
+If that change violates $-\tau$, it falls back to the best truly feasible
+calibration window, or to the host if none exists, and reports the violation
+instead of silently returning an infeasible choice. The host should also be kept
+if $\mathcal{F}$ is empty or that window's predicted gain is not positive. The
+conformal certificate requires $|\mathcal{F}|\ge m+2$; when fewer feasible
+competitors exist, the selected window is returned without a certificate. The
+original 8B selections of Section~\ref{sec:protocol} used $b=1$; the isolated
+follow-up then fitted $b$ and left those windows unchanged.
 
 \paragraph{Build once and certify.}
 Now $\theta^{\widehat{S}}$ is built and its language loss measured, together with
@@ -442,7 +458,8 @@ host model plus one layer (Appendix~\ref{app:notes}).
 \captionof{algorithm}{\textsc{Suture}. Lines 2--7 score every layer from one host
 forward--backward pass per probe; $s^{\varphi}_\ell$ and $v_\ell$ must come from
 the same host pass and probe. Lines 8--9 calibrate the language scores on ten
-built windows and choose; lines 10--12 build the choice and certify it.}
+built windows and choose; later lines build the choice, fall back if the measured
+language change violates the constraint, and otherwise certify it.}
 \label{alg:suture}
 \vspace{2pt}
 \hrule height 0.4pt
@@ -457,14 +474,20 @@ $\mathcal{P}_\util,\mathcal{P}_\risk$, tolerance $\tau$, sizes $m_c$ and $m$
   \STATE backward pass from $\varphi(p)$, reading off $s^{\varphi}_\ell$ at every layer output
   \STATE accumulate $a^{\varphi}_\ell \mathrel{+}= \langle s^{\varphi}_\ell, v_\ell\rangle / |\mathcal{P}_\varphi|$
 \ENDFOR
-\STATE build $m_c$ uniformly drawn windows; fit $b$ from their measured $\Delta\varphi_\risk$ against $A_\risk$
+\STATE build $m_c$ uniformly drawn windows; measure $\Delta\varphi_\util$ and $\Delta\varphi_\risk$; fit $b$ from the latter against $A_\risk$ and retain them as $\mathcal{C}$
 \STATE score every window by prefix sums; $\widehat{S}\leftarrow$ \eqref{eq:select}
-\IF{$|\mathcal{F}|\ge m+2$}
-  \STATE build $\widehat{S}$ and $m$ windows from $\mathcal{F}\setminus\{\widehat{S}\}$; measure each $r=\Delta\varphi_\util-A_\util$
-  \STATE $q \leftarrow$ the largest $|r|$ among the $m$ draws
-  \STATE {\bfseries return} $\widehat{S}$, its measured $\Delta\varphi_\risk$, and every $S\in\mathcal{F}\setminus\{\widehat{S}\}$ with $A_\util(\widehat{S})-A_\util(S)>q+|r(\widehat{S})|$
+\STATE build $\widehat{S}$; measure its $\Delta\varphi_\util$ and $\Delta\varphi_\risk$
+\IF{$\Delta\varphi_\risk(\widehat{S})<-\tau$}
+  \STATE $\mathcal{C}_{\rm feas}\leftarrow\{S\in\mathcal{C}:\Delta\varphi_\risk(S)\ge-\tau\}\cup\{\emptyset\}$; set both host changes to $0$
+  \STATE {\bfseries return} the best $\widehat{S}_{\rm fb}\in\mathcal{C}_{\rm feas}$ by measured $\Delta\varphi_\util$, its measured language change, and the violation of $\widehat{S}$
 \ELSE
-  \STATE {\bfseries return} $\widehat{S}$ and its measured $\Delta\varphi_\risk$ without a certificate
+  \IF{$|\mathcal{F}|\ge m+2$}
+    \STATE build $m$ windows from $\mathcal{F}\setminus\{\widehat{S}\}$; measure each $r=\Delta\varphi_\util-A_\util$
+    \STATE $q \leftarrow$ the largest $|r|$ among the $m$ draws
+    \STATE {\bfseries return} $\widehat{S}$, its measured $\Delta\varphi_\risk$, and every $S\in\mathcal{F}\setminus\{\widehat{S}\}$ with $A_\util(\widehat{S})-A_\util(S)>q+|r(\widehat{S})|$
+  \ELSE
+    \STATE {\bfseries return} $\widehat{S}$ and its measured $\Delta\varphi_\risk$ without a certificate
+  \ENDIF
 \ENDIF
 \end{algorithmic}
 \vspace{2pt}
@@ -521,15 +544,15 @@ Predicted and measured change agree over random graft sets of every size, at
 Pearson $0.980$ in the seeded stack; Figure~\ref{fig:verify}(a) shows the
 per-stack Pearson values, with a multi-stack median of $0.95$ over $48$ stacks.
 The seeded-stack remainder falls with the fine-tuning scale at a fitted log-log slope of
-$2.055$ (Figure~\ref{fig:verify}(b)), while the three-smallest-scale aggregate
-in Table~\ref{tab:verify-full} gives $2.045$.
+$2.055$ (Figure~\ref{fig:verify}(b)), while the aggregate over the three
+smallest scales in Table~\ref{tab:verify-full} gives $2.045$.
 
 \begin{table}[t]
 \centering
 \caption{Ranking and selection in the controlled stack, mean $\pm$ sd over $12$
 stacks with fresh experts and readouts per stack. Regret is the loss in readout
 value, in nats, from taking the highest-scoring window instead of the best one;
-\emph{Builds} counts merged models a method must construct before it can choose.
+\emph{Builds} is the number of merged models a method must construct before it can choose.
 Per-layer expert gaps span a $4\times$ range, so parameter statistics have
 variation to rank. Differences are paired against \textsc{Suture} on the same
 stacks, with bootstrap $95\%$ intervals and Holm-adjusted Wilcoxon signed-rank
@@ -613,7 +636,7 @@ neither it nor weight attribution separates from the full score. A
 readout-agnostic statistic can stand in here because the construction aligns the
 two behaviors, the truths anticorrelating at $-0.96$; under random perturbation
 they are unrelated ($-0.06$) and movement is no better than random
- (Appendix~\ref{app:verify}). Which regime real pairs fall into is untested. What the scores buy is builds
+(Appendix~\ref{app:verify}). Which regime real pairs fall into is untested. What the scores buy is builds
 (Table~\ref{tab:trained}; Figure~\ref{fig:verify}(d)): with none, \textsc{Suture} reaches regret $0.013$
 against $0.002$ for a full $78$-window sweep, a difference that is not
 significant (Holm-adjusted $p=0.95$), while random search and hill climbing with
@@ -682,7 +705,15 @@ the published $[13,22]$ and $[13,20]$ intervals therefore match the selected
 intervals' convention.
 Three limits matter: the answer readout is close to but not the task readout, and
 neither is free-generation accuracy; a decoding-cache mismatch prevented the
-latter (Appendix~\ref{app:notes}). Calibration and the certificate were not run.
+latter (Appendix~\ref{app:notes}). An isolated A100 follow-up fit the language
+scale on ten windows: $b=0.452$ (RMSE $0.747$) for French and $b=0.012$
+(RMSE $0.916$) for Chinese, leaving the selected windows $[13,15]$ and
+$[20,31]$. Parameter movement selected $[0,35]$ in both languages, while
+first-order weight attribution selected the same constrained windows; without
+the constraint it selected French $[22,32]$, gaining $+1.243$ answer nats but
+losing $-1.259$ language-readout units. The conformal certificate was not run.
+Algorithm~\ref{alg:suture} specifies a measured calibration-window fallback if a
+future choice violates the constraint.
 The Chinese window extends past layer 20, where
 \citet{lasbordes2026rethinking} saw traces revert to English. On $76$ held-out
 language probes, selected-minus-host was $(+1.070,+0.268)$ and
@@ -713,139 +744,100 @@ implementation checks (Appendix~\ref{app:protocol}).
 \label{sec:related}
 % ============================================================================
 
-Three literatures meet here: how bands are chosen, how merged models are
-searched for or predicted, and how first-order attribution is used inside one
-model.
+Three literatures meet here: layer swapping, model-merging search, and
+first-order attribution.
 
 \paragraph{Layer swapping and multilingual composition.}
-\citet{bandarkar2025layerswap} introduced layer swapping and read the band's
-shape from where each expert's parameters moved.
-\citet{bandarkar2025unreasonable} found that the parameters most important for
-math and for multilingual ability barely overlap, and that layer swapping was
-the most consistent modular method they compared, a result they call surprising
-and explain through task-vector linearity. The recipe has been carried to long
-chain-of-thought reasoners \citep{lasbordes2026rethinking} and to safety
-alignment with automatic module selection \citep{shin2026safetyswap}, while
-steerable merging weights a multilingual and a reasoning model per input
-\citep{li2026stmerge}. The lineage sits inside task arithmetic
-\citep{ilharco2023task, chronopoulou2024langtask} and composable sparse
-fine-tuning \citep{ansell2022sft}. None of these predicts what a band will do to
-a given behavior before it is built; Theorem~\ref{thm:superposition} does so to
-first order, and Section~\ref{sec:protocol} tests its reach only in part.
+\citet{bandarkar2025layerswap} introduced layer swapping and selected its band
+from expert parameter movement; later work found little overlap between
+math- and language-important parameters \citep{bandarkar2025unreasonable},
+extended the recipe to long reasoning and safety
+\citep{lasbordes2026rethinking, shin2026safetyswap}, and made merging
+input-steerable \citep{li2026stmerge}. This lineage includes task arithmetic and
+composable sparse fine-tuning \citep{ilharco2023task, chronopoulou2024langtask,
+ansell2022sft}, but these methods do not predict a band's behavioral effect
+before construction; Theorem~\ref{thm:superposition} does so to first order.
 
 \paragraph{How compositions are chosen.}
-Search evaluates candidates: evolutionary merging optimizes mixing weights and
-the layer data flow with a benchmark fitness for every candidate
-\citep{akiba2025evolutionary}, and cheaper evaluation or Bayesian search still
-queries one merge at a time \citep{merge3-2025, chen2025sipbmm}. Learned
-predictors pay that cost once, fitting regressors to $22{,}000$ evaluated merges
-\citep{akizuki2025surrogate}.
-Expert-intrinsic criteria need no evaluated merges but read the experts rather
-than the behavior \citep{yadav2023ties, yu2024dare, jin2023regmean}; closest in form is
-Sens-Merging \citep{liu2025sensmerging}. Behavior-referenced methods optimize a loss
-through the merged model \citep{yang2024adamerging, symerge2026, fu2026merit},
-and unlabeled proxies score one configuration at a time \citep{tap2026}. Ours
-differ in combining four properties: signed predictions of a composed model's
-change in a chosen readout, no evaluated merge or training, additivity across
-layers, and a linear language constraint.
+Evolutionary, Bayesian, and surrogate methods still evaluate individual merges
+\citep{akiba2025evolutionary, merge3-2025, chen2025sipbmm, akizuki2025surrogate};
+expert-intrinsic rules read weights rather than behavior
+\citep{yadav2023ties, yu2024dare, jin2023regmean, liu2025sensmerging}; and
+behavior-referenced or unlabeled proxies score one configuration at a time
+\citep{yang2024adamerging, symerge2026, fu2026merit, tap2026}. StatsMerging
+\citep{merugu2025statsmerging} and CAT Merging
+\citep{sun2025cat} likewise operate in weight space, while MergeBench
+\citep{he2025mergebench} benchmarks merged LLMs; none scores combinatorial layer
+grafts under a language constraint.
 
-\paragraph{Weight-space attribution, and where the output language is decided.}
-Attribution patching linearizes activation patches \citep{nanda2023attribution,
-syed2024attribution}; Weight Patching carries it into parameter space, screening
-transplanted components with a parameter-difference and anchor-gradient score
-\citep{sun2026weightpatching}. Our per-layer score belongs to that family and we
-do not claim it as new; a weight-attribution version of it selects as well here
-(Table~\ref{tab:verify}). What differs is what surrounds it: two independently
-fine-tuned experts, exact differencing on the host trajectory,
-Theorem~\ref{thm:superposition} making selection an exact constrained program
-over all $2^L$ sets, and Proposition~\ref{prop:regret} turning the remainder into
-a per-competitor certificate. Separately, interpretability and behavioral studies
-place language-agnostic computation mid-stack and the commitment to an output
-language late \citep{wendler2024llamas, tang2024langneurons, schut2025english},
-and language confusion \citep{marchisio2024confusion} has been traced to switch
-points in generation and to final-layer failures \citep{nie2025confusion}. A
-late-layer swap overriding the host's language
-\citep{lasbordes2026rethinking} fits that picture, and is why the program keeps a
-language readout.
+\paragraph{Attribution and output language.}
+Attribution patching and Weight Patching linearize activation or parameter
+changes \citep{nanda2023attribution, syed2024attribution, sun2026weightpatching};
+we do not claim that family as new (Table~\ref{tab:verify}). Our distinction is
+exact host-path differencing for two independently tuned experts, a constrained
+program over all $2^L$ sets, and a per-competitor remainder certificate.
+Interpretability studies place language-agnostic computation mid-stack and
+language commitment late \citep{wendler2024llamas, tang2024langneurons,
+schut2025english}; work on confusion and late-layer failures
+\citep{marchisio2024confusion, nie2025confusion} motivates retaining a language
+readout.
 
 \section{Implications and limitations}
 \label{sec:limitations}
 % ============================================================================
 
 \paragraph{What a practitioner gets.}
-A fixed budget of twenty-one built models, whatever the depth of the stack, spent
-on calibrating and certifying one choice rather than on search. The cheaper
-alternative is to reuse a published band, which costs one build and no search,
-but published bands are tied to their model and language: the window that worked
-for four languages sent most Chinese traces back to English
-\citep{lasbordes2026rethinking}, and nothing about that failure is visible until
-the model is built and generated from. The same scores
-rank arbitrary subsets of layers, not only contiguous windows, at no extra cost;
-whether that pays off on language models is untested.
+A fixed budget of twenty-one builds calibrates and certifies one choice rather
+than searching; a published band costs one build but is tied to its model and
+language, and can send Chinese traces back to English
+\citep{lasbordes2026rethinking}. The same scores rank arbitrary subsets at no
+extra cost, but that extension is untested on language models.
 
 \paragraph{Why swaps compose, and where they should stop.}
-The theorem predicts a stopping boundary: when the language readout tracks
-output language, its scores should flag when a band costs the host its language.
-The held-out proxy supports only the host-relative teacher-forced gain, not the
-Chinese selected-versus-published comparison; regime diagnostics of
-Appendix~\ref{app:negative} suggest that the free-generation claim can fail.
+When the language readout tracks output language, the theorem predicts a stopping
+boundary. Our held-out proxy supports only a host-relative teacher-forced gain,
+not the Chinese selected-versus-published comparison; Appendix~\ref{app:negative}
+shows why the free-generation claim may fail.
 
 \paragraph{Limitations.}
 At 8B the evidence covers two languages, one donor, and a teacher-forced
-functional: selected intervals lose to the published answer readout, and
-generated-text language identification remains unmeasured. Calibration,
-certificate, and baselines are only controlled-stack results; the 1.5B study is
-inconclusive (Appendix~\ref{app:negative}), local studies use one seed, and
-probes are machine-translated. Controlled stacks support additive composition
-and constant-cost selection; language-model evidence is partial, and the
-free-generation boundary remains untested.
+functional; selected intervals lose to published references, and generated-text
+language identification is unmeasured. The certificate remains controlled-stack
+only; an isolated follow-up ran 8B calibration and cheaper baselines. The 1.5B
+study is inconclusive; local studies use one seed and machine-translated probes.
+Fixed-attention stacks achieve only $0.64\pm0.48$ on the width-$6$ diagnostic; a
+from-scratch transformer (Appendix~\ref{app:negative}) also failed to reproduce
+transfer.
 
 \subsection*{Reproducibility statement}
-Assumptions are stated in each result and complete proofs are in
-Appendix~\ref{app:proof-superposition}. The supplementary code contains
-NumPy/SciPy harnesses that recompute the seeded controlled-stack checks in
+Assumptions and proofs are in Appendix~\ref{app:proof-superposition}; the
+supplementary NumPy/SciPy harnesses recompute the seeded checks in
 Section~\ref{sec:verify}, Figure~\ref{fig:verify}, and
-Tables~\ref{tab:verify} and~\ref{tab:verify-full}; each runs in CPU minutes.
-The multi-stack values are frozen study aggregates, and the supplement's
-readme identifies which retained script produces each seeded check.
-Appendix~\ref{app:protocol} lists checkpoints and revisions, dataset files and
-hashes, licenses, hardware, and software versions for the language-model runs.
-Per-record language-model outputs and run manifests remain in the authors'
-archive rather than the anonymized repository, so the reported language-model
-numbers cannot be recomputed from the released material alone. Model weights
-are not redistributed. Code and aggregate evidence are available at
+Tables~\ref{tab:verify}--\ref{tab:verify-full} in CPU minutes. Multi-stack values
+are frozen aggregates, and Appendix~\ref{app:protocol} lists checkpoints,
+revisions, data hashes, licenses, hardware, and software. Per-record outputs
+and manifests remain in the authors' archive, so the language-model numbers are
+not recomputable from this anonymized release; weights are not redistributed.
+Code and aggregate evidence are available at
 \url{https://anonymous.4open.science/r/grafts-add-up-8541/}.
 
 \subsection*{Ethics statement}
-This work composes existing open models and introduces no new data collection or
-human subjects. Layer grafting can move behavior across languages without
-target-language supervision, and the same mechanism that transfers reasoning can
-transfer unsafe behavior or weaken safety tuning that was validated only in the
-donor's language. Nothing here is a safety guarantee. Machine-translated probes can carry
-translation artifacts, which may fall unevenly on lower-resource languages. The
-intended benefit is better non-English capability without in-language
-annotation.
+This work uses existing open models and no human subjects or new data collection.
+Layer grafting can transfer unsafe behavior or weaken donor-language safety
+tuning; it is not a safety guarantee. Machine-translated probes may carry
+uneven artifacts. The intended benefit is non-English capability without
+in-language annotation.
 
 \subsection*{AI use statement}
 \label{sec:ai-use}
-In this work, we used generative AI tools to help develop the theoretical
-framework, formulate the mathematical claims, write and check the proofs,
-propose and refine hypotheses, design the experimental protocols, implement the
-methods and the analysis code, and interpret results. Generative AI was also
-part of the method: the probes were machine-translated with the pinned Qwen
-models listed in Appendix~\ref{app:protocol}. The controlled-stack data are
-produced by NumPy code written with AI assistance; we did not use generative AI
-to create evaluation labels or to supply any reported number, and qualitative or
-thematic analysis was not applicable. Additionally, we used generative AI tools
-to prepare and edit the manuscript, create figures, search and summarize related
-literature, and check and format references against primary sources.
-The authors re-derived Theorem 1, Proposition 2, and Lemma 3 line by line,
-checked the optimizer arguments and analysis scripts against the released
-artifacts, and checked the rendered bibliography against primary sources.
-No reported run used a hosted model API: the 1.5B and 1.7B runs used a local GPU,
-and the 8B run used a rented A100 with downloaded open-weight checkpoints. We
-take full responsibility for the final content of this work, including text,
-claims, and artifacts produced with the aid of generative AI.
+Generative AI assisted the theory, proofs, hypotheses, protocols, code,
+manuscript, figures, literature search, and reference checks.
+It also translated probes with the pinned Qwen models in
+Appendix~\ref{app:protocol}; NumPy controlled-stack data were AI-assisted, but
+AI supplied neither labels nor reported numbers. The authors re-derived and
+checked the theorems, optimizers, scripts, artifacts, and bibliography. No run
+used a hosted API: the 1.5B/1.7B runs used a local GPU and the 8B run a rented
+A100 with open weights. We take responsibility for the final content.
 
 \bibliographystyle{iclr2027_conference}
 \bibliography{suture}
@@ -912,7 +904,7 @@ By definition of the two trajectories,
 which is exact, since it only adds and subtracts
 $B_\ell(x^{\host}_\ell;\theta^{a(\ell)}_\ell)$; it is verified numerically to
 relative error $1.9\times10^{-15}$ (Table~\ref{tab:verify-full}), and
-The retained \artifact{verify/verify\_theory.py} harness checks the recursion
+the retained \artifact{verify/verify\_theory.py} harness checks the recursion
 and the second-order decay of the readout remainder numerically; this is a
 numerical check, not a proof of the bound. If
 $\|\Delta_\ell\|\le\rho$ the segment from $x^{\host}_\ell$ to
@@ -931,7 +923,7 @@ $\|\Delta_\ell\|\le\rho$ true at every step.
 Because the Jacobian of $B_\ell(\cdot\,;\theta^{a(\ell)}_\ell)$ is
 $\kappa$-Lipschitz on $\mathcal{B}_\ell$, the propagation term equals
 $J^{a(\ell)}_\ell\Delta_\ell+e_\ell$ with
-$\|e_\ell\|=\big\|\int_0^1(J^{a(\ell)}(x^{\host}_\ell+u\Delta_\ell)-J^{a(\ell)}_\ell)\Delta_\ell\,du\big\|\le\tfrac{\kappa}{2}\|\Delta_\ell\|^2$.
+$\|e_\ell\|=\big\|\int_0^1(J^{a(\ell)}_\ell(x^{\host}_\ell+u\Delta_\ell)-J^{a(\ell)}_\ell)\Delta_\ell\,du\big\|\le\tfrac{\kappa}{2}\|\Delta_\ell\|^2$.
 Writing $J^{a(\ell)}_\ell=J^{\host}_\ell+\mathbf{1}[\ell\in S](J^{\donor}_\ell-J^{\host}_\ell)$,
 \begin{equation}
 \Delta_{\ell+1} = \left(I + J^{\host}_\ell\right)\Delta_\ell + \mathbf{1}[\ell\in S]\, v_\ell + q_\ell,
@@ -1266,11 +1258,10 @@ obtained.
 The protocol file
 \artifact{b3\_lighton\_qwen3\_8b\_v1.json}
 is loaded at runtime from \artifact{configs/}, which is the canonical public
-copy.
-pins the English donor at revision
+copy; it pins the English donor at revision
 \artifact{3e1efbca}\ldots, the French host at
 \artifact{a53d601e}\ldots, and the Chinese host at
-\artifact{b100a627fcbe1af4391de73cb962e7564aff877a}. It uses
+\artifact{b100a627}\ldots. It uses
 \artifact{lightonai/mgsm-rev2}@\artifact{1463c6dc}\ldots,
 the test split, $250$ records per language, and all $666$ zero-based
 contiguous intervals for selection.
@@ -1288,14 +1279,18 @@ Selection builds nothing; measurement compares host, selected interval and
 published reference by mean teacher-forced answer log-probability per target
 token. The isolated language-fidelity follow-up compares the same candidates
 by target-language-minus-English first-token log-probability on $76$ held-out
-records per language. It used one A100-SXM4-80GB, BF16, CUDA 12.4, Python
-3.11.11, \artifact{torch==2.6.0+cu124} and
+records per language. It used one A100 PCIe 80GB, BF16, CUDA 12.4, Python
+3.10.13, \artifact{torch==2.6.0+cu124} and
 \artifact{transformers==5.14.1}; no generated-text language-ID rate was run.
 The language-readout means (host, selected, published) were
 $(2.644,3.714,3.584)$ in French and $(7.737,8.004,8.319)$ in Chinese.
 Per-record language-fidelity inputs and measurements remain in the authors'
 archive; the public release contains the path-free aggregate
 \artifact{results/b3/lighton\_qwen3\_8b/posthoc\_language\_fidelity.json} only.
+Calibration slopes, RMSE, and the 8B movement and weight-attribution window
+choices are in the pair-level
+\artifact{results/b3/lighton\_qwen3\_8b/llm\_feedback\_followup/*/summary.json}
+files; per-record follow-up measurements are not released.
 
 \paragraph{Readouts and probes, per study.}
 The readouts are those of \eqref{eq:readouts}, called \artifact{utility} and
@@ -1344,10 +1339,13 @@ bfloat16 under Python 3.11.9, \artifact{torch==2.6.0+cu124},
 \artifact{numpy==2.4.2}. Total GPU-hours were not logged.
 
 \paragraph{8B compute.}
-The two pairs ran sequentially on one rented A100-SXM4-80GB with both BF16
-checkpoints resident: preflight checks, all $666$ intervals scored with no
+The two canonical pairs ran sequentially on one rented A100 PCIe 80GB with both
+BF16 checkpoints resident: preflight checks, all $666$ intervals scored with no
 grafted model built, then three candidates measured on $250$ held-out records.
-Wall time was not recorded.
+The isolated follow-up reused those frozen score and measurement trees, fit the
+language scale on ten windows per language, scored $500$ utility and $500$ risk
+probes for each calibration and attribution pass, and measured only new
+candidate windows. Wall time was not recorded.
 
 \paragraph{Earlier contiguous sweeps.}
 Earlier Spanish, Chinese and Swahili sweeps exist but are first-token
@@ -1365,7 +1363,7 @@ solved.
 \label{app:notes}
 % ============================================================================
 
-\paragraph{Cost, memory, and three notes.}
+\paragraph{Cost and memory.}
 Line 4 of Algorithm~\ref{alg:suture} needs the donor's unit $\ell$ only while
 that unit is scored, so peak memory is the host plus one unit, and a shared base
 lets the donor be stored as a task vector. Scoring costs one forward, one streamed-donor and one
@@ -1375,15 +1373,19 @@ Spanish run timed neither its selection nor the sweep before a resume. On Qwen3-
 $161$\,s for $406$ two-layer candidate forwards ($42\times$) and $806$\,s for a
 full-forward lower bound ($209\times$), with streamed donor evaluation peaking
 $0.81$\,GiB above the host forward; these are local timings, not 8B FLOPs.
-Ranking with the adjoint alone, the within-model gradient-layer selector, raises
-controlled-stack regret from $0.006$ to $0.12$ (Table~\ref{tab:verify}) yet
+
+\paragraph{Three implementation notes.}
+\begin{enumerate}
+\item Ranking with the adjoint alone, the within-model gradient-layer selector,
+raises controlled-stack regret from $0.006$ to $0.12$ (Table~\ref{tab:verify}) yet
 ranked teacher-forced outcomes above the full score on the 24-window Coder
-comparison, in an archived per-window diagnostic. An eight-probe run reproduces the
-$200$-probe window scores at
-Spearman $0.93$ while the unconstrained argmax moves. Off-path
-evaluation applies the donor layer to the host's input with the host's mask,
-positions and the donor's own normalization weights, which makes each injection
-independent of the graft.
+comparison, in an archived per-window diagnostic.
+\item An eight-probe run reproduces the $200$-probe window scores at Spearman
+$0.93$ while the unconstrained argmax moves.
+\item Off-path evaluation applies the donor layer to the host's input with the
+host's mask, positions and the donor's own normalization weights, which makes
+each injection independent of the graft.
+\end{enumerate}
 
 The supplement specifies the seven experiments that remain outside the reported
 scope. All paths exposed in this manuscript are repository-relative.

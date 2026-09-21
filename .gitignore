@@ -77,9 +77,11 @@ results/b3_expanded/
 results/tier_a/verification_release/*.zip
 verify/toy_transfer_results.json
 
-# Author-only audit and raw language-fidelity follow-up
+# Author-only audit, LLM-feedback notes, and raw language-fidelity follow-up
 paper/REDFLAGS.txt
+paper/llm_feedback
 results/b3/lighton_qwen3_8b/*/fidelity/
+results/b3/lighton_qwen3_8b/llm_feedback_followup/*/private/
 suture/contracts/
 
 # Local LaTeX build directory
