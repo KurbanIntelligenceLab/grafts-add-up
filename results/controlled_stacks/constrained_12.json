@@ -1,0 +1,508 @@
+{
+ "summary": {
+  "n_stacks": 12,
+  "spearman_B": {
+   "mean": 0.9185666654021083,
+   "sd": 0.06167793773982525,
+   "min": 0.81972457921825,
+   "max": 0.99076872494594
+  },
+  "0.25": {
+   "selected_truly_feasible": 9,
+   "regret_vs_best_feasible": {
+    "mean": 0.011790234844531603,
+    "sd": 0.042154338370741166,
+    "min": -0.0749311558535175,
+    "max": 0.11021720081000508
+   },
+   "feasibility_agreement": {
+    "mean": 0.907051282051282,
+    "sd": 0.05631614314919202,
+    "min": 0.8076923076923077,
+    "max": 0.9871794871794872
+   },
+   "unconstrained_violations": 10,
+   "random_feasible_violation_rate": {
+    "mean": 0.2504166666666667,
+    "sd": 0.25440177898653765,
+    "min": 0.0,
+    "max": 0.73
+   },
+   "random_feasible_regret": {
+    "mean": 0.18926190445044788,
+    "sd": 0.11079792931841942,
+    "min": 0.07249916048297762,
+    "max": 0.40465945510278006
+   },
+   "paired_regret_vs_random": {
+    "mean_diff": 0.1774716696059163,
+    "ci95": [
+     0.12603135974770874,
+     0.2371452004435029
+    ],
+    "wilcoxon_p": 0.00048828125,
+    "rank_biserial": 1.0,
+    "n_worse": 12,
+    "n_better": 0,
+    "n_ties": 0,
+    "holm_p": 0.00048828125
+   }
+  },
+  "0.5": {
+   "selected_truly_feasible": 10,
+   "regret_vs_best_feasible": {
+    "mean": 0.021716888308098887,
+    "sd": 0.07811630659499359,
+    "min": -0.04371748709907086,
+    "max": 0.25810557626917596
+   },
+   "feasibility_agreement": {
+    "mean": 0.8814102564102565,
+    "sd": 0.07357211682692594,
+    "min": 0.7692307692307693,
+    "max": 0.9871794871794872
+   },
+   "unconstrained_violations": 6,
+   "random_feasible_violation_rate": {
+    "mean": 0.14291666666666666,
+    "sd": 0.16057366382801233,
+    "min": 0.0,
+    "max": 0.49
+   },
+   "random_feasible_regret": {
+    "mean": 0.23803574507425096,
+    "sd": 0.12783050707789548,
+    "min": 0.07216531237835036,
+    "max": 0.5420601138838376
+   },
+   "paired_regret_vs_random": {
+    "mean_diff": 0.21631885676615212,
+    "ci95": [
+     0.1692599448833751,
+     0.26517561620535146
+    ],
+    "wilcoxon_p": 0.00048828125,
+    "rank_biserial": 1.0,
+    "n_worse": 12,
+    "n_better": 0,
+    "n_ties": 0,
+    "holm_p": 0.00048828125
+   }
+  },
+  "0.75": {
+   "selected_truly_feasible": 9,
+   "regret_vs_best_feasible": {
+    "mean": 0.008221586383061289,
+    "sd": 0.017575974096826638,
+    "min": -0.027037038029309457,
+    "max": 0.039871835330101746
+   },
+   "feasibility_agreement": {
+    "mean": 0.8931623931623932,
+    "sd": 0.07092659553128766,
+    "min": 0.7692307692307693,
+    "max": 1.0
+   },
+   "unconstrained_violations": 4,
+   "random_feasible_violation_rate": {
+    "mean": 0.08416666666666667,
+    "sd": 0.09270758852271464,
+    "min": 0.0,
+    "max": 0.265
+   },
+   "random_feasible_regret": {
+    "mean": 0.26576745237087934,
+    "sd": 0.12672136580352417,
+    "min": 0.08448980736041407,
+    "max": 0.5192348686744266
+   },
+   "paired_regret_vs_random": {
+    "mean_diff": 0.2575458659878181,
+    "ci95": [
+     0.19242922263789694,
+     0.32891003759547427
+    ],
+    "wilcoxon_p": 0.00048828125,
+    "rank_biserial": 1.0,
+    "n_worse": 12,
+    "n_better": 0,
+    "n_ties": 0,
+    "holm_p": 0.00048828125
+   }
+  }
+ },
+ "stacks": [
+  {
+   "seed": 1000,
+   "spearman_B": 0.9160586249193843,
+   "0.25": {
+    "threshold": 0.10374034708732631,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": 0.005245365491046261,
+    "feasibility_agreement": 0.8461538461538461,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.555,
+    "random_feasible_regret": 0.09453414097328176
+   },
+   "0.5": {
+    "threshold": 0.044237137857584444,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.005245365491046261,
+    "feasibility_agreement": 0.8205128205128205,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.325,
+    "random_feasible_regret": 0.10146682054218369
+   },
+   "0.75": {
+    "threshold": -0.037937042084878005,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": 0.02825364705101574,
+    "feasibility_agreement": 0.9487179487179487,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.045,
+    "random_feasible_regret": 0.13941300704046125
+   }
+  },
+  {
+   "seed": 1001,
+   "spearman_B": 0.8552080830561842,
+   "0.25": {
+    "threshold": 0.0920582611945596,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.8461538461538461,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.605,
+    "random_feasible_regret": 0.40465945510278006
+   },
+   "0.5": {
+    "threshold": 0.04621903248452157,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": -0.04371748709907086,
+    "feasibility_agreement": 0.8205128205128205,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.25,
+    "random_feasible_regret": 0.3204079009162237
+   },
+   "0.75": {
+    "threshold": 0.0014296225140518273,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.8974358974358975,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.095,
+    "random_feasible_regret": 0.33706453441383033
+   }
+  },
+  {
+   "seed": 1002,
+   "spearman_B": 0.9208386550158703,
+   "0.25": {
+    "threshold": 0.025363969801480923,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.9615384615384616,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.145,
+    "random_feasible_regret": 0.07249916048297762
+   },
+   "0.5": {
+    "threshold": 0.0032556701126699172,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": -0.04182999142475019,
+    "feasibility_agreement": 0.8461538461538461,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.26,
+    "random_feasible_regret": 0.07216531237835036
+   },
+   "0.75": {
+    "threshold": -0.014924173125998468,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": -0.027037038029309457,
+    "feasibility_agreement": 0.8076923076923077,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.265,
+    "random_feasible_regret": 0.08448980736041407
+   }
+  },
+  {
+   "seed": 1003,
+   "spearman_B": 0.81972457921825,
+   "0.25": {
+    "threshold": -0.003901239220299755,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.11021720081000508,
+    "feasibility_agreement": 0.8846153846153846,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.32294309749803884
+   },
+   "0.5": {
+    "threshold": -0.065856310935746,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.7948717948717948,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.30676419084584294
+   },
+   "0.75": {
+    "threshold": -0.11747210768490611,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.015915194109651587,
+    "feasibility_agreement": 0.7692307692307693,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.31547213406928876
+   }
+  },
+  {
+   "seed": 1004,
+   "spearman_B": 0.9521238255415471,
+   "0.25": {
+    "threshold": 0.09493481456614317,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.039871835330101746,
+    "feasibility_agreement": 0.9743589743589743,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.12499983276899393
+   },
+   "0.5": {
+    "threshold": 0.0173858938055658,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.039871835330101746,
+    "feasibility_agreement": 0.8846153846153846,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.17147433884440505
+   },
+   "0.75": {
+    "threshold": -0.043211244450660685,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.039871835330101746,
+    "feasibility_agreement": 0.9230769230769231,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.02,
+    "random_feasible_regret": 0.20032199057389513
+   }
+  },
+  {
+   "seed": 1005,
+   "spearman_B": 0.99076872494594,
+   "0.25": {
+    "threshold": 0.3877309105090767,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0024183941200570658,
+    "feasibility_agreement": 0.9358974358974359,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.18,
+    "random_feasible_regret": 0.33713590085318124
+   },
+   "0.5": {
+    "threshold": 0.22706390467186416,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.25810557626917596,
+    "feasibility_agreement": 0.9615384615384616,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.065,
+    "random_feasible_regret": 0.5420601138838376
+   },
+   "0.75": {
+    "threshold": 0.03007686568099055,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 1.0,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.5192348686744266
+   }
+  },
+  {
+   "seed": 1006,
+   "spearman_B": 0.9825743876376788,
+   "0.25": {
+    "threshold": 0.1653690514403042,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.00039066408480126213,
+    "feasibility_agreement": 0.9230769230769231,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.15,
+    "random_feasible_regret": 0.16374280101283817
+   },
+   "0.5": {
+    "threshold": 0.09632779851089093,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.00039066408480126213,
+    "feasibility_agreement": 0.9615384615384616,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.1664250293553843
+   },
+   "0.75": {
+    "threshold": 0.0052584128888790715,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.00039066408480126213,
+    "feasibility_agreement": 0.9871794871794872,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.19014486629973676
+   }
+  },
+  {
+   "seed": 1007,
+   "spearman_B": 0.9832572490800338,
+   "0.25": {
+    "threshold": -0.008737204069201372,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0010980066331995886,
+    "feasibility_agreement": 0.9871794871794872,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.065,
+    "random_feasible_regret": 0.08891223023224239
+   },
+   "0.5": {
+    "threshold": -0.14303220766122343,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.02013601320619074,
+    "feasibility_agreement": 0.9871794871794872,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.02,
+    "random_feasible_regret": 0.22606759783941385
+   },
+   "0.75": {
+    "threshold": -0.2595490757672987,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": 0.018864050210782857,
+    "feasibility_agreement": 0.8717948717948718,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.135,
+    "random_feasible_regret": 0.28765287812416956
+   }
+  },
+  {
+   "seed": 1008,
+   "spearman_B": 0.8757697998204327,
+   "0.25": {
+    "threshold": 0.023282876666558754,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.03842609806023489,
+    "feasibility_agreement": 0.8717948717948718,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.0,
+    "random_feasible_regret": 0.19227815896464193
+   },
+   "0.5": {
+    "threshold": -0.01950177125993028,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.8974358974358975,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.025,
+    "random_feasible_regret": 0.22181005783419924
+   },
+   "0.75": {
+    "threshold": -0.06628284483864152,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.8846153846153846,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.02,
+    "random_feasible_regret": 0.29303092835605826
+   }
+  },
+  {
+   "seed": 1009,
+   "spearman_B": 0.8236952920497224,
+   "0.25": {
+    "threshold": 0.0610564678459987,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": -0.0749311558535175,
+    "feasibility_agreement": 0.8076923076923077,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.73,
+    "random_feasible_regret": 0.08289524121720813
+   },
+   "0.5": {
+    "threshold": 0.029473862692221207,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.7692307692307693,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.49,
+    "random_feasible_regret": 0.18987555622197683
+   },
+   "0.75": {
+    "threshold": -0.0016462475937544093,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.8076923076923077,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.245,
+    "random_feasible_regret": 0.19785675490473723
+   }
+  },
+  {
+   "seed": 1010,
+   "spearman_B": 0.936519177025506,
+   "0.25": {
+    "threshold": 0.028473091294644634,
+    "selected_truly_feasible": false,
+    "regret_vs_best_feasible": 0.018746409458450852,
+    "feasibility_agreement": 0.9102564102564102,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.365,
+    "random_feasible_regret": 0.2000392510789068
+   },
+   "0.5": {
+    "threshold": -0.16453217394971822,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.021923455543692683,
+    "feasibility_agreement": 0.8717948717948718,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.205,
+    "random_feasible_regret": 0.3568389156718307
+   },
+   "0.75": {
+    "threshold": -0.3059024574167555,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.021923455543692683,
+    "feasibility_agreement": 0.9102564102564102,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.125,
+    "random_feasible_regret": 0.4461572893196968
+   }
+  },
+  {
+   "seed": 1011,
+   "spearman_B": 0.966261586514751,
+   "0.25": {
+    "threshold": -0.05456249902125354,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0,
+    "feasibility_agreement": 0.9358974358974359,
+    "unconstrained_violates": true,
+    "random_feasible_violation_rate": 0.21,
+    "random_feasible_regret": 0.1865035832202837
+   },
+   "0.5": {
+    "threshold": -0.13430877525826976,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0004772282959990548,
+    "feasibility_agreement": 0.9615384615384616,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.075,
+    "random_feasible_regret": 0.1810731065573638
+   },
+   "0.75": {
+    "threshold": -0.22924250357475753,
+    "selected_truly_feasible": true,
+    "regret_vs_best_feasible": 0.0004772282959990548,
+    "feasibility_agreement": 0.9102564102564102,
+    "unconstrained_violates": false,
+    "random_feasible_violation_rate": 0.06,
+    "random_feasible_regret": 0.1783703693138379
+   }
+  }
+ ]
+}

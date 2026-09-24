@@ -1,0 +1,76 @@
+{
+ "summary": {
+  "n_stacks": 48,
+  "by_m": {
+   "5": {
+    "certified": {
+     "mean": 63.31697916666667,
+     "sd": 10.850738612940837,
+     "min": 38.49,
+     "max": 75.8
+    },
+    "false_per_draw": {
+     "mean": 0.12333333333333334,
+     "sd": 0.4397440422507569,
+     "min": 0.0,
+     "max": 2.37
+    },
+    "max_false_in_a_draw": 4,
+    "false_share_of_certified": 0.001947871407583866,
+    "bound_expected_unbuilt_exceedances": 12.0
+   },
+   "10": {
+    "certified": {
+     "mean": 60.54083333333333,
+     "sd": 13.068464003793244,
+     "min": 26.86,
+     "max": 75.545
+    },
+    "false_per_draw": {
+     "mean": 0.09145833333333335,
+     "sd": 0.3529675989188311,
+     "min": 0.0,
+     "max": 1.82
+    },
+    "max_false_in_a_draw": 4,
+    "false_share_of_certified": 0.0015106883783672178,
+    "bound_expected_unbuilt_exceedances": 6.090909090909091
+   },
+   "20": {
+    "certified": {
+     "mean": 57.97552083333333,
+     "sd": 15.003630349323167,
+     "min": 18.55,
+     "max": 75.34
+    },
+    "false_per_draw": {
+     "mean": 0.05708333333333334,
+     "sd": 0.22378711705293772,
+     "min": 0.0,
+     "max": 1.08
+    },
+    "max_false_in_a_draw": 3,
+    "false_share_of_certified": 0.0009846109618822602,
+    "bound_expected_unbuilt_exceedances": 2.7142857142857144
+   },
+   "40": {
+    "certified": {
+     "mean": 55.81020833333334,
+     "sd": 16.32113021346976,
+     "min": 14.605,
+     "max": 75.065
+    },
+    "false_per_draw": {
+     "mean": 0.022291666666666668,
+     "sd": 0.09249472862112217,
+     "min": 0.0,
+     "max": 0.45
+    },
+    "max_false_in_a_draw": 3,
+    "false_share_of_certified": 0.0003994191624142835,
+    "bound_expected_unbuilt_exceedances": 0.9024390243902439
+   }
+  }
+ },
+ "stacks": []
+}

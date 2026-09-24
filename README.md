@@ -1,7 +1,7 @@
 # SUTURE: Grafts Add Up
 
 Reproducibility repository for **“Grafts Add Up: Scoring Every Layer Swap in One Forward–Backward Pass,”**
-submitted to ICLR 2027. The package contains the manuscript,
+prepared for ICLR 2027. The package contains the manuscript,
 the theory and scoring implementation, frozen experiment contracts, curated
 JSON/JSONL evidence, and offline checks needed to audit the reported results.
 
@@ -97,14 +97,14 @@ python verify/corrections_check.py
 python verify/toy_transfer.py
 ```
 
-The paper's controlled-stack figures can be regenerated deterministically:
+The seeded controlled-stack figure panels can be regenerated deterministically:
 
 ```bash
 python verify/make_figdata.py
 ```
 
-This writes the PGFPlots inputs under `paper/figs/`. It does not write the
-legacy root-level figure directory.
+This writes their PGFPlots inputs under `paper/figs/`. The multi-stack plot
+tables are audited against the frozen stack records below.
 
 The combined CPU entry point is:
 
@@ -142,9 +142,11 @@ The public result tree is intentionally curated:
 
 - `results/b3/lighton_qwen3_8b/` contains the tracked FR/ZH B3 preflight,
   selection, answer-measurement evidence, and post-hoc statistics. The
-  language-fidelity follow-up is represented by the path-free aggregate
-  summary; its per-record probes, measurements, and run manifests remain
-  author-only.
+  language-fidelity follow-up includes path-free per-record measurements and
+  its aggregate summary and translated probe inputs. Original run manifests
+  remain author-only.
+- `results/controlled_stacks/` contains 18 recovered JSON outputs for the
+  controlled studies.
 - `results/tier_a/` contains the canonical Spanish E1 evidence, the
   language-panel probe data, readiness and regime diagnostics, final plumbing
   pilots, and release attestation.
@@ -154,11 +156,35 @@ The public result tree is intentionally curated:
   cost diagnostics, score-variant comparisons, and the powered Spanish
   ranking.
 
-These artifacts reproduce the retained analyses without new API calls or
-retraining. The language-model aggregate results whose per-record inputs remain
-private cannot be recomputed from this checkout alone. The code also supports
-optional reruns when the exact public checkpoints and required hardware are
+The released B3 answer and language-fidelity records support an independent
+check of their reported means and paired intervals with
+`python verify/audit_b3_results.py`. The controlled-stack seeded checks can
+also be regenerated. Run `python verify/audit_controlled_results.py` to audit
+the recovered 12- and 48-stack results against their summaries, paired tests,
+confidence intervals, and figure tables. The original multi-stack generator
+and per-candidate window scores are still absent.
+The code supports optional
+model reruns when the exact public checkpoints and required hardware are
 available.
+
+The controlled files preserve stack seeds and per-stack outcomes. In particular,
+`table1_12stacks.json`, `robust48.json`, and `trained_48.json` support the main
+controlled tables and plots; the other files support appendix analyses. The
+audit recomputes means, sample standard deviations, paired regret differences,
+Wilcoxon tests, and bootstrap intervals from these rows. Its bootstrap seed is
+fixed, so its bounds can differ slightly from those stored with the experiments.
+
+The language-fidelity release contains 76 translated probes per language and
+228 measurement rows per language: host, selected window, and published window
+for each probe. The `*_measurements.jsonl` files are byte-for-byte copies of
+the retained measurement outputs; the `*_probes.jsonl` headers replace local
+paths with repository-relative paths. `verify/audit_b3_results.py` checks their
+record hashes and recomputes paired intervals with 20,000 draws and seed
+20260918. The probes derive from
+[`CohereLabsCommunity/multilingual-reward-bench`](https://huggingface.co/datasets/CohereLabsCommunity/multilingual-reward-bench)
+at revision `04120fd1f0ef4faed0d6fd4fb632a14476fb0498` (ODC-BY) and were
+translated with `Qwen/Qwen3-1.7B` at revision
+`70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`.
 
 ### Tier-A contract-v2 panel
 
@@ -214,18 +240,23 @@ path is embedded in the released code.
 
 ## Release and traceability
 
-Regenerate the file-level inventory after changing the release tree:
-
-```bash
-python scripts/generate_submission_manifest.py
-```
-
 To regenerate the clean-room paper bundle and release attestation:
 
 ```bash
 python scripts/write_release_bundle.py
 python -m suture.tier_a_release_attestation
 ```
+
+After all release files are final, stage the intended changes and regenerate
+the file-level inventory:
+
+```bash
+python scripts/generate_submission_manifest.py
+python verify/audit_paper_release.py
+```
+
+The paper audit checks manuscript file references, TeX inputs, plot data, and
+bibliography files against the staged public inventory.
 
 Public run manifests retain portable commands, model pins, and input/output
 hashes as provenance records without recording local workstation paths.
@@ -245,7 +276,5 @@ workflow; the canonical local pipeline does not require external API calls.
 ## Paper and project documentation
 
 - [`paper/main.tex`](paper/main.tex) — anonymous ICLR manuscript.
-- [`docs/PROJECT_EXPLAINER.md`](docs/PROJECT_EXPLAINER.md) — method and
-  experiment overview.
 - [`docs/FILES_RATIONALE.md`](docs/FILES_RATIONALE.md) — public-file selection
   and traceability policy.

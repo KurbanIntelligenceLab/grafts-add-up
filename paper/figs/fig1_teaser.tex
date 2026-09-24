@@ -66,8 +66,8 @@
   xtick={0,4,8}, ytick={-0.2,0,0.2},
   yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
   tick label style={font=\footnotesize}, label style={font=\footnotesize},
-  xlabel={layer $\ell$}, ylabel={score (nats)},
-  ylabel style={yshift=-3pt}, xlabel style={yshift=2pt},
+  xlabel={layer $\ell$},
+  xlabel style={yshift=2pt},
   tick align=outside, tick pos=left,
   axis line style={black!55, line width=0.5pt}, tick style={black!55},
   grid=major, grid style={draw=black!8, line width=0.3pt},
@@ -80,9 +80,6 @@
 \addplot[draw=oiOrange!80!black, fill=oiOrange!55, line width=0.3pt, bar shift=0.5mm]
   table[x=layer, y=risk] {figs/fig_profile.dat};
 \draw[black!45, line width=0.4pt] (axis cs:-0.7,0) -- (axis cs:11.7,0);
-\node[keybox, anchor=north west] at (rel axis cs:0.02,0.99)
-  {\textcolor{oiBlue!85!black}{$\blacksquare$}~task\\[-1.5pt]
-   \textcolor{oiOrange!85!black}{$\blacksquare$}~language};
 \end{axis}
 % ---------------- (c) every window is a subset sum ----------------
 \begin{axis}[
@@ -93,7 +90,7 @@
   yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
   xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
   tick label style={font=\footnotesize}, label style={font=\footnotesize},
-  xlabel={task sum (nats)}, ylabel={language sum (nats)},
+  xlabel={task sum (nats)},
   xlabel style={yshift=2pt},
   tick align=outside, tick pos=left,
   axis line style={black!55, line width=0.5pt}, tick style={black!55},
@@ -110,8 +107,6 @@
   fill opacity=0.65] table[x=task, y=lang] {figs/fig_windows_feasible.dat};
 \addplot[only marks, mark=star, mark size=2.6pt, draw=oiGreen!70!black,
   line width=0.8pt] table[x=task, y=lang] {figs/fig_windows_pick.dat};
-\node[keybox, anchor=south west] at (rel axis cs:0.03,0.03)
-  {$-\tau$ bound\\[-1.5pt]\textcolor{oiGreen!60!black}{$\star$}~choice};
 \end{axis}
 % ---------------- (d) models built against depth ----------------
 % sweep builds L(L+1)/2 models; Suture builds 21 (10 calibration, 10 certificate,
@@ -130,18 +125,13 @@
   grid=major, grid style={draw=black!8, line width=0.3pt},
   title={\footnotesize\textbf{(d)}\ models built},
   title style={at={(0.5,1.0)}, anchor=base, yshift=4pt},
-  legend style={at={(0.04,0.96)}, anchor=north west, font=\scriptsize,
-    draw=black!20, fill=white, inner sep=1.5pt, row sep=-2.5pt},
-  legend cell align=left, legend image post style={scale=0.55},
 ]
 \addplot[draw=oiGrey!80!black, mark=*, mark size=1.1pt, line width=0.8pt,
   mark options={fill=oiGrey}]
   coordinates {(12,78) (24,300) (36,666) (48,1176)};
-\addlegendentry{sweep}
 \addplot[draw=oiGreen!65!black, mark=square*, mark size=1.1pt, line width=0.8pt,
   mark options={fill=oiGreen!70}]
   coordinates {(12,21) (24,21) (36,21) (48,21)};
-\addlegendentry{\textsc{Suture}}
 
 \end{axis}
 \end{tikzpicture}

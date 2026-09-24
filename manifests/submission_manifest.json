@@ -1,5 +1,5 @@
 {
-  "file_count": 269,
+  "file_count": 293,
   "files": [
     {
       "bytes": 447,
@@ -8,10 +8,10 @@
       "sha256": "4c66a8a9bb574a6d87441cdf288fa0998666ef471b4563dbb94788f671d97076"
     },
     {
-      "bytes": 1772,
+      "bytes": 1807,
       "path": ".gitignore",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "a4c799495dae0217c3359f4a3e5d875d49fc53e1f44a6e93f165a6c0e6e5dfa8"
+      "sha256": "c3b2b3d8cde97dba861ddf09188c7630a72c99abf69f7cdcf27f034168c0f316"
     },
     {
       "bytes": 296,
@@ -20,16 +20,16 @@
       "sha256": "304c6c2d94bc02758d8c388679efd3f108a8c51aef6a743f6f6e5bf6440a52af"
     },
     {
-      "bytes": 1095,
+      "bytes": 1074,
       "path": "LICENSE",
       "rationale": "Software license for the released code and documentation.",
-      "sha256": "0aadca21706ffa5430d4947401a782e56d23304c15fddf7bdc355181e46f7c65"
+      "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 9214,
+      "bytes": 11012,
       "path": "README.md",
       "rationale": "Reviewer-facing overview, setup, reproduction workflow, and claim boundaries.",
-      "sha256": "a37c6f32cac79e91737bd0e50372caff78fb6fb70e2301993f22cbd60f7c5f98"
+      "sha256": "570e5c11756b42081f171006031e3b0120685209508512e54a5d2c71fd5c38a7"
     },
     {
       "bytes": 8046,
@@ -56,28 +56,22 @@
       "sha256": "83883daad53e2da5ac9ee6fd3377867fad82388f72bbd6abd3c7e8fc5ad4bbcb"
     },
     {
-      "bytes": 2642,
+      "bytes": 2573,
       "path": "configs/reviewer_followup_contract_v1.json",
       "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
-      "sha256": "79659248c94fca72376bcab8a0f888868fd70460e449f00297798e31a25d8366"
+      "sha256": "29e2844d7fd0d277cb2960a5540739749b57528726969e10ffc08ef72afd7ec7"
     },
     {
-      "bytes": 2867,
+      "bytes": 2795,
       "path": "configs/reviewer_llm_comparison_v1.json",
       "rationale": "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane.",
-      "sha256": "3653d334c34b0a1189c75159478c94eb486a2047470ff1c67bcbcfa606febb12"
+      "sha256": "c76d13596eb90f0b8c52f902d600efb372abb7053cde3e67bc686c31f6dadb88"
     },
     {
-      "bytes": 3934,
+      "bytes": 4385,
       "path": "docs/FILES_RATIONALE.md",
       "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "fa416a59ac92d888f44b3de2e85c99e6e58074bd00efc408d4321db8645eaa7b"
-    },
-    {
-      "bytes": 4100,
-      "path": "docs/PROJECT_EXPLAINER.md",
-      "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "4f19ac3fd639d8ac7e6948ea04c7cc08297da3278a4ec19fe547ca52b1782326"
+      "sha256": "20fbfcc52241b8b86270cbe846dbabf635e91a2a20128113f99029019cceed29"
     },
     {
       "bytes": null,
@@ -93,16 +87,16 @@
       "sha256": "e7b4498f11feacc7cf4df2f3d38f8dea293b057be10842946b0f36ee2083c5ff"
     },
     {
-      "bytes": 7794,
+      "bytes": 7142,
       "path": "paper/figs/fig1_teaser.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "818928b81ef76727d9aed3d4b848239bffeb70832a8c46b259c7c71d25023624"
+      "sha256": "9ff05c7159868c54cbc48ec5ca39165b38805e7b00333b4bc93afd3c457d8905"
     },
     {
-      "bytes": 7411,
+      "bytes": 6314,
       "path": "paper/figs/fig2_verify.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "92b4508184cc4aee7b47045914f9dd427a9d8dbab4392ac006166bbaae689093"
+      "sha256": "001f5f095d1ead4eca1ca719cfb60fb5c0c25bdb7eb698655ccb74901b802f52"
     },
     {
       "bytes": 94,
@@ -237,16 +231,16 @@
       "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
     },
     {
-      "bytes": 82065,
+      "bytes": 74722,
       "path": "paper/main.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "f36229ab510c5f8f9904ca9f49f001f393172af9bf60a0357f5100bf6ac3ed48"
+      "sha256": "8b144fe440f8dfdd7349dbfd17f9f5710f05daededbd318f9c0dfdeae3f0193d"
     },
     {
-      "bytes": 39399,
+      "bytes": 39273,
       "path": "paper/suture.bib",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "84f6177cd2ca733cf09c23b4f9de2d6b0c164354936ad39e1e7de1ab85cfdd2a"
+      "sha256": "29c0094fd794f8276a1d06c8fba2c8a596ed39b6ade43c4a77743ecccd098e81"
     },
     {
       "bytes": 500,
@@ -357,6 +351,30 @@
       "sha256": "a14430d81e960cc01310ad6c991d0c1fd04a0b9269f14b9feed5ea5a7dea9f19"
     },
     {
+      "bytes": 47872,
+      "path": "results/b3/lighton_qwen3_8b/language_fidelity_records/fr_measurements.jsonl",
+      "rationale": "Path-free per-record language-fidelity measurements and probe inputs for paired-statistic reproduction.",
+      "sha256": "cdf59f7812c9a844d64ef32122f9b30d54b052060d5ba13291b2df22f08d4fa0"
+    },
+    {
+      "bytes": 74196,
+      "path": "results/b3/lighton_qwen3_8b/language_fidelity_records/fr_probes.jsonl",
+      "rationale": "Path-free per-record language-fidelity measurements and probe inputs for paired-statistic reproduction.",
+      "sha256": "94c54ee73b04ee1d18641b1994a70fbece19bafbcff2a2fe88935efb13836c22"
+    },
+    {
+      "bytes": 50125,
+      "path": "results/b3/lighton_qwen3_8b/language_fidelity_records/zh_measurements.jsonl",
+      "rationale": "Path-free per-record language-fidelity measurements and probe inputs for paired-statistic reproduction.",
+      "sha256": "c93c10854673d773caa616476cdd0c5e365ed5ddd5c331cf5d1be0ce4bfacc26"
+    },
+    {
+      "bytes": 69923,
+      "path": "results/b3/lighton_qwen3_8b/language_fidelity_records/zh_probes.jsonl",
+      "rationale": "Path-free per-record language-fidelity measurements and probe inputs for paired-statistic reproduction.",
+      "sha256": "0e31e01cf1c3c10b060c0ee4fb9b26477c123c81224f80dbc41a1bde4f9f1480"
+    },
+    {
       "bytes": 1288,
       "path": "results/b3/lighton_qwen3_8b/llm_feedback_followup/fr_host__en_donor/run_manifest.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
@@ -381,10 +399,10 @@
       "sha256": "3feb15b7ca109ef64f950f645e4b1cf573729f6ee0767dd9b9f4f1750dcbe726"
     },
     {
-      "bytes": 1504,
+      "bytes": 1548,
       "path": "results/b3/lighton_qwen3_8b/posthoc_language_fidelity.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
-      "sha256": "43c99f914c7ed545c1c7753517d261f8a178d0ad375639a1dcff77c3b90172d9"
+      "sha256": "2eb690d308c3e85c853a8c03a15a0f423b699b797cfe9fe426e636b6fab2eb98"
     },
     {
       "bytes": 1031,
@@ -487,6 +505,114 @@
       "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection_scores.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
       "sha256": "2c348088b9e1f5b756343d16ae119f4427f3a6bcd76fdb4f05aec2833966bf27"
+    },
+    {
+      "bytes": 16636,
+      "path": "results/controlled_stacks/baselines_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "624628446558ba68b59894178b689214c0646afff3f503bfdefdb98d35308f11"
+    },
+    {
+      "bytes": 50997,
+      "path": "results/controlled_stacks/baselines_48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "298025f6251136dc966ec4676842314d7b1795d9c2721fdfe34bcaf484e2ac80"
+    },
+    {
+      "bytes": 18750,
+      "path": "results/controlled_stacks/calibration_random_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "b59b02903fdadf17c293b278f3eca1a39b9598d73b4cd40b00335bb51cbcfeee"
+    },
+    {
+      "bytes": 64126,
+      "path": "results/controlled_stacks/calibration_random_48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "67598686b10d7c2a63f41f65868f129ba43ab24bd301077356566b5de6b2bf2c"
+    },
+    {
+      "bytes": 18961,
+      "path": "results/controlled_stacks/calibration_trained_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "a2ab580fa4e62f39ab34d0b3476e00616b62f9d095177a02df6374fb836c0511"
+    },
+    {
+      "bytes": 66540,
+      "path": "results/controlled_stacks/calibration_trained_48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "d026d8aab320676ed6489ff5a40ee6602eff99676262902e543e079a8054b3c3"
+    },
+    {
+      "bytes": 15518,
+      "path": "results/controlled_stacks/constrained_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "0d1cf00cb4fc39658745b1e1c0bb4880502c73694c6c4c4000b988b662398bbe"
+    },
+    {
+      "bytes": 10086,
+      "path": "results/controlled_stacks/depth_sweep_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "c5f18819bcc028a7c5281cd06e1b794340c6b9eb551f2191112710f36471acd6"
+    },
+    {
+      "bytes": 1144,
+      "path": "results/controlled_stacks/failure_seed1037.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "e0a1664f232505e25bfc9afdfd954b92983342dffa4107d1c7b276d5ec825d0b"
+    },
+    {
+      "bytes": 1731,
+      "path": "results/controlled_stacks/m_sweep_48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "6d80bb7e42294e86a5b7004a08b41976ed7ee1e70ad27d6ece282b98e2fc7338"
+    },
+    {
+      "bytes": 128802,
+      "path": "results/controlled_stacks/robust48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "fd503743685266614301a99dd2d467475ff5aabacfccfabd3aa0d8ae9a0e3bb6"
+    },
+    {
+      "bytes": 19768,
+      "path": "results/controlled_stacks/scale_sweep_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "73d91969146dc7a52fd96885d3a20b375c5eecbc4eaa99c8d92550f7f187bafd"
+    },
+    {
+      "bytes": 7491,
+      "path": "results/controlled_stacks/specificity_trained_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "3cb15caba7c68580d2f9877909aa269deb973ff43c30a3b796b59fbba58fc48b"
+    },
+    {
+      "bytes": 39540,
+      "path": "results/controlled_stacks/table1_12stacks.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "a3f16919d6072a1918a77afcf9e972637e577e7e85ee4fc9ba2c3dbbc7dd8e42"
+    },
+    {
+      "bytes": 46684,
+      "path": "results/controlled_stacks/trained_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "b5d79f3c0749f37c17cf034d9565c535b05f5e4ed3b7090b91f24e1987a3b2df"
+    },
+    {
+      "bytes": 151856,
+      "path": "results/controlled_stacks/trained_48.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "468cf3a224a524c30a2d9853ff30574a6d2cffb5c01d64ba2afeb6bc4f40dccc"
+    },
+    {
+      "bytes": 46667,
+      "path": "results/controlled_stacks/trained_rel001_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "4d922e7796984efbdf9a63ae62c252eac38a309ca997e88b8e7c006b2a1c1ad7"
+    },
+    {
+      "bytes": 47604,
+      "path": "results/controlled_stacks/trained_rel005_12.json",
+      "rationale": "Recovered controlled-stack output needed to audit stack-level paper statistics.",
+      "sha256": "5ec542409836328454e6cd684ff7e976e92cfb774d3809fd3dea592adef40cf8"
     },
     {
       "bytes": 2562,
@@ -651,10 +777,10 @@
       "sha256": "848152fade1759b04820adbcd405bbe041091888b5c15fb1ce7418929da02356"
     },
     {
-      "bytes": 3280,
+      "bytes": 3168,
       "path": "results/tier_a/es/e1_canonical_seed0_posthoc_statistics.json",
       "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
-      "sha256": "2762a4ebdca0d627bebc40bbe46bc4ff19c412f7fee800f7e05acc32a61fa945"
+      "sha256": "f64213978ecd3ec6eaebc5cc9962c70dfc6184f82230792370ce1c546d602c57"
     },
     {
       "bytes": 27921,
@@ -873,10 +999,10 @@
       "sha256": "31efdc45d6acd1a8bf5ee53a3c361cbdd1be4c4b06408fd3a66f41ee0cf3ba3b"
     },
     {
-      "bytes": 4302,
+      "bytes": 4168,
       "path": "results/tier_a/tier_a_replication_statistics.json",
       "rationale": "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper.",
-      "sha256": "bc342b30f2107cd4f5810b927a1f714217205eb88565dd642c774c3c83d70fe8"
+      "sha256": "81306b6a866856ee62a4bb7d49b3f67a82dbc4de4df474fd795204c95e617a04"
     },
     {
       "bytes": 325410,
@@ -1317,10 +1443,10 @@
       "sha256": "e857d3abf021b6a7ef1966cde8acb7274c392a2b2d62dd08b7f2b2435249c4d5"
     },
     {
-      "bytes": 7716,
+      "bytes": 8571,
       "path": "scripts/generate_submission_manifest.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
-      "sha256": "8ce9bd6def35774a19eeb7755a0d615da4caff938a48825316f30852caea960b"
+      "sha256": "5d6b5c913bb6c9604f294f49a32dd6982a89e50f5567293d2f3695266a0311ae"
     },
     {
       "bytes": 224,
@@ -1341,10 +1467,10 @@
       "sha256": "aea89c717cbeab30267353735be15a5210c44ba1b0b9e1fd75b54a7e81bb3434"
     },
     {
-      "bytes": 6653,
+      "bytes": 6897,
       "path": "scripts/write_release_bundle.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
-      "sha256": "43bf43a82060b036a6793d5126df304184c2cd8aaa1f5e94c29eaa28f55cd867"
+      "sha256": "450f1be0e3eaab9972f96788366fa5eff7e4863d2e170b8e988c8f89d0c261f1"
     },
     {
       "bytes": 72,
@@ -1371,10 +1497,10 @@
       "sha256": "5f269f203d7955f10db9c8239cb4e180d1a619e808ee8598b1dd631344fc3366"
     },
     {
-      "bytes": 37205,
+      "bytes": 36209,
       "path": "src/suture/b3_llm_feedback_followup.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
-      "sha256": "1d5bdb22bb2f4d6654a7a217cd5e36c541f8600b4c02da99b90bef9557165166"
+      "sha256": "e7683abdfb8561b59dea818c10eb769bc3c9a5517b62fec3fa975742188ed570"
     },
     {
       "bytes": 5657,
@@ -1395,22 +1521,22 @@
       "sha256": "9ee61a9bd514cfe9409e5e2d09b3cabce60f9ccf5762880c3d83d7bb71b01005"
     },
     {
-      "bytes": 13645,
+      "bytes": 13265,
       "path": "src/suture/reviewer_cost_diagnostics.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
-      "sha256": "460a273e82e506b4f4b5fac6a155c7f1add129c5e4e94d5de83692f768994961"
+      "sha256": "5944a16621ed0ecad6d1d908b238df7f097e220474c9262aabc664ff751519b7"
     },
     {
-      "bytes": 11995,
+      "bytes": 11647,
       "path": "src/suture/reviewer_followup.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
-      "sha256": "398e924dd3c71a60e1dde82a86cca063e00db58acdd1dcfea83fc8a0a598ffdd"
+      "sha256": "bac65328ec2606d74d2995d92b2db05741ac5dff09026ee4a6c68bb4a3fec135"
     },
     {
-      "bytes": 17857,
+      "bytes": 17373,
       "path": "src/suture/reviewer_llm_comparison.py",
       "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
-      "sha256": "c2cee7c6e5d8ec0ca86778061c08dc3a0b84c2da9885ff0cd8feb6f09a9ab85c"
+      "sha256": "4cdfa2b33f3863d5d6520d1ce8402fb926d510cbe953cf8420226892782d1639"
     },
     {
       "bytes": 15192,
@@ -1581,10 +1707,28 @@
       "sha256": "f1a0514123acd4374ab6df3c6ef9571e45e406bea523d392d5e0ac508a443924"
     },
     {
-      "bytes": 3805,
+      "bytes": 7008,
+      "path": "verify/audit_b3_results.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "ee3be16120c016d3681ec19907c03289595345a22292c0f93c57c2b8a4a7eaea"
+    },
+    {
+      "bytes": 8342,
+      "path": "verify/audit_controlled_results.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "421728d06c1557ce66570c428b7c1d354d0865a6805105f58ff1f7593b148259"
+    },
+    {
+      "bytes": 3434,
+      "path": "verify/audit_paper_release.py",
+      "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
+      "sha256": "cc8ab4fed6472840f6628545692bd64256e582d799581c58dd39ab4b3c9b1817"
+    },
+    {
+      "bytes": 3912,
       "path": "verify/corrections_check.py",
       "rationale": "Theory, figure-data, power, clean-room, or negative-control verification harness cited by the paper.",
-      "sha256": "5727b98d0433bc1961fb5fab7b7e48af281fd9800345a46329ee7ecfe3925723"
+      "sha256": "fdffb9560b6d33a671bba9e7f1e3f03001a0615f078f315561ec4b9ae8eab0c1"
     },
     {
       "bytes": 5988,
@@ -1617,7 +1761,7 @@
       "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
     }
   ],
-  "generated_at": "2026-09-21T01:42:23.520973+00:00",
+  "generated_at": "2026-09-24T00:53:13.451930+00:00",
   "kind": "public_submission_manifest",
   "root": "repository checkout",
   "schema_version": 1,

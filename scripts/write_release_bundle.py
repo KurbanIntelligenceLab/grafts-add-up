@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import subprocess
+import sys
 import tempfile
 import zipfile
 from datetime import datetime, timezone
@@ -26,20 +27,22 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def run_logged_check(command: list[str], output: Path) -> None:
+    completed = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    output.write_text(completed.stdout + completed.stderr, encoding="utf-8", newline="\n")
+    if completed.returncode != 0:
+        raise RuntimeError(f"Check failed ({completed.returncode}): {' '.join(command)}")
+
+
 def main() -> int:
+    started = datetime.now(timezone.utc)
     ver = ROOT / "results" / "tier_a" / "verification_release"
     ver.mkdir(parents=True, exist_ok=True)
-    (ver / "theory.log").write_text(
-        "25/25 claims made in the paper passed.\nC13 excluded (not claimed).\n",
-        encoding="utf-8",
-        newline="\n",
-    )
-    (ver / "smoke.log").write_text("SMOKE TEST PASSED\n", encoding="utf-8", newline="\n")
-    (ver / "figdata.log").write_text(
-        "wrote fig_scatter/remainder/regime/intervals/profile to paper/figs/\n",
-        encoding="utf-8",
-        newline="\n",
-    )
+    run_logged_check([sys.executable, "verify/verify_theory.py"], ver / "theory.log")
+    run_logged_check([sys.executable, "-m", "suture.suture_metrics", "--smoke"],
+                     ver / "smoke.log")
+    run_logged_check([sys.executable, "verify/audit_controlled_results.py"],
+                     ver / "controlled_results.log")
 
     reason_e2 = (
         "E2 completed before stage-specific timed manifests existed; "
@@ -90,7 +93,6 @@ def main() -> int:
             newline="\n",
         )
 
-    started = datetime.fromisoformat("2026-08-14T16:48:44.702459+00:00")
     paper = ROOT / "paper"
     members = [
         "main.tex",

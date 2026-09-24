@@ -27,6 +27,7 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
+.cursor/
 
 # Local caches and secrets
 workspace/
@@ -79,10 +80,14 @@ verify/toy_transfer_results.json
 
 # Author-only audit, LLM-feedback notes, and raw language-fidelity follow-up
 paper/REDFLAGS.txt
+paper/REVISION_AUDIT.md
 paper/llm_feedback
 results/b3/lighton_qwen3_8b/*/fidelity/
 results/b3/lighton_qwen3_8b/llm_feedback_followup/*/private/
 suture/contracts/
+
+# Avoid duplicate imports from the original Overleaf folder location
+results_controlled/
 
 # Local LaTeX build directory
 paper/build/

@@ -1,6 +1,7 @@
 """Verify the CORRECTED statements hold, from first principles."""
 import numpy as np
 from scipy.stats import beta as Beta
+from suture.suture_metrics import best_subset
 rng = np.random.default_rng(3)
 L, d = 6, 4
 def blk(x, W1, W2, b): return np.tanh(x @ W1 + b) @ W2
@@ -67,10 +68,10 @@ for pi in (0.01,0.05,0.10,0.30):
     print(f"   pi={pi:<5} coverage {cov:.4f}  {'OK' if cov>=0.95 else 'FAIL'}")
 
 # ---- subset DP degenerate grid --------------------------------------------
-ar=np.zeros(8)
-lo,hi=ar[ar<0].sum(), ar[ar>0].sum()
-print(f"\nSubset DP: all risk scores zero -> lo={lo}, hi={hi}, h=(hi-lo)/N = 0 "
-      f"-> division by zero in the rounding rule (degenerate case unhandled)")
+utilities=np.array([1.0,-2.0,3.0,-4.0,5.0,-6.0,7.0,-8.0])
+value, selected, step=best_subset(utilities, np.zeros(8), tau=0.0)
+assert step == 0.0 and selected == (0, 2, 4, 6) and value == 16.0
+print("\nSubset DP: zero-risk grid uses the exact positive-utility solution  OK")
 
 # ---- margin condition soundness, from scratch ------------------------------
 bad=0

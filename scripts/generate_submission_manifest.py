@@ -1,8 +1,8 @@
 """Generate the machine-readable public-file inventory.
 
-The manifest is derived from Git-visible files and a small public-root
-allowlist. This prevents ignored local environments, archives, model weights,
-and generated packaging output from entering the release inventory.
+The manifest is derived from staged Git files and a small public-root
+allowlist. Hashing Git blobs makes checksums independent of local line endings.
+Stage all intended release changes before running this script.
 """
 
 from __future__ import annotations
@@ -89,12 +89,14 @@ SKIP_RESULT_DIRECTORIES = {
 }
 
 
-def _sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+def _staged_bytes(path: Path) -> bytes:
+    relative = path.relative_to(ROOT).as_posix()
+    return subprocess.run(
+        ["git", "show", f":{relative}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    ).stdout
 
 
 def _included(path: Path) -> bool:
@@ -115,6 +117,8 @@ def _included(path: Path) -> bool:
     ):
         return False
     if path.name in SKIP_NAMES or path.name == "tokenizer.json":
+        return False
+    if path.name == "README.md" and relative_parts != ("README.md",):
         return False
     if any(path.name.endswith(suffix) for suffix in SKIP_SUFFIXES):
         return False
@@ -154,7 +158,11 @@ def _rationale(relative: str) -> str:
     if relative.startswith("configs/"):
         return "Frozen experiment contract or protocol pin required to interpret and rerun the corresponding study lane."
     if relative.startswith("results/b3/"):
+        if "/language_fidelity_records/" in relative:
+            return "Path-free per-record language-fidelity measurements and probe inputs for paired-statistic reproduction."
         return "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper."
+    if relative.startswith("results/controlled_stacks/"):
+        return "Recovered controlled-stack output needed to audit stack-level paper statistics."
     if relative.startswith("results/tier_a/"):
         return "Canonical Tier-A evidence, source data, audit, attestation, or verification output used by the paper."
     if relative.startswith("results/v2/"):
@@ -169,10 +177,10 @@ def _rationale(relative: str) -> str:
 
 
 def _iter_files() -> Iterable[Path]:
-    """Yield existing files visible to Git and allowed by the release policy."""
+    """Yield staged files allowed by the release policy."""
 
     result = subprocess.run(
-        ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+        ["git", "ls-files", "--cached"],
         cwd=ROOT,
         check=True,
         capture_output=True,
@@ -189,14 +197,26 @@ def _iter_files() -> Iterable[Path]:
 
 
 def build_manifest() -> dict:
+    unstaged = subprocess.run(
+        ["git", "diff", "--name-only"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    pending = [name for name in unstaged if name != "manifests/submission_manifest.json"
+               and _included(ROOT / name)]
+    if pending:
+        raise RuntimeError(f"Stage release changes before generating the manifest: {pending}")
     files = []
     for path in _iter_files():
         relative = path.relative_to(ROOT).as_posix()
+        content = _staged_bytes(path)
         files.append(
             {
                 "path": relative,
-                "bytes": path.stat().st_size,
-                "sha256": _sha256(path),
+                "bytes": len(content),
+                "sha256": hashlib.sha256(content).hexdigest(),
                 "rationale": _rationale(relative),
             }
         )

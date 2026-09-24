@@ -1,0 +1,769 @@
+{
+ "summary": {
+  "n_stacks": 12,
+  "by_scale": {
+   "0.05": {
+    "suture_spearman": {
+     "mean": 0.9855018399322195,
+     "sd": 0.012717440101845933,
+     "min": 0.9601411246980867,
+     "max": 0.998153744989188
+    },
+    "suture_regret": {
+     "mean": 0.0017797656921706058,
+     "sd": 0.003255202509098193,
+     "min": 0.0,
+     "max": 0.00833105026111447
+    },
+    "wattr_spearman": {
+     "mean": 0.9828989575825018,
+     "sd": 0.012047318604124538,
+     "min": 0.9554369680951958,
+     "max": 0.9966109839527559
+    },
+    "wattr_regret": {
+     "mean": 0.000720348627635666,
+     "sd": 0.00201328570704511,
+     "min": 0.0,
+     "max": 0.006915582078107274
+    },
+    "superposition": {
+     "mean": 0.9834041235740036,
+     "sd": 0.014517076121822545,
+     "min": 0.9464183163356404,
+     "max": 0.9970332507130475
+    },
+    "cert_frac": {
+     "mean": 0.9153463203463202,
+     "sd": 0.05112646749941569,
+     "min": 0.8342857142857142,
+     "max": 0.9855844155844156
+    },
+    "false_per_draw": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "min": 0.0,
+     "max": 0.0
+    },
+    "n": 12,
+    "regret_diff_wattr_minus_suture": {
+     "mean_diff": -0.0010594170645349399,
+     "ci95": [
+      -0.0028130883174960855,
+      0.0002881002422534529
+     ],
+     "wilcoxon_p": 0.5,
+     "rank_biserial": -0.6666666666666666,
+     "n_worse": 1,
+     "n_better": 2,
+     "n_ties": 9,
+     "holm_p": 0.5
+    }
+   },
+   "0.1": {
+    "suture_spearman": {
+     "mean": 0.9514873312341666,
+     "sd": 0.03517089839878856,
+     "min": 0.8620114063152037,
+     "max": 0.9928173092730053
+    },
+    "suture_regret": {
+     "mean": 0.013048114742049107,
+     "sd": 0.018435496193158422,
+     "min": 0.0,
+     "max": 0.053754468313290005
+    },
+    "wattr_spearman": {
+     "mean": 0.94230663850917,
+     "sd": 0.03262455927312781,
+     "min": 0.8911468278556887,
+     "max": 0.9895800402129515
+    },
+    "wattr_regret": {
+     "mean": 0.01661807205877826,
+     "sd": 0.0198548182492984,
+     "min": 0.0,
+     "max": 0.053754468313290005
+    },
+    "superposition": {
+     "mean": 0.9450661298915803,
+     "sd": 0.04149295833018065,
+     "min": 0.8540278481562845,
+     "max": 0.9881143682747173
+    },
+    "cert_frac": {
+     "mean": 0.7909307359307359,
+     "sd": 0.14999852121437238,
+     "min": 0.4931168831168831,
+     "max": 0.9819480519480519
+    },
+    "false_per_draw": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "min": 0.0,
+     "max": 0.0
+    },
+    "n": 12,
+    "regret_diff_wattr_minus_suture": {
+     "mean_diff": 0.0035699573167291554,
+     "ci95": [
+      0.0,
+      0.010709871950187466
+     ],
+     "wilcoxon_p": 1.0,
+     "rank_biserial": 1.0,
+     "n_worse": 1,
+     "n_better": 0,
+     "n_ties": 11,
+     "holm_p": 1.0
+    }
+   },
+   "0.2": {
+    "suture_spearman": {
+     "mean": 0.8511235599843193,
+     "sd": 0.13387866787639296,
+     "min": 0.5078086470491533,
+     "max": 0.9836871988770722
+    },
+    "suture_regret": {
+     "mean": 0.15104362385718031,
+     "sd": 0.1935834901032799,
+     "min": 0.0,
+     "max": 0.6021510980065461
+    },
+    "wattr_spearman": {
+     "mean": 0.7816950981507942,
+     "sd": 0.17938283173845246,
+     "min": 0.2777602144690752,
+     "max": 0.9516938757445086
+    },
+    "wattr_regret": {
+     "mean": 0.16945544578589924,
+     "sd": 0.18565424768814515,
+     "min": 0.0,
+     "max": 0.6021510980065461
+    },
+    "superposition": {
+     "mean": 0.8349805455272148,
+     "sd": 0.11080882895623541,
+     "min": 0.6445278566341093,
+     "max": 0.9536347778968445
+    },
+    "cert_frac": {
+     "mean": 0.5077597402597402,
+     "sd": 0.31086683918993013,
+     "min": 0.007662337662337662,
+     "max": 0.9257142857142857
+    },
+    "false_per_draw": {
+     "mean": 0.09333333333333334,
+     "sd": 0.24264951654348682,
+     "min": 0.0,
+     "max": 0.81
+    },
+    "n": 12,
+    "regret_diff_wattr_minus_suture": {
+     "mean_diff": 0.01841182192871893,
+     "ci95": [
+      -0.06975271886652228,
+      0.10404881167004136
+     ],
+     "wilcoxon_p": 0.84375,
+     "rank_biserial": 0.14285714285714285,
+     "n_worse": 3,
+     "n_better": 3,
+     "n_ties": 6,
+     "holm_p": 0.84375
+    }
+   },
+   "0.4": {
+    "suture_spearman": {
+     "mean": 0.5864768143249156,
+     "sd": 0.2242248114648404,
+     "min": 0.25186206198864425,
+     "max": 0.9504040263533935
+    },
+    "suture_regret": {
+     "mean": 0.3867714128384801,
+     "sd": 0.46205345711165857,
+     "min": 0.0,
+     "max": 1.4148519659289551
+    },
+    "wattr_spearman": {
+     "mean": 0.4889814826523688,
+     "sd": 0.20371564021783,
+     "min": 0.21642914047977338,
+     "max": 0.8073066174331998
+    },
+    "wattr_regret": {
+     "mean": 0.50596652735188,
+     "sd": 0.45252789440100105,
+     "min": 0.0,
+     "max": 1.4148519659289551
+    },
+    "superposition": {
+     "mean": 0.48040681757383824,
+     "sd": 0.2325705288743445,
+     "min": 0.16946908627133878,
+     "max": 0.8515764969646821
+    },
+    "cert_frac": {
+     "mean": 0.3076515151515151,
+     "sd": 0.3347956206885538,
+     "min": 0.0071428571428571435,
+     "max": 0.9190909090909091
+    },
+    "false_per_draw": {
+     "mean": 0.25916666666666666,
+     "sd": 0.547464541538924,
+     "min": 0.0,
+     "max": 1.77
+    },
+    "n": 12,
+    "regret_diff_wattr_minus_suture": {
+     "mean_diff": 0.11919511451339991,
+     "ci95": [
+      -0.05795401446629617,
+      0.33845596112771964
+     ],
+     "wilcoxon_p": 0.6875,
+     "rank_biserial": 0.21428571428571427,
+     "n_worse": 3,
+     "n_better": 4,
+     "n_ties": 5,
+     "holm_p": 0.6875
+    }
+   }
+  }
+ },
+ "stacks": [
+  {
+   "scale": 0.05,
+   "seed": 1000,
+   "suture_spearman": 0.9601411246980867,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9746582531392658,
+   "wattr_regret": 0.0017286014535207173,
+   "superposition": 0.9806783948429839,
+   "cert_frac": 0.8342857142857142,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1001,
+   "suture_spearman": 0.998153744989188,
+   "suture_regret": 0.006110555966825526,
+   "wattr_spearman": 0.9943347791449056,
+   "wattr_regret": 0.0,
+   "superposition": 0.9970332507130475,
+   "cert_frac": 0.8945454545454545,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1002,
+   "suture_spearman": 0.9638083435551791,
+   "suture_regret": 0.00833105026111447,
+   "wattr_spearman": 0.9699288053718432,
+   "wattr_regret": 0.0,
+   "superposition": 0.9779928097152717,
+   "cert_frac": 0.8403896103896104,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1003,
+   "suture_spearman": 0.975948102530381,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9554369680951958,
+   "wattr_regret": 0.0,
+   "superposition": 0.996817796255627,
+   "cert_frac": 0.9623376623376623,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1004,
+   "suture_spearman": 0.9929690562601954,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9919321185143969,
+   "wattr_regret": 0.0,
+   "superposition": 0.994721232955883,
+   "cert_frac": 0.8849350649350649,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1005,
+   "suture_spearman": 0.9965856927882244,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9966109839527559,
+   "wattr_regret": 0.0,
+   "superposition": 0.9935157520203146,
+   "cert_frac": 0.9749350649350649,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1006,
+   "suture_spearman": 0.99046523097156,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9845976808002124,
+   "wattr_regret": 0.0,
+   "superposition": 0.9949793830455222,
+   "cert_frac": 0.9494805194805195,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1007,
+   "suture_spearman": 0.9808545884495252,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9843447691548955,
+   "wattr_regret": 0.0,
+   "superposition": 0.9464183163356404,
+   "cert_frac": 0.9211688311688313,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1008,
+   "suture_spearman": 0.9876326205440129,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9754169880752158,
+   "wattr_regret": 0.0,
+   "superposition": 0.9864682909778071,
+   "cert_frac": 0.9423376623376624,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1009,
+   "suture_spearman": 0.9955740462069576,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9933737148927022,
+   "wattr_regret": 0.0,
+   "superposition": 0.9808856861426883,
+   "cert_frac": 0.9855844155844156,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1010,
+   "suture_spearman": 0.992159738995182,
+   "suture_regret": 0.006915582078107274,
+   "wattr_spearman": 0.9874302912277595,
+   "wattr_regret": 0.006915582078107274,
+   "superposition": 0.9707619850524742,
+   "cert_frac": 0.866103896103896,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.05,
+   "seed": 1011,
+   "suture_spearman": 0.9917297891981435,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9867221386208725,
+   "wattr_regret": 0.0,
+   "superposition": 0.9805765848307848,
+   "cert_frac": 0.928051948051948,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1000,
+   "suture_spearman": 0.8620114063152037,
+   "suture_regret": 0.053754468313290005,
+   "wattr_spearman": 0.9105957333805433,
+   "wattr_regret": 0.053754468313290005,
+   "superposition": 0.9235167767370142,
+   "cert_frac": 0.4931168831168831,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1001,
+   "suture_spearman": 0.9928173092730053,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9895800402129515,
+   "wattr_regret": 0.0,
+   "superposition": 0.9881143682747173,
+   "cert_frac": 0.8849350649350649,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1002,
+   "suture_spearman": 0.9070549703461095,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.908395402066288,
+   "wattr_regret": 0.0,
+   "superposition": 0.9122409398876089,
+   "cert_frac": 0.7814285714285715,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1003,
+   "suture_spearman": 0.9513650906055968,
+   "suture_regret": 0.015915194109651587,
+   "wattr_spearman": 0.90993816310272,
+   "wattr_regret": 0.015915194109651587,
+   "superposition": 0.986064338208457,
+   "cert_frac": 0.8593506493506494,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1004,
+   "suture_spearman": 0.9610263154566953,
+   "suture_regret": 0.039871835330101746,
+   "wattr_spearman": 0.9540459540459539,
+   "wattr_regret": 0.039871835330101746,
+   "superposition": 0.9863618202336378,
+   "cert_frac": 0.5890909090909091,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1005,
+   "suture_spearman": 0.9840918575095788,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9867474297854043,
+   "wattr_regret": 0.0,
+   "superposition": 0.974830008523383,
+   "cert_frac": 0.9514285714285715,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1006,
+   "suture_spearman": 0.9576372994094512,
+   "suture_regret": 0.00039066408480126213,
+   "wattr_spearman": 0.8911468278556887,
+   "wattr_regret": 0.04323015188555113,
+   "superposition": 0.9791613592578557,
+   "cert_frac": 0.7558441558441559,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1007,
+   "suture_spearman": 0.9542229921976756,
+   "suture_regret": 0.023828372211897708,
+   "wattr_spearman": 0.9725590864831369,
+   "wattr_regret": 0.023828372211897708,
+   "superposition": 0.8540278481562845,
+   "cert_frac": 0.7796103896103896,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1008,
+   "suture_spearman": 0.9504040263533935,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9267062051872178,
+   "wattr_regret": 0.0,
+   "superposition": 0.9431873719403863,
+   "cert_frac": 0.9284415584415584,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1009,
+   "suture_spearman": 0.9738995182033156,
+   "suture_regret": 0.00041615901515523746,
+   "wattr_spearman": 0.9589777311296298,
+   "wattr_regret": 0.00041615901515523746,
+   "superposition": 0.9453337755828943,
+   "cert_frac": 0.9819480519480519,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1010,
+   "suture_spearman": 0.9595594279138582,
+   "suture_regret": 0.021923455543692683,
+   "wattr_spearman": 0.9494935444302531,
+   "wattr_regret": 0.021923455543692683,
+   "superposition": 0.9024401834907427,
+   "cert_frac": 0.6498701298701298,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.1,
+   "seed": 1011,
+   "suture_spearman": 0.9637577612261156,
+   "suture_regret": 0.0004772282959990548,
+   "wattr_spearman": 0.9494935444302531,
+   "wattr_regret": 0.0004772282959990548,
+   "superposition": 0.9455147684059837,
+   "cert_frac": 0.836103896103896,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1000,
+   "suture_spearman": 0.5078086470491533,
+   "suture_regret": 0.3742047914726463,
+   "wattr_spearman": 0.6576840880638349,
+   "wattr_regret": 0.3742047914726463,
+   "superposition": 0.6445278566341093,
+   "cert_frac": 0.007662337662337662,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1001,
+   "suture_spearman": 0.9836871988770722,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9516938757445086,
+   "wattr_regret": 0.0,
+   "superposition": 0.9536347778968445,
+   "cert_frac": 0.9257142857142857,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1002,
+   "suture_spearman": 0.8330530229264407,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.795293314280656,
+   "wattr_regret": 0.2350287046199373,
+   "superposition": 0.751406010716725,
+   "cert_frac": 0.5584415584415584,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1003,
+   "suture_spearman": 0.883812390141504,
+   "suture_regret": 0.300034056334201,
+   "wattr_spearman": 0.7934723504343757,
+   "wattr_regret": 0.0,
+   "superposition": 0.927834002252591,
+   "cert_frac": 0.5709090909090909,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1004,
+   "suture_spearman": 0.9512892171120019,
+   "suture_regret": 0.022979468332719133,
+   "wattr_spearman": 0.9039947394377774,
+   "wattr_regret": 0.28833878559968174,
+   "superposition": 0.9409878435360257,
+   "cert_frac": 0.4014285714285714,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1005,
+   "suture_spearman": 0.9442076910431341,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.9514156729346602,
+   "wattr_regret": 0.22026750308851106,
+   "superposition": 0.9229942319920437,
+   "cert_frac": 0.691948051948052,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1006,
+   "suture_spearman": 0.6766271702980563,
+   "suture_regret": 0.13496003195502038,
+   "wattr_spearman": 0.2777602144690752,
+   "wattr_regret": 0.13496003195502038,
+   "superposition": 0.8847320487792513,
+   "cert_frac": 0.0812987012987013,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1007,
+   "suture_spearman": 0.8920826009433603,
+   "suture_regret": 0.25738213724370995,
+   "wattr_spearman": 0.8114037860873303,
+   "wattr_regret": 0.0949874399804096,
+   "superposition": 0.6573820264230306,
+   "cert_frac": 0.5554545454545455,
+   "false_per_draw": 0.81
+  },
+  {
+   "scale": 0.2,
+   "seed": 1008,
+   "suture_spearman": 0.865147510717131,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.7812820091301104,
+   "wattr_regret": 0.0,
+   "superposition": 0.779618269987299,
+   "cert_frac": 0.755974025974026,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1009,
+   "suture_spearman": 0.9385930525171031,
+   "suture_regret": 0.037284908233282454,
+   "wattr_spearman": 0.7523994992349422,
+   "wattr_regret": 0.0,
+   "superposition": 0.9416751017290389,
+   "cert_frac": 0.9102597402597403,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1010,
+   "suture_spearman": 0.8457491875213394,
+   "suture_regret": 0.6021510980065461,
+   "wattr_spearman": 0.8482783039745064,
+   "wattr_regret": 0.6021510980065461,
+   "superposition": 0.8160358690579963,
+   "cert_frac": 0.08688311688311688,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.2,
+   "seed": 1011,
+   "suture_spearman": 0.8914250306655369,
+   "suture_regret": 0.0835269947080386,
+   "wattr_spearman": 0.8556633240177542,
+   "wattr_regret": 0.0835269947080386,
+   "superposition": 0.7989385073216203,
+   "cert_frac": 0.5471428571428572,
+   "false_per_draw": 0.31
+  },
+  {
+   "scale": 0.4,
+   "seed": 1000,
+   "suture_spearman": 0.25808368846343527,
+   "suture_regret": 0.7818810737159154,
+   "wattr_spearman": 0.28365305580495453,
+   "wattr_regret": 0.7818810737159154,
+   "superposition": 0.39994764722867476,
+   "cert_frac": 0.0071428571428571435,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1001,
+   "suture_spearman": 0.9504040263533935,
+   "suture_regret": 0.0003573273758501472,
+   "wattr_spearman": 0.7739981537449891,
+   "wattr_regret": 0.0,
+   "superposition": 0.8515764969646821,
+   "cert_frac": 0.9190909090909091,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1002,
+   "suture_spearman": 0.7597086457845951,
+   "suture_regret": 0.0,
+   "wattr_spearman": 0.8073066174331998,
+   "wattr_regret": 0.17678322258892099,
+   "superposition": 0.38299206459848584,
+   "cert_frac": 0.6736363636363636,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1003,
+   "suture_spearman": 0.25186206198864425,
+   "suture_regret": 1.4148519659289551,
+   "wattr_spearman": 0.6710884052656204,
+   "wattr_regret": 1.4148519659289551,
+   "superposition": 0.25920632321618453,
+   "cert_frac": 0.15103896103896106,
+   "false_per_draw": 1.77
+  },
+  {
+   "scale": 0.4,
+   "seed": 1004,
+   "suture_spearman": 0.5631962973735125,
+   "suture_regret": 0.2565998514698822,
+   "wattr_spearman": 0.22702613841854347,
+   "wattr_regret": 0.9906052508939562,
+   "superposition": 0.2770419444370856,
+   "cert_frac": 0.1868831168831169,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1005,
+   "suture_spearman": 0.7917019689171587,
+   "suture_regret": 0.22151614597097735,
+   "wattr_spearman": 0.6682557948380732,
+   "wattr_regret": 0.22151614597097735,
+   "superposition": 0.7062390980069999,
+   "cert_frac": 0.8329870129870129,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1006,
+   "suture_spearman": 0.6301420098888453,
+   "suture_regret": 0.4480557681871149,
+   "wattr_spearman": 0.42194514346413076,
+   "wattr_regret": 0.4480557681871149,
+   "superposition": 0.8195564883868479,
+   "cert_frac": 0.02077922077922078,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1007,
+   "suture_spearman": 0.280769863048344,
+   "suture_regret": 1.050912860229615,
+   "wattr_spearman": 0.392961468910836,
+   "wattr_regret": 0.640155227979903,
+   "superposition": 0.2604946690684444,
+   "cert_frac": 0.10415584415584415,
+   "false_per_draw": 0.48
+  },
+  {
+   "scale": 0.4,
+   "seed": 1008,
+   "suture_spearman": 0.7489851920231666,
+   "suture_regret": 0.038974783835125315,
+   "wattr_spearman": 0.5391949822329569,
+   "wattr_regret": 0.025084351936895732,
+   "superposition": 0.4322918573541758,
+   "cert_frac": 0.27610389610389613,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1009,
+   "suture_spearman": 0.6518671202215505,
+   "suture_regret": 0.31519386748779876,
+   "wattr_spearman": 0.21642914047977338,
+   "wattr_regret": 0.31136829487343753,
+   "superposition": 0.6642972446455013,
+   "cert_frac": 0.4797402597402597,
+   "false_per_draw": 0.86
+  },
+  {
+   "scale": 0.4,
+   "seed": 1010,
+   "suture_spearman": 0.6057866184448463,
+   "suture_regret": 0.017322023052837032,
+   "wattr_spearman": 0.4559364685946964,
+   "wattr_regret": 0.9657057393387938,
+   "superposition": 0.5417688907076375,
+   "cert_frac": 0.027792207792207795,
+   "false_per_draw": 0.0
+  },
+  {
+   "scale": 0.4,
+   "seed": 1011,
+   "suture_spearman": 0.5452142793914945,
+   "suture_regret": 0.09559128680769025,
+   "wattr_spearman": 0.4099824226406505,
+   "wattr_regret": 0.09559128680769025,
+   "superposition": 0.16946908627133878,
+   "cert_frac": 0.012467532467532468,
+   "false_per_draw": 0.0
+  }
+ ]
+}

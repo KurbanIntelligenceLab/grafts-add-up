@@ -8,7 +8,7 @@ property, or inspect the retained evidence.
 The machine-readable inventory at
 [`manifests/submission_manifest.json`](../manifests/submission_manifest.json)
 records every included file with its byte count, SHA-256 digest, and rationale.
-Regenerate it with:
+Stage the intended release files, then regenerate it with:
 
 ```bash
 python scripts/generate_submission_manifest.py
@@ -43,13 +43,13 @@ release attestation, and manifest generation.
 
 `results/`
 Contains the JSON, JSONL, manifests, statistics, and attestation needed to
-inspect the paper's retained experimental evidence. Author-only raw
-language-fidelity probes and per-record measurements are excluded from the
-public tree; public stage manifests and the isolated follow-up's path-free
-pair-level summaries and run manifests are retained.
+inspect the paper's retained experimental evidence. Its `controlled_stacks/`
+subdirectory contains the recovered controlled-study records. Path-free
+language-fidelity measurements and translated probe inputs allow paired
+statistics to be recomputed. Original local run manifests remain author-only.
 
 `docs/`
-Contains this selection rationale and a plain-language project explainer.
+Contains this selection rationale. The root README is the single project guide.
 
 `manifests/`
 Contains the machine-readable file inventory for the repository release.
@@ -71,11 +71,19 @@ machine-readable citation metadata.
 
 ## Artifact decisions
 
+`results/controlled_stacks/`
+All 18 recovered JSON outputs are retained. Together they are under 1 MB and
+support the main controlled tables, figure panels, and appendix studies. The
+root README states which source arrays and generator are still missing. Their
+original output basenames are retained to preserve the link to the archived
+experiment runs.
+
 `results/b3/lighton_qwen3_8b/`
 Contains the French and Chinese B3 data construction, preflight, selection,
-held-out answer measurement, aggregate language-fidelity summary, and post-hoc
-statistics. Raw language-fidelity records and their private measurement
-manifests remain author-only. The canonical stage manifests and the isolated
+held-out answer measurement, per-record language-fidelity scores and probes,
+aggregate language-fidelity summary, and post-hoc statistics. Original
+language-fidelity measurement manifests remain author-only. The
+canonical stage manifests and the isolated
 `llm_feedback_followup/` pair-level summaries and run manifests are public,
 while its per-record files remain ignored.
 
@@ -91,9 +99,8 @@ contract-v2 plumbing artifacts.
 Contains controlled multi-donor diagnostics, cost measurements, score-variant
 comparisons, and the powered Spanish ranking.
 
-The retained result files are sufficient to inspect the released evidence
-without rerunning model collection. Public run manifests preserve a portable
+The retained result files support the B3 answer and language-fidelity paired
+statistics without rerunning models. Public run manifests preserve a portable
 command record, model pin, input/output hashes, and selection invariants
-without recording local workspace paths. The language-model aggregate results
-whose per-record inputs remain private cannot be recomputed from this checkout
-alone.
+without recording local workspace paths. Other isolated follow-up summaries
+whose per-record inputs remain private cannot be recomputed from this checkout.

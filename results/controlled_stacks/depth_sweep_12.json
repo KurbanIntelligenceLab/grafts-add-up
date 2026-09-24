@@ -1,0 +1,468 @@
+{
+ "summary": {
+  "n_stacks": 12,
+  "by_depth": {
+   "6": {
+    "spearman": {
+     "mean": 0.9812770562770563,
+     "sd": 0.014253030480681446,
+     "min": 0.9493506493506494,
+     "max": 1.0
+    },
+    "regret": {
+     "mean": 0.007055145194769352,
+     "sd": 0.018679182742416596,
+     "min": 0.0,
+     "max": 0.06509159157967481
+    },
+    "superposition": {
+     "mean": 0.9813669385024575,
+     "sd": 0.016906824079862545,
+     "min": 0.936402472397835,
+     "max": 0.9958527950776721
+    },
+    "cert_frac": {
+     "mean": 0.8530416666666666,
+     "sd": 0.17394270978652365,
+     "min": 0.3795,
+     "max": 1.0
+    },
+    "false_per_draw": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "min": 0.0,
+     "max": 0.0
+    },
+    "n_windows": 21
+   },
+   "12": {
+    "spearman": {
+     "mean": 0.9514873312341666,
+     "sd": 0.03517089839878856,
+     "min": 0.8620114063152037,
+     "max": 0.9928173092730053
+    },
+    "regret": {
+     "mean": 0.013048114742049107,
+     "sd": 0.018435496193158422,
+     "min": 0.0,
+     "max": 0.053754468313290005
+    },
+    "superposition": {
+     "mean": 0.9450661298915803,
+     "sd": 0.04149295833018065,
+     "min": 0.8540278481562845,
+     "max": 0.9881143682747173
+    },
+    "cert_frac": {
+     "mean": 0.7936363636363636,
+     "sd": 0.144041872897519,
+     "min": 0.5085714285714286,
+     "max": 0.9811688311688311
+    },
+    "false_per_draw": {
+     "mean": 0.0008333333333333334,
+     "sd": 0.002886751345948129,
+     "min": 0.0,
+     "max": 0.01
+    },
+    "n_windows": 78
+   },
+   "24": {
+    "spearman": {
+     "mean": 0.8888798394056231,
+     "sd": 0.11034479319884977,
+     "min": 0.6266336292625473,
+     "max": 0.9872207468971876
+    },
+    "regret": {
+     "mean": 0.10937074619887988,
+     "sd": 0.28405313831380663,
+     "min": 0.0,
+     "max": 1.0017811701673391
+    },
+    "superposition": {
+     "mean": 0.8376886538395159,
+     "sd": 0.17802578469237504,
+     "min": 0.4252037608065562,
+     "max": 0.9626925260831365
+    },
+    "cert_frac": {
+     "mean": 0.6096488294314383,
+     "sd": 0.3567981861546893,
+     "min": 0.015317725752508362,
+     "max": 0.9522408026755854
+    },
+    "false_per_draw": {
+     "mean": 0.205,
+     "sd": 0.4609772228646444,
+     "min": 0.0,
+     "max": 1.56
+    },
+    "n_windows": 300
+   }
+  }
+ },
+ "stacks": [
+  {
+   "L": 6,
+   "seed": 1000,
+   "spearman": 0.9844155844155844,
+   "regret": 0.0,
+   "superposition": 0.9917442140413788,
+   "cert_frac": 0.95,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1001,
+   "spearman": 0.9857142857142858,
+   "regret": 0.0,
+   "superposition": 0.9887981291792154,
+   "cert_frac": 0.8640000000000001,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1002,
+   "spearman": 0.9493506493506494,
+   "regret": 0.06509159157967481,
+   "superposition": 0.9733780575807024,
+   "cert_frac": 0.3795,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1003,
+   "spearman": 0.9675324675324675,
+   "regret": 0.011645281965411591,
+   "superposition": 0.936402472397835,
+   "cert_frac": 0.6615,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1004,
+   "spearman": 0.9649350649350649,
+   "regret": 0.0,
+   "superposition": 0.9646359111325132,
+   "cert_frac": 0.95,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1005,
+   "spearman": 0.9844155844155844,
+   "regret": 0.0,
+   "superposition": 0.9930153325929186,
+   "cert_frac": 0.9550000000000001,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1006,
+   "spearman": 0.9831168831168832,
+   "regret": 0.0,
+   "superposition": 0.9796312995871849,
+   "cert_frac": 0.874,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1007,
+   "spearman": 0.9922077922077923,
+   "regret": 0.0,
+   "superposition": 0.9837054043970991,
+   "cert_frac": 0.9265000000000001,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1008,
+   "spearman": 0.9909090909090909,
+   "regret": 0.007924868792145823,
+   "superposition": 0.9872651059568986,
+   "cert_frac": 0.85,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1009,
+   "spearman": 0.9935064935064933,
+   "regret": 0.0,
+   "superposition": 0.9958527950776721,
+   "cert_frac": 0.85,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1010,
+   "spearman": 0.9792207792207792,
+   "regret": 0.0,
+   "superposition": 0.9864107742582581,
+   "cert_frac": 0.976,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 6,
+   "seed": 1011,
+   "spearman": 1.0,
+   "regret": 0.0,
+   "superposition": 0.995563765827812,
+   "cert_frac": 1.0,
+   "false_per_draw": 0.0,
+   "n_windows": 21
+  },
+  {
+   "L": 12,
+   "seed": 1000,
+   "spearman": 0.8620114063152037,
+   "regret": 0.053754468313290005,
+   "superposition": 0.9235167767370142,
+   "cert_frac": 0.5085714285714286,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1001,
+   "spearman": 0.9928173092730053,
+   "regret": 0.0,
+   "superposition": 0.9881143682747173,
+   "cert_frac": 0.881818181818182,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1002,
+   "spearman": 0.9070549703461095,
+   "regret": 0.0,
+   "superposition": 0.9122409398876089,
+   "cert_frac": 0.7737662337662338,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1003,
+   "spearman": 0.9513650906055968,
+   "regret": 0.015915194109651587,
+   "superposition": 0.986064338208457,
+   "cert_frac": 0.8577922077922078,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1004,
+   "spearman": 0.9610263154566953,
+   "regret": 0.039871835330101746,
+   "superposition": 0.9863618202336378,
+   "cert_frac": 0.5928571428571429,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1005,
+   "spearman": 0.9840918575095788,
+   "regret": 0.0,
+   "superposition": 0.974830008523383,
+   "cert_frac": 0.941038961038961,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1006,
+   "spearman": 0.9576372994094512,
+   "regret": 0.00039066408480126213,
+   "superposition": 0.9791613592578557,
+   "cert_frac": 0.755974025974026,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1007,
+   "spearman": 0.9542229921976756,
+   "regret": 0.023828372211897708,
+   "superposition": 0.8540278481562845,
+   "cert_frac": 0.8022077922077923,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1008,
+   "spearman": 0.9504040263533935,
+   "regret": 0.0,
+   "superposition": 0.9431873719403863,
+   "cert_frac": 0.9277922077922077,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1009,
+   "spearman": 0.9738995182033156,
+   "regret": 0.00041615901515523746,
+   "superposition": 0.9453337755828943,
+   "cert_frac": 0.9811688311688311,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1010,
+   "spearman": 0.9595594279138582,
+   "regret": 0.021923455543692683,
+   "superposition": 0.9024401834907427,
+   "cert_frac": 0.665974025974026,
+   "false_per_draw": 0.01,
+   "n_windows": 78
+  },
+  {
+   "L": 12,
+   "seed": 1011,
+   "spearman": 0.9637577612261156,
+   "regret": 0.0004772282959990548,
+   "superposition": 0.9455147684059837,
+   "cert_frac": 0.8346753246753246,
+   "false_per_draw": 0.0,
+   "n_windows": 78
+  },
+  {
+   "L": 24,
+   "seed": 1000,
+   "spearman": 0.9089367659640663,
+   "regret": 0.0,
+   "superposition": 0.9626925260831365,
+   "cert_frac": 0.8515719063545151,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1001,
+   "spearman": 0.6266336292625473,
+   "regret": 0.0,
+   "superposition": 0.7073965615924054,
+   "cert_frac": 0.12879598662207356,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1002,
+   "spearman": 0.8573473038589317,
+   "regret": 0.05708886259209178,
+   "superposition": 0.915602318866041,
+   "cert_frac": 0.7736789297658864,
+   "false_per_draw": 1.56,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1003,
+   "spearman": 0.9715290169890776,
+   "regret": 0.028861634085173726,
+   "superposition": 0.9610053989281516,
+   "cert_frac": 0.7601337792642141,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1004,
+   "spearman": 0.9612000133334815,
+   "regret": 0.12058299149579144,
+   "superposition": 0.9493793615250694,
+   "cert_frac": 0.9291638795986622,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1005,
+   "spearman": 0.9229889220991344,
+   "regret": 0.010403722613086863,
+   "superposition": 0.9154203341875137,
+   "cert_frac": 0.9429765886287625,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1006,
+   "spearman": 0.7172150801675573,
+   "regret": 1.0017811701673391,
+   "superposition": 0.4252037608065562,
+   "cert_frac": 0.05461538461538461,
+   "false_per_draw": 0.41,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1007,
+   "spearman": 0.9872207468971876,
+   "regret": 0.0,
+   "superposition": 0.9615247939414163,
+   "cert_frac": 0.9522408026755854,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1008,
+   "spearman": 0.9066918521316903,
+   "regret": 0.0,
+   "superposition": 0.927222330600521,
+   "cert_frac": 0.015317725752508362,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1009,
+   "spearman": 0.8870769675218613,
+   "regret": 0.09373057343307556,
+   "superposition": 0.8037584973728661,
+   "cert_frac": 0.6160535117056856,
+   "false_per_draw": 0.49,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1010,
+   "spearman": 0.9822780253113922,
+   "regret": 0.0,
+   "superposition": 0.9485865828881567,
+   "cert_frac": 0.8280602006688963,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  },
+  {
+   "L": 24,
+   "seed": 1011,
+   "spearman": 0.9374397493305482,
+   "regret": 0.0,
+   "superposition": 0.5744713792823567,
+   "cert_frac": 0.46317725752508365,
+   "false_per_draw": 0.0,
+   "n_windows": 300
+  }
+ ]
+}

@@ -1,0 +1,998 @@
+{
+ "summary": {
+  "0.25": {
+   "uncalibrated": {
+    "feasible": {
+     "mean": 0.9166666666666666,
+     "sd": 0.28867513459481287
+    },
+    "regret": {
+     "mean": 0.02508719693642521,
+     "sd": 0.036043075862146175
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "margin": {
+    "feasible": {
+     "mean": 0.9883333333333333,
+     "sd": 0.04041451884327381
+    },
+    "regret": {
+     "mean": 0.0667802877775002,
+     "sd": 0.0553687274439633
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "isotonic": {
+    "feasible": {
+     "mean": 0.8716666666666667,
+     "sd": 0.2801893299289975
+    },
+    "regret": {
+     "mean": 0.028593437987436174,
+     "sd": 0.02259337924557234
+    },
+    "kept_host": {
+     "mean": 0.02666666666666667,
+     "sd": 0.03550501458394378
+    }
+   },
+   "linear": {
+    "feasible": {
+     "mean": 0.9116666666666667,
+     "sd": 0.28736525168987964
+    },
+    "regret": {
+     "mean": 0.03413791282458815,
+     "sd": 0.03688229492301263
+    },
+    "kept_host": {
+     "mean": 0.005,
+     "sd": 0.012431631210161222
+    }
+   }
+  },
+  "0.5": {
+   "uncalibrated": {
+    "feasible": {
+     "mean": 0.75,
+     "sd": 0.45226701686664544
+    },
+    "regret": {
+     "mean": 0.0078106631203625305,
+     "sd": 0.03840208503200321
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "margin": {
+    "feasible": {
+     "mean": 1.0,
+     "sd": 0.0
+    },
+    "regret": {
+     "mean": 0.05107106022684985,
+     "sd": 0.0710655684584918
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "isotonic": {
+    "feasible": {
+     "mean": 0.8666666666666667,
+     "sd": 0.19639169272068757
+    },
+    "regret": {
+     "mean": 0.016911189383138684,
+     "sd": 0.043766725091597534
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "linear": {
+    "feasible": {
+     "mean": 0.8333333333333334,
+     "sd": 0.38924947208076144
+    },
+    "regret": {
+     "mean": 0.010883526509998505,
+     "sd": 0.034861564565301054
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   }
+  },
+  "0.75": {
+   "uncalibrated": {
+    "feasible": {
+     "mean": 0.8333333333333334,
+     "sd": 0.38924947208076144
+    },
+    "regret": {
+     "mean": 0.006023692301630468,
+     "sd": 0.015899692869627606
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "margin": {
+    "feasible": {
+     "mean": 1.0,
+     "sd": 0.0
+    },
+    "regret": {
+     "mean": 0.025323395017696315,
+     "sd": 0.026202552060875847
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "isotonic": {
+    "feasible": {
+     "mean": 0.9266666666666666,
+     "sd": 0.15962076268076114
+    },
+    "regret": {
+     "mean": 0.011096591744761075,
+     "sd": 0.015136059058821424
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   },
+   "linear": {
+    "feasible": {
+     "mean": 0.8733333333333334,
+     "sd": 0.3130301563553883
+    },
+    "regret": {
+     "mean": 0.009489051881095218,
+     "sd": 0.01367116427646012
+    },
+    "kept_host": {
+     "mean": 0.0,
+     "sd": 0.0
+    }
+   }
+  }
+ },
+ "stacks": [
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.005245365491046261,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0006294438589255513,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.98,
+     "regret": 0.00718211552683913,
+     "kept_host": 0.02
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.005245365491046261,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.005245365491046261,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0033570339142696072,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.005245365491046261,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.005245365491046261,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": 0.02825364705101574,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.036184665018406115,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.54,
+     "regret": 0.032482501648716106,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 0.0,
+     "regret": 0.02822669949867052,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.004317589736687832,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.16467719455108484,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.94,
+     "regret": 0.022799970337931717,
+     "kept_host": 0.04
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.001986091278876403,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.06694249595693444,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.021405320986578946,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.012908586517288346,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.04300954344850958,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": -0.03576603038778625,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0060639610369639385,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.44,
+     "regret": -0.017360834160896167,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 0.0,
+     "regret": -0.03576603038778625,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.038483592110770175,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.09822366401037508,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.05893419840622505,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.94,
+     "regret": 0.013152591153426414,
+     "kept_host": 0.04
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.09822366401037506,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.11021720081000508,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.06392597646980294,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.88,
+     "regret": 0.004114167309358292,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0022043440162001016,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.013050459169914302,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.013050459169914302,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.05468370214130228,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.98,
+     "regret": 0.045953753475301076,
+     "kept_host": 0.02
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.04092982581661607,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.039871835330101746,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0024183941200570658,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0024183941200570658,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.05146709909463066,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.042811445275588264,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.258105576269176,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.14453912271073854,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.09808011898228687,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.050252143188469864,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.00039066408480126213,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.09340634294534755,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.11251424428453422,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.07472507435627804,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.09340634294534755,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": -0.013222207097390637,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0820660937569454,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.78,
+     "regret": 0.012797204739402837,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.02013601320619074,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": -0.018632522686044872,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.08304954226448874,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.64,
+     "regret": 0.026406070723287076,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 0.48,
+     "regret": 0.009928280649963046,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.03842609806023489,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.14121163469291648,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.72,
+     "regret": 0.026046164141822193,
+     "kept_host": 0.06
+    },
+    "linear": {
+     "feasible": 0.98,
+     "regret": 0.07471237687792705,
+     "kept_host": 0.02
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.021053060429796842,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.74,
+     "regret": -0.022594181687385983,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.94,
+     "regret": -0.001983405525659414,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.10748836130535434,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.88,
+     "regret": 0.046123589070394655,
+     "kept_host": 0.12
+    },
+    "linear": {
+     "feasible": 0.96,
+     "regret": 0.03320276865602903,
+     "kept_host": 0.04
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": -0.03540955462611883,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.04867534163371432,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.56,
+     "regret": -0.007875076045773284,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 0.0,
+     "regret": -0.03486926295983875,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.040490214115586426,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0005402916662800816,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 0.0,
+     "regret": 0.018746409458450852,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 0.86,
+     "regret": 0.031056812354912474,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 0.02,
+     "regret": 0.028931144302893987,
+     "kept_host": 0.02
+    },
+    "linear": {
+     "feasible": 0.0,
+     "regret": 0.018746409458450852,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.021923455543692683,
+     "kept_host": 0.0
+    }
+   }
+  },
+  {
+   "0.25": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.07749732442622026,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.026349090304914887,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0,
+     "kept_host": 0.0
+    }
+   },
+   "0.5": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    }
+   },
+   "0.75": {
+    "uncalibrated": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "margin": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "isotonic": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    },
+    "linear": {
+     "feasible": 1.0,
+     "regret": 0.0004772282959990548,
+     "kept_host": 0.0
+    }
+   }
+  }
+ ],
+ "m_built": 10,
+ "draws": 50
+}

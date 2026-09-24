@@ -1,0 +1,834 @@
+{
+ "summary": {
+  "n_stacks": 12,
+  "all78": {
+   "table": {
+    "suture": {
+     "regret": {
+      "mean": 0.013048114742049107,
+      "sd": 0.018435496193158422,
+      "min": 0.0,
+      "max": 0.053754468313290005
+     },
+     "spearman": {
+      "mean": 0.9514873312341666,
+      "sd": 0.03517089839878856,
+      "min": 0.8620114063152037,
+      "max": 0.9928173092730053
+     }
+    },
+    "weight_attr": {
+     "regret": {
+      "mean": 0.01661807205877826,
+      "sd": 0.0198548182492984,
+      "min": 0.0,
+      "max": 0.053754468313290005
+     },
+     "spearman": {
+      "mean": 0.94230663850917,
+      "sd": 0.03262455927312781,
+      "min": 0.8911468278556887,
+      "max": 0.9895800402129515
+     }
+    },
+    "sens": {
+     "regret": {
+      "mean": 0.24074318919143925,
+      "sd": 0.1920327629228832,
+      "min": 0.05146836253742659,
+      "max": 0.5856016205379966
+     },
+     "spearman": {
+      "mean": 0.018319233509106924,
+      "sd": 0.44460126647844106,
+      "min": -0.8339635048495808,
+      "max": 0.5801160864452003
+     }
+    },
+    "top_3": {
+     "regret": {
+      "mean": 0.009629146598923702,
+      "sd": 0.018701721963811372,
+      "min": 0.0,
+      "max": 0.053754468313290005
+     }
+    },
+    "random_3": {
+     "regret": {
+      "mean": 0.1540413008949776,
+      "sd": 0.07146242938562927,
+      "min": 0.06461960757658114,
+      "max": 0.3348505242069338
+     }
+    },
+    "top_11": {
+     "regret": {
+      "mean": 0.0002647538404368192,
+      "sd": 0.0009171342062711088,
+      "min": 0.0,
+      "max": 0.0031770460852418303
+     }
+    },
+    "random_11": {
+     "regret": {
+      "mean": 0.06194858577220825,
+      "sd": 0.033497217525993606,
+      "min": 0.03091431876569796,
+      "max": 0.15264065183983427
+     }
+    }
+   },
+   "tests": {
+    "weight_attr": {
+     "mean_diff": 0.0035699573167291554,
+     "ci95": [
+      0.0,
+      0.010709871950187466
+     ],
+     "wilcoxon_p": 1.0,
+     "rank_biserial": 1.0,
+     "n_worse": 1,
+     "n_better": 0,
+     "n_ties": 11,
+     "holm_p": 1.0
+    },
+    "sens": {
+     "mean_diff": 0.22769507444939016,
+     "ci95": [
+      0.12533101384869508,
+      0.337337437523661
+     ],
+     "wilcoxon_p": 0.00048828125,
+     "rank_biserial": 1.0,
+     "n_worse": 12,
+     "n_better": 0,
+     "n_ties": 0,
+     "holm_p": 0.0029296875
+    },
+    "top_3": {
+     "mean_diff": -0.003418968143125404,
+     "ci95": [
+      -0.008024642838658705,
+      -7.444894259619102e-05
+     ],
+     "wilcoxon_p": 0.0625,
+     "rank_biserial": -1.0,
+     "n_worse": 0,
+     "n_better": 5,
+     "n_ties": 7,
+     "holm_p": 0.125
+    },
+    "random_3": {
+     "mean_diff": 0.14099318615292852,
+     "ci95": [
+      0.10154634535411398,
+      0.18573577686663212
+     ],
+     "wilcoxon_p": 0.00048828125,
+     "rank_biserial": 1.0,
+     "n_worse": 12,
+     "n_better": 0,
+     "n_ties": 0,
+     "holm_p": 0.0029296875
+    },
+    "top_11": {
+     "mean_diff": -0.012783360901612287,
+     "ci95": [
+      -0.023515786840079725,
+      -0.003587540269527212
+     ],
+     "wilcoxon_p": 0.0078125,
+     "rank_biserial": -1.0,
+     "n_worse": 0,
+     "n_better": 8,
+     "n_ties": 4,
+     "holm_p": 0.0234375
+    },
+    "random_11": {
+     "mean_diff": 0.04890047103015915,
+     "ci95": [
+      0.02848868031841363,
+      0.07322086676101262
+     ],
+     "wilcoxon_p": 0.00146484375,
+     "rank_biserial": 0.9487179487179487,
+     "n_worse": 11,
+     "n_better": 1,
+     "n_ties": 0,
+     "holm_p": 0.005859375
+    }
+   }
+  },
+  "w6": {
+   "table": {
+    "suture": {
+     "regret": {
+      "mean": 0.005741581074027964,
+      "sd": 0.015279995217235713,
+      "min": 0.0,
+      "max": 0.05162964358035316
+     },
+     "spearman": {
+      "mean": 0.9285714285714288,
+      "sd": 0.10328554364017446,
+      "min": 0.642857142857143,
+      "max": 1.0
+     }
+    },
+    "weight_attr": {
+     "regret": {
+      "mean": 0.005543315979656516,
+      "sd": 0.014632148793527928,
+      "min": 0.0,
+      "max": 0.04925046244789577
+     },
+     "spearman": {
+      "mean": 0.9315476190476194,
+      "sd": 0.0893938738823486,
+      "min": 0.7500000000000002,
+      "max": 1.0
+     }
+    },
+    "sens": {
+     "regret": {
+      "mean": 0.1588225264038403,
+      "sd": 0.14126504926782152,
+      "min": 0.0,
+      "max": 0.44602147217309973
+     },
+     "spearman": {
+      "mean": 0.1666666666666667,
+      "sd": 0.6369376331688147,
+      "min": -0.7857142857142859,
+      "max": 0.8928571428571429
+     }
+    }
+   },
+   "tests": {
+    "weight_attr": {
+     "mean_diff": -0.00019826509437144887,
+     "ci95": [
+      -0.0005947952831143466,
+      0.0
+     ],
+     "wilcoxon_p": 1.0,
+     "rank_biserial": -1.0,
+     "n_worse": 0,
+     "n_better": 1,
+     "n_ties": 11,
+     "holm_p": 1.0
+    },
+    "sens": {
+     "mean_diff": 0.1530809453298123,
+     "ci95": [
+      0.07842789430785384,
+      0.23546692571812028
+     ],
+     "wilcoxon_p": 0.00390625,
+     "rank_biserial": 1.0,
+     "n_worse": 9,
+     "n_better": 0,
+     "n_ties": 3,
+     "holm_p": 0.0078125
+    }
+   }
+  },
+  "weight_attr_vs_suture_score_corr": {
+   "mean": 0.9871580812636288,
+   "sd": 0.007213865046503762,
+   "min": 0.9716169994366821,
+   "max": 0.9977817526440145
+  },
+  "param_grad_check_max_rel_err": 1.072370096189128e-08
+ },
+ "stacks": [
+  {
+   "seed": 1000,
+   "all78": {
+    "suture": {
+     "spearman": 0.8620114063152037,
+     "regret": 0.053754468313290005,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9105957333805433,
+     "regret": 0.053754468313290005
+    },
+    "sens": {
+     "spearman": 0.34506000328785136,
+     "regret": 0.05510184593055101
+    },
+    "top_3": {
+     "regret": 0.053754468313290005,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.09851333033657061,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.0406963311320515,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.0,
+     "regret": 0.19621479854201151
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9850496166809535
+  },
+  {
+   "seed": 1001,
+   "all78": {
+    "suture": {
+     "spearman": 0.9928173092730053,
+     "regret": 0.0,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9895800402129515,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.8339635048495808,
+     "regret": 0.477824088567925
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.1660513576388595,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.044586446194091474,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.3214285714285715,
+     "regret": 0.3114242273296277
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9881155469213788
+  },
+  {
+   "seed": 1002,
+   "all78": {
+    "suture": {
+     "spearman": 0.9070549703461095,
+     "regret": 0.0,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.908395402066288,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.1759632772291,
+     "regret": 0.05146836253742659
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.06461960757658114,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.03708305101447491,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.642857142857143,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 0.7500000000000002,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.21428571428571433,
+     "regret": 0.09709674326462636
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9938092180318948
+  },
+  {
+   "seed": 1003,
+   "all78": {
+    "suture": {
+     "spearman": 0.9513650906055968,
+     "regret": 0.015915194109651587,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.90993816310272,
+     "regret": 0.015915194109651587
+    },
+    "sens": {
+     "spearman": -0.08390343833381808,
+     "regret": 0.27651150329136787
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.18695568053944414,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.08480580695107559,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.6785714285714287,
+     "regret": 0.0
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9977817526440145
+  },
+  {
+   "seed": 1004,
+   "all78": {
+    "suture": {
+     "spearman": 0.9610263154566953,
+     "regret": 0.039871835330101746,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9540459540459539,
+     "regret": 0.039871835330101746
+    },
+    "sens": {
+     "spearman": 0.5801160864452003,
+     "regret": 0.05844142333066005
+    },
+    "top_3": {
+     "regret": 0.039871835330101746,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.11425491181705386,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.052005338344880095,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.5714285714285715,
+     "regret": 0.44602147217309973
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9927970724497078
+  },
+  {
+   "seed": 1005,
+   "all78": {
+    "suture": {
+     "spearman": 0.9840918575095788,
+     "regret": 0.0,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9867474297854043,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.39693218174230827,
+     "regret": 0.487180969759903
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.3348505242069338,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.15264065183983427,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.8928571428571429,
+     "regret": 0.0
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9819282610789287
+  },
+  {
+   "seed": 1006,
+   "all78": {
+    "suture": {
+     "spearman": 0.9576372994094512,
+     "regret": 0.00039066408480126213,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.8911468278556887,
+     "regret": 0.04323015188555113
+    },
+    "sens": {
+     "spearman": -0.10175900049317771,
+     "regret": 0.09768150017624588
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.1218225826213617,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.055190848771328745,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.017269329307982417
+    },
+    "weight_attr": {
+     "spearman": 0.7857142857142859,
+     "regret": 0.017269329307982417
+    },
+    "sens": {
+     "spearman": -0.7857142857142859,
+     "regret": 0.16127657511809268
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9716169994366821
+  },
+  {
+   "seed": 1007,
+   "all78": {
+    "suture": {
+     "spearman": 0.9542229921976756,
+     "regret": 0.023828372211897708,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9725590864831369,
+     "regret": 0.023828372211897708
+    },
+    "sens": {
+     "spearman": 0.5153959964086546,
+     "regret": 0.34729654228804474
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.14691531501169472,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.05629627479193575,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 1.0,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.7142857142857144,
+     "regret": 0.14452155611711248
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9919803977975539
+  },
+  {
+   "seed": 1008,
+   "all78": {
+    "suture": {
+     "spearman": 0.9504040263533935,
+     "regret": 0.0,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9267062051872178,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.42088291455380056,
+     "regret": 0.14976582563911922
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.18760409104074482,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.08895262288192524,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.8928571428571429,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 0.8928571428571429,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": -0.5714285714285715,
+     "regret": 0.34045787072036493
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9893268118899763
+  },
+  {
+   "seed": 1009,
+   "all78": {
+    "suture": {
+     "spearman": 0.9738995182033156,
+     "regret": 0.00041615901515523746,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9589777311296298,
+     "regret": 0.00041615901515523746
+    },
+    "sens": {
+     "spearman": -0.30679447135143334,
+     "regret": 0.21727308692944014
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.1310458943216758,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.04400394540595724,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.642857142857143,
+     "regret": 0.0948439108631911
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9838308462491117
+  },
+  {
+   "seed": 1010,
+   "all78": {
+    "suture": {
+     "spearman": 0.9595594279138582,
+     "regret": 0.021923455543692683,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9494935444302531,
+     "regret": 0.021923455543692683
+    },
+    "sens": {
+     "spearman": 0.32330960179061446,
+     "regret": 0.5856016205379966
+    },
+    "top_3": {
+     "regret": 0.021923455543692683,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.2061325305418338,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0031770460852418303,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.05620739317324633,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.8214285714285715,
+     "regret": 0.05162964358035316
+    },
+    "weight_attr": {
+     "spearman": 0.8571428571428573,
+     "regret": 0.04925046244789577
+    },
+    "sens": {
+     "spearman": 0.8571428571428573,
+     "regret": 0.05162964358035316
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9793788475816712
+  },
+  {
+   "seed": 1011,
+   "all78": {
+    "suture": {
+     "spearman": 0.9637577612261156,
+     "regret": 0.0004772282959990548,
+     "builds": 1
+    },
+    "weight_attr": {
+     "spearman": 0.9494935444302531,
+     "regret": 0.0004772282959990548
+    },
+    "sens": {
+     "spearman": 0.42422134827198116,
+     "regret": 0.08477150130859101
+    },
+    "top_3": {
+     "regret": 0.0,
+     "builds": 3
+    },
+    "random_3": {
+     "regret": 0.08972978508697746,
+     "builds": 3
+    },
+    "top_11": {
+     "regret": 0.0,
+     "builds": 11
+    },
+    "random_11": {
+     "regret": 0.03091431876569796,
+     "builds": 11
+    }
+   },
+   "w6": {
+    "suture": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "weight_attr": {
+     "spearman": 0.9642857142857145,
+     "regret": 0.0
+    },
+    "sens": {
+     "spearman": 0.6785714285714287,
+     "regret": 0.06238351913760365
+    }
+   },
+   "weight_attr_vs_suture_score_corr": 0.9902816044016733
+  }
+ ]
+}
