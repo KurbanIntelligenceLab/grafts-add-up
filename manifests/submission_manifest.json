@@ -1,5 +1,5 @@
 {
-  "file_count": 358,
+  "file_count": 384,
   "files": [
     {
       "bytes": 447,
@@ -8,10 +8,10 @@
       "sha256": "4c66a8a9bb574a6d87441cdf288fa0998666ef471b4563dbb94788f671d97076"
     },
     {
-      "bytes": 1164,
+      "bytes": 1543,
       "path": ".gitattributes",
       "rationale": "Public repository metadata required to reproduce or audit the submission.",
-      "sha256": "0344e1c051d6dd1c8c32df695ee985c0392e7f83c14991ef77046524852df59a"
+      "sha256": "1b0ff228405fe465c4d35ddfa313b7bb0ef0484a9ddaa61a81d54ef24c3e3e5c"
     },
     {
       "bytes": 1807,
@@ -32,10 +32,10 @@
       "sha256": "1d0dde41ece0f9620937f1a81a67e295ace0eae180c009d862006e8f3b288458"
     },
     {
-      "bytes": 11837,
+      "bytes": 12361,
       "path": "README.md",
       "rationale": "Reviewer-facing overview, setup, reproduction workflow, and claim boundaries.",
-      "sha256": "83e54aa081930e2a88a7d39853fb213f556b39a9301315ec6e29df7c57f70c5f"
+      "sha256": "7f05b4230e6ae377b1059fedf962f5911e032f10772aeae54b6ef13261b9f7f7"
     },
     {
       "bytes": 5194,
@@ -80,10 +80,10 @@
       "sha256": "c76d13596eb90f0b8c52f902d600efb372abb7053cde3e67bc686c31f6dadb88"
     },
     {
-      "bytes": 4862,
+      "bytes": 5165,
       "path": "docs/FILES_RATIONALE.md",
       "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "4ec268956dbd20b7b6efcff42ab530a5f285f756d0985e6479982c7f428345c9"
+      "sha256": "92c53cbd58d6a4d8cd17ae057b99aa3886037daa425464f99083cadb0df141bd"
     },
     {
       "bytes": null,
@@ -255,16 +255,16 @@
       "sha256": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
     },
     {
-      "bytes": 81180,
+      "bytes": 82292,
       "path": "paper/main.tex",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "7fa5262245fc0eca8bafae06df5fa2be9bef0ca674207bdcd03e704e16b0753a"
+      "sha256": "916a0607f7a00c48a35688243c2cbdb5ba69a5f919ea8a5d5b022afe7b254898"
     },
     {
-      "bytes": 39295,
+      "bytes": 39747,
       "path": "paper/suture.bib",
       "rationale": "Manuscript source or compile input consumed by the ICLR paper build.",
-      "sha256": "eb0230836646706405fecf6f11415c7621aaecdbad7d2e39b9ae56a80d00fbfb"
+      "sha256": "8358215f45bfc9925a7885596f43be7953748b35119e08c8885df62ec64d78ab"
     },
     {
       "bytes": 500,
@@ -273,10 +273,10 @@
       "sha256": "7a7043ad82f5001610d3ad6f6d7674073699e076ddad532c1614cc548e99fb6c"
     },
     {
-      "bytes": 608,
+      "bytes": 660,
       "path": "requirements-gpu.txt",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "a5ef68fb0f6b0515dc08b5cea661f3e6e228ab7586cf8ef16e25cd0f30603f84"
+      "sha256": "332041124e9f82b8d033ad5e6da8ccb5362c2e509cff5ab4a090940fb8b65e9f"
     },
     {
       "bytes": 139,
@@ -811,6 +811,126 @@
       "path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/score/selection_scores.json",
       "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
       "sha256": "2c348088b9e1f5b756343d16ae119f4427f3a6bcd76fdb4f05aec2833966bf27"
+    },
+    {
+      "bytes": 1372,
+      "path": "results/b3/translation_audit_v1/attempt_001/embedding_freeze.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "34afd912a330149e815f80aef1f4837daae25e23f26a0e3dac3fdc72721fc405"
+    },
+    {
+      "bytes": 331,
+      "path": "results/b3/translation_audit_v1/attempt_001/status.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "f25f429abe12aa6c02dddb65556a714bc983ec48360e12af29190cb45facadb8"
+    },
+    {
+      "bytes": 5340,
+      "path": "results/b3/translation_audit_v1/audit_protocol.md",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "81c7e7b743eb250311dd8e83d2d64ab4bd9801cf3cde90c2d71ef2bf8335d1b7"
+    },
+    {
+      "bytes": 1389107,
+      "path": "results/b3/translation_audit_v1/embedding_chunk_tokens.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "00a2e8e171e8d902f121447bf2f938477db89204ad5000313d5e873ba4903f43"
+    },
+    {
+      "bytes": 1372,
+      "path": "results/b3/translation_audit_v1/embedding_freeze.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "b0a380764f40421e20a440db2773c77f6464ecc311d9a6caf33d701f38f0a0ad"
+    },
+    {
+      "bytes": 1443748,
+      "path": "results/b3/translation_audit_v1/embedding_inputs.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "c26530dfea0050bde426d9ac5897a9163cda3c792cb6388308a7667a575fece9"
+    },
+    {
+      "bytes": 10190726,
+      "path": "results/b3/translation_audit_v1/embeddings.npz",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "bea043f69539864ced8097a17f0d3fe556a8d1cbefb8732bed22983f2fd715dd"
+    },
+    {
+      "bytes": 7767,
+      "path": "results/b3/translation_audit_v1/illustrative_examples.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "6096ccbb27f0f2b825488806844700e6741770429550cbbd1831590951fffaec"
+    },
+    {
+      "bytes": 9283,
+      "path": "results/b3/translation_audit_v1/independent_audit.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "4d9c8d41e65c72cf128f9832aa787366451024b6ede06a20e3cefc7abe7b38e9"
+    },
+    {
+      "bytes": 6317,
+      "path": "results/b3/translation_audit_v1/independent_number_audit.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "8122d0e7b464da611217392197775bbcd1230d4fdb8fa83527737b30522d2a36"
+    },
+    {
+      "bytes": 729,
+      "path": "results/b3/translation_audit_v1/number_freeze.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "651bc73191afee783fc4de7b82d6749f2bff84818cebdad2f2a1a01e98e0f1cb"
+    },
+    {
+      "bytes": 36520,
+      "path": "results/b3/translation_audit_v1/number_inspection_examples.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "4a5ef886f5af44afee753484c22491710602ac9910f496eabe9e32de663895d4"
+    },
+    {
+      "bytes": 6001030,
+      "path": "results/b3/translation_audit_v1/number_records.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "62aa76d71839b9ef9a93df36860da054839c7f65775131a09e30246ee0383246"
+    },
+    {
+      "bytes": 3882,
+      "path": "results/b3/translation_audit_v1/number_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "649636eda5cdb4d1c3099be7759e580e3f36c3022e985c597fd10c53ba1d0393"
+    },
+    {
+      "bytes": 2430058,
+      "path": "results/b3/translation_audit_v1/paired_texts.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0"
+    },
+    {
+      "bytes": 1973084,
+      "path": "results/b3/translation_audit_v1/semantic_scores.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "64baeaf56030018bf5477ae41b0beec40cd874f93c167674a684e0849dad4a0d"
+    },
+    {
+      "bytes": 18763,
+      "path": "results/b3/translation_audit_v1/semantic_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "721a57e71d226ceeaba1e03edef84bb8cb960f65289a4f52d9d98349697d50ad"
+    },
+    {
+      "bytes": 6556,
+      "path": "results/b3/translation_audit_v1/source_recovery.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "04d847d77b7cdabdd8c618bd017de48e2290150629650082fda66034db22fcde"
+    },
+    {
+      "bytes": 936806,
+      "path": "results/b3/translation_audit_v1/tokenizer_length_records.jsonl",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "858b52d5997405e9b765474c8388eab6d367631291d595d5b06f5685bb27cfd1"
+    },
+    {
+      "bytes": 21504,
+      "path": "results/b3/translation_audit_v1/tokenizer_length_summary.json",
+      "rationale": "Canonical B3 LightOn/Qwen3-8B selection and held-out measurement artifact reported in the paper.",
+      "sha256": "831411dcb09f0c55893ea38bbb6442d394eaa967ace86717a8eeb2817179a8b8"
     },
     {
       "bytes": 16636,
@@ -1749,6 +1869,12 @@
       "sha256": "e857d3abf021b6a7ef1966cde8acb7274c392a2b2d62dd08b7f2b2435249c4d5"
     },
     {
+      "bytes": 12378,
+      "path": "scripts/check_b3_translation_lengths.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "ecc83235235117e0fe0d70f1db91a657c35181142f1323e21f14613a575425d2"
+    },
+    {
       "bytes": 1321,
       "path": "scripts/download_b3_generation_checkpoints.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
@@ -1767,6 +1893,12 @@
       "sha256": "880bd44070bd55598a3196dcd293fcde91a98d06bdf1139654f57da09c1b9f07"
     },
     {
+      "bytes": 15107,
+      "path": "scripts/prepare_b3_translation_audit.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "e90567030491fd6a94ee472cc6b6ab8f7a32b9f6e7303132fce4759e437a7ee0"
+    },
+    {
       "bytes": 3729,
       "path": "scripts/record_b3_generation_inputs.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
@@ -1783,6 +1915,18 @@
       "path": "scripts/run_b3_generation_followup.py",
       "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
       "sha256": "9e87ca94b9392abae03c279b57cec9be08edc44a377d593057f1b900ba536d80"
+    },
+    {
+      "bytes": 4307,
+      "path": "scripts/run_b3_translation_numbers.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "8cd6e0cf4ff51d358fdb3bf152809fe7444e13ab32c6ba8ce1e77cd1687c4c69"
+    },
+    {
+      "bytes": 13639,
+      "path": "scripts/run_b3_translation_semantics.py",
+      "rationale": "Reviewer-facing command-line entry point for the reproducibility workflow.",
+      "sha256": "aae2e68385d79d9517b39d335b0a02bf068f07e0e006cc1d3b2d4939d8506b43"
     },
     {
       "bytes": 1269,
@@ -2007,6 +2151,12 @@
       "sha256": "722cb87e70ef9e3e90178fa3e289bc3f79f44db170820bad7e8be5fa7dc3f27c"
     },
     {
+      "bytes": 33162,
+      "path": "src/suture/translation_number_checks.py",
+      "rationale": "Reusable experiment implementation, scoring adapter, provenance, or contract enforcement code.",
+      "sha256": "c3ecbb74ea09df9c8a17dc717752b4d782e2b737b01e794597a931d71ed0e69f"
+    },
+    {
       "bytes": 11979,
       "path": "tests/test_b3_contract.py",
       "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
@@ -2071,6 +2221,12 @@
       "path": "tests/test_tier_a_stats.py",
       "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
       "sha256": "ea61b1e78548b563d540c907bea1b46dca81bb3cd3a6c49f560323aeec4100d3"
+    },
+    {
+      "bytes": 5736,
+      "path": "tests/test_translation_number_checks.py",
+      "rationale": "Offline regression test for a released data, scoring, provenance, or fail-closed guard.",
+      "sha256": "4401d0d3481c39b7eee11f8b7c4b6332a23ff3c1a900a9a49ab97b3c9efd2d40"
     },
     {
       "bytes": 6886,
@@ -2151,7 +2307,7 @@
       "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
     }
   ],
-  "generated_at": "2026-11-09T14:25:29.068141+00:00",
+  "generated_at": "2026-11-09T20:52:32.227977+00:00",
   "kind": "public_submission_manifest",
   "root": "repository checkout",
   "schema_version": 1,

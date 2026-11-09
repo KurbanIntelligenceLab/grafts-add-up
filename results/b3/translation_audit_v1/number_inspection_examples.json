@@ -1,0 +1,978 @@
+{
+  "selection": "Post-hoc nonrandom AI-assisted inspection of flags, not an error-rate sample. Checker is not adapted after scoring.",
+  "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+  "examples": [
+    {
+      "observation": "False flag: twice becomes deux fois; twice is outside the supported English numeral grammar.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:114",
+        "language": "fr",
+        "manifest_input_text_sha256": "c2d3741a907813a021799e49f97e3f9483c9f2d831c712869c4de688892c6d25",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:114",
+        "manifest_record_sha256": "1c2cae9d4a1ce306f695a74ddfaf9bcf6305dab3972e1dca6e63aafcd7d184d5",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:114",
+        "source_index": 114,
+        "source_sha256": "ce87f553b8706e5631c8d1d6ace86e579690ca4b0870f1faaebd050f551c378f",
+        "source_subset": null,
+        "source_text": "Ed has 2 dogs, 3 cats and twice as many fish as cats and dogs combined. How many pets does Ed have in total?",
+        "target_sha256": "e0f23c95741836cd690a035ff4ea93169974558ef88ef761d901b092442ddb9d",
+        "target_text": "Ed a 2 chiens, 3 chats et deux fois plus de poissons que les chiens et les chats combinés. Combien de animaux a Ed en total ?"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "fr",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "match",
+          "source_multiset": [
+            {
+              "normalized_value": "2",
+              "count": 1
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "2",
+              "count": 1
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": []
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "2",
+              "count": 1
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "2",
+              "count": 2
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "2",
+              "count": 1
+            }
+          ]
+        },
+        "source": {
+          "digit_mentions": [
+            {
+              "span": "2",
+              "start": 7,
+              "end": 8,
+              "normalized_value": "2",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "3",
+              "start": 15,
+              "end": 16,
+              "normalized_value": "3",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 2
+        },
+        "target": {
+          "digit_mentions": [
+            {
+              "span": "2",
+              "start": 5,
+              "end": 6,
+              "normalized_value": "2",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "3",
+              "start": 15,
+              "end": 16,
+              "normalized_value": "3",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [
+            {
+              "span": "deux",
+              "start": 26,
+              "end": 30,
+              "normalized_value": "2",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 3
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": true,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 2,
+        "target_numeric_signal_count": 3,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    },
+    {
+      "observation": "False flag: English weekday names become Chinese weekday numerals.",
+      "pair": {
+        "id": "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:63",
+        "language": "zh",
+        "manifest_input_text_sha256": "cee6b2accf90328af75db0c2d734874e187530b25a3daf3f811704bf1b9d591a",
+        "manifest_path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:zh:P_util:openai/gsm8k:main:train:63",
+        "manifest_record_sha256": "b9d8cbb60c5940e00327a429162ee727941ae220677a21fc6c562dd80c60f04d",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:63",
+        "source_index": 63,
+        "source_sha256": "ae6965410f8e9e8a710e87cf4d40b49de984937ef0881e9c914ed10711a1df56",
+        "source_subset": null,
+        "source_text": "Shawna's workout goal is 30 situps. On Monday, Shawna was only able to do 12 situps, so she decided that she would make up for the rest on Tuesday. However, she was only able to do 19 situps on Tuesday. How many situps would Shawna have to do on Wednesday to meet her minimum goal and make up for the ones she didn't do?",
+        "target_sha256": "e146b51d9b5e496ea45c6f19141c55f1786796a5d96f43af2a09ec70d8c4c8be",
+        "target_text": "莎娜的健身目标是做30次仰卧起坐。周一，莎娜只能做12次，因此她决定在周二补上剩下的。然而，周二她只做了19次。莎娜要在周三做多少次仰卧起坐才能达到她的最低目标并补上她没做的那几次呢？"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "zh",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "match",
+          "source_multiset": [
+            {
+              "normalized_value": "12",
+              "count": 1
+            },
+            {
+              "normalized_value": "19",
+              "count": 1
+            },
+            {
+              "normalized_value": "30",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "12",
+              "count": 1
+            },
+            {
+              "normalized_value": "19",
+              "count": 1
+            },
+            {
+              "normalized_value": "30",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": []
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "12",
+              "count": 1
+            },
+            {
+              "normalized_value": "19",
+              "count": 1
+            },
+            {
+              "normalized_value": "30",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            },
+            {
+              "normalized_value": "12",
+              "count": 1
+            },
+            {
+              "normalized_value": "19",
+              "count": 1
+            },
+            {
+              "normalized_value": "2",
+              "count": 2
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            },
+            {
+              "normalized_value": "30",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            },
+            {
+              "normalized_value": "2",
+              "count": 2
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ]
+        },
+        "source": {
+          "digit_mentions": [
+            {
+              "span": "30",
+              "start": 25,
+              "end": 27,
+              "normalized_value": "30",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "12",
+              "start": 74,
+              "end": 76,
+              "normalized_value": "12",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "19",
+              "start": 181,
+              "end": 183,
+              "normalized_value": "19",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 3
+        },
+        "target": {
+          "digit_mentions": [
+            {
+              "span": "30",
+              "start": 9,
+              "end": 11,
+              "normalized_value": "30",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "12",
+              "start": 25,
+              "end": 27,
+              "normalized_value": "12",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "19",
+              "start": 52,
+              "end": 54,
+              "normalized_value": "19",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [
+            {
+              "span": "一",
+              "start": 18,
+              "end": 19,
+              "normalized_value": "1",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "二",
+              "start": 36,
+              "end": 37,
+              "normalized_value": "2",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "二",
+              "start": 47,
+              "end": 48,
+              "normalized_value": "2",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "三",
+              "start": 61,
+              "end": 62,
+              "normalized_value": "3",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 7
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": true,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 3,
+        "target_numeric_signal_count": 7,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    },
+    {
+      "observation": "False flag: English month/weekday names become Chinese numerals.",
+      "pair": {
+        "id": "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:524:chosen_en",
+        "language": "zh",
+        "manifest_input_text_sha256": "75500791c6766f232258b98a446446537ae859f3985e8bda41ce35f2bed0b536",
+        "manifest_path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
+        "manifest_record_id": "b3:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:524:chosen_en",
+        "manifest_record_sha256": "11102b3b71a922d245d0ca9461ab310bbe5d9f8ee118bd33c71adb79b0916f0b",
+        "probe": "P_risk",
+        "source_id": "CohereLabsCommunity/multilingual-reward-bench:translation:test:524:chosen_en",
+        "source_index": 524,
+        "source_sha256": "75fefc1ef3f68cd093e876d7ff76f9805b531774d83e6fd5eca3108de550f306",
+        "source_subset": "translation-de-en-hard",
+        "source_text": "The AfD’s federal arbitration court had confirmed the exclusion of Kalbitz after several hours of hearing on Saturday in Stuttgart; the AfD’s federal board had decided the expulsion with majority in May.",
+        "target_sha256": "736c9d938cf368fde7e00939204109ca581d9e9fb4b4b077190f2cf05c364402",
+        "target_text": "AfD的联邦仲裁法院在周六上午数小时的听证后确认了卡尔比特兹的排除；AfD的联邦董事会在五月以多数票决定将其驱逐。"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "zh",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "match",
+          "source_multiset": [],
+          "target_multiset": [],
+          "missing_from_target": [],
+          "extra_in_target": []
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [],
+          "target_multiset": [
+            {
+              "normalized_value": "5",
+              "count": 1
+            },
+            {
+              "normalized_value": "6",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "5",
+              "count": 1
+            },
+            {
+              "normalized_value": "6",
+              "count": 1
+            }
+          ]
+        },
+        "source": {
+          "digit_mentions": [],
+          "supported_number_words": [],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": false,
+          "numeric_signal_count": 0
+        },
+        "target": {
+          "digit_mentions": [],
+          "supported_number_words": [
+            {
+              "span": "六",
+              "start": 12,
+              "end": 13,
+              "normalized_value": "6",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "五",
+              "start": 44,
+              "end": 45,
+              "normalized_value": "5",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 2
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": false,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 0,
+        "target_numeric_signal_count": 2,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    },
+    {
+      "observation": "False flag: idiomatic 一方面 and 另一方面 are not literal quantity mentions.",
+      "pair": {
+        "id": "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:0:source",
+        "language": "zh",
+        "manifest_input_text_sha256": "70d40258dd0d0b8759ef39086a4cab63e2939765ca9fd16708bf47b60b98886b",
+        "manifest_path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
+        "manifest_record_id": "b3:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:0:source",
+        "manifest_record_sha256": "8ac902ca2aacca2023533dee1e90e73557c29932741ed1158f501d5a683b6d72",
+        "probe": "P_risk",
+        "source_id": "CohereLabsCommunity/multilingual-reward-bench:translation:test:0:source",
+        "source_index": 0,
+        "source_sha256": "d1b3554f34e6cf903e8830900ff680524efed36ec6eef1b6681accf515371740",
+        "source_subset": "translation-en-de-easy",
+        "source_text": "So what does the future have in store for Thunberg? Well that depends how you look at Cullis-Suzuki's example. On one hand, none of her worst fears came to pass. On the other, world governments still have ecological problems to contend with, and are still being lectured by children about them.",
+        "target_sha256": "2f60b880ba2a33ca76fbf679423a7df67cb17dd89a3c380df59162f255c41874",
+        "target_text": "所以，图恩伯格的未来会有什么呢？这取决于你怎么看待库利斯-苏兹uki的例子。一方面，她最糟糕的恐惧并没有实现。另一方面，世界政府仍然需要解决生态问题，而且还在被孩子们批评。"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "zh",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "match",
+          "source_multiset": [],
+          "target_multiset": [],
+          "missing_from_target": [],
+          "extra_in_target": []
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "1",
+              "count": 2
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            }
+          ]
+        },
+        "source": {
+          "digit_mentions": [],
+          "supported_number_words": [
+            {
+              "span": "one",
+              "start": 114,
+              "end": 117,
+              "normalized_value": "1",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 1
+        },
+        "target": {
+          "digit_mentions": [],
+          "supported_number_words": [
+            {
+              "span": "一",
+              "start": 38,
+              "end": 39,
+              "normalized_value": "1",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "一",
+              "start": 56,
+              "end": 57,
+              "normalized_value": "1",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 2
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": true,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 1,
+        "target_numeric_signal_count": 2,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    },
+    {
+      "observation": "Illustrative omission: target ends before final stamp requirements; AI-assisted inspection, no independent human adjudication.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:116",
+        "language": "fr",
+        "manifest_input_text_sha256": "e51e952b2207e46ca7fcf45be4cd6f5a5ac587f4cbd3cc7af0a3dca8186bd67d",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:116",
+        "manifest_record_sha256": "a5a24fd325a3882c352d7e59f2927f329050707095ece5f42e6347428d1cb1b2",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:116",
+        "source_index": 116,
+        "source_sha256": "7130063dd581fb55264610fc165503ad0e3544c9841e65985a668a3b35728497",
+        "source_subset": null,
+        "source_text": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+        "target_sha256": "2aa2b066f2ee2463fc523bfb2f73585a51aee696221119850007953c7cc6829e",
+        "target_text": "Valérie doit mettre des timbres sur les enveloppes qu'elle est en train de envoyer. Elle a des cartes remerciements pour chaque grand-mère, oncle et tante pour les cadeaux de naissance qu'elles ont envoyés. Elle doit aussi payer séparément la facture d'eau et la facture d'électricité. Elle veut envoyer trois fois plus de rebates en ligne que de factures et elle a deux"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "fr",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            },
+            {
+              "normalized_value": "2",
+              "count": 1
+            }
+          ],
+          "target_multiset": [],
+          "missing_from_target": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            },
+            {
+              "normalized_value": "2",
+              "count": 1
+            }
+          ],
+          "extra_in_target": []
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            },
+            {
+              "normalized_value": "2",
+              "count": 1
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "2",
+              "count": 1
+            },
+            {
+              "normalized_value": "3",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [
+            {
+              "normalized_value": "1",
+              "count": 1
+            }
+          ],
+          "extra_in_target": []
+        },
+        "source": {
+          "digit_mentions": [
+            {
+              "span": "1",
+              "start": 419,
+              "end": 420,
+              "normalized_value": "1",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "2",
+              "start": 465,
+              "end": 466,
+              "normalized_value": "2",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [
+            {
+              "span": "three",
+              "start": 259,
+              "end": 264,
+              "normalized_value": "3",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 3
+        },
+        "target": {
+          "digit_mentions": [],
+          "supported_number_words": [
+            {
+              "span": "trois",
+              "start": 304,
+              "end": 309,
+              "normalized_value": "3",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            },
+            {
+              "span": "deux",
+              "start": 366,
+              "end": 370,
+              "normalized_value": "2",
+              "kind": "number_word",
+              "marker": null,
+              "source_form": "number_word"
+            }
+          ],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 2
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": true,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 3,
+        "target_numeric_signal_count": 2,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    },
+    {
+      "observation": "Illustrative numeric addition: target says 2025 where source says next year; AI-assisted inspection, no independent human adjudication.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:196",
+        "language": "fr",
+        "manifest_input_text_sha256": "77ef27d3b4f9c64a0d2e8369465631226017bb16a5bea1b020ddf4364c02d633",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:196",
+        "manifest_record_sha256": "1219f9265efc6e4079a6b8b11fb246eecae685c33112293fa68ef1cacadd14f3",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:196",
+        "source_index": 196,
+        "source_sha256": "46d7f44c648c9db3060aaf63cf2b231087e52299eff2adb6294226cb38f73f18",
+        "source_subset": null,
+        "source_text": "Herbert is 10 years younger than Kris. If Kris is 24 years old now, how old will Herbert be next year?",
+        "target_sha256": "6f7e40d59f586210973a112bc97daf7a864ffb1d3539aa7228bb09c2b8e508da",
+        "target_text": "Herbert est 10 ans plus jeune que Kris. Si Kris a 24 ans maintenant, combien aura-t-il en 2025?"
+      },
+      "check": {
+        "schema_version": 1,
+        "check_kind": "numeral_consistency_flag",
+        "source_language": "en",
+        "target_language": "fr",
+        "status": "mismatch",
+        "strict_digit_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "10",
+              "count": 1
+            },
+            {
+              "normalized_value": "24",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "10",
+              "count": 1
+            },
+            {
+              "normalized_value": "2025",
+              "count": 1
+            },
+            {
+              "normalized_value": "24",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "2025",
+              "count": 1
+            }
+          ]
+        },
+        "supported_number_comparison": {
+          "status": "mismatch",
+          "source_multiset": [
+            {
+              "normalized_value": "10",
+              "count": 1
+            },
+            {
+              "normalized_value": "24",
+              "count": 1
+            }
+          ],
+          "target_multiset": [
+            {
+              "normalized_value": "10",
+              "count": 1
+            },
+            {
+              "normalized_value": "2025",
+              "count": 1
+            },
+            {
+              "normalized_value": "24",
+              "count": 1
+            }
+          ],
+          "missing_from_target": [],
+          "extra_in_target": [
+            {
+              "normalized_value": "2025",
+              "count": 1
+            }
+          ]
+        },
+        "source": {
+          "digit_mentions": [
+            {
+              "span": "10",
+              "start": 11,
+              "end": 13,
+              "normalized_value": "10",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "24",
+              "start": 50,
+              "end": 52,
+              "normalized_value": "24",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 2
+        },
+        "target": {
+          "digit_mentions": [
+            {
+              "span": "10",
+              "start": 12,
+              "end": 14,
+              "normalized_value": "10",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "24",
+              "start": 50,
+              "end": 52,
+              "normalized_value": "24",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            },
+            {
+              "span": "2025",
+              "start": 90,
+              "end": 94,
+              "normalized_value": "2025",
+              "kind": "number",
+              "marker": null,
+              "source_form": "digits"
+            }
+          ],
+          "supported_number_words": [],
+          "ambiguous_spans": [],
+          "unhandled_spans": [],
+          "article_candidates_not_counted": [],
+          "has_numeric_signal": true,
+          "numeric_signal_count": 3
+        },
+        "unhandled_source_spans": [],
+        "unhandled_target_spans": [],
+        "ambiguous_source_spans": [],
+        "ambiguous_target_spans": [],
+        "source_has_numeric_signal": true,
+        "target_has_numeric_signal": true,
+        "source_numeric_signal_count": 2,
+        "target_numeric_signal_count": 3,
+        "caveats": [
+          "These are numeral-consistency flags, not confirmed translation errors or an error-rate estimate.",
+          "No units, currency meaning, dates, mathematical relations, or semantic correctness are verified.",
+          "Dates, times, versions, ranges, unsupported number words, and ambiguous locale separators require review.",
+          "English a/an and French un/une are not automatically counted as one; they are reported as article candidates.",
+          "No universal acceptance threshold is defined. Review-needed records must remain visible in any aggregate."
+        ]
+      }
+    }
+  ]
+}

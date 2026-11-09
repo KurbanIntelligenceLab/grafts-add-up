@@ -1,0 +1,24 @@
+{
+  "model": "sentence-transformers/LaBSE",
+  "revision": "836121a0533e5664b21c7aacc5d22951f2b8b25b",
+  "n_pairs": 2000,
+  "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+  "script_sha256": "186c6cc1a0a3e696a5633c2bdd66429b15d3f23ee42038388f9d7a257654456a",
+  "dtype": "float32",
+  "device": "cuda",
+  "batch_size": 16,
+  "max_tokens_including_specials": 256,
+  "attention": "eager",
+  "seed": 20261109,
+  "quality_acceptance_threshold": null,
+  "filter_or_retranslate": false,
+  "primary_standard_score": "cosine of first-256-token normalized LaBSE embeddings",
+  "long_text_diagnostic": "nonoverlapping token chunks; token-weighted mean of normalized chunk embeddings, L2-normalized before cosine",
+  "coverage_diagnostic": "source-token-weighted mean of each source chunk's maximum cosine against any target chunk",
+  "controls": {
+    "wrong_target": "cyclic shift 137 within each language/probe group",
+    "source_number": "add 1 to first standalone Arabic numeric mention in English; unsupported cases have no control"
+  },
+  "control_limitation": "Controls assess sensitivity, not a human-calibrated fidelity threshold; numeric perturbations are not adjudicated error labels.",
+  "timing": "protocol and source hashes recorded before embedding inference; post-submission, not externally preregistered"
+}

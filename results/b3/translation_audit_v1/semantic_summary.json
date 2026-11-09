@@ -1,0 +1,391 @@
+{
+  "protocol": {
+    "model": "sentence-transformers/LaBSE",
+    "revision": "836121a0533e5664b21c7aacc5d22951f2b8b25b",
+    "n_pairs": 2000,
+    "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "script_sha256": "aae2e68385d79d9517b39d335b0a02bf068f07e0e006cc1d3b2d4939d8506b43",
+    "dtype": "float32",
+    "device": "cuda",
+    "batch_size": 16,
+    "max_tokens_including_specials": 256,
+    "attention": "eager",
+    "seed": 20261109,
+    "quality_acceptance_threshold": null,
+    "filter_or_retranslate": false,
+    "primary_standard_score": "cosine of first-256-token normalized LaBSE embeddings",
+    "long_text_diagnostic": "nonoverlapping token chunks; token-weighted mean of normalized chunk embeddings, L2-normalized before cosine",
+    "coverage_diagnostic": "source-token-weighted mean of each source chunk's maximum cosine against any target chunk",
+    "controls": {
+      "wrong_target": "cyclic shift 137 within each language/probe group",
+      "source_number": "add 1 to first standalone Arabic numeric mention in English; unsupported cases have no control"
+    },
+    "control_limitation": "Controls assess sensitivity, not a human-calibrated fidelity threshold; numeric perturbations are not adjudicated error labels.",
+    "timing": "protocol and source hashes recorded before embedding inference; post-submission, not externally preregistered"
+  },
+  "groups": {
+    "fr/P_risk": {
+      "n": 500,
+      "prefix_cosine": {
+        "n": 500,
+        "mean": 0.8993795567750931,
+        "min": 0.5797582864761353,
+        "p05": 0.7874417245388031,
+        "median": 0.9105910062789917,
+        "p95": 0.9581207156181335,
+        "max": 0.9752455949783325
+      },
+      "pooled_chunk_cosine": {
+        "n": 500,
+        "mean": 0.8993810702562333,
+        "min": 0.5797582864761353,
+        "p05": 0.7874416679143905,
+        "median": 0.9105908870697021,
+        "p95": 0.9581207156181335,
+        "max": 0.9752455949783325
+      },
+      "source_chunk_coverage_cosine": {
+        "n": 500,
+        "mean": 0.8993060580004345,
+        "min": 0.5797582864761353,
+        "p05": 0.7874417245388031,
+        "median": 0.9105910062789917,
+        "p95": 0.9581207156181335,
+        "max": 0.9752455949783325
+      },
+      "wrong_target_prefix_cosine": {
+        "n": 500,
+        "mean": 0.17541908864304423,
+        "min": -0.08567185699939728,
+        "p05": 0.030014254432171584,
+        "median": 0.174388125538826,
+        "p95": 0.3153964817523956,
+        "max": 0.4894799590110779
+      },
+      "wrong_target_pooled_cosine": {
+        "n": 500,
+        "mean": 0.17541909551620483,
+        "min": -0.08567184954881668,
+        "p05": 0.030014254432171584,
+        "median": 0.174388125538826,
+        "p95": 0.3153964802622795,
+        "max": 0.4894799590110779
+      },
+      "source_prefix_truncated": 1,
+      "target_prefix_truncated": 0,
+      "paired_exceeds_wrong_target_pooled": 500,
+      "numeric_perturbation_n": 110,
+      "numeric_prefix_score_drop": {
+        "n": 110,
+        "mean": 0.030444396084005183,
+        "min": -0.006844222545623779,
+        "p05": 0.0007810592651367188,
+        "median": 0.02566644549369812,
+        "p95": 0.07035004198551177,
+        "max": 0.12502288818359375
+      },
+      "lowest_pooled_ids": [
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:564:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:428:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:432:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:537:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:715:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:604:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:667:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:509:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:409:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:704:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:60:source",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:39:source",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:299:source",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:22:source",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:570:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:296:source",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:502:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:696:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:464:chosen_en",
+        "b3_translation_audit_v1:fr:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:439:chosen_en"
+      ]
+    },
+    "fr/P_util": {
+      "n": 500,
+      "prefix_cosine": {
+        "n": 500,
+        "mean": 0.9377610375881195,
+        "min": 0.8258339762687683,
+        "p05": 0.8880976140499115,
+        "median": 0.9420388340950012,
+        "p95": 0.9696976542472839,
+        "max": 0.9814653992652893
+      },
+      "pooled_chunk_cosine": {
+        "n": 500,
+        "mean": 0.937760999917984,
+        "min": 0.8258339762687683,
+        "p05": 0.8880976140499115,
+        "median": 0.9420387148857117,
+        "p95": 0.9696976482868195,
+        "max": 0.9814653992652893
+      },
+      "source_chunk_coverage_cosine": {
+        "n": 500,
+        "mean": 0.9377610375881195,
+        "min": 0.8258339762687683,
+        "p05": 0.8880976140499115,
+        "median": 0.9420388340950012,
+        "p95": 0.9696976542472839,
+        "max": 0.9814653992652893
+      },
+      "wrong_target_prefix_cosine": {
+        "n": 500,
+        "mean": 0.3870944070219994,
+        "min": 0.14670991897583008,
+        "p05": 0.2572947427630424,
+        "median": 0.38554856181144714,
+        "p95": 0.5232665747404097,
+        "max": 0.6962265968322754
+      },
+      "wrong_target_pooled_cosine": {
+        "n": 500,
+        "mean": 0.38709439343214036,
+        "min": 0.1467098891735077,
+        "p05": 0.2572947427630424,
+        "median": 0.38554856181144714,
+        "p95": 0.5232665717601775,
+        "max": 0.6962265968322754
+      },
+      "source_prefix_truncated": 0,
+      "target_prefix_truncated": 0,
+      "paired_exceeds_wrong_target_pooled": 500,
+      "numeric_perturbation_n": 481,
+      "numeric_prefix_score_drop": {
+        "n": 481,
+        "mean": 0.023253008258565796,
+        "min": -0.007469296455383301,
+        "p05": 0.006043553352355957,
+        "median": 0.021452724933624268,
+        "p95": 0.04731780290603638,
+        "max": 0.0734362006187439
+      },
+      "lowest_pooled_ids": [
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:361",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:115",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:331",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:385",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:358",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:399",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:144",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:304",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:7",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:253",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:497",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:216",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:8",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:442",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:247",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:496",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:341",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:493",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:387",
+        "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:465"
+      ]
+    },
+    "zh/P_risk": {
+      "n": 500,
+      "prefix_cosine": {
+        "n": 500,
+        "mean": 0.8639689806699753,
+        "min": 0.6284186244010925,
+        "p05": 0.7385849982500077,
+        "median": 0.8776412010192871,
+        "p95": 0.9374749958515166,
+        "max": 0.9981058835983276
+      },
+      "pooled_chunk_cosine": {
+        "n": 500,
+        "mean": 0.8639670740365982,
+        "min": 0.6284185647964478,
+        "p05": 0.7385849922895431,
+        "median": 0.8776411712169647,
+        "p95": 0.9374749928712844,
+        "max": 0.9981058239936829
+      },
+      "source_chunk_coverage_cosine": {
+        "n": 500,
+        "mean": 0.8638718555310639,
+        "min": 0.6284186244010925,
+        "p05": 0.7385849982500077,
+        "median": 0.8776412010192871,
+        "p95": 0.9374749958515166,
+        "max": 0.9981058835983276
+      },
+      "wrong_target_prefix_cosine": {
+        "n": 500,
+        "mean": 0.12836392587982118,
+        "min": -0.13022476434707642,
+        "p05": 0.003731684200465679,
+        "median": 0.12354101240634918,
+        "p95": 0.27319279015064235,
+        "max": 0.46980157494544983
+      },
+      "wrong_target_pooled_cosine": {
+        "n": 500,
+        "mean": 0.12835735236480833,
+        "min": -0.13022474944591522,
+        "p05": 0.003731684200465679,
+        "median": 0.12354099377989769,
+        "p95": 0.27319279015064235,
+        "max": 0.46980157494544983
+      },
+      "source_prefix_truncated": 1,
+      "target_prefix_truncated": 0,
+      "paired_exceeds_wrong_target_pooled": 500,
+      "numeric_perturbation_n": 110,
+      "numeric_prefix_score_drop": {
+        "n": 110,
+        "mean": 0.03513133471662348,
+        "min": -0.003552377223968506,
+        "p05": 0.0015218764543533324,
+        "median": 0.030054330825805664,
+        "p95": 0.0853934735059738,
+        "max": 0.14692920446395874
+      },
+      "lowest_pooled_ids": [
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:537:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:231:source",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:409:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:576:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:769:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:532:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:513:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:432:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:796:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:433:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:715:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:509:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:533:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:418:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:505:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:627:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:400:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:428:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:538:chosen_en",
+        "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:510:chosen_en"
+      ]
+    },
+    "zh/P_util": {
+      "n": 500,
+      "prefix_cosine": {
+        "n": 500,
+        "mean": 0.9122705014944077,
+        "min": 0.8046602010726929,
+        "p05": 0.8581426441669464,
+        "median": 0.9168341159820557,
+        "p95": 0.9482676059007644,
+        "max": 0.9679793119430542
+      },
+      "pooled_chunk_cosine": {
+        "n": 500,
+        "mean": 0.9122704645395279,
+        "min": 0.8046601414680481,
+        "p05": 0.8581425875425339,
+        "median": 0.9168340563774109,
+        "p95": 0.9482675492763519,
+        "max": 0.9679791927337646
+      },
+      "source_chunk_coverage_cosine": {
+        "n": 500,
+        "mean": 0.9122705014944077,
+        "min": 0.8046602010726929,
+        "p05": 0.8581426441669464,
+        "median": 0.9168341159820557,
+        "p95": 0.9482676059007644,
+        "max": 0.9679793119430542
+      },
+      "wrong_target_prefix_cosine": {
+        "n": 500,
+        "mean": 0.35938585545122625,
+        "min": 0.10647756606340408,
+        "p05": 0.22337894812226297,
+        "median": 0.3583417236804962,
+        "p95": 0.5027090281248092,
+        "max": 0.6644439697265625
+      },
+      "wrong_target_pooled_cosine": {
+        "n": 500,
+        "mean": 0.3593858394324779,
+        "min": 0.10647756606340408,
+        "p05": 0.2233789458870888,
+        "median": 0.35834166407585144,
+        "p95": 0.502709025144577,
+        "max": 0.6644439697265625
+      },
+      "source_prefix_truncated": 0,
+      "target_prefix_truncated": 0,
+      "paired_exceeds_wrong_target_pooled": 500,
+      "numeric_perturbation_n": 481,
+      "numeric_prefix_score_drop": {
+        "n": 481,
+        "mean": 0.02339137814892553,
+        "min": -0.005257725715637207,
+        "p05": 0.003990888595581055,
+        "median": 0.02126258611679077,
+        "p95": 0.04661703109741211,
+        "max": 0.07552862167358398
+      },
+      "lowest_pooled_ids": [
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:73",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:149",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:426",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:189",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:197",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:232",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:403",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:98",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:464",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:218",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:425",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:152",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:394",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:329",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:224",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:447",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:86",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:258",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:407",
+        "b3_translation_audit_v1:zh:P_util:openai/gsm8k:main:train:227"
+      ]
+    }
+  },
+  "limitations": [
+    "Post-submission automated diagnostics; no calibrated quality cutoff or independent human validation.",
+    "Chunk pooling/coverage are descriptive extensions and do not establish semantic equivalence.",
+    "Frozen probes and all earlier selection/evaluation results are unchanged."
+  ],
+  "execution": {
+    "packages": {
+      "torch": "2.6.0+cu124",
+      "sentence-transformers": "5.5.1",
+      "transformers": "5.14.1",
+      "huggingface-hub": "1.16.1",
+      "numpy": "2.4.2",
+      "pyarrow": "24.0.0"
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "elapsed_seconds": 13.01500000001397,
+    "direct_pipeline_vs_standard_encode_max_error": 0.0,
+    "max_cuda_memory_allocated": 2087995904,
+    "weights_sha256": {
+      "model.safetensors": "77d8e1f2dbab6eb5d3c261ce9d3dbf1e3c69e02938c95f934f94f42c22dfa31f",
+      "2_Dense/model.safetensors": "f866c945fa2147ce4940c8ead0b4b20af4217e0f4664bd35f41c2a0967c4fe77"
+    }
+  },
+  "artifacts": {
+    "embeddings.npz": "bea043f69539864ced8097a17f0d3fe556a8d1cbefb8732bed22983f2fd715dd",
+    "embedding_chunk_tokens.jsonl": "00a2e8e171e8d902f121447bf2f938477db89204ad5000313d5e873ba4903f43",
+    "embedding_freeze.json": "b0a380764f40421e20a440db2773c77f6464ecc311d9a6caf33d701f38f0a0ad",
+    "embedding_inputs.jsonl": "c26530dfea0050bde426d9ac5897a9163cda3c792cb6388308a7667a575fece9",
+    "paired_texts.jsonl": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "semantic_scores.jsonl": "64baeaf56030018bf5477ae41b0beec40cd874f93c167674a684e0849dad4a0d"
+  }
+}

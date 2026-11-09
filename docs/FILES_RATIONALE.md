@@ -95,6 +95,12 @@ the new appendix table can be recomputed from them. Its `PROTOCOL.md` is a
 study-specific methods record; the root README remains the only repository
 guide. Run logs and cloud transfer bundles remain local.
 
+`results/b3/translation_audit_v1/`
+Contains the frozen source/translation pairs, per-record LaBSE scores and
+embeddings, numeral and length checks, and independent audit receipts for the
+post-submission translation audit. The methods and limits are in
+`audit_protocol.md`. Inference logs remain local.
+
 `results/tier_a/`
 Contains the canonical Spanish E1 artifacts, language-panel probe data, final
 plumbing pilots, readiness and regime diagnostics, and release attestation.

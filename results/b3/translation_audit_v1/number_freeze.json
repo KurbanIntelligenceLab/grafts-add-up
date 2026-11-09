@@ -1,0 +1,13 @@
+{
+  "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+  "checker_sha256": "c3ecbb74ea09df9c8a17dc717752b4d782e2b737b01e794597a931d71ed0e69f",
+  "runner_sha256": "8cd6e0cf4ff51d358fdb3bf152809fe7444e13ab32c6ba8ce1e77cd1687c4c69",
+  "scope": "EN to FR/ZH explicit numeral multisets",
+  "classification": "match, mismatch, review-needed under the declared conservative grammar",
+  "limitations": [
+    "Not a confirmed translation error rate or semantic/units validation.",
+    "Ambiguous and unsupported constructions remain review-needed.",
+    "No probe filtering, replacement, or selection rerun."
+  ],
+  "timing": "post-submission, post-hoc audit; not externally preregistered"
+}

@@ -1,0 +1,176 @@
+{
+  "audit_type": "independent_read_only_recomputation_from_frozen_number_sidecar",
+  "status": "PASS",
+  "scope": "Hash binding, all-pair identity/text hash alignment, and independent recomputation of saved group summaries. No model inference or checker rerun.",
+  "verified_hashes": {
+    "paired_texts.jsonl": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "number_freeze.json": "651bc73191afee783fc4de7b82d6749f2bff84818cebdad2f2a1a01e98e0f1cb",
+    "number_records.jsonl": "62aa76d71839b9ef9a93df36860da054839c7f65775131a09e30246ee0383246",
+    "number_summary.json": "649636eda5cdb4d1c3099be7759e580e3f36c3022e985c597fd10c53ba1d0393",
+    "number_inspection_examples.json": "4a5ef886f5af44afee753484c22491710602ac9910f496eabe9e32de663895d4",
+    "checker": {
+      "path": "src/suture/translation_number_checks.py",
+      "sha256": "c3ecbb74ea09df9c8a17dc717752b4d782e2b737b01e794597a931d71ed0e69f",
+      "matches_freeze": true
+    },
+    "runner": {
+      "path": "scripts/run_b3_translation_numbers.py",
+      "sha256": "8cd6e0cf4ff51d358fdb3bf152809fe7444e13ab32c6ba8ce1e77cd1687c4c69",
+      "matches_freeze": true
+    },
+    "input_matches_freeze": true
+  },
+  "pair_checks": {
+    "input_rows": 2000,
+    "record_rows": 2000,
+    "unique_input_ids": 2000,
+    "unique_record_ids": 2000,
+    "ordered_ids_match": true,
+    "language_probe_fields_match": true,
+    "source_and_target_text_sha256_match_all_rows": true,
+    "saved_inspection_examples_checked": 6,
+    "examples_bound_to_pair_and_record_sidecars": true
+  },
+  "group_recomputation_matches_saved_summary": true,
+  "groups": {
+    "fr/P_risk": {
+      "n": 500,
+      "source_numeric_signal_n": 208,
+      "no_numeric_signal_on_either_side_n": 281,
+      "supported_status_counts": {
+        "review-needed": 124,
+        "match": 368,
+        "mismatch": 8
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 115,
+        "match": 87,
+        "mismatch": 6
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 99,
+        "match": 397,
+        "mismatch": 4
+      },
+      "strict_digit_multiset_difference_n": 33,
+      "supported_multiset_difference_n": 75,
+      "ambiguous_span_pair_n": 46,
+      "unhandled_span_pair_n": 48
+    },
+    "fr/P_util": {
+      "n": 500,
+      "source_numeric_signal_n": 499,
+      "no_numeric_signal_on_either_side_n": 0,
+      "supported_status_counts": {
+        "review-needed": 247,
+        "match": 229,
+        "mismatch": 24
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 246,
+        "match": 229,
+        "mismatch": 24
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 207,
+        "match": 286,
+        "mismatch": 7
+      },
+      "strict_digit_multiset_difference_n": 99,
+      "supported_multiset_difference_n": 185,
+      "ambiguous_span_pair_n": 11,
+      "unhandled_span_pair_n": 149
+    },
+    "zh/P_risk": {
+      "n": 500,
+      "source_numeric_signal_n": 208,
+      "no_numeric_signal_on_either_side_n": 176,
+      "supported_status_counts": {
+        "review-needed": 249,
+        "match": 210,
+        "mismatch": 41
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 161,
+        "match": 34,
+        "mismatch": 13
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 189,
+        "match": 308,
+        "mismatch": 3
+      },
+      "strict_digit_multiset_difference_n": 95,
+      "supported_multiset_difference_n": 243,
+      "ambiguous_span_pair_n": 98,
+      "unhandled_span_pair_n": 103
+    },
+    "zh/P_util": {
+      "n": 500,
+      "source_numeric_signal_n": 499,
+      "no_numeric_signal_on_either_side_n": 0,
+      "supported_status_counts": {
+        "review-needed": 345,
+        "match": 109,
+        "mismatch": 46
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 344,
+        "match": 109,
+        "mismatch": 46
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 258,
+        "match": 217,
+        "mismatch": 25
+      },
+      "strict_digit_multiset_difference_n": 140,
+      "supported_multiset_difference_n": 363,
+      "ambiguous_span_pair_n": 43,
+      "unhandled_span_pair_n": 194
+    }
+  },
+  "denominator_partition": {
+    "fr/P_risk": {
+      "source_signal_n": 208,
+      "no_signal_either_side_n": 281,
+      "target_only_signal_n": 11,
+      "partition_sum": 500
+    },
+    "fr/P_util": {
+      "source_signal_n": 499,
+      "no_signal_either_side_n": 0,
+      "target_only_signal_n": 1,
+      "partition_sum": 500
+    },
+    "zh/P_risk": {
+      "source_signal_n": 208,
+      "no_signal_either_side_n": 176,
+      "target_only_signal_n": 116,
+      "partition_sum": 500
+    },
+    "zh/P_util": {
+      "source_signal_n": 499,
+      "no_signal_either_side_n": 0,
+      "target_only_signal_n": 1,
+      "partition_sum": 500
+    }
+  },
+  "overall_counts": {
+    "n": 2000,
+    "broad_parser_status": {
+      "review-needed": 965,
+      "match": 916,
+      "mismatch": 119
+    },
+    "strict_digit_multiset_difference_n": 367,
+    "broad_supported_multiset_difference_n": 866
+  },
+  "interpretation_limits": [
+    "The match, mismatch, and review-needed labels are outputs of the frozen explicit numeral-multiset grammar, not confirmed translation errors or error rates.",
+    "The source_numeric_supported_status_counts field counts every record with a source numeric signal, including ambiguous or unhandled spans; source-signal subset is the clearer description.",
+    "Multiset matching discards order and context and does not verify units, date/time meaning, mathematical relations, or semantic correctness.",
+    "Verified false-positive examples include English twice translated as French deux fois, Chinese weekday names 周一/周二/周三, May/Saturday as 五月/周六, and idiomatic 一方面/另一方面. These examples demonstrate parser limits, not an adjudicated error rate.",
+    "The inspection examples are explicitly nonrandom and AI-assisted, with no independent human adjudication; they are illustrative only."
+  ]
+}

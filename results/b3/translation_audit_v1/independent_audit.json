@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-09",
+  "status": "PASS_WITH_INTERPRETATION_LIMITS",
+  "scope": "Read-only independent audit of saved source/translation pairing, extraction, embedding artifacts, scores, and four-group aggregates. No model inference was run. No human translation-quality adjudication was performed. The separate number-checker outputs were not available and are outside this audit.",
+  "inputs": {
+    "source_recovery": "results/b3/translation_audit_v1/source_recovery.json",
+    "paired_texts": "results/b3/translation_audit_v1/paired_texts.jsonl",
+    "embedding_freeze": "results/b3/translation_audit_v1/embedding_freeze.json",
+    "semantic_summary": "results/b3/translation_audit_v1/semantic_summary.json",
+    "semantic_scores": "results/b3/translation_audit_v1/semantic_scores.jsonl",
+    "embedding_inputs": "results/b3/translation_audit_v1/embedding_inputs.jsonl",
+    "embeddings": "results/b3/translation_audit_v1/embeddings.npz",
+    "embedding_chunk_tokens": "results/b3/translation_audit_v1/embedding_chunk_tokens.jsonl"
+  },
+  "sha256": {
+    "source_recovery.json": "04d847d77b7cdabdd8c618bd017de48e2290150629650082fda66034db22fcde",
+    "paired_texts.jsonl": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "embedding_freeze.json": "b0a380764f40421e20a440db2773c77f6464ecc311d9a6caf33d701f38f0a0ad",
+    "semantic_summary.json": "721a57e71d226ceeaba1e03edef84bb8cb960f65289a4f52d9d98349697d50ad",
+    "semantic_scores.jsonl": "64baeaf56030018bf5477ae41b0beec40cd874f93c167674a684e0849dad4a0d",
+    "embedding_inputs.jsonl": "c26530dfea0050bde426d9ac5897a9163cda3c792cb6388308a7667a575fece9",
+    "embeddings.npz": "bea043f69539864ced8097a17f0d3fe556a8d1cbefb8732bed22983f2fd715dd",
+    "embedding_chunk_tokens.jsonl": "00a2e8e171e8d902f121447bf2f938477db89204ad5000313d5e873ba4903f43",
+    "semantic_script_current": "aae2e68385d79d9517b39d335b0a02bf068f07e0e006cc1d3b2d4939d8506b43",
+    "preparation_script_current_not_bound_in_source_recovery": "e90567030491fd6a94ee472cc6b6ab8f7a32b9f6e7303132fce4759e437a7ee0",
+    "source_loader_module_recorded_in_source_recovery": "a381734fa32b0ef57a4cfe67f7ed61bd8235505c9a0f81d0184685de49255279",
+    "raw_manifests": {
+      "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_risk.jsonl": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+      "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
+      "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
+      "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea"
+    },
+    "model_weights": {
+      "model.safetensors": "77d8e1f2dbab6eb5d3c261ce9d3dbf1e3c69e02938c95f934f94f42c22dfa31f",
+      "2_Dense/model.safetensors": "f866c945fa2147ce4940c8ead0b4b20af4217e0f4664bd35f41c2a0967c4fe77"
+    }
+  },
+  "checks": {
+    "paired_texts_sha256_matches_source_recovery_and_frozen_protocol": true,
+    "summary_protocol_equals_embedding_freeze": true,
+    "summary_script_sha256_matches_current_semantics_script": true,
+    "row_count_and_unique_ids": "2000 rows, 2000 unique pair IDs, 2000 score rows, IDs aligned in original order",
+    "groups": "FR/P_util, FR/P_risk, ZH/P_util, ZH/P_risk; 500 rows each",
+    "raw_manifest_hashes_match_source_recovery": true,
+    "manifest_record_hashes_revalidated_with_read_manifest": true,
+    "source_ids_indices_and_source_text_hashes_match_manifests": true,
+    "all_2000_translations_exactly_reextracted_from_verified_manifest_input_text": true,
+    "source_and_target_text_hashes_match_pair_records": true,
+    "all_score_text_links_and_source_token_chunk_metadata_match_paired_inputs": true,
+    "no_filtering": "All 2000 paired rows have exactly one score row. The frozen protocol has no acceptance threshold, and the runner declares filter_or_retranslate=false.",
+    "tokenization_and_truncation": "The pinned BERT tokenizer has two special tokens and 254 content wordpieces per 256-token input. All 3592 saved chunk inputs begin with CLS ID 101, end with SEP ID 102, are at most 256 tokens, and agree with saved text token counts and chunk weights. Prefix truncation counts are FR utility 0 source/0 target, FR risk 1/0, ZH utility 0/0, ZH risk 1/0. The two risk-group flags are the same English source paired once per language.",
+    "normalized_embedding_vectors": "All saved 768-dimensional chunk embeddings have L2 norm within 2e-6 of 1.",
+    "direct_pipeline_vs_standard_encode_max_error": 0.0,
+    "saved_vector_cosine_recomputation_max_abs_error": {
+      "prefix_cosine": 0.0,
+      "pooled_chunk_cosine": 1.3259926989750426e-7,
+      "source_chunk_coverage_cosine": 0.0,
+      "wrong_target_prefix_cosine": 0.0,
+      "wrong_target_pooled_cosine": 7.947444435885131e-8,
+      "number_perturbed_prefix_cosine": 0.0,
+      "number_perturbed_pooled_cosine": 1.0111232551235361e-7
+    },
+    "summary_aggregate_recomputation_max_abs_error": 0.0,
+    "all_per_record_counts_and_lowest_pooled_ids_match_summary": true,
+    "within_group_shift_control": "Every wrong_target_id is the deterministic cyclic +137 target within its same language/probe group, is not the paired target, and all 500 paired pooled scores exceed their shifted controls in each group. This is a matching-specificity sanity check, not translation QA or a calibrated fidelity test."
+  },
+  "recomputed_group_metrics": {
+    "fr/P_util": {
+      "n": 500,
+      "prefix_cosine_mean": 0.9377610375881195,
+      "pooled_chunk_cosine_mean": 0.937760999917984,
+      "wrong_target_pooled_cosine_mean": 0.38709439343214036,
+      "paired_above_shifted_count": 500,
+      "source_prefix_truncated": 0,
+      "target_prefix_truncated": 0,
+      "numeric_perturbation_n": 481,
+      "mean_prefix_cosine_drop_after_source_perturbation": 0.023253008258565796
+    },
+    "fr/P_risk": {
+      "n": 500,
+      "prefix_cosine_mean": 0.8993795567750931,
+      "pooled_chunk_cosine_mean": 0.8993810702562333,
+      "wrong_target_pooled_cosine_mean": 0.17541909551620483,
+      "paired_above_shifted_count": 500,
+      "source_prefix_truncated": 1,
+      "target_prefix_truncated": 0,
+      "numeric_perturbation_n": 110,
+      "mean_prefix_cosine_drop_after_source_perturbation": 0.030444396084005183
+    },
+    "zh/P_util": {
+      "n": 500,
+      "prefix_cosine_mean": 0.9122705014944077,
+      "pooled_chunk_cosine_mean": 0.9122704645395279,
+      "wrong_target_pooled_cosine_mean": 0.3593858394324779,
+      "paired_above_shifted_count": 500,
+      "source_prefix_truncated": 0,
+      "target_prefix_truncated": 0,
+      "numeric_perturbation_n": 481,
+      "mean_prefix_cosine_drop_after_source_perturbation": 0.02339137814892553
+    },
+    "zh/P_risk": {
+      "n": 500,
+      "prefix_cosine_mean": 0.8639689806699753,
+      "pooled_chunk_cosine_mean": 0.8639670740365982,
+      "wrong_target_pooled_cosine_mean": 0.12835735236480833,
+      "paired_above_shifted_count": 500,
+      "source_prefix_truncated": 1,
+      "target_prefix_truncated": 0,
+      "numeric_perturbation_n": 110,
+      "mean_prefix_cosine_drop_after_source_perturbation": 0.03513133471662348
+    }
+  },
+  "metric_definitions_and_limits": {
+    "prefix_cosine": "Cosine between normalized LaBSE embeddings for the first 256-token sequence, including two special tokens. It covers all text in 1998 of 2000 pair rows; the two rows with longer source text have a truncated prefix.",
+    "pooled_chunk_cosine": "For texts split into nonoverlapping chunks of up to 254 wordpieces plus CLS/SEP, each normalized chunk vector is averaged with its original-token-count weight, the average is L2-normalized, and source/target averages are compared by cosine.",
+    "source_chunk_coverage_cosine": "For each source chunk, take its maximum cosine to any target chunk, then average with source-token-count weights. The same target chunk can be the maximum for multiple source chunks; this is a descriptive diagnostic, not a one-to-one alignment or completeness measure.",
+    "numeric_perturbation": "The runner changes the first regex-matched English digit sequence by +1 and compares its source embedding to the unchanged target. It is a sensitivity probe, not a labeled semantic error. The regex allows hyphen boundaries: 5 of 110 risk-group first matches per language follow a hyphen, including COVID-19 and CCTV-2, so do not describe all perturbations as changing a numeric quantity. No human adjudication was done.",
+    "quality_claims": "LaBSE cosine values are not calibrated translation-quality probabilities. No threshold, human reference score, or translation pass/fail criterion was used. High similarity can occur for untranslated English: the highest ZH/P_risk prefix cosine is 0.9981059 for an English target that omits only the source's initial 'The'.",
+    "preparation_script_binding": "The source recovery receipt binds the contract, source loader module, and raw manifests but does not record a SHA-256 for scripts/prepare_b3_translation_audit.py. Pairing and extraction were independently revalidated against the raw manifest hashes in this audit."
+  }
+}

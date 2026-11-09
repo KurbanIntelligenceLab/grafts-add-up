@@ -1,0 +1,122 @@
+{
+  "contract": {
+    "contract_name": "b3_lighton_qwen3_8b_v1",
+    "contract_version": 1,
+    "path": "configs/b3_lighton_qwen3_8b_v1.json",
+    "sha256_after": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90",
+    "sha256_before": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90",
+    "unchanged_during_recovery": true
+  },
+  "created_utc": "2026-11-09T20:01:53.188523+00:00",
+  "frozen_manifest_hashes_after": {
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_risk.jsonl": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea"
+  },
+  "frozen_manifest_hashes_before": {
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_risk.jsonl": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea"
+  },
+  "frozen_manifests": {
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_risk.jsonl": {
+      "file_sha256_after": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+      "file_sha256_before": "4355ec5d45c73c12da3899d359001016d89e328c202505f35811420b26bb8e6f",
+      "manifest_name": "b3_fr_P_risk",
+      "n_records": 500,
+      "paired_rows_added": 500,
+      "record_hashes_verified": true,
+      "source_ids_indices_and_english_hashes_matched_in_order": true,
+      "translated_texts_extracted": 500,
+      "unchanged_during_recovery": true
+    },
+    "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl": {
+      "file_sha256_after": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
+      "file_sha256_before": "9a5b21004ac9bbca7615512de33645ce0a604157afc8da0f0ecc393131e28729",
+      "manifest_name": "b3_fr_P_util",
+      "n_records": 500,
+      "paired_rows_added": 500,
+      "record_hashes_verified": true,
+      "source_ids_indices_and_english_hashes_matched_in_order": true,
+      "translated_texts_extracted": 500,
+      "unchanged_during_recovery": true
+    },
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl": {
+      "file_sha256_after": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
+      "file_sha256_before": "30811cccda974770b497d184c32afcb6616caf9ed6efe88a61155096816a5872",
+      "manifest_name": "b3_zh_P_risk",
+      "n_records": 500,
+      "paired_rows_added": 500,
+      "record_hashes_verified": true,
+      "source_ids_indices_and_english_hashes_matched_in_order": true,
+      "translated_texts_extracted": 500,
+      "unchanged_during_recovery": true
+    },
+    "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_util.jsonl": {
+      "file_sha256_after": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea",
+      "file_sha256_before": "863c0b53b5269625192790efdb8b5f00650b513ca076cf06bcdd42b98191b1ea",
+      "manifest_name": "b3_zh_P_util",
+      "n_records": 500,
+      "paired_rows_added": 500,
+      "record_hashes_verified": true,
+      "source_ids_indices_and_english_hashes_matched_in_order": true,
+      "translated_texts_extracted": 500,
+      "unchanged_during_recovery": true
+    }
+  },
+  "paired_texts": {
+    "n_pairs": 2000,
+    "ordering": "FR P_util, FR P_risk, ZH P_util, ZH P_risk; source loader/manifest order within each group",
+    "path": "results/b3/translation_audit_v1/paired_texts.jsonl",
+    "sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "translation_extraction": "exact Qwen chat prefix/suffix and final probe marker removed; no trimming or content rewriting",
+    "unique_pair_ids": 2000
+  },
+  "purpose": "Post-hoc recovery of English source and existing translated B3 probe texts; no translation inference or filtering was performed.",
+  "schema_version": 1,
+  "source_loader": {
+    "dataset_loader_revision_argument": "contract-pinned immutable revision",
+    "module": "src/suture/b3_data.py",
+    "risk_function": "load_risk_source",
+    "sha256": "a381734fa32b0ef57a4cfe67f7ed61bd8235505c9a0f81d0184685de49255279",
+    "utility_function": "load_utility_source"
+  },
+  "source_pin_receipts": {
+    "P_risk": {
+      "canonical_loader_rows_sha256": "dec192e4475464f7394042dfd326993c75685d0c41a30fe7f95408d539c23f38",
+      "config": "translation",
+      "dataset": "CohereLabsCommunity/multilingual-reward-bench",
+      "license": "odc-by",
+      "n_rows": 500,
+      "ordered_source_ids_sha256": "e871d2f954b98bcd9773df39a1d76c31a74cc01876d2c3904f3b5720969a6c45",
+      "ordered_source_indices_sha256": "9a6a39e332e86c24affd975d4a8294d97e6cf0c1a835690114157e8db1a6b237",
+      "revision": "04120fd1f0ef4faed0d6fd4fb632a14476fb0498",
+      "selection": "first 500 unique English source/chosen records after deterministic SHA-256 ordering",
+      "source_text_sha256_list_sha256": "2bbd063883f7c1188f846fb703af94e0835141f58000977b953131739bc5e8fd",
+      "split": "test"
+    },
+    "P_util": {
+      "canonical_loader_rows_sha256": "cb92910156dbd97a7c758d46e9aed9ef1282857c21b7e86a51d032b144dfeff9",
+      "config": "main",
+      "dataset": "openai/gsm8k",
+      "license": "mit",
+      "n_rows": 500,
+      "ordered_source_ids_sha256": "f5bcb64ea2a1676c76c7ae4a325445fd7bace348bc3ced8c40f4ca9c4ef60abf",
+      "ordered_source_indices_sha256": "5a97a9b5d813c39d121c81830f566f3ef04776fa9ac13eb78a19dc18977041ea",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "selection": "rows 0 through 499 in dataset order",
+      "source_text_sha256_list_sha256": "b9269f3673e4334c126ea3a711c385baf0a7858c03e89dbcc415f0cbad69694c",
+      "split": "train"
+    }
+  },
+  "status": "PASS",
+  "translation_provenance": {
+    "batch_size": 1,
+    "id": "Qwen/Qwen3-1.7B",
+    "max_new_tokens": 96,
+    "method": "greedy chat generation with thinking disabled",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  }
+}

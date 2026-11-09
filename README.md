@@ -152,6 +152,11 @@ The public result tree is intentionally curated:
   sidecars, audit reports, and execution receipts. See
   [`PROTOCOL.md`](results/b3/generation_followup_v1/PROTOCOL.md) for the fixed
   candidate set, parser history, and limits of the comparison.
+- `results/b3/translation_audit_v1/` contains the post-submission audit of all
+  2,000 frozen French and Chinese selection probes: source/translation pairs,
+  embedding scores and vectors, numeral checks, length checks, and audit
+  receipts. See its [`audit_protocol.md`](results/b3/translation_audit_v1/audit_protocol.md)
+  for methods and interpretation limits.
 - `results/controlled_stacks/` contains 18 recovered JSON outputs for the
   controlled studies.
 - `results/tier_a/` contains the canonical Spanish E1 evidence, the
@@ -172,6 +177,8 @@ confidence intervals, and figure tables. The original multi-stack generator
 and per-candidate window scores are still absent.
 Run `python verify/audit_b3_generation_results.py` to check the separate
 free-generation records and the table reported in the appendix.
+The translation audit includes per-record evidence and CPU numeral-check tests;
+its LaBSE inference and tokenizer-length reruns require pinned model snapshots.
 The code supports optional
 model reruns when the exact public checkpoints and required hardware are
 available.

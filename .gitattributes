@@ -18,3 +18,10 @@
 /results/b3/lighton_qwen3_8b/zh_host__en_donor/data/MGSM_rev2_test.jsonl text eol=lf
 # Runtime receipts hash exact files, including reports written on Windows.
 /results/b3/generation_followup_v1/** -text whitespace=cr-at-eol
+/scripts/run_b3_translation_semantics.py text eol=lf
+/scripts/prepare_b3_translation_audit.py text eol=lf
+/scripts/run_b3_translation_numbers.py text eol=lf
+/scripts/check_b3_translation_lengths.py text eol=lf
+/src/suture/translation_number_checks.py text eol=lf
+/tests/test_translation_number_checks.py text eol=lf
+/results/b3/translation_audit_v1/** -text whitespace=cr-at-eol

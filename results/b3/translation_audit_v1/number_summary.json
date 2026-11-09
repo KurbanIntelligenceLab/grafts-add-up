@@ -1,0 +1,119 @@
+{
+  "protocol": {
+    "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "checker_sha256": "c3ecbb74ea09df9c8a17dc717752b4d782e2b737b01e794597a931d71ed0e69f",
+    "runner_sha256": "8cd6e0cf4ff51d358fdb3bf152809fe7444e13ab32c6ba8ce1e77cd1687c4c69",
+    "scope": "EN to FR/ZH explicit numeral multisets",
+    "classification": "match, mismatch, review-needed under the declared conservative grammar",
+    "limitations": [
+      "Not a confirmed translation error rate or semantic/units validation.",
+      "Ambiguous and unsupported constructions remain review-needed.",
+      "No probe filtering, replacement, or selection rerun."
+    ],
+    "timing": "post-submission, post-hoc audit; not externally preregistered"
+  },
+  "groups": {
+    "fr/P_risk": {
+      "n": 500,
+      "source_numeric_signal_n": 208,
+      "no_numeric_signal_on_either_side_n": 281,
+      "supported_status_counts": {
+        "review-needed": 124,
+        "match": 368,
+        "mismatch": 8
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 115,
+        "match": 87,
+        "mismatch": 6
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 99,
+        "match": 397,
+        "mismatch": 4
+      },
+      "strict_digit_multiset_difference_n": 33,
+      "supported_multiset_difference_n": 75,
+      "ambiguous_span_pair_n": 46,
+      "unhandled_span_pair_n": 48
+    },
+    "fr/P_util": {
+      "n": 500,
+      "source_numeric_signal_n": 499,
+      "no_numeric_signal_on_either_side_n": 0,
+      "supported_status_counts": {
+        "review-needed": 247,
+        "match": 229,
+        "mismatch": 24
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 246,
+        "match": 229,
+        "mismatch": 24
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 207,
+        "match": 286,
+        "mismatch": 7
+      },
+      "strict_digit_multiset_difference_n": 99,
+      "supported_multiset_difference_n": 185,
+      "ambiguous_span_pair_n": 11,
+      "unhandled_span_pair_n": 149
+    },
+    "zh/P_risk": {
+      "n": 500,
+      "source_numeric_signal_n": 208,
+      "no_numeric_signal_on_either_side_n": 176,
+      "supported_status_counts": {
+        "review-needed": 249,
+        "match": 210,
+        "mismatch": 41
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 161,
+        "match": 34,
+        "mismatch": 13
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 189,
+        "match": 308,
+        "mismatch": 3
+      },
+      "strict_digit_multiset_difference_n": 95,
+      "supported_multiset_difference_n": 243,
+      "ambiguous_span_pair_n": 98,
+      "unhandled_span_pair_n": 103
+    },
+    "zh/P_util": {
+      "n": 500,
+      "source_numeric_signal_n": 499,
+      "no_numeric_signal_on_either_side_n": 0,
+      "supported_status_counts": {
+        "review-needed": 345,
+        "match": 109,
+        "mismatch": 46
+      },
+      "source_numeric_supported_status_counts": {
+        "review-needed": 344,
+        "match": 109,
+        "mismatch": 46
+      },
+      "strict_digit_status_counts": {
+        "review-needed": 258,
+        "match": 217,
+        "mismatch": 25
+      },
+      "strict_digit_multiset_difference_n": 140,
+      "supported_multiset_difference_n": 363,
+      "ambiguous_span_pair_n": 43,
+      "unhandled_span_pair_n": 194
+    }
+  },
+  "total_pairs": 2000,
+  "artifacts": {
+    "paired_texts.jsonl": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0",
+    "number_freeze.json": "651bc73191afee783fc4de7b82d6749f2bff84818cebdad2f2a1a01e98e0f1cb",
+    "number_records.jsonl": "62aa76d71839b9ef9a93df36860da054839c7f65775131a09e30246ee0383246"
+  }
+}

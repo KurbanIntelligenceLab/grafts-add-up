@@ -676,6 +676,16 @@ proxy nor this three-choice comparison validates accuracy ranking over all
 windows. The new outputs change the capped answer-score comparison with the
 published choices, while confirming the Chinese language-switching concern.
 
+\paragraph{Translation quality remains a limitation.}
+A post-submission audit covers all 2,000 frozen 8B selection probes, without
+filtering or retranslation. Mean LaBSE
+cosines are 0.938/0.912 for French/Chinese math and 0.899/0.864 for language
+passages. These are similarity diagnostics, not fidelity estimates: French
+examples end mid-phrase and one Chinese target remains in English despite
+cosine 0.998. The explicit-number screen flags 24/46 French/Chinese math pairs
+and leaves 247/345 unresolved; lexical false positives prevent interpreting
+these counts as error rates. No independent human or native-speaker audit was performed.
+
 \paragraph{The Chinese calibration constraint becomes nonbinding.}
 An isolated ten-window fit gave $b=0.012119$, making all $666$ windows
 predicted feasible. The original choice $[20,31]$ used $b=1$ and also maximizes
@@ -769,7 +779,7 @@ post-hoc, and the French published reference is frequently truncated. These
 results do not validate all-window generation ranking. The certificate remains
 controlled-stack only. The 1.5B free-generation ranking is not validated, and
 local expert studies use one training seed and machine-translated probes
-without independent human or semantic translation QA. Fixed-attention stacks
+without independent human or native-speaker QA. Fixed-attention stacks
 achieve only $0.64\pm0.48$ on the width-6 diagnostic; the from-scratch
 transformer (Appendix~\ref{app:negative}) also failed to reproduce transfer.
 
@@ -796,6 +806,11 @@ identification, pairings and summary statistics from all 1,500 outputs;
 \artifact{verify/check\_b3\_calibration.py} re-enumerates the saved windows.
 Appendix~\ref{app:protocol} lists checkpoints, data, software and the documented
 translation-builder messages. Weights are not redistributed.
+The frozen source/translation pairs, LaBSE scores, numeral flags, length checks
+and audit receipts are under \artifact{results/b3/translation\_audit\_v1/};
+\artifact{scripts/prepare\_b3\_translation\_audit.py} recovers the pairs and
+\artifact{scripts/run\_b3\_translation\_semantics.py} and
+\artifact{scripts/run\_b3\_translation\_numbers.py} retain the automated checks.
 Code and aggregate evidence are included in the accompanying release package.
 
 \subsection*{Ethics statement}
@@ -1315,9 +1330,10 @@ The builder disables thinking and uses greedy translation with at most 96 new
 tokens and batch size 1; this cap differs from the 128-token probe-input limit.
 Cleanup removes
 wrappers/fences and rejects empty output; source deduplication, count checks,
-record hashes and split checks are mechanical safeguards. No independent
-human, native-speaker or semantic translation-quality audit was performed.
-These checks support reproducible construction, not translation fidelity.
+record hashes and split checks are mechanical safeguards. A post-submission
+LaBSE and numeral-consistency audit of all 2,000 frozen 8B probes is released
+under \artifact{results/b3/translation\_audit\_v1/}. No independent human or native-speaker
+translation audit was performed; the automated checks do not establish fidelity.
 The probe/evaluation datasets are not a complete account of the public
 specialists' training corpora.
 

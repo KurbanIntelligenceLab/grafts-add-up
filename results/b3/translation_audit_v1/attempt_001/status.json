@@ -1,0 +1,7 @@
+{
+  "status": "setup_failure_before_study_pair_encoding",
+  "cause": "Transformers 5 tokenizer removed build_inputs_with_special_tokens",
+  "repair": "Use pinned BERT CLS/SEP format, assert empty encoding and special-token count; issue new script hash/freeze.",
+  "observed_study_scores": false,
+  "smoke_test_only": true
+}

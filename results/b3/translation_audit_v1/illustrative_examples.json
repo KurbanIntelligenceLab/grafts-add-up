@@ -1,0 +1,91 @@
+{
+  "selection": "One maximum-score Chinese language example and three first-in-order French math examples recorded by tokenizer-length inspection. Descriptive, nonrandom examples, not a prevalence sample.",
+  "limitations": "No independent human/native QA; no probes altered.",
+  "examples": [
+    {
+      "observation": "Target remains in English despite Chinese target language and high similarity. This is an illustrative AI-assisted inspection, not independent human/native QA or an error-rate estimate.",
+      "pair": {
+        "id": "b3_translation_audit_v1:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:34:source",
+        "language": "zh",
+        "manifest_input_text_sha256": "841875c89bb45f1d728d8d3093056885e3d287f1baf2012383ee133121d50681",
+        "manifest_path": "results/b3/lighton_qwen3_8b/zh_host__en_donor/data/P_risk.jsonl",
+        "manifest_record_id": "b3:zh:P_risk:CohereLabsCommunity/multilingual-reward-bench:translation:test:34:source",
+        "manifest_record_sha256": "7c0a15874494586c9f1909fa6b1243263badfb0504c65ac95316d175a447a032",
+        "probe": "P_risk",
+        "source_id": "CohereLabsCommunity/multilingual-reward-bench:translation:test:34:source",
+        "source_index": 34,
+        "source_sha256": "a8d95fc3a88c17c96013dd8a68ae3e3be47c453bd31ac73315a81501dfe4ef9b",
+        "source_subset": "translation-en-de-easy",
+        "source_text": "The NEA also published a video explaining the steps voters can take to cast their vote remotely via email, as part of precautions against the coronavirus pandemic.",
+        "target_sha256": "39a5c676c740f2d3c680dd7ae3234725499c6db6be7982b31513983a3877f564",
+        "target_text": "NEA also published a video explaining the steps voters can take to cast their vote remotely via email, as part of precautions against the coronavirus pandemic."
+      },
+      "prefix_cosine": 0.9981058835983276,
+      "pooled_chunk_cosine": 0.9981058239936829
+    },
+    {
+      "observation": "Target ends mid-phrase or mid-word in AI-assisted text inspection. Original finish reasons are unavailable; no cap-termination label is inferred.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:8",
+        "language": "fr",
+        "manifest_input_text_sha256": "04b31187f262dd740e37fe37ceda983a22b97a9396b7a506b4990f32b5c7b06e",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:8",
+        "manifest_record_sha256": "dbefe1a756c6a5ccf97a0c2a3a907dbee45a66f5d0218936f0a082f5e87a8cd1",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:8",
+        "source_index": 8,
+        "source_sha256": "a13430e732d2c1e663238de0e34daf75abd640df18ff2ab97d0d55479204c2d1",
+        "source_subset": null,
+        "source_text": "Alexis is applying for a new job and bought a new set of business clothes to wear to the interview. She went to a department store with a budget of $200 and spent $30 on a button-up shirt, $46 on suit pants, $38 on a suit coat, $11 on socks, and $18 on a belt. She also purchased a pair of shoes, but lost the receipt for them. She has $16 left from her budget. How much did Alexis pay for the shoes?",
+        "target_sha256": "ba27c9b71727e04f983cdbd818a06d25539f636f90fb0b8c6a3433f49f807d9a",
+        "target_text": "Alexis applique pour un nouveau poste et a acheté un nouveau ensemble de vêtements professionnels pour porter lors de l'interview. Elle a visité une boutique de départment avec un budget de 200 dollars et a dépensé 30 dollars pour un chemise à boutons, 46 dollars pour des pantalons de costume, 38 dollars pour un manteau de costume, 11 dollars pour des"
+      },
+      "prefix_cosine": 0.8745133876800537,
+      "pooled_chunk_cosine": 0.8745133876800537
+    },
+    {
+      "observation": "Target ends mid-phrase or mid-word in AI-assisted text inspection. Original finish reasons are unavailable; no cap-termination label is inferred.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:10",
+        "language": "fr",
+        "manifest_input_text_sha256": "cac40ac9e662ebd9870640490d163d16eedbe33e5679cd23b14b95d22161bdbf",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:10",
+        "manifest_record_sha256": "13d84fd05939f692d966de6b7d5ba9f592130a4c7b846574cd4d22fefe6a4f00",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:10",
+        "source_index": 10,
+        "source_sha256": "09296cd5e0fc1cb5a7c241379aa53704fca1c2d3cf3e106fdf539f2f88d050c1",
+        "source_subset": null,
+        "source_text": "A deep-sea monster rises from the waters once every hundred years to feast on a ship and sate its hunger. Over three hundred years, it has consumed 847 people. Ships have been built larger over time, so each new ship has twice as many people as the last ship. How many people were on the ship the monster ate in the first hundred years?",
+        "target_sha256": "c28f4a88550e8084200a71b6ce89619e284edbe7d08c5ecfb74c6a504e78598b",
+        "target_text": "Un monstre de mer sort du milieu des eaux toutes les cent années pour se nourrir d'un navire et satisfaire sa faim. Au cours de trois cent ans, il a consommé 847 personnes. Les navires ont été construits de plus en plus grands au cours du temps, donc chaque navire nouveau a deux fois plus de personnes que le dernier. Combien de personnes étaient sur le navire que le monstre a"
+      },
+      "prefix_cosine": 0.9454848766326904,
+      "pooled_chunk_cosine": 0.9454848170280457
+    },
+    {
+      "observation": "Target ends mid-phrase or mid-word in AI-assisted text inspection. Original finish reasons are unavailable; no cap-termination label is inferred.",
+      "pair": {
+        "id": "b3_translation_audit_v1:fr:P_util:openai/gsm8k:main:train:11",
+        "language": "fr",
+        "manifest_input_text_sha256": "ef1277235f77f5045d5d4d33521fc5fc8044ee5bc13af63e276502309600e0f9",
+        "manifest_path": "results/b3/lighton_qwen3_8b/fr_host__en_donor/data/P_util.jsonl",
+        "manifest_record_id": "b3:fr:P_util:openai/gsm8k:main:train:11",
+        "manifest_record_sha256": "8da017548bdc149de7b88f09f7bfb6e7ba5cb14e1ed672395d34446d36914f6e",
+        "probe": "P_util",
+        "source_id": "openai/gsm8k:main:train:11",
+        "source_index": 11,
+        "source_sha256": "3097703f5bcc130a683ad04b50f35470e76b8613faf2a78c10ce14fbf0421795",
+        "source_subset": null,
+        "source_text": "Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?",
+        "target_sha256": "6903860fbdd6d0164c7facf7f304b63038cc1e79acd307f5ed0146058953eb45",
+        "target_text": "Tobias achète un nouveau paire de chaussures qui coûte 95 dollars. Il a économisé son argent chaque mois pendant les trois derniers mois. Il reçoit un crédit de 5 dollars par mois. Il aussi arrose les jardins et éclate les trottoirs. Il charge 15 dollars pour arroser un jardin et 7 dollars pour éclater. Après avoir acheté les chauss"
+      },
+      "prefix_cosine": 0.9070291519165039,
+      "pooled_chunk_cosine": 0.9070291519165039
+    }
+  ],
+  "input_sha256": "a9d64dbe80917da9900eeeb7d0ed59ebc76f28337d5d8a1f4e002a15cc8a9aa0"
+}
