@@ -107,12 +107,6 @@ contract-v2 plumbing artifacts.
 Contains controlled multi-donor diagnostics, cost measurements, score-variant
 comparisons, and the powered Spanish ranking.
 
-`reviews/`
-Is excluded from the public repository. It holds reviewer correspondence,
-rebuttal drafts, screenshots, and prior submission snapshots. The freeze
-records needed to audit the generation follow-up are published under
-`results/b3/generation_followup_v1/` instead.
-
 The retained result files support the B3 answer and language-fidelity paired
 statistics without rerunning models. Public run manifests preserve a portable
 command record, model pin, input/output hashes, and selection invariants

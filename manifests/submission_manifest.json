@@ -14,10 +14,10 @@
       "sha256": "0344e1c051d6dd1c8c32df695ee985c0392e7f83c14991ef77046524852df59a"
     },
     {
-      "bytes": 1816,
+      "bytes": 1807,
       "path": ".gitignore",
       "rationale": "Root project metadata or dependency configuration required for a clean checkout.",
-      "sha256": "db77b1e381feb159a9ee4830b198cb785bde283f18942752c7831bb642dbca0e"
+      "sha256": "c3b2b3d8cde97dba861ddf09188c7630a72c99abf69f7cdcf27f034168c0f316"
     },
     {
       "bytes": 296,
@@ -80,10 +80,10 @@
       "sha256": "c76d13596eb90f0b8c52f902d600efb372abb7053cde3e67bc686c31f6dadb88"
     },
     {
-      "bytes": 5136,
+      "bytes": 4862,
       "path": "docs/FILES_RATIONALE.md",
       "rationale": "Reviewer-facing project explanation or public-file selection rationale.",
-      "sha256": "0d0b953c7500c26c4dffc72114b728d8c155c1b806428fab405a751e1677d12b"
+      "sha256": "4ec268956dbd20b7b6efcff42ab530a5f285f756d0985e6479982c7f428345c9"
     },
     {
       "bytes": null,
@@ -2151,7 +2151,7 @@
       "sha256": "2e138cdd34c374b50c90a2fb733f3d4ff763e9df2041e07302254a826b3827cb"
     }
   ],
-  "generated_at": "2026-11-09T14:16:20.078133+00:00",
+  "generated_at": "2026-11-09T14:25:29.068141+00:00",
   "kind": "public_submission_manifest",
   "root": "repository checkout",
   "schema_version": 1,

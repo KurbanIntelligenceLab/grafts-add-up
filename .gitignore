@@ -82,7 +82,6 @@ verify/toy_transfer_results.json
 paper/REDFLAGS.txt
 paper/REVISION_AUDIT.md
 paper/llm_feedback
-reviews/
 results/b3/lighton_qwen3_8b/*/fidelity/
 results/b3/lighton_qwen3_8b/llm_feedback_followup/*/private/
 suture/contracts/
