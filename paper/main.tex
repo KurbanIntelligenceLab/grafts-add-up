@@ -100,7 +100,10 @@ models to calibrate a language constraint and check its choice. Controlled
 stacks support the approximation for small expert changes and show where its
 ranking weakens. On public multilingual models, selected windows improve a
 teacher-forced answer measure over the host but do not surpass published
-windows. Their effect on the language of free generation remains unmeasured.
+windows on that measure. A separate generation follow-up finds a French
+accuracy gain under an output cap, while the Chinese selection largely reasons
+in English. These results do not establish an advantage over constrained first-order
+weight attribution, which selects the same windows.
 The method offers a way to narrow layer-swap search while keeping the final
 choice subject to direct validation.
 \end{abstract}
@@ -109,8 +112,10 @@ choice subject to direct validation.
 \section{Introduction}
 % ============================================================================
 
-Layer swapping combines experts trained from a shared base by replacing a band
-of one model's layers with layers from another. It can transfer mathematical
+In a \emph{layer swap}, a \emph{host model} receives complete decoder layers
+from a compatible \emph{donor model}, retaining its other parameters. A
+\emph{layer window} is a consecutive set of layer indices to replace. We study
+experts fine-tuned from a shared base. Layer swapping can transfer mathematical
 reasoning to a language without task data \citep{bandarkar2025layerswap}, and
 has also been studied for long reasoning and multilingual safety
 \citep{lasbordes2026rethinking,shin2026safetyswap}. The choice of layers matters:
@@ -136,7 +141,10 @@ merges \citep{akizuki2025surrogate}, or rank layers using parameter statistics
 \citep{bandarkar2025layerswap,shin2026safetyswap}. The last approach avoids
 candidate builds but does not use a task or language readout. We ask whether a
 single pass through the host can provide readout-specific scores for every
-possible window before any merged model is built.
+possible window before any merged model is built. A 36-layer model has 666
+nonempty windows, making exhaustive construction expensive. Our question is
+how to shortlist windows for existing experts; it is not whether separately
+training and merging experts is preferable to joint training.
 
 Our starting point is to evaluate each donor layer on the states produced by
 the host. This gives one output difference per layer, independent of the other
@@ -151,9 +159,10 @@ additive scores to choose among windows under a language constraint.
 constraint on built windows, and checks the selected window directly
 (Section~\ref{sec:method}). We test the approximation and selection procedure
 in controlled stacks where every window can be measured, then evaluate public
-multilingual specialists with a narrower teacher-forced measure
-(Sections~\ref{sec:verify} and~\ref{sec:protocol}). The readout does not
-establish the language of free generation.
+multilingual specialists with teacher-forced measures and a separate
+free-generation follow-up (Sections~\ref{sec:verify} and~\ref{sec:protocol}).
+The first-token language readout fails to preserve Chinese reasoning in that
+follow-up, despite the favorable proxy score.
 
 \paragraph{Contributions.}
 We give a first-order decomposition for arbitrary graft sets, a window-selection
@@ -163,7 +172,7 @@ transfers to multilingual specialists while reporting where the current
 evidence ends.
 
 % ============================================================================
-\section{Choosing a band is a constrained program}
+\section{Choosing a layer window is a constrained program}
 \label{sec:setup}
 % ============================================================================
 
@@ -173,7 +182,10 @@ $L$ residual units to a state $x_\ell \in \Rb^{T\times d}$,
 \begin{equation}
 x_{\ell+1} \;=\; x_\ell + B_\ell(x_\ell;\theta_\ell), \qquad \ell = 0,\dots,L-1,
 \end{equation}
-with embedding and unembedding fixed. A host expert $\theta^{\host}$ and a donor
+where $T$ is prompt length, $d$ is hidden width, $x_0$ is the embedded prompt,
+$B_\ell$ is the layer's residual update, and $\theta_\ell$ its parameters.
+The residual connection adds the update to the input; embedding and output
+head remain fixed. A host expert $\theta^{\host}$ and a donor
 expert $\theta^{\donor}$ are fine-tuned independently from a shared base
 $\theta^{\base}$. As in \citet{bandarkar2025layerswap}, the host is the expert
 whose surface behavior we keep and the donor is the expert whose internal
@@ -181,14 +193,17 @@ capability we import; in the cross-lingual case the host speaks the target
 language and the donor reasons.
 
 For $S\subseteq\{0,\dots,L-1\}$, the \emph{graft} $\theta^{S}$ takes donor
-parameters at the layers in $S$ and host parameters elsewhere. We call any such
-$S$ a \emph{graft set}, a contiguous one a \emph{window}, and the window a
-practitioner finally swaps a \emph{band}; layer swapping searches over windows.
+parameters at the layers in $S$ and host parameters elsewhere. In the theory,
+we call any such $S$ a \emph{graft set}; a contiguous set is a layer window.
 The theory holds for any partition into sequential units, but units are whole
 layers here.
 
-Two scalar readouts are computed from the final state at the last prompt
-position. The \emph{task} readout $\varphi_\util$ measures the imported
+A \emph{probe} is a fixed prompt used to compute scores. A \emph{readout}
+$\varphi_p$ is a differentiable scalar computed from the model's output
+distribution for that prompt. Writing $\varphi_p(x_L)$ includes the final
+normalization, output head and softmax applied to the hidden state. Our two
+readouts use the last prompt position, which predicts the first response token.
+The \emph{task} readout $\varphi_\util$ measures the imported
 capability, the \emph{language} readout $\varphi_\risk$ how strongly the host
 keeps its output language. Both are differentiable next-token log-probability
 functionals that need no human annotation (Section~\ref{sec:method}). Each has
@@ -211,10 +226,9 @@ measuring or reading the language of generated samples. Methods that tune
 coefficients through the merged model \citep{yang2024adamerging, symerge2026}
 also require model evaluations during search. The next section gives a way to
 score windows before building them.
-We use the first-response-token scalar because it is the differentiable
-readout needed by Theorem~\ref{thm:superposition}; this is an analytical
-compromise, not a claim that first-token confidence captures compounding
-autoregressive errors or mid-generation language collapse.
+We use a first-response-token scalar to keep scoring inexpensive. This is a
+proxy choice, not a requirement of Theorem~\ref{thm:superposition}, and it does
+not measure compounding autoregressive errors or later language switching.
 
 % ============================================================================
 \section{Why grafts add up}
@@ -223,9 +237,10 @@ autoregressive errors or mid-generation language collapse.
 
 The structure of \eqref{eq:program} is cheaper than its values. Two per-layer
 quantities, both taken from the host's own forward and backward pass on a probe
-$p$, carry all of it. The \emph{injection} $v_\ell$ is the change in what layer
+$p$, carry all of it. The layer output difference, or \emph{injection}, $v_\ell$
+is the change in what layer
 $\ell$ adds to the residual stream when the donor's layer replaces the host's,
-evaluated at the host's input to that layer. The \emph{adjoint}
+evaluated at the host's input to that layer. The readout gradient, or \emph{adjoint},
 $s^{\varphi}_\ell$ is the gradient of the readout with respect to the residual
 stream just after layer $\ell$, with the later layers held at the host's:
 \begin{equation}
@@ -242,7 +257,7 @@ units of the readout. All $L$ injections come from evaluating each donor layer
 beside the host during one forward pass, and all $L$ adjoints from one backward
 pass. The score $a^{\varphi}_\ell$ is the first-order change in the readout when
 layer $\ell$ alone is swapped; the result below says that these single-layer
-scores also predict every multi-layer graft.
+scores also approximate multi-layer swaps within the local regime below.
 
 \begin{theorem}[Grafts add up]
 \label{thm:superposition}
@@ -274,6 +289,10 @@ by a small amount $t$ from the same base, and the layers are smooth in their
 parameters, then $\lambda$ and $\varepsilon_S$ are $O(t)$, so the scores are
 $O(t)$ and the remainder $O(t^2)$, which Figure~\ref{fig:verify}(b) tests. The
 constants grow exponentially with depth, so we never use them numerically.
+The layer output difference is evaluated exactly. Weight attribution also
+linearizes that difference in the parameter change; both methods approximate
+interactions between simultaneous swaps. The theorem does not guarantee useful
+ranking for arbitrary expert pairs.
 
 The identity is what makes the program cheap. Every graft set is scored by a
 subset sum of $L$ numbers per readout, so both the objective and the constraint
@@ -294,11 +313,46 @@ Appendix~\ref{app:proof-superposition}).
 
 \textsc{Suture} turns Section~\ref{sec:theory} into four steps
 (Algorithm~\ref{alg:suture}): score every layer, calibrate the language scores on
-ten built windows, choose a band, and build it to certify the choice. Units are
+ten built windows, choose a window, and build it to certify the choice. Units are
 whole decoder layers. The composed model
 $\theta^{S}$ takes the donor's complete decoder layers at the indices in $S$,
 including their normalization weights, and takes everything else from the host,
 including the embedding, the final normalization, and the output head.
+
+\begin{algorithm}[t]
+\caption{\textsc{Suture}. Lines 2--7 score every layer from one host
+forward--backward pass per probe; $s^{\varphi}_\ell$ and $v_\ell$ must come from
+the same host pass and probe. Lines 8--9 calibrate the language scores on ten
+built windows and choose; later lines build the choice, fall back if the measured
+language change violates the constraint, and otherwise certify it.}
+\label{alg:suture}
+\small
+\begin{algorithmic}[1]
+\STATE {\bfseries Input:} host $\theta^{\host}$, donor $\theta^{\donor}$, probes
+$\mathcal{P}_\util,\mathcal{P}_\risk$, tolerance $\tau$, sizes $m_c$ and $m$
+\FOR{$\varphi \in \{\varphi_\util, \varphi_\risk\}$ and each $p \in \mathcal{P}_\varphi$}
+  \STATE host forward pass on $p$, caching the input $x^{\host}_\ell$ and the output of every layer
+  \STATE for each $\ell$, apply donor layer $\ell$ to $x^{\host}_\ell$ with the host's mask and positions; store $v_\ell$ \hfill\COMMENT{streamed}
+  \STATE backward pass from $\varphi(p)$, reading off $s^{\varphi}_\ell$ at every layer output
+  \STATE accumulate $a^{\varphi}_\ell \mathrel{+}= \langle s^{\varphi}_\ell, v_\ell\rangle / |\mathcal{P}_\varphi|$
+\ENDFOR
+\STATE build $m_c$ uniformly drawn windows; measure $\Delta\varphi_\util$ and $\Delta\varphi_\risk$; fit $b$ from the latter against $A_\risk$ and retain them as $\mathcal{C}$
+\STATE score every window by prefix sums; $\widehat{S}\leftarrow$ \eqref{eq:select}
+\STATE build $\widehat{S}$; measure its $\Delta\varphi_\util$ and $\Delta\varphi_\risk$
+\IF{$\Delta\varphi_\risk(\widehat{S})<-\tau$}
+  \STATE $\mathcal{C}_{\rm feas}\leftarrow\{S\in\mathcal{C}:\Delta\varphi_\risk(S)\ge-\tau\}\cup\{\emptyset\}$; set both host changes to $0$
+  \STATE {\bfseries return} the best $\widehat{S}_{\rm fb}\in\mathcal{C}_{\rm feas}$ by measured $\Delta\varphi_\util$, its measured language change, and the violation of $\widehat{S}$
+\ELSE
+  \IF{$|\mathcal{F}|\ge m+2$}
+    \STATE build $m$ windows from $\mathcal{F}\setminus\{\widehat{S}\}$; measure each $r=\Delta\varphi_\util-A_\util$
+    \STATE $q \leftarrow$ the largest $|r|$ among the $m$ draws
+    \STATE {\bfseries return} $\widehat{S}$, its measured $\Delta\varphi_\risk$, and every $S\in\mathcal{F}\setminus\{\widehat{S}\}$ with $A_\util(\widehat{S})-A_\util(S)>q+|r(\widehat{S})|$
+  \ELSE
+    \STATE {\bfseries return} $\widehat{S}$ and its measured $\Delta\varphi_\risk$ without a certificate
+  \ENDIF
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
 
 \paragraph{Readouts.}
 Both readouts are next-token log-probability functionals at the first response
@@ -323,8 +377,12 @@ protocol-listed candidate tokens at the first response position, not sequence
 likelihoods: the adjoint only sees the distribution at that position. This
 choice keeps the scalar differentiable and makes clear what the proxy does not
 measure.
-How closely $\varphi_\risk$ agrees with the language of free generation has not
-been measured (Section~\ref{sec:limitations});
+These first-token scores neither measure full-answer probability nor detect
+later language switching; Section~\ref{sec:protocol} tests the latter directly.
+Theorem~\ref{thm:superposition} also allows smooth sequence-level scalars, such
+as teacher-forced log probabilities along fixed target-language reasoning
+traces. Such readouts need suitable traces and longer forward/backward passes;
+we have not evaluated them, and free generation would still need to be checked.
 Appendix~\ref{app:protocol} gives templates, token sets, and probe counts.
 
 \paragraph{Scores.}
@@ -338,7 +396,7 @@ output of host layer $\ell$. Probes are scored one at a time, so no padding
 enters the scores.
 
 \paragraph{Calibrate, then choose.}
-A band is a window $[i,j]$ of consecutive layers, and
+A layer window is an interval $[i,j]$ of consecutive layers, and
 $A_\varphi(S)=\sum_{\ell\in S}a^{\varphi}_\ell$. Scores rank windows well but can
 misstate magnitudes once a readout saturates, and the constraint depends on
 magnitudes (Section~\ref{sec:verify}). \textsc{Suture} therefore builds $m_c=10$
@@ -352,7 +410,9 @@ selects
 \mathcal{F}=\{\text{windows } S : b\,A_\risk(S)\ge-\tau\},
 \end{equation}
 the calibrated first-order version of \eqref{eq:program}. All $L(L+1)/2$ windows,
-$666$ for a 36-layer model, have proxy scores computed exactly from prefix sums. We fix $\tau=0.05$ nats before any measurement;
+$666$ for a 36-layer model, have proxy scores computed exactly from prefix sums.
+The choices $m_c=m=10$, $\tau=0.05$ nats and first-token readouts are fixed
+protocol settings, not established optima. We fix $\tau$ before measurement;
 we leave $A_\util$ uncalibrated because only its ordering enters this argmax;
 using the same builds to calibrate it could instead reduce the task-remainder
 variance in the certificate, but is not part of the default procedure.
@@ -383,56 +443,16 @@ Proposition~\ref{prop:regret} an unbuilt competitor drawn uniformly has
 $|r(S)|\le q$ with probability at least $m/(m{+}1)$, and a built one has
 $|r(S)|\le q$ outright; either way it cannot then beat $\widehat{S}$. We use
 $m=10$, bounding that failure probability by $1/11$ and bringing the procedure to
-$21$ built models. The statement is about $\varphi_\util$ on the scoring probes,
+$21$ built configurations at most. This is a marginal guarantee for a uniformly
+drawn competitor, not a simultaneous guarantee over all windows. The statement
+is about $\varphi_\util$ on the scoring probes,
 not about downstream accuracy, and it has been evaluated in controlled stacks but
 not on language models.
 
 Donor layers are streamed one at a time during scoring, so peak memory is one
 host model plus one layer.
 
-\par\smallskip
-\noindent\begin{minipage}{\linewidth}
-\hrule height 0.8pt
-\vspace{3pt}
-\captionof{algorithm}{\textsc{Suture}. Lines 2--7 score every layer from one host
-forward--backward pass per probe; $s^{\varphi}_\ell$ and $v_\ell$ must come from
-the same host pass and probe. Lines 8--9 calibrate the language scores on ten
-built windows and choose; later lines build the choice, fall back if the measured
-language change violates the constraint, and otherwise certify it.}
-\label{alg:suture}
-\vspace{2pt}
-\hrule height 0.4pt
-\vspace{3pt}
-\footnotesize
-\begin{algorithmic}[1]
-\STATE {\bfseries Input:} host $\theta^{\host}$, donor $\theta^{\donor}$, probes
-$\mathcal{P}_\util,\mathcal{P}_\risk$, tolerance $\tau$, sizes $m_c$ and $m$
-\FOR{$\varphi \in \{\varphi_\util, \varphi_\risk\}$ and each $p \in \mathcal{P}_\varphi$}
-  \STATE host forward pass on $p$, caching the input $x^{\host}_\ell$ and the output of every layer
-  \STATE for each $\ell$, apply donor layer $\ell$ to $x^{\host}_\ell$ with the host's mask and positions; store $v_\ell$ \hfill\COMMENT{streamed}
-  \STATE backward pass from $\varphi(p)$, reading off $s^{\varphi}_\ell$ at every layer output
-  \STATE accumulate $a^{\varphi}_\ell \mathrel{+}= \langle s^{\varphi}_\ell, v_\ell\rangle / |\mathcal{P}_\varphi|$
-\ENDFOR
-\STATE build $m_c$ uniformly drawn windows; measure $\Delta\varphi_\util$ and $\Delta\varphi_\risk$; fit $b$ from the latter against $A_\risk$ and retain them as $\mathcal{C}$
-\STATE score every window by prefix sums; $\widehat{S}\leftarrow$ \eqref{eq:select}
-\STATE build $\widehat{S}$; measure its $\Delta\varphi_\util$ and $\Delta\varphi_\risk$
-\IF{$\Delta\varphi_\risk(\widehat{S})<-\tau$}
-  \STATE $\mathcal{C}_{\rm feas}\leftarrow\{S\in\mathcal{C}:\Delta\varphi_\risk(S)\ge-\tau\}\cup\{\emptyset\}$; set both host changes to $0$
-  \STATE {\bfseries return} the best $\widehat{S}_{\rm fb}\in\mathcal{C}_{\rm feas}$ by measured $\Delta\varphi_\util$, its measured language change, and the violation of $\widehat{S}$
-\ELSE
-  \IF{$|\mathcal{F}|\ge m+2$}
-    \STATE build $m$ windows from $\mathcal{F}\setminus\{\widehat{S}\}$; measure each $r=\Delta\varphi_\util-A_\util$
-    \STATE $q \leftarrow$ the largest $|r|$ among the $m$ draws
-    \STATE {\bfseries return} $\widehat{S}$, its measured $\Delta\varphi_\risk$, and every $S\in\mathcal{F}\setminus\{\widehat{S}\}$ with $A_\util(\widehat{S})-A_\util(S)>q+|r(\widehat{S})|$
-  \ELSE
-    \STATE {\bfseries return} $\widehat{S}$ and its measured $\Delta\varphi_\risk$ without a certificate
-  \ENDIF
-\ENDIF
-\end{algorithmic}
-\vspace{2pt}
-\hrule height 0.8pt
-\end{minipage}
-\par\smallskip
+
 
 % ============================================================================
 \section{Controlled stacks: the identity, the mechanism, and its limit}
@@ -525,7 +545,7 @@ score selects at regret $0.006$. Dropping the adjoint gives $0.21$, dropping the
 injection $0.12$, movement from the base $0.19$, and random scores $0.20$; every
 alternative is worse on the same stacks (Holm-adjusted $p\le0.016$), and $48$
 stacks leave the order unchanged ($0.011$ against $0.16$--$0.24$, all
-$p<10^{-5}$). Movement from the base, the statistic behind the original band
+$p<10^{-5}$). Movement from the base, the statistic behind the original window
 \citep{bandarkar2025layerswap}, is not distinguishable from random scores here
 ($0.192$ against $0.201$, paired $p=0.91$), because nothing in this construction
 ties parameter magnitude to the readout; width-3 windows give the same picture
@@ -606,44 +626,63 @@ ranking breaks.
 \label{sec:protocol}
 % ============================================================================
 
-Controlled stacks cannot show that the ranking survives on real experts or
-under free generation. We report three real-model studies, each under a protocol
-fixed before its measurement (Appendix~\ref{app:protocol}).
+Controlled stacks cannot establish ranking or language retention during real
+model generation. We report the original three studies and a separate
+post-submission generation comparison; Appendix~\ref{app:protocol} distinguishes
+their protocols and retained evidence.
 
-\paragraph{Public 8B specialists.}
-We took the Qwen3-8B native specialists of \citet{lasbordes2026rethinking} for
-French and Chinese as hosts and their English specialist as donor. Selection
-scored all $666$ windows of the 36-layer model, with no grafted model built,
-and chose layers $[13,15]$ for French and $[20,31]$ for Chinese (zero-based). On
-$250$ MGSM-Rev2 test records per language, disjoint from the probes, the selected
-windows raised mean teacher-forced answer log-probability over the host by
-$+0.398$ nats per token in French (paired bootstrap $95\%$ interval
-$[+0.358,+0.437]$) and by $+1.326$ in Chinese ($[+1.210,+1.446]$).
-The host means were $-8.808$ and $-9.516$ nats per token, respectively. The
-same records were used to measure the published windows (layers 13--22 and
-13--20): selected minus published was $-0.355$ nats per token in French
-(paired bootstrap $95\%$ interval $[-0.417,-0.293]$) and $-0.131$ in Chinese
-($[-0.222,-0.039]$), so the selected intervals beat the host but lose to the
-published references. All intervals use zero-based inclusive layer indices:
-the published $[13,22]$ and $[13,20]$ intervals therefore match the selected
-intervals' convention.
-Three limits matter: the answer readout is close to but not the task readout, and
-neither is free-generation accuracy; a decoding-cache mismatch prevented the
-latter. An isolated A100 follow-up fit the language
-scale on ten windows: $b=0.452$ (RMSE $0.747$) for French and $b=0.012$
-(RMSE $0.916$) for Chinese, leaving the selected windows $[13,15]$ and
-$[20,31]$. Parameter movement selected $[0,35]$ in both languages, while
-first-order weight attribution selected the same constrained windows; without
-the constraint it selected French $[22,32]$, gaining $+1.243$ answer nats but
-losing $-1.259$ language-readout units. The conformal certificate was not run.
-Algorithm~\ref{alg:suture} specifies a measured calibration-window fallback if a
-future choice violates the constraint.
-The Chinese window extends past layer 20, where
-\citet{lasbordes2026rethinking} saw traces revert to English. On $76$ held-out
-language probes, selected-minus-host was $(+1.070,+0.268)$ and
-selected-minus-published $(+0.130,-0.315)$ (French, Chinese). The proxy supports a host-relative gain but not
-the Chinese comparison with the published window; generated-text language
-identification remains unmeasured.
+\paragraph{Public 8B specialists and the scope of the comparison.}
+We use the public Qwen3-8B French and Chinese native-reasoning specialists of
+\citet{lasbordes2026rethinking} as hosts and their English specialist as donor.
+Both hosts already reason in their native language. We did not test reversed
+host/donor roles or compare separate expert training with joint training.
+
+Selection scored all $666$ windows without building a merged model and chose
+$[13,15]$ for French and $[20,31]$ for Chinese. All layer indices are zero-based
+and inclusive; the published references are $[13,22]$ and $[13,20]$.
+On $250$ MGSM-Rev2 test records per language, disjoint from selection probes,
+selected-minus-host teacher-forced answer log-probability was $+0.398$
+nats/token in French and $+1.326$ in Chinese. Selected-minus-published was
+$-0.355$ (paired 95\% interval $[-0.417,-0.293]$) and $-0.131$
+($[-0.222,-0.039]$), respectively. Constrained first-order weight attribution selected the
+same windows. These measurements do not establish an advantage over that
+baseline; the certificate was not run on the language models.
+
+\paragraph{Capped free generation on the frozen choices.}
+We compared the host, selected, and official published Swap checkpoints on the
+same $250$ test questions per language, with one sampled answer per item and an
+8,192-token output cap (Table~\ref{tab:b3-generation}). Numeric EM uses a
+post-hoc parser corrected after comparative-output QA; the original integer
+score is retained. Appendix~\ref{app:b3-generation} gives the decoding, scoring,
+language-ID, provenance and audit details.
+
+\input{figs/b3_generation_followup_table}
+
+Selected-minus-host numeric EM is $+6.0$ percentage points in French (paired
+95\% item-bootstrap interval $[2.0,10.0]$) and $+0.4$ in Chinese
+($[-3.2,4.0]$). Selected-minus-published is $+29.6$ ($[23.6,35.6]$) and
+$+24.0$ ($[18.0,30.0]$), respectively. Intervals condition on one seed
+schedule. The French reference has $55$ truncations versus $3$ for selected,
+so its lower score is cap-sensitive. All $247$ evaluable selected French traces
+are classified as French, with no flagged English chunk.
+
+The Chinese choice fails language preservation: $225$ of $248$ complete
+reasoning traces are identified as English and only $23$ as Chinese; $238/250$
+outputs contain an English-classified chunk. Its higher first-token language
+score therefore does not establish native-language reasoning. On the original
+$76$ held-out language probes, selected-minus-host was $(+1.070,+0.268)$ and
+selected-minus-published $(+0.130,-0.315)$ for French and Chinese. Neither that
+proxy nor this three-choice comparison validates accuracy ranking over all
+windows. The new outputs change the capped answer-score comparison with the
+published choices, while confirming the Chinese language-switching concern.
+
+\paragraph{The Chinese calibration constraint becomes nonbinding.}
+An isolated ten-window fit gave $b=0.012119$, making all $666$ windows
+predicted feasible. The original choice $[20,31]$ used $b=1$ and also maximizes
+the task score without the constraint, so the fit did not cause it. Three
+fitting windows violate the measured proxy threshold yet pass the fitted
+constraint. The measured check and fallback in Algorithm~\ref{alg:suture}
+remain necessary; neither guarantees generated language.
 
 \paragraph{A weak 1.5B pair: free-generation ranking is inconclusive.}
 On Qwen2.5-Coder-1.5B-Instruct, the only 1--2B decoder in our offline mirror, matched
@@ -671,14 +710,13 @@ Three literatures meet here: layer swapping, model-merging search, and
 first-order attribution.
 
 \paragraph{Layer swapping and multilingual composition.}
-\citet{bandarkar2025layerswap} introduced layer swapping and selected its band
+\citet{bandarkar2025layerswap} introduced layer swapping and selected its window
 from expert parameter movement; later work found little overlap between
 math- and language-important parameters \citep{bandarkar2025unreasonable},
 extended the recipe to long reasoning and safety
-\citep{lasbordes2026rethinking, shin2026safetyswap}, and made merging
-input-steerable \citep{li2026stmerge}. This lineage includes task arithmetic and
+\citep{lasbordes2026rethinking, shin2026safetyswap}. This lineage includes task arithmetic and
 composable sparse fine-tuning \citep{ilharco2023task, chronopoulou2024langtask,
-ansell2022sft}, but these methods do not predict a band's behavioral effect
+ansell2022sft}, but these methods do not predict a window's behavioral effect
 before construction; Theorem~\ref{thm:superposition} does so to first order.
 
 \paragraph{How compositions are chosen.}
@@ -687,11 +725,8 @@ Evolutionary, Bayesian, and surrogate methods still evaluate individual merges
 expert-intrinsic rules read weights rather than behavior
 \citep{yadav2023ties, yu2024dare, jin2023regmean, liu2025sensmerging}; and
 behavior-referenced or unlabeled proxies score one configuration at a time
-\citep{yang2024adamerging, symerge2026, fu2026merit, tap2026}. StatsMerging
-\citep{merugu2025statsmerging} and CAT Merging
-\citep{sun2025cat} likewise operate in weight space, while MergeBench
-\citep{he2025mergebench} benchmarks merged LLMs; none scores combinatorial layer
-grafts under a language constraint.
+\citep{yang2024adamerging, symerge2026, fu2026merit}. None scores
+combinatorial layer grafts under a language constraint.
 
 \paragraph{Attribution and output language.}
 Attribution patching and Weight Patching linearize activation or parameter
@@ -709,28 +744,34 @@ readout.
 \label{sec:limitations}
 % ============================================================================
 
-\paragraph{What a practitioner gets.}
-A fixed budget of twenty-one builds calibrates and certifies one choice rather
-than searching; a published band costs one build but is tied to its model and
-language, and can send Chinese traces back to English
-\citep{lasbordes2026rethinking}. The same scores rank arbitrary subsets at no
-extra cost, but that extension is untested on language models.
+\paragraph{What the method provides.}
+The contribution is local first-order scoring and a procedure to shortlist
+windows under a proxy constraint. In the controlled trained-expert comparison,
+score-only selection reaches regret $0.013$ versus $0.062$ for the best of 11
+random builds ($p_{\mathrm{Holm}}=0.006$), but is not distinguished from weight
+attribution. The same limitation holds for the 8B choices, which coincide with
+constrained weight attribution. This is evidence about search cost in the controlled setting,
+not a general empirical advantage over other inexpensive attribution methods.
 
-\paragraph{Why swaps compose, and where they should stop.}
-When the language readout tracks output language, the theorem predicts a stopping
-boundary. Our held-out proxy supports only a host-relative teacher-forced gain,
-not the Chinese selected-versus-published comparison; Appendix~\ref{app:negative}
-shows why the free-generation claim may fail.
+\paragraph{Language preservation needs direct validation.}
+The French generation follow-up supports a bounded accuracy gain under its
+parser and output cap. The Chinese selection largely reasons in English,
+despite an improved first-token language proxy. The theorem bounds changes
+in its chosen scalar locally; it does not turn that proxy into a guarantee
+about generated language. Sequence-level readouts are compatible with the
+analysis but remain unevaluated, as do reverse-direction swaps and a
+matched-data-and-compute comparison with joint training.
 
 \paragraph{Limitations.}
-At 8B the evidence covers two languages, one donor, and a teacher-forced
-functional; selected intervals lose to published references, and generated-text
-language identification is unmeasured. The certificate remains controlled-stack
-only; an isolated follow-up ran 8B calibration and cheaper baselines. The 1.5B
-study is inconclusive; local studies use one seed and machine-translated probes.
-Fixed-attention stacks achieve only $0.64\pm0.48$ on the width-$6$ diagnostic; a
-from-scratch transformer (Appendix~\ref{app:negative}) also failed to reproduce
-transfer.
+The 8B generation evidence covers two languages, one donor, one sample per
+item, three frozen choices and an output cap. Its scalar answer parser is
+post-hoc, and the French published reference is frequently truncated. These
+results do not validate all-window generation ranking. The certificate remains
+controlled-stack only. The 1.5B free-generation ranking is not validated, and
+local expert studies use one training seed and machine-translated probes
+without independent human or semantic translation QA. Fixed-attention stacks
+achieve only $0.64\pm0.48$ on the width-6 diagnostic; the from-scratch
+transformer (Appendix~\ref{app:negative}) also failed to reproduce transfer.
 
 \subsection*{Reproducibility statement}
 Assumptions and proofs are in Appendix~\ref{app:proof-superposition}. The
@@ -747,10 +788,15 @@ paired intervals. The $76$-probe language-fidelity measurements are also
 released with their translated probe inputs, and the same script recomputes their paired
 intervals. Other isolated follow-ups have only aggregate summaries, so their
 intervals cannot be recomputed from this release.
-Appendix~\ref{app:protocol} lists checkpoints, data, and software. Weights are
-not redistributed.
-Code and aggregate evidence are available at
-\url{https://anonymous.4open.science/r/grafts-add-up-8541/}.
+The new generation records, both post-hoc parser versions, source hashes and
+independent audit reports are retained under
+\artifact{results/b3/generation\_followup\_v1/}. The CPU verifier
+\artifact{verify/audit\_b3\_generation\_results.py} recomputes answers, language
+identification, pairings and summary statistics from all 1,500 outputs;
+\artifact{verify/check\_b3\_calibration.py} re-enumerates the saved windows.
+Appendix~\ref{app:protocol} lists checkpoints, data, software and the documented
+translation-builder messages. Weights are not redistributed.
+Code and aggregate evidence are included in the accompanying release package.
 
 \subsection*{Ethics statement}
 This work uses existing open models and no human subjects or new data collection.
@@ -766,9 +812,9 @@ manuscript, figures, literature search, and reference checks.
 It also translated probes with the pinned Qwen models in
 Appendix~\ref{app:protocol}; NumPy controlled-stack data were AI-assisted, but
 AI supplied neither labels nor reported numbers. The authors re-derived and
-checked the theorems, optimizers, scripts, artifacts, and bibliography. No run
-used a hosted API: the 1.5B/1.7B runs used a local GPU and the 8B run a rented
-A100 with open weights. We take responsibility for the final content.
+checked the theorems, optimizers, scripts, artifacts, and bibliography. No model-inference run
+used a hosted API: the 1.5B/1.7B runs used a local GPU and the 8B runs rented
+A100 GPUs with open weights. We take responsibility for the final content.
 
 \bibliographystyle{iclr2027_conference}
 \bibliography{suture}
@@ -1059,7 +1105,7 @@ worse and the rest not separable from \textsc{Suture}, though the orderings amon
 the inseparable methods differ.
 Differences are paired against \textsc{Suture}, Holm-adjusted within the block.}
 \label{tab:trained}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\centering\arraybackslash}p{0.12\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}>{\centering\arraybackslash}p{0.23\textwidth}>{\centering\arraybackslash}p{0.11\textwidth}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.12\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}>{\centering\arraybackslash}p{0.26\textwidth}>{\centering\arraybackslash}p{0.10\textwidth}@{}}
 \toprule
 \textbf{Score} & \textbf{Spearman} & \textbf{Regret} & \textbf{$\Delta$regret [95\% CI]} & \textbf{$p_{\text{Holm}}$} \\
 \midrule
@@ -1101,7 +1147,7 @@ to window $[0,7]$, which contains the two layers with the largest injections.
 The selection is still the true optimum, because the best window's score margin
 is large, and the deployable certificate becomes cautious rather than wrong: it
 certifies about $30$ of $77$ competitors, none falsely. Large remainders thus
-show up as fewer certified competitors, which is the behavior a practitioner can
+show up as fewer certified competitors, which is the behavior a user choosing layers can
 observe without the sweep.
 
 % ============================================================================
@@ -1177,14 +1223,16 @@ a held-out comparison of host, selected and published windows);
 \artifact{Qwen/Qwen2.5-Coder-1.5B-Instruct} (matched LoRA experts and an
 exhaustive $406$-window Spanish sweep); and \artifact{Qwen/Qwen3-1.7B}, which
 stopped at the readiness checks. Safety-task and larger-scale sweeps were not
-run. The 8B answer-measurement records and their manifests are released under
-\artifact{results/b3/lighton\_qwen3\_8b/}; the isolated follow-up records are
-not included, as stated in the reproducibility statement.
+run. The original 8B answer-measurement records and their manifests are released under
+\artifact{results/b3/lighton\_qwen3\_8b/}; most isolated follow-ups retain
+only aggregates. The separately retained 76-record language-proxy follow-up
+is described below. A new post-submission generation study is documented in
+Appendix~\ref{app:b3-generation}.
 The isolated follow-up builder also translated the next $76$ disjoint language
 records for each 8B host, and the isolated A100 follow-up scored the host,
 selected, and published candidates on those records. These artifacts report a
-teacher-forced language readout only; no generated-text language-ID rate was
-obtained.
+teacher-forced language readout only; that follow-up did not obtain a
+generated-text language-ID rate.
 
 \paragraph{8B protocol.}
 The public protocol file
@@ -1212,7 +1260,8 @@ token. The isolated language-fidelity follow-up compares the same candidates
 by target-language-minus-English first-token log-probability on $76$ held-out
 records per language. It used one A100 PCIe 80GB, BF16, CUDA 12.4, Python
 3.10.13, \artifact{torch==2.6.0+cu124} and
-\artifact{transformers==5.14.1}; no generated-text language-ID rate was run.
+\artifact{transformers==5.14.1}; it did not run generated-text language ID.
+The later generation study uses a separate runtime (Appendix~\ref{app:b3-generation}).
 The language-readout means (host, selected, published) were
 $(2.644,3.714,3.584)$ in French and $(7.737,8.004,8.319)$ in Chinese.
 Per-record language-fidelity measurements are released under
@@ -1224,6 +1273,53 @@ Calibration slopes, RMSE, and the 8B movement and weight-attribution window
 choices are in the pair-level
 \artifact{results/b3/lighton\_qwen3\_8b/llm\_feedback\_followup/*/summary.json}
 files; per-record follow-up measurements are not released.
+
+\paragraph{Checkpoint training and original scores.}
+The public 8B hosts are \artifact{lightonai/Qwen3-8B-FR} and
+\artifact{lightonai/Qwen3-8B-ZH}; the donor is
+\artifact{lightonai/Qwen3-8B-EN}. The host model cards describe full SFT from
+\artifact{Qwen/Qwen3-8B-Base} on the corresponding language splits of
+\artifact{lightonai/Dolci-Think-SFT-32B-Multilingual}, approximately 10B tokens
+over two epochs.\footnote{Public host cards:
+\url{https://huggingface.co/lightonai/Qwen3-8B-FR} and
+\url{https://huggingface.co/lightonai/Qwen3-8B-ZH}.}
+These are already native-reasoning specialists, not language-only models. We
+did not train them or establish absence of overlap with their training data.
+The original teacher-forced host means were $-8.808$ and $-9.516$ nats/token;
+selected-minus-host was $+0.398$ (95\% paired interval $[0.358,0.437]$) in
+French and $+1.326$ ($[1.210,1.446]$) in Chinese. In the isolated follow-up,
+the fitted slopes were $0.452$ (RMSE $0.747$) and $0.012$ (RMSE $0.916$).
+Parameter movement selected $[0,35]$ in both languages, while weight attribution
+selected the same constrained windows as \textsc{Suture}. Unconstrained weight
+attribution selected French $[22,32]$, with $+1.243$ answer nats and $-1.259$
+language-readout units. These are distinct from the generation metrics.
+
+\paragraph{Translation prompt and quality checks.}
+The available 8B builder, \path{src/suture/b3_data.py}, specifies the
+following messages, with the language name and source passage substituted for
+\texttt{[language]} and \texttt{[text]}. This records the builder's verbatim
+instruction; original request-level translation logs are not retained, so it
+is not an independent reconstruction of every historical translation request.
+\begin{quote}\small
+\textbf{System:} You are a precise translator. Output only the translation.
+
+\textbf{User:} Translate the following English text into [language]. Output only
+the translation, with no explanation or quotation marks.
+
+English text:\\
+\texttt{[text]}
+
+Translation:
+\end{quote}
+The builder disables thinking and uses greedy translation with at most 96 new
+tokens and batch size 1; this cap differs from the 128-token probe-input limit.
+Cleanup removes
+wrappers/fences and rejects empty output; source deduplication, count checks,
+record hashes and split checks are mechanical safeguards. No independent
+human, native-speaker or semantic translation-quality audit was performed.
+These checks support reproducible construction, not translation fidelity.
+The probe/evaluation datasets are not a complete account of the public
+specialists' training corpora.
 
 \paragraph{Readouts and probes, per study.}
 The readouts are those of \eqref{eq:readouts}, called \artifact{utility} and
@@ -1280,5 +1376,7 @@ The isolated follow-up reused those frozen score and measurement trees, fit the
 language scale on ten windows per language, scored $500$ utility and $500$ risk
 probes for each calibration and attribution pass, and measured only new
 candidate windows. Wall time was not recorded.
+
+\input{appendix/generation_followup}
 
 \end{document}

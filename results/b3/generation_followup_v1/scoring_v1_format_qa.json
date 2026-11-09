@@ -1,0 +1,646 @@
+{
+  "kind": "post_comparative_output_format_QA",
+  "original_correct_supplemental_v1_not_correct": 67,
+  "finding": "66 Markdown marker/value wrapper false negatives; one trailing-dollar case intentionally rejected by supplemental scalar grammar. All v1 outputs retained; do not infer v2 results from these counts.",
+  "candidates": {
+    "fr/host_baseline": {
+      "original_correct_supplemental_v1_not_correct": 1,
+      "v1_sidecar_sha256": "35406135f7e9602a3e250cdd2a247ac7ae88d25f69b884351dd5840dbfd30545",
+      "records": [
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:10",
+          "final_line": "**Réponse :** 366",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    },
+    "fr/selected": {
+      "original_correct_supplemental_v1_not_correct": 7,
+      "v1_sidecar_sha256": "2def396b7e9ccfcd74f32905c2c9c532710c4f9de0ce41f35398dcf4d8707579",
+      "records": [
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:12",
+          "final_line": "**Réponse : 13**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:167",
+          "final_line": "**Réponse :** 16",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:184",
+          "final_line": "**Réponse :** 25",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:189",
+          "final_line": "**Réponse :** 34",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:239",
+          "final_line": "**Réponse** : 280",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:38",
+          "final_line": "**Réponse :** 10",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:87",
+          "final_line": "**Réponse :** 9360",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    },
+    "fr/published_reference": {
+      "original_correct_supplemental_v1_not_correct": 31,
+      "v1_sidecar_sha256": "e23e194504e5c5cc3c7de48413da31affaab2df74b46115fee22bd78e339c4fa",
+      "records": [
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:0",
+          "final_line": "**Réponse: 18**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:101",
+          "final_line": "**Réponse :** 6",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:104",
+          "final_line": "**Réponse: 500**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:113",
+          "final_line": "**Réponse :** 25",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:116",
+          "final_line": "**Réponse : 42**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:122",
+          "final_line": "**Réponse:** 48",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:125",
+          "final_line": "**Réponse:** 10",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:130",
+          "final_line": "**Réponse : 30**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:133",
+          "final_line": "**Réponse : 13**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:155",
+          "final_line": "**Réponse : 280**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:166",
+          "final_line": "**Réponse :** 5",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:191",
+          "final_line": "**Réponse:** 5",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:194",
+          "final_line": "**Réponse: 10**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:232",
+          "final_line": "**Réponse : 75**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:238",
+          "final_line": "**Réponse :** 68",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:24",
+          "final_line": "**Réponse: 26**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:243",
+          "final_line": "**Réponse :** 250",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:246",
+          "final_line": "**Réponse: 27000**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:247",
+          "final_line": "**Réponse :** 32",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:3",
+          "final_line": "**Réponse :** 540",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:32",
+          "final_line": "**Réponse: 35**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:40",
+          "final_line": "**Réponse :** 8",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:42",
+          "final_line": "**Réponse : 26**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:46",
+          "final_line": "**Réponse: 163**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:5",
+          "final_line": "64 $",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:60",
+          "final_line": "**Réponse :** 17",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:83",
+          "final_line": "**Réponse : 600**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:9",
+          "final_line": "**Réponse : 460**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:92",
+          "final_line": "**Réponse : 4**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:95",
+          "final_line": "**Réponse : 40**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:fr:MGSM_rev2_test:99",
+          "final_line": "**Réponse :** 58",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    },
+    "zh/host_baseline": {
+      "original_correct_supplemental_v1_not_correct": 7,
+      "v1_sidecar_sha256": "40bc62b6ddd56cef4ca57367d03590fa11a5c06fa66d67224a6fa486ea584cbe",
+      "records": [
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:108",
+          "final_line": "**答案：** 50",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:121",
+          "final_line": "**答案：** 27",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:188",
+          "final_line": "**答案：** 50",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:240",
+          "final_line": "**答案：** 21",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:33",
+          "final_line": "**答案：** 70",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:39",
+          "final_line": "**答案**: 18",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:53",
+          "final_line": "**答案：** 40",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    },
+    "zh/selected": {
+      "original_correct_supplemental_v1_not_correct": 10,
+      "v1_sidecar_sha256": "d0d0327565b05862c75010ce0308ff53f10d9d92ddf3210ec66a13411f202547",
+      "records": [
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:106",
+          "final_line": "**Answer:** 72",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:177",
+          "final_line": "**答案：** 350",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:186",
+          "final_line": "**答案：** 5",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:227",
+          "final_line": "**答案：9**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:237",
+          "final_line": "**Answer:** 90",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:30",
+          "final_line": "**答案：**109",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:46",
+          "final_line": "**Answer:** 163",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:57",
+          "final_line": "**Answer:** 83",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:58",
+          "final_line": "**Answer:** 57",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:8",
+          "final_line": "**Answer:** 45",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    },
+    "zh/published_reference": {
+      "original_correct_supplemental_v1_not_correct": 11,
+      "v1_sidecar_sha256": "3e98a0b7a5e82a54d007d3cee2ff852413df6ebf5fb6edf3bc90a0c548bd234c",
+      "records": [
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:109",
+          "final_line": "**答案：28**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:13",
+          "final_line": "**最终答案：** \\boxed{18}",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:14",
+          "final_line": "**答案：** 60",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:147",
+          "final_line": "**答案：75**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:167",
+          "final_line": "**答案：** 16",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:171",
+          "final_line": "**答案：** 1210",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:173",
+          "final_line": "**答案：** 18000",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:191",
+          "final_line": "**答案：** 5",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:31",
+          "final_line": "**答案：** 80",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:39",
+          "final_line": "**答案：** 18",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        },
+        {
+          "record_id": "b3:zh:MGSM_rev2_test:49",
+          "final_line": "**答案：30**",
+          "parser_status": "invalid_numeric_suffix",
+          "strict_original_em": true,
+          "new_numeric_em": null,
+          "finish_reason": "stop",
+          "truncated": false
+        }
+      ]
+    }
+  }
+}

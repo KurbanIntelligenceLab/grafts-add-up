@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "study_name": "b3_generation_followup_v1",
+  "status": "frozen_before_generation",
+  "source_contract": "configs/b3_lighton_qwen3_8b_v1.json",
+  "candidate_names": [
+    "host_baseline",
+    "selected",
+    "published_reference"
+  ],
+  "donor": {
+    "id": "lightonai/Qwen3-8B-EN",
+    "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1"
+  },
+  "languages": {
+    "fr": {
+      "host": {
+        "id": "lightonai/Qwen3-8B-FR",
+        "revision": "a53d601e18842b62bd43b3718cf3900ba2d7bbf6"
+      },
+      "selected_window": [
+        13,
+        14,
+        15
+      ],
+      "published_reference": {
+        "id": "lightonai/Qwen3-8B-FR-Swap",
+        "revision": "9219ee997381f2fc0558168e41c7fd19fff5c620"
+      },
+      "published_window_inclusive": [
+        13,
+        22
+      ],
+      "prompt_instruction": "Résolvez ce problème de mathématiques. Donnez les étapes de raisonnement avant de fournir la réponse finale sur la dernière ligne elle-même dans le format de “Réponse:”. N’ajoutez rien d’autre que le nombre de la réponse après “Réponse:”."
+    },
+    "zh": {
+      "host": {
+        "id": "lightonai/Qwen3-8B-ZH",
+        "revision": "b100a627fcbe1af4391de73cb962e7564aff877a"
+      },
+      "selected_window": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "published_reference": {
+        "id": "lightonai/Qwen3-8B-ZH-Swap",
+        "revision": "ca13acae7d919cdb66ad1cd29e1e1e9352798cc6"
+      },
+      "published_window_inclusive": [
+        13,
+        20
+      ],
+      "prompt_instruction": "解决这个数学问题。在最后一行给出答案前，请提供推理步骤。最后一行应该以“答案：”的形式独立给出答案。在“答案：”后不要添加除整数答案之外的任何内容。"
+    }
+  },
+  "dataset": {
+    "id": "lightonai/mgsm-rev2",
+    "revision": "1463c6dc7991a8751b8e28e76f6c561b9201eb55",
+    "split": "test",
+    "n_items_per_language": 250,
+    "source_manifest_pattern": "results/b3/lighton_qwen3_8b/{language}_host__en_donor/data/MGSM_rev2_test.jsonl"
+  },
+  "chat_template": {
+    "tokenizer_source": "pinned host tokenizer used for all three candidates",
+    "add_generation_prompt": true,
+    "enable_thinking": true,
+    "assistant_prefix_in_prompt": "<think>\n",
+    "prompt_role": "user",
+    "prompt_instruction_joiner": "\\n"
+  },
+  "generation": {
+    "backend": "vllm",
+    "vllm_version": "0.11.0",
+    "dtype": "bfloat16",
+    "quantization": null,
+    "tensor_parallel_size": 1,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "n": 1,
+    "best_of": null,
+    "min_tokens": 0,
+    "max_tokens": 8192,
+    "ignore_eos": false,
+    "stop": null,
+    "stop_token_ids": null,
+    "logprobs": null,
+    "prompt_logprobs": null,
+    "include_stop_str_in_output": false,
+    "detokenize": true,
+    "skip_special_tokens": false,
+    "spaces_between_special_tokens": true,
+    "truncate_prompt_tokens": null,
+    "bad_words": null,
+    "logit_bias": null,
+    "allowed_token_ids": null,
+    "extra_args": null,
+    "seed": 20261108,
+    "seed_derivation": "sha256(global_seed:record_id), first four bytes as unsigned big-endian masked to 31 bits; paired per-record across candidates",
+    "batch_size": 32,
+    "max_model_len": 16384,
+    "max_num_seqs": 32,
+    "max_num_batched_tokens": 8192,
+    "gpu_memory_utilization": 0.9,
+    "enforce_eager": true,
+    "enable_prefix_caching": false
+  },
+  "language_id": {
+    "model": "models/lid.176.ftz",
+    "label_mapping": {
+      "fr": "__label__fr",
+      "zh": "__label__zh"
+    },
+    "primary_segment": "complete generated reasoning between prompt-prefilled <think> and generated </think>",
+    "minimum_letter_characters": 20,
+    "primary_rule": "fastText top-1 target-language label on complete reasoning only; incomplete or too-short traces are unknown and remain in the all-record denominator",
+    "english_chunk_diagnostic": {
+      "chunk_characters": 200,
+      "minimum_letter_characters": 20,
+      "minimum_probability": 0.5,
+      "stride_characters": 200,
+      "purpose": "secondary diagnostic for localized English spans, not the primary LID rate"
+    }
+  },
+  "answer_parser": {
+    "source_segment": "generated text after </think>; never scan reasoning",
+    "final_line_only": true,
+    "localized_labels": {
+      "fr": [
+        "Réponse:",
+        "Réponse finale:"
+      ],
+      "zh": [
+        "答案："
+      ]
+    },
+    "accept_bare_final_integer": true,
+    "accept_markdown_bold_and_boxed_integer": true,
+    "unparseable_counts_incorrect": true,
+    "truncated_counts_incorrect_even_if_number_is_visible": true,
+    "format_adherence_reported_separately": true
+  },
+  "metrics": {
+    "bootstrap_resamples": 20000,
+    "bootstrap_seed": 20261108,
+    "accuracy_denominator": "all 250 records; unparseable and truncated outputs are incorrect",
+    "language_id_denominator": "all 250 records, with unknown count separately reported"
+  }
+}

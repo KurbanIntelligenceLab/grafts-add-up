@@ -30,6 +30,7 @@ PUBLIC_ROOTS = {
     "verify",
 }
 PUBLIC_ROOT_FILES = {
+    ".gitattributes",
     ".env.example",
     ".gitignore",
     "CITATION.cff",
@@ -129,7 +130,7 @@ def _included(path: Path) -> bool:
             "build.sh",
             "iclr2027_conference.sty",
             "iclr2027_conference.bst",
-        } or len(relative_parts) >= 3 and relative_parts[1] == "figs" and path.suffix in {
+        } or len(relative_parts) >= 3 and relative_parts[1] in {"figs", "appendix"} and path.suffix in {
             ".dat",
             ".tex",
         }

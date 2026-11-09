@@ -1,0 +1,23 @@
+{
+  "status": "INSTANCE_DESTROYED_AND_ABSENCE_VERIFIED",
+  "provider": "Vast.ai",
+  "gpu": "NVIDIA A100 SXM4 80GB",
+  "n_gpus": 1,
+  "creation_request_at_utc": "2026-11-07T21:33:53.052404+00:00",
+  "destroyed_and_absence_verified_at_utc": "2026-11-07T23:57:02.444627+00:00",
+  "creation_request_to_verified_deletion_seconds": 8589.392223,
+  "usd_per_hour_including_allocated_storage": 1.1166666666666667,
+  "approximate_account_credit_decrease_usd": 5.006885225000005,
+  "cost_scope": "Approximate account credit change during allocation, including checkpoint transfer, preparation and six inference runs; not a per-candidate invoice",
+  "recorded_candidate_elapsed_seconds": {
+    "fr/host_baseline": 1192.897,
+    "fr/selected": 1001.889,
+    "fr/published_reference": 1348.158,
+    "zh/host_baseline": 1102.099,
+    "zh/selected": 761.829,
+    "zh/published_reference": 1320.133
+  },
+  "total_recorded_candidate_elapsed_seconds": 6727.004999999999,
+  "final_transport_bundle_sha256": "83cb99033a7ce9871f5f41e36f0526d76138c5a45c8e3a4cdca009e3878ddc99",
+  "n_raw_generation_rows_locally_verified": 1500
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-07T22:28:23.044231+00:00",
+  "parser_module": "src/suture/b3_generation_scoring.py",
+  "parser_sha256": "cc5a12e59937a23ac74dde28b4286c7f8801ce55deac3d3bbceffe72b4af506b",
+  "scope": "Supplemental post-hoc normalized numeric EM; original strict EM and raw rows remain unchanged",
+  "basis": "Host-only answer-format QA and synthetic fixtures; no selected or published outputs or comparative scores inspected for this parser",
+  "generation_runner_sha256": "1ab53cf1ddf42012e3b41c4a380690fb4fa587762df0274015972d4c86c00d69",
+  "generation_config_sha256": "785f600ad422910847c35dd1b9d82d5a7a2315fe798dc56a9b745c7aad9264c6",
+  "raw_audit_PASS_required": true,
+  "raw_audit_total_rows": 1500,
+  "normalization": "Final post-think line only; last explicit answer marker or standalone scalar; exact decimal/fraction; reject ambiguous values, grouping, prose/units, truncation and missing think-close",
+  "formal_external_preregistration": false
+}

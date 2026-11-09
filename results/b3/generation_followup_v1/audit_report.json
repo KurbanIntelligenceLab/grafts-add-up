@@ -1,0 +1,397 @@
+{
+  "audit_kind": "b3_generation_followup_independent_audit",
+  "conclusion": "All six candidate runs, source records, prompt/seed pairing, parsed answers, recomputed LID diagnostics, model receipts, and summary statistics passed.",
+  "input_hashes": {
+    "config_sha256": "785f600ad422910847c35dd1b9d82d5a7a2315fe798dc56a9b745c7aad9264c6",
+    "fasttext_lid_sha256": "8f3472cfe8738a7b6099e8e999c3cbfae0dcd15696aac7d7738a8039db603e83",
+    "receipts_sha256": "0c052619c2cec1a71a4f2cbdf366a03d52df3fc3f8d9cb1df4a721f4daa71688",
+    "runner_sha256": "1ab53cf1ddf42012e3b41c4a380690fb4fa587762df0274015972d4c86c00d69",
+    "source_contract_sha256": "28f21e28951662dca1d369b1a10657d570fe2502149d85bf786813ef0102bb90"
+  },
+  "languages": {
+    "fr": {
+      "candidate_counts": {
+        "host_baseline": 250,
+        "published_reference": 250,
+        "selected": 250
+      },
+      "candidate_input_checks": {
+        "host_baseline": {
+          "model_snapshot_sha256": "4ce9c7335d4b0ed971573fb5dcace52c88c82a70bf714e8e1f19c15c65e575e3",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "1ac70dd590d75b5c1fd008275567307deeb19c18c94f0bdd147f93d5ffe6a29a"
+        },
+        "published_reference": {
+          "model_snapshot_sha256": "af40efb810942d4b85ea89c16a368f704ec7908d23224d4237ade619b7c2d9d8",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "1ac70dd590d75b5c1fd008275567307deeb19c18c94f0bdd147f93d5ffe6a29a"
+        },
+        "selected": {
+          "model_snapshot_sha256": "e73cd5526dc6e57e95baf2e0c55330cd669c3abfd2be88b705884f374a46bd3f",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "1ac70dd590d75b5c1fd008275567307deeb19c18c94f0bdd147f93d5ffe6a29a"
+        }
+      },
+      "independent_bootstrap": {
+        "published_minus_host.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.208,
+            -0.048
+          ],
+          "independent_seed": 2459445367,
+          "runner_ci95": [
+            -0.208,
+            -0.048
+          ]
+        },
+        "published_minus_host.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.004,
+            0.032
+          ],
+          "independent_seed": 3781060505,
+          "runner_ci95": [
+            0.004,
+            0.032
+          ]
+        },
+        "published_minus_host.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.248,
+            -0.14
+          ],
+          "independent_seed": 2668775131,
+          "runner_ci95": [
+            -0.248,
+            -0.136
+          ]
+        },
+        "selected_minus_host.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.072,
+            0.2
+          ],
+          "independent_seed": 1790547843,
+          "runner_ci95": [
+            0.072,
+            0.2
+          ]
+        },
+        "selected_minus_host.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_seed": 3244089181,
+          "runner_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_minus_host.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.004,
+            0.044
+          ],
+          "independent_seed": 1918916600,
+          "runner_ci95": [
+            -0.004,
+            0.044
+          ]
+        },
+        "selected_minus_published.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.196,
+            0.332
+          ],
+          "independent_seed": 3600959422,
+          "runner_ci95": [
+            0.196,
+            0.332
+          ]
+        },
+        "selected_minus_published.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.032,
+            -0.004
+          ],
+          "independent_seed": 1539207877,
+          "runner_ci95": [
+            -0.032,
+            -0.004
+          ]
+        },
+        "selected_minus_published.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.164,
+            0.264
+          ],
+          "independent_seed": 1185550206,
+          "runner_ci95": [
+            0.164,
+            0.264
+          ]
+        }
+      },
+      "recomputed_accuracy": {
+        "host_baseline": 0.752,
+        "published_reference": 0.624,
+        "selected": 0.888
+      },
+      "recomputed_reasoning_english_chunk_rate": {
+        "host_baseline": 0.0,
+        "published_reference": 0.016,
+        "selected": 0.0
+      },
+      "recomputed_reasoning_target_lid_rate": {
+        "host_baseline": 0.968,
+        "published_reference": 0.776,
+        "selected": 0.988
+      },
+      "source_manifest": {
+        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\fr_host__en_donor\\data\\MGSM_rev2_test.jsonl",
+        "records": 250,
+        "sha256": "3e50eb2e051301ed2fa4e99921e5d5dbee7115474397716d7f0653eed4ee633f"
+      },
+      "status": "PASS"
+    },
+    "zh": {
+      "candidate_counts": {
+        "host_baseline": 250,
+        "published_reference": 250,
+        "selected": 250
+      },
+      "candidate_input_checks": {
+        "host_baseline": {
+          "model_snapshot_sha256": "df090293efcdf2cf39f9c485a690391001be44abcbeec7c89d72bb55d6d4e9c2",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "3b38884c87ab63ca56d9cd4318865c2ff679dffb9a9f2bd8ea95c9589f66cc8b"
+        },
+        "published_reference": {
+          "model_snapshot_sha256": "38f75ee2f6eebf4a23f4b1617a013e2c1201b39e2b72c4977d6c0ec0a10d5ad4",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "3b38884c87ab63ca56d9cd4318865c2ff679dffb9a9f2bd8ea95c9589f66cc8b"
+        },
+        "selected": {
+          "model_snapshot_sha256": "9f4513d95502ea55383f3dc90bbd7c4a426f229a0c3dc40855abbb892c0691c9",
+          "receipt_core_files_checked": 11,
+          "tensor_mapping_receipt_sha256": "3b38884c87ab63ca56d9cd4318865c2ff679dffb9a9f2bd8ea95c9589f66cc8b"
+        }
+      },
+      "independent_bootstrap": {
+        "published_minus_host.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.236,
+            -0.092
+          ],
+          "independent_seed": 2999746679,
+          "runner_ci95": [
+            -0.236,
+            -0.092
+          ]
+        },
+        "published_minus_host.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_seed": 2625880364,
+          "runner_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "published_minus_host.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.096,
+            -0.028
+          ],
+          "independent_seed": 1426682072,
+          "runner_ci95": [
+            -0.096,
+            -0.028
+          ]
+        },
+        "selected_minus_host.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.02,
+            0.124
+          ],
+          "independent_seed": 3778781252,
+          "runner_ci95": [
+            0.02,
+            0.124
+          ]
+        },
+        "selected_minus_host.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.924,
+            0.976
+          ],
+          "independent_seed": 4004049700,
+          "runner_ci95": [
+            0.924,
+            0.976
+          ]
+        },
+        "selected_minus_host.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.924,
+            -0.848
+          ],
+          "independent_seed": 13720112,
+          "runner_ci95": [
+            -0.924,
+            -0.848
+          ]
+        },
+        "selected_minus_published.accuracy_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.176,
+            0.29609999999999126
+          ],
+          "independent_seed": 3714498096,
+          "runner_ci95": [
+            0.176,
+            0.29609999999999126
+          ]
+        },
+        "selected_minus_published.reasoning_english_chunk_any_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            0.924,
+            0.976
+          ],
+          "independent_seed": 1307465248,
+          "runner_ci95": [
+            0.924,
+            0.976
+          ]
+        },
+        "selected_minus_published.reasoning_target_lid_top1_all_records": {
+          "absolute_endpoint_tolerance": 0.02,
+          "independent_numpy_ci95": [
+            -0.876,
+            -0.78
+          ],
+          "independent_seed": 4290682733,
+          "runner_ci95": [
+            -0.876,
+            -0.78
+          ]
+        }
+      },
+      "recomputed_accuracy": {
+        "host_baseline": 0.848,
+        "published_reference": 0.684,
+        "selected": 0.92
+      },
+      "recomputed_reasoning_english_chunk_rate": {
+        "host_baseline": 0.0,
+        "published_reference": 0.0,
+        "selected": 0.952
+      },
+      "recomputed_reasoning_target_lid_rate": {
+        "host_baseline": 0.98,
+        "published_reference": 0.92,
+        "selected": 0.092
+      },
+      "source_manifest": {
+        "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\lighton_qwen3_8b\\zh_host__en_donor\\data\\MGSM_rev2_test.jsonl",
+        "records": 250,
+        "sha256": "4b5d98b158f332d95f21aa9cd2de217939c24890d79ba778f68d9ae98eda729d"
+      },
+      "status": "PASS"
+    }
+  },
+  "results_root": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\generation_followup_v1",
+  "schema_version": 1,
+  "source_files": {
+    "fr/host_baseline/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "f8e6535c148797d507d4ffd4a0773c97b222950116fe5f2cb0b8598e1fac82f5"
+    },
+    "fr/published_reference/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "c6093ff8170228de58ce67ed7f571f6fb3e5dd825c30ac286d74a92ec1279101"
+    },
+    "fr/selected/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "a1682a14b7ac89ac7b6e8c55372e3c769ef27e83c04f1c1e4a5ac3764bc44748"
+    },
+    "zh/host_baseline/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "45aba87241e5e78a9a61f52c236d879c62acc23479ebece9a8d8816d77fbab92"
+    },
+    "zh/published_reference/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "e67f3d70243dd124655b98c0d1702342be6930a283aef0fdb0580711a3b42e1f"
+    },
+    "zh/selected/generations.jsonl": {
+      "n_records": 250,
+      "sha256": "72a1b6deb9ed6b072f9542ae2673ddaf7dded1e21e8a9a54a084f99c50ba80c1"
+    }
+  },
+  "status": "PASS",
+  "tensor_mapping_receipts": {
+    "fr": {
+      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\generation_followup_v1\\fr_candidate_provenance.json",
+      "published_swap_exact_mapping": true,
+      "published_window_zero_based_inclusive": [
+        13,
+        22
+      ],
+      "selected_swap_exact_mapping": true,
+      "selected_window_zero_based_inclusive": [
+        13,
+        15
+      ],
+      "sha256": "1ac70dd590d75b5c1fd008275567307deeb19c18c94f0bdd147f93d5ffe6a29a",
+      "tensor_names": 399,
+      "verified_roles": [
+        "host",
+        "donor",
+        "official_published",
+        "selected"
+      ]
+    },
+    "zh": {
+      "path": "F:\\Program Files\\GitHub\\model-composition\\results\\b3\\generation_followup_v1\\zh_candidate_provenance.json",
+      "published_swap_exact_mapping": true,
+      "published_window_zero_based_inclusive": [
+        13,
+        20
+      ],
+      "selected_swap_exact_mapping": true,
+      "selected_window_zero_based_inclusive": [
+        20,
+        31
+      ],
+      "sha256": "3b38884c87ab63ca56d9cd4318865c2ff679dffb9a9f2bd8ea95c9589f66cc8b",
+      "tensor_names": 399,
+      "verified_roles": [
+        "host",
+        "donor",
+        "official_published",
+        "selected"
+      ]
+    }
+  },
+  "total_rows": 1500
+}

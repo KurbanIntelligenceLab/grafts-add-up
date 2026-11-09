@@ -1,0 +1,20 @@
+# Preserve the exact bytes used by the hash-bound generation follow-up.
+/src/suture/b3_generation_followup.py text eol=lf
+/src/suture/b3_generation_scoring.py text eol=lf
+/src/suture/b3_generation_scoring_v2.py text eol=lf
+/configs/b3_generation_followup_v1.json text eol=lf
+/configs/b3_lighton_qwen3_8b_v1.json text eol=lf
+/scripts/run_b3_generation_followup.py text eol=lf
+/scripts/score_b3_generation_followup.py text eol=lf
+/scripts/score_b3_generation_followup_v2.py text eol=lf
+/scripts/download_b3_generation_checkpoints.py text eol=lf
+/scripts/prepare_b3_generation_candidates.py text eol=lf
+/scripts/record_b3_generation_inputs.py text eol=lf
+/tests/test_b3_generation_followup.py text eol=lf
+/tests/test_b3_generation_scoring.py text eol=lf
+/tests/test_b3_generation_scoring_v2.py text eol=lf
+/verify/audit_b3_generation_results.py text eol=lf
+/results/b3/lighton_qwen3_8b/fr_host__en_donor/data/MGSM_rev2_test.jsonl text eol=lf
+/results/b3/lighton_qwen3_8b/zh_host__en_donor/data/MGSM_rev2_test.jsonl text eol=lf
+# Runtime receipts hash exact files, including reports written on Windows.
+/results/b3/generation_followup_v1/** -text whitespace=cr-at-eol

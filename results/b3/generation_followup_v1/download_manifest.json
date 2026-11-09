@@ -1,0 +1,31 @@
+{
+  "started_at_utc": "2026-11-07T21:37:40.016957+00:00",
+  "checkpoints": {
+    "en": {
+      "id": "lightonai/Qwen3-8B-EN",
+      "revision": "3e1efbcad91112cd0ac4ebf266a938596b47a1b1",
+      "path": "/workspace/b3_generation/models/en"
+    },
+    "fr": {
+      "id": "lightonai/Qwen3-8B-FR",
+      "revision": "a53d601e18842b62bd43b3718cf3900ba2d7bbf6",
+      "path": "/workspace/b3_generation/models/fr"
+    },
+    "fr_published": {
+      "id": "lightonai/Qwen3-8B-FR-Swap",
+      "revision": "9219ee997381f2fc0558168e41c7fd19fff5c620",
+      "path": "/workspace/b3_generation/models/fr_published"
+    },
+    "zh": {
+      "id": "lightonai/Qwen3-8B-ZH",
+      "revision": "b100a627fcbe1af4391de73cb962e7564aff877a",
+      "path": "/workspace/b3_generation/models/zh"
+    },
+    "zh_published": {
+      "id": "lightonai/Qwen3-8B-ZH-Swap",
+      "revision": "ca13acae7d919cdb66ad1cd29e1e1e9352798cc6",
+      "path": "/workspace/b3_generation/models/zh_published"
+    }
+  },
+  "finished_at_utc": "2026-11-07T21:49:37.821196+00:00"
+}

@@ -87,6 +87,14 @@ canonical stage manifests and the isolated
 `llm_feedback_followup/` pair-level summaries and run manifests are public,
 while its per-record files remain ignored.
 
+`results/b3/generation_followup_v1/`
+Contains the post-submission French and Chinese free-generation follow-up:
+the protocol, 1,500 raw completion records, parser sidecars and freeze records,
+candidate receipts, and independent audits. The records are retained because
+the new appendix table can be recomputed from them. Its `PROTOCOL.md` is a
+study-specific methods record; the root README remains the only repository
+guide. Run logs and cloud transfer bundles remain local.
+
 `results/tier_a/`
 Contains the canonical Spanish E1 artifacts, language-panel probe data, final
 plumbing pilots, readiness and regime diagnostics, and release attestation.
@@ -98,6 +106,12 @@ contract-v2 plumbing artifacts.
 `results/reviewer_followup/`
 Contains controlled multi-donor diagnostics, cost measurements, score-variant
 comparisons, and the powered Spanish ranking.
+
+`reviews/`
+Is excluded from the public repository. It holds reviewer correspondence,
+rebuttal drafts, screenshots, and prior submission snapshots. The freeze
+records needed to audit the generation follow-up are published under
+`results/b3/generation_followup_v1/` instead.
 
 The retained result files support the B3 answer and language-fidelity paired
 statistics without rerunning models. Public run manifests preserve a portable

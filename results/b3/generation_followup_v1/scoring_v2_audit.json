@@ -1,0 +1,128 @@
+{
+  "audited_at_utc": "2026-11-08T00:16:01.570781+00:00",
+  "facts_and_table": {
+    "build_and_review_tables_match_v2_facts": true,
+    "generation_facts_match_report": true
+  },
+  "limitations": [
+    "v2 was specified after comparative-output QA and was not externally preregistered.",
+    "Intervals condition on one shared deterministic generation-seed schedule and sampled test items; they do not capture run-to-run generation variability.",
+    "Language-ID and English-span results are fastText proxies, not human-validated language judgments."
+  ],
+  "paired_statistics": {
+    "all_observed_means_recomputed": true,
+    "method": "paired item bootstrap with replacement using Python random.Random and linear percentile interpolation",
+    "n_paired_records_per_contrast": 250,
+    "new_numeric_CIs_recomputed_exactly": 6,
+    "resamples": 20000,
+    "strict_and_LID_chunk_CIs_match_v1": true
+  },
+  "parser": {
+    "external_preregistration": false,
+    "matches_both_freeze_records": true,
+    "sha256": "c81e5057f341588ae8d7ea3d94d331d58cbacffb6e4701563c15ff2202248828",
+    "specified_after_comparative_output_QA": true,
+    "version": "b3_generation_scoring_v2"
+  },
+  "scope": "Read-only independent verification of v2 sidecars, raw/source hashes, exact numeric outcomes, all-250 summaries, preserved strict/LID values, paired means and CIs.",
+  "sidecars": {
+    "all_candidate_denominators": 250,
+    "all_summary_counts_recomputed": true,
+    "exact_fraction_gold_comparisons": 1500,
+    "only_remaining_strict_correct_numeric_rejection": {
+      "case": "FR published item b3:fr:MGSM_rev2_test:5 final line `64 $`, remains unparsed under the frozen currency-suffix policy.",
+      "per_candidate": {
+        "fr": {
+          "host_baseline": 0,
+          "published_reference": 1,
+          "selected": 0
+        },
+        "zh": {
+          "host_baseline": 0,
+          "published_reference": 0,
+          "selected": 0
+        }
+      }
+    },
+    "reasoning_and_answer_LID_fields_preserved": true,
+    "rows_checked": 1500,
+    "strict_original_em_and_parser_status_preserved": true,
+    "v1_markdown_false_negatives_fixed": {
+      "fr": {
+        "host_baseline": 1,
+        "published_reference": 30,
+        "selected": 7
+      },
+      "zh": {
+        "host_baseline": 7,
+        "published_reference": 11,
+        "selected": 10
+      }
+    }
+  },
+  "source_integrity": {
+    "all_1500_canonical_row_hashes_match": true,
+    "all_1500_raw_rows_match_exact_manifest_IDs": true,
+    "all_six_raw_hashes_match_audit_and_report": true,
+    "all_six_sidecar_hashes_match_report": true,
+    "audit_sha256": "2e75ec35e56e75cbfed5ed7bb3c789195630eda0556a7f5f3bded0baa05227fd",
+    "raw_audit_status": "PASS",
+    "raw_audit_total_rows": 1500,
+    "raw_outputs_unchanged": true
+  },
+  "status": "PASS_INDEPENDENT_V2_AUDIT",
+  "verified_counts": {
+    "fr": {
+      "host_baseline": {
+        "english_chunk_any": 0,
+        "new_numeric_correct": 223,
+        "numeric_unknown": 7,
+        "strict_original_correct": 188,
+        "target_lid_top1": 242,
+        "truncated": 8
+      },
+      "published_reference": {
+        "english_chunk_any": 4,
+        "new_numeric_correct": 164,
+        "numeric_unknown": 27,
+        "strict_original_correct": 156,
+        "target_lid_top1": 194,
+        "truncated": 55
+      },
+      "selected": {
+        "english_chunk_any": 0,
+        "new_numeric_correct": 238,
+        "numeric_unknown": 4,
+        "strict_original_correct": 222,
+        "target_lid_top1": 247,
+        "truncated": 3
+      }
+    },
+    "zh": {
+      "host_baseline": {
+        "english_chunk_any": 0,
+        "new_numeric_correct": 235,
+        "numeric_unknown": 2,
+        "strict_original_correct": 212,
+        "target_lid_top1": 245,
+        "truncated": 5
+      },
+      "published_reference": {
+        "english_chunk_any": 0,
+        "new_numeric_correct": 176,
+        "numeric_unknown": 45,
+        "strict_original_correct": 171,
+        "target_lid_top1": 230,
+        "truncated": 20
+      },
+      "selected": {
+        "english_chunk_any": 238,
+        "new_numeric_correct": 236,
+        "numeric_unknown": 2,
+        "strict_original_correct": 230,
+        "target_lid_top1": 23,
+        "truncated": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+\subsection{Post-submission 8B free-generation follow-up}
+\label{app:b3-generation}
+
+This post-submission follow-up evaluates the frozen 8B hosts, selected swaps,
+and published Swaps under free generation. It uses 250 MGSM-Rev2 test
+questions per language and candidate, at revision
+\artifact{1463c6dc}\ldots{} (test split). Selection searched all 666 windows
+and chose zero-based inclusive layers $[13,15]$ for French and $[20,31]$ for
+Chinese; published windows are $[13,22]$ and $[13,20]$. Exact model commits,
+prompts, runs, outputs, and audits are recorded under
+\artifact{results/b3/generation\_followup\_v1/}.
+
+Selected swaps were ordinary checkpoints made by copying English-donor layers
+into each host. Per-language receipts verify 399 tensor names, the exact
+selected mappings, and equality of each official Swap with its reconstruction.
+All candidates used the pinned host tokenizer, localized reasoning prompt,
+and enabled thinking. Sampling used temperature $1$, top-$p=0.95$, top-$k=20$,
+min-$p=0$, paired per-item seeds, and an 8,192-token cap. Inference used vLLM
+0.11.0 with BF16 and no quantization on one A100 SXM4 80GB; package versions
+and the image digest are in the execution manifest. This differs from the
+32,768-token example and ten-run averages reported by the source model cards
+\citep{lasbordes2026rethinking}.
+
+A separate archived German BF16 pilot stopped because cached and uncached
+greedy decoding diverged. Its runbook reports the same disagreement for the
+raw model and says the observed divergence disappeared in float32; changing
+precision would have violated that pilot's frozen protocol. Partial outputs
+were deleted, so no token-level trace remains for reanalysis. This does not
+establish a French or Chinese generation failure. All six present
+materialized-checkpoint vLLM runs completed and passed their audits.
+
+Table~\ref{tab:b3-generation} reports frozen integer EM beside post-hoc
+numeric EM; the original score is unchanged. V2 parses only the completed,
+non-truncated post-think final line, using the suffix after the last answer
+marker or a standalone scalar, and compares decimals and fractions exactly.
+Host-only QA preceded the v1 freeze. Later comparative QA found 66 answers
+accepted by integer EM but rejected by v1 because bold Markdown around markers
+leaked into the suffix. V2 strips only bold, underscore, and backtick tokens
+before marker extraction. Specified after comparative QA, v2 was not externally
+preregistered; v1 and original scores remain intact. V2 still rejects a French
+published answer ending in \artifact{64 \$} under the unchanged currency
+policy. Unparseable and truncated answers count as incorrect. Both raw-output
+and v2 audits passed; see
+\artifact{results/b3/generation\_followup\_v1/audit\_report.json} and
+\artifact{results/b3/generation\_followup\_v1/scoring\_v2\_audit.json}.
+
+Target ID is fastText top-1 on a complete reasoning trace with at least 20
+letters; incomplete, too-short, or truncated traces are unknown and count as
+non-target among all 250 records \citep{grave2018fasttext}. EN span flags
+English in a non-overlapping chunk of up to 200 characters with at least 20
+letters and English probability at least $0.5$. These are classifier outputs,
+not human-validated judgments. Of the selected Chinese model's 248 complete traces, 225
+are classified as English and 23 as Chinese; two are unknown. English is
+flagged in 238 of 250 traces. The published French model has 55 truncations,
+compared with three for selected, so that comparison is cap-sensitive and does
+not establish uncapped superiority.
+
+Paired 95\% percentile intervals use 20,000 item resamples paired by question
+ID. They are conditional on one shared deterministic seed schedule, are not
+adjusted across contrasts, and do not capture generation-seed variability.
+Constrained first-order weight attribution selects the same windows, so this three-choice
+panel cannot attribute any difference to SUTURE over that baseline. It does
+not validate all-window free-generation ranking or general language
+preservation.

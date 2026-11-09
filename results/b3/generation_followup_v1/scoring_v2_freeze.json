@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-11-08T00:06:18.542648+00:00",
+  "parser_module": "src/suture/b3_generation_scoring_v2.py",
+  "parser_sha256": "c81e5057f341588ae8d7ea3d94d331d58cbacffb6e4701563c15ff2202248828",
+  "original_v1_sha256": "cc5a12e59937a23ac74dde28b4286c7f8801ce55deac3d3bbceffe72b4af506b",
+  "scope": "Supplemental post-hoc numeric EM v2; all raw outputs, original integer EM and v1 sidecars retained",
+  "timing": "Specified after comparative-output QA, before executing this v2 rescoring. Not frozen before comparative results.",
+  "basis": "QA found 66 original-correct answers rejected by v1 because Markdown around answer markers leaked into the numeric suffix. Synthetic fixtures cover the correction.",
+  "only_parser_change": "Remove **, __ and backticks from the normalized final line before answer-marker extraction. No numeric grammar or currency-suffix policy change.",
+  "raw_audit_PASS_required": true,
+  "raw_audit_total_rows": 1500,
+  "formal_external_preregistration": false
+}

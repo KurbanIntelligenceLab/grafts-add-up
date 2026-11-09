@@ -14,9 +14,11 @@ candidate. The controlled-stack experiments provide exhaustive ground truth.
 The language-model evidence is deliberately bounded. The repository includes
 the canonical Spanish E1 stop and follow-up diagnostics, contract-v2 readiness
 and plumbing stops, and a completed B3 scale check on public Qwen3-8B
-specialists for French and Chinese. The B3 result compares three declared
-candidates with teacher-forced answer log-probability; it is not a full
-held-out sweep or a free-generation ranking claim. The powered Spanish
+specialists for French and Chinese. The original B3 result compares three
+declared candidates with teacher-forced answer log-probability. A separate
+free-generation follow-up compares the host, selected swap, and published swap
+on 250 questions per language under one decoding cap and seed schedule. It does
+not establish an all-window free-generation ranking. The powered Spanish
 free-generation ranking remains negative.
 
 ## Repository layout
@@ -145,6 +147,11 @@ The public result tree is intentionally curated:
   language-fidelity follow-up includes path-free per-record measurements and
   its aggregate summary and translated probe inputs. Original run manifests
   remain author-only.
+- `results/b3/generation_followup_v1/` contains the separate free-generation
+  protocol, all 1,500 completion records, original and corrected scoring
+  sidecars, audit reports, and execution receipts. See
+  [`PROTOCOL.md`](results/b3/generation_followup_v1/PROTOCOL.md) for the fixed
+  candidate set, parser history, and limits of the comparison.
 - `results/controlled_stacks/` contains 18 recovered JSON outputs for the
   controlled studies.
 - `results/tier_a/` contains the canonical Spanish E1 evidence, the
@@ -163,6 +170,8 @@ also be regenerated. Run `python verify/audit_controlled_results.py` to audit
 the recovered 12- and 48-stack results against their summaries, paired tests,
 confidence intervals, and figure tables. The original multi-stack generator
 and per-candidate window scores are still absent.
+Run `python verify/audit_b3_generation_results.py` to check the separate
+free-generation records and the table reported in the appendix.
 The code supports optional
 model reruns when the exact public checkpoints and required hardware are
 available.
@@ -261,6 +270,9 @@ bibliography files against the staged public inventory.
 Public run manifests retain portable commands, model pins, and input/output
 hashes as provenance records without recording local workstation paths.
 Author-only language-fidelity manifests are intentionally excluded.
+The generation follow-up's derived audit reports retain the original checkout
+path as a historical hash-bound field; its audit commands resolve files from
+the current checkout.
 
 ## Data provenance and licenses
 
